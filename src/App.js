@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 import Navbar from "./component/Navbar";
-import Dashboard from "./Dashboard";
+import Dashboard from "./page/Dashboard";
+
 
 
 function App() {
