@@ -1,13 +1,17 @@
+import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+import Navbar from "./component/Navbar";
+import Dashboard from "./Dashboard";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Navbar/>
+      <header className="">
         
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        
+        <Dashboard/>
         
       </header>
     </div>
