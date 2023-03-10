@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
-import Navbar from "./component/Navbar";
+// import Navbar from "./component/Navbar";
+import Sidebar from "./component/Sidebar";
 import Dashboard from "./page/Dashboard";
 
 
@@ -8,9 +9,8 @@ import Dashboard from "./page/Dashboard";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Sidebar/>
       <header className="">
-        
         
         <Dashboard/>
         
