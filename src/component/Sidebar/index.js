@@ -1,37 +1,53 @@
 import React from 'react'
 import Logo from '../../assets/logo.png'
+import { BiHomeAlt, BiGridAlt, BiIdCard, BiUser, BiShoppingBag } from 'react-icons/bi'
+// import { IoSettingsOutline } from 'react-icons/io'
 
 export default function Sidebar() {
 
     const menu = [
-        {name:'Dashboard', icon:''},
-        {name:'Home', icon:''},
-        {name:'Pelanggan', icon:''},
-        {name:'Penjualan', icon:''},
-        {name:'Item', icon:''},
+        {name:'Dashboard', icon: <BiHomeAlt/>},
+        {name:'Home', icon: <BiGridAlt/>},
+        {name:'Pelanggan', icon: <BiIdCard/>},
+        {name:'Penjualan', icon: <BiUser/>},
+        {name:'Item', icon: <BiShoppingBag/>},
         
-    ]
+    ];
 
   return (
-    <div className='h-screen border-r border-gray-600 w-64 px-10'>
-        <div className='flex flex-row items-center'>
-            <img src={Logo} alt='sakir' className='w-10 h-10 '/>
-            <div>Shoping</div>
-        </div>
-
-        <div className='flex flex-row font-light left-1'>
-            <ul>
-                <div>Menu</div>
-                {menu.map((val, index) => {
-                    return (
-                        <li key = {index} className='mb-7'>
-                            {val.name} 
-                        </li>
-                    );
-                })}
-            </ul>
-        </div>
+    <>
         
-    </div>
+        <div className='bg-red-400 h-screen border-r border-gray-200 w-64 px-9 space-y-7'>
+            <div className='flex flex-row items-center pt-8 '>
+                <img src={Logo} alt='sakir' className='w-9 h-9 '/>
+                <div>Shoping</div>
+            </div>
+
+            {/* className='flex flex-row font-light left-1' */}
+
+            <div className='text-red-700'>
+                ____________________________
+                
+            </div>
+            
+            <div  className='space-y-7 '>
+                <ul>
+                    <div className='mb-10'></div>
+                    {menu.map((val, index) => {
+                        return (
+                            <li key = {index} 
+                                className='mb-7 flex flex-row items-center text-gray-100'>
+
+                                <div className='mr-3'>{val.icon}</div>
+                                <div>{val.name}</div> 
+                            
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+            
+        </div>
+    </>
   )
 }
