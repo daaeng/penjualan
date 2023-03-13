@@ -1,7 +1,8 @@
 import React from 'react'
 import Logo from '../../assets/logo.png'
-import { BiHomeAlt, BiGridAlt, BiIdCard, BiUser, BiShoppingBag } from 'react-icons/bi'
-// import { IoSettingsOutline } from 'react-icons/io'
+import { BiHomeAlt, BiGridAlt, BiIdCard } from 'react-icons/bi'
+import { MdShoppingCartCheckout } from 'react-icons/md'
+import { BsBasket2 } from 'react-icons/bs'
 
 export default function Sidebar() {
 
@@ -9,8 +10,8 @@ export default function Sidebar() {
         {name:'Dashboard', icon: <BiHomeAlt/>},
         {name:'Home', icon: <BiGridAlt/>},
         {name:'Pelanggan', icon: <BiIdCard/>},
-        {name:'Penjualan', icon: <BiUser/>},
-        {name:'Item', icon: <BiShoppingBag/>},
+        {name:'Penjualan', icon: <MdShoppingCartCheckout/>},
+        {name:'Item', icon: <BsBasket2/>},
         
     ];
 
