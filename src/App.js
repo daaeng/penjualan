@@ -4,7 +4,7 @@ import './App.css';
 import Sidebar from "./component/Sidebar";
 import Dashboard from "./page/Dashboard";
 import {BiUserCircle, BiBell} from 'react-icons/bi';
-
+import { FiMail } from 'react-icons/fi'
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Sidebar/>
       <section className="flex-1">
       <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
+          <FiMail size={'25'}/>
           <BiBell size={'25'}/>
           <BiUserCircle size={'25'}/>
         </div>

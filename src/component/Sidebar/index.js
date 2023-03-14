@@ -1,5 +1,4 @@
 import React from 'react'
-import './sidebar.css'
 import Logo from '../../assets/logo.png'
 import { BiHomeAlt, BiGridAlt, BiIdCard } from 'react-icons/bi'
 import { MdShoppingCartCheckout } from 'react-icons/md'
