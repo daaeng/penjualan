@@ -1,10 +1,11 @@
 import React from 'react'
+import './sidebar.css'
 import Logo from '../../assets/logo.png'
 import { BiHomeAlt, BiGridAlt, BiIdCard } from 'react-icons/bi'
 import { MdShoppingCartCheckout } from 'react-icons/md'
 import { BsBasket2 } from 'react-icons/bs'
 
-export default function Sidebar() {
+function Sidebar() {
 
     const menu = [
         {name:'Dashboard', icon: <BiHomeAlt/>},
@@ -18,7 +19,7 @@ export default function Sidebar() {
   return (
     <>
         
-        <div className='bg-red-400 h-screen border-r border-gray-200 w-64 px-9 space-y-7'>
+        <nav className='bg-red-400 h-screen border-r border-gray-200 w-64 px-9 space-y-7'>
             <div className='flex flex-row items-center pt-8 '>
                 <img src={Logo} alt='sakir' className='w-9 h-9 '/>
                 <div>Shoping</div>
@@ -48,7 +49,9 @@ export default function Sidebar() {
                 </ul>
             </div>
             
-        </div>
+        </nav>
     </>
   )
 }
+
+export default Sidebar;

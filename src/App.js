@@ -11,17 +11,21 @@ function App() {
     <div className="w-full min-h-screen bg-white flex flex-row">
       <Sidebar/>
       <section className="flex-1">
+      <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
+          <BiBell size={'25'}/>
+          <BiUserCircle size={'25'}/>
+        </div>
       
         <Dashboard/>
 
       </section>
       
-      <section className="w-24 bg-gray-100 rounded-tl-70px overflow-hidden ">
+      {/* <section className="w-24 ">
         <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
           <BiBell size={'25'}/>
           <BiUserCircle size={'25'}/>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

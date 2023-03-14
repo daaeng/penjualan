@@ -31,7 +31,7 @@ function Dashboard() {
     <>
 
       
-      <div className='px-14 flex-1 pt-14 ml-5'>
+      <div className='px-14 flex-1 pt-14 ml-5 mr-5'>
 
         <div className='border border-gray-200  rounded w-full flex py-3 px-3 items-center'>
           <BiSearch/>
@@ -68,13 +68,51 @@ function Dashboard() {
 
       </div>
       
-      <div>
-          <div className='px-14 flex-1 pt-14 ml-5'>
+      <div className='flex flex-row space-x-2 ml-10 mr-10 pt-2'>
+
+          <div className='px-14 pt-14 ml-5 mb-5 rounded-xl bg-gray-100'>
             <div style={{
-                width: 800
+                width: 700
+                
                 }}>
 
                 <Bar options={options} data={data} />
+
+            </div>
+            
+            <div style={{
+                width: 700
+                
+                }}>
+
+                <Bar options={options} data={data} />
+
+            </div>
+
+
+          </div>
+
+          <div className='mr-1 rounded-xl bg-gray-200 mb-5'>
+            <div className='ml-3 mr-3 mt-3 rounded-md bg-red-200'>
+
+            <div style={{
+                width: 500
+                
+                }}>
+
+                <Bar options={options} data={data} />
+
+            </div>
+
+
+            </div>
+
+            <div className='mr-3 ml-3 mt-2 rounded bg-green-500'>
+              
+              <label>
+                qwerty
+              </label>
+              <input type={'date'}></input>
 
             </div>
           </div>
@@ -92,7 +130,7 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'right',
+      position: 'bottom',
     },
     title: {
       display: true,
