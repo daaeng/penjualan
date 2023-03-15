@@ -46,7 +46,7 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Tampilan Bar Chart',
+        text: 'Bar Chart Penjualan',
       },
     },
   };

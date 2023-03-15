@@ -1,15 +1,15 @@
 //Data grafik
 import React from 'react';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+  } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
 function Data_grafGAB(){
@@ -28,11 +28,7 @@ function Data_grafGAB(){
 
     return(
         <>
-
-            <div style={{
-                width: 1200
-                
-                }}>
+            <div style={{width: 1200}}>
 
                 <Line options={options} data={data} />
 
@@ -49,11 +45,11 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'right'
+      position: 'bottom'
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text: 'Chart Line Penjualan dan Pembayaran',
     },
   },
 };

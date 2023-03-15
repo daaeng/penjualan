@@ -1,14 +1,11 @@
-
 import React, { useState } from 'react'
 import DatePicker from 'react-date-picker';
-import { BiSearch } from 'react-icons/bi';
-import { BsShop } from "react-icons/bs";
-import { MdPayments } from "react-icons/md";
-
-
 import Data_grafGAB from '../chart/data_grafGAB';
 import Pembayaran from '../chart/pembayaran';
 import Penjualan from '../chart/penjualan';
+import Box from '../component/box';
+import Search from '../component/search';
+import './Dash.css'
 
 
 function Dashboard() {
@@ -22,29 +19,11 @@ function Dashboard() {
       
       <div className='px-14 flex-1 pt-14 ml-5 mr-8'>
 
-        <div className='border border-gray-200  rounded w-full flex py-3 px-3 items-center'>
-          <BiSearch/>
-          <input type={'text'} className = 'flex-1' placeholder = 'Search'/>
-        </div>
+        <Search/>
         
         <div className='px-10 flex-1 pt-10 ml-5'>
           
-          <div className='flex flex-row space-x-8 '>
-            <div className=' rounded-xl bg-green-500 bg-opacity-10 p-5 w-40 text-green-600'>
-              <BsShop size={25}/>
-              <span className='text-sm'>
-              Penjualan
-              </span>
-            </div>
-          
-            <div className=' rounded-xl bg-yellow-500 bg-opacity-10 p-5 w-40 text-green-600'>
-              <MdPayments size={25}/>
-              <span className='text-sm'>
-              Pembayaran
-              </span>
-            </div>
-            
-          </div>
+          <Box/>
 
           <div className='px-1 flex-1 pt-2'>
             <div className='mr-2 pt-2 px-3 flex flex-row space-x-5 text-gray-500 justify-end'>
@@ -62,25 +41,38 @@ function Dashboard() {
       
       <div className='flex flex-row space-x-2 ml-10 mr-10 pt-2'>
 
-          <div className='px-3 pt-14 ml-2 mb-5 rounded-xl bg-gray-100'>
+          <div className='px-3 pt-3 ml-2 mb-5 rounded-xl bg-gray-100'>
 
             <Penjualan/>
+
+            <div className='flex justify-end mb-3'>
+              <button className='rounded-md w-16 items-center bg-gray-300'>Detail</button>
+            </div>
             
           </div>
 
-          <div className='px-3 pt-14 ml-2 mb-5 rounded-xl bg-gray-100'>
+          <div className='px-3 pt-3 ml-2 mb-5 rounded-xl bg-gray-100'>
 
             <Pembayaran/>
+
+            <div className='flex justify-end mb-3'>
+              <button className='rounded-md w-16 items-center bg-gray-300'>Detail</button>
+            </div>
             
           </div>
           
       </div>
 
-      <div className='pt-2 ml-12 mr-14 rounded-xl mb-5'>
-        <div className='rounded-xl bg-gray-100 px-3'>
-        <Data_grafGAB/>
+      <div className='flex flex-row pt-2 ml-12 mr-14 rounded-xl mb-5 bg-gray-100'>
+          
+        <div className='rounded-xl bg-gray-100 px-3 pt-3 mt-2 mb-3 ml-14'>
+                    
+          <Data_grafGAB/>
 
         </div>
+        <div className='ml-1 mt-1'>
+            <button className='rounded-md w-16 items-center bg-gray-300'>Detail</button>
+          </div>
       </div>
       
 

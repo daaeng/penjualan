@@ -14,9 +14,10 @@ function App() {
       <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
           <FiMail size={'25'}/>
           <BiBell size={'25'}/>
-          <BiUserCircle size={'25'}/>
+          <BiUserCircle size={'40'}/>
         </div>
       
+        
         <Dashboard/>
 
       </section>
