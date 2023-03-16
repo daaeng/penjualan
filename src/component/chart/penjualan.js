@@ -11,6 +11,7 @@ import {
   } from 'chart.js';
   import { Bar } from 'react-chartjs-2';
 
+
 function Data_graf(){
 
     ChartJS.register(
@@ -29,6 +30,7 @@ function Data_graf(){
                 
                 }}>
 
+                {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />
 
             </div>
@@ -53,7 +55,7 @@ const options = {
   
   const labels = ['01/01/2023', '01/02/2023', '01/03/2023', '01/04/2023', '01/05/2023', '01/06/2023', '01/07/2023', '01/08/2023', '01/09/2023', '01/10/2023'];
   
-  const data = {
+  export const data = {
     labels,
     datasets: [
       {

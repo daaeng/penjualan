@@ -24,8 +24,6 @@ function Sidebar() {
                 <div>Shoping</div>
             </div>
 
-            {/* className='flex flex-row font-light left-1' */}
-
             <div className='text-red-700'>
                 ____________________________
                 
