@@ -10,7 +10,7 @@ function Box () {
             <span className='text-sm'>
               Penjualan
               </span>
-            </div>
+        </div>
           
         <div className=' rounded-xl bg-yellow-500 bg-opacity-10 p-5 w-40 text-green-600'>
             <MdPayments size={25}/>

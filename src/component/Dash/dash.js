@@ -4,8 +4,8 @@ import Box from './box';
 import Search from './search';
 import Penjualan from '../chart/penjualan.js';
 import Pembayaran from '../chart/pembayaran';
-import Data_grafGAB from '../chart/data_grafGAB';
 import {useNavigate} from 'react-router-dom'
+import DataGrafGAB from '../chart/dataGrafGAB';
 
 function Dash() {
 
@@ -48,7 +48,7 @@ function Dash() {
 
             <div className='flex justify-end mb-3'>
               <button
-                onClick = {() => navigate ('/detail_pen')} 
+                onClick = {() => navigate ('/d_pen')} 
                 className='rounded-md w-16 items-center bg-gray-300'>
                   Detail
               </button>
@@ -76,7 +76,7 @@ function Dash() {
           
         <div className='rounded-xl bg-gray-100 px-3 pt-3 mt-2 mb-3 ml-14'>
                     
-          <Data_grafGAB/>
+          <DataGrafGAB/>
 
         </div>
       </div>

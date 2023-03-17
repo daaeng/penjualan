@@ -55,7 +55,7 @@ function Sidebar() {
                                        
                                         <div className={`ml-2 text-2xl`}>{val.icon}</div>
 
-                                        <div className={`ml-2 duration-50 ${!open && 'hidden'}`} >{val.name}</div> 
+                                        <div className={`ml-2 duration-50 ${!open && 'hidden' }`} >{val.name}</div> 
                                     
                                 </li>
                             </>

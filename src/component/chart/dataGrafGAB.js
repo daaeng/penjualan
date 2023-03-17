@@ -12,7 +12,7 @@ import {
   } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-function Data_grafGAB(){
+function DataGrafGAB(){
 
     ChartJS.register(
       CategoryScale,
@@ -39,7 +39,7 @@ function Data_grafGAB(){
 
 }
 
-export default Data_grafGAB
+export default DataGrafGAB
 
 const options = {
   responsive: true,
