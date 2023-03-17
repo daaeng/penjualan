@@ -14,7 +14,7 @@ function Sidebar() {
         {name:'Item', icon: <BsBasket2/>},
         
     ];
-
+ 
   return (
     <>
         
