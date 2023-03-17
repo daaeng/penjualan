@@ -10,10 +10,10 @@ function Navbar() {
       <nav>
         
         <div className="pt-2 flex  space-x-3   bg-gray-50">
-          <div className='flex flex-1 justify-end mb-2 mr-3 space-x-2 items-center'>
+          <div className='cursor-pointer flex flex-1 justify-end mb-2 mr-3 space-x-3 text-gray-500 items-center'>
             <FiMail size={'25'}/>
             <BiBell size={'25'}/>
-            <BiUserCircle size={'40'}/>
+            <BiUserCircle size={'30'}/>
           </div>
         </div>
       

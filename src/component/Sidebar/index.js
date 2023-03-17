@@ -45,13 +45,13 @@ function Sidebar() {
                 </div> */}
 
                 
-                <div  className='mt-16'>
+                <div  className='mt-16 '>
                                         
                     {menu.map((val, index) => {
                         return (
                             <>
                                 <li key = {index} 
-                                   className={`mb-10 flex flex-row items-center text-gray-100 hover:bg-light-white rounded-lg mt-2`}>
+                                   className={` mb-10 flex flex-row items-center text-gray-100 hover:bg-light-white rounded-lg mt-2 pt-1 pb-1`}>
                                        
                                         <div className={`ml-2 text-2xl`}>{val.icon}</div>
 
