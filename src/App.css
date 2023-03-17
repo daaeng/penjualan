@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+
+}
+
+nav{
+  margin: 0rem;
+  text-decoration: none;
+}
+
+
+
+@media only screen and (max-width : 1920px) {
+
+  header{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+}

@@ -5,7 +5,7 @@ function Search() {
   return (
     <div className='border border-gray-200  rounded w-full flex py-3 px-3 items-center'>
         <BiSearch/>
-        <input type={'text'} className = 'flex-1' placeholder = 'Search'/>
+        <input type={'text'} className = 'flex-1 ml-1' placeholder = 'Search'/>
     </div>
   )
 }

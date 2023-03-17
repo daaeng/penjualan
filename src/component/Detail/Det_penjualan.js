@@ -1,13 +1,18 @@
 import React from "react";
 import Penjualan from '../chart/penjualan.js';
+import {useNavigate} from 'react-router-dom'
+import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 
 const Det_penjualan = () => {
 
-    
+    const navigate = useNavigate()
 
     return(
 
         <>
+                    
+            <div className='flex justify-start mb-3 ml-2'>
+                </div>
 
             <div className='px-5 flex-1 pt-2 ml-5 mr-8'>
 

@@ -32,7 +32,7 @@ function Pembayaran(){
     return(
         <>
             
-            <div style={{width: 650}}>
+            <div style={{width: 730}}>
 
                 <Bar 
                   options={options} 

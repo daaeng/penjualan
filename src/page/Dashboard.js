@@ -3,6 +3,8 @@ import Sidebar from '../component/Sidebar'
 import './Dash.css'
 import Dash from '../component/Dash/dash'
 import Navbar from '../component/Navbar/navbar'
+//import Sidebar2 from '../component/Sidebar/sidebar2'
+import '../App.css'
 
 function Dashboard() {
   
@@ -11,11 +13,11 @@ function Dashboard() {
     <>
 
       <div className="w-full min-h-screen bg-white flex flex-row " >
-
-        <Sidebar/>
-
-        <section className='flex-1'>
+        
           <Navbar/>
+          <Sidebar/>
+          
+        <section className='flex-1'>
           <Dash/>
         </section>
 

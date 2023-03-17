@@ -18,7 +18,7 @@ function Dash() {
     <>
 
       
-      <div className='px-14 flex-1 pt-14 ml-5 mr-8'>
+      <div className='px-14 flex-1 pt-14 ml-5 mr-8 mt-3'>
 
         <Search/>
         
@@ -40,7 +40,7 @@ function Dash() {
 
       </div>
       
-      <div className='flex flex-row space-x-2 ml-10 mr-10 pt-2'>
+      <div className='flex flex-row space-x-2 ml-10 mr-10 pt-2 relative'>
 
           <div className='px-3 pt-3 ml-2 mb-5 rounded-xl bg-gray-100'>
 
@@ -52,6 +52,7 @@ function Dash() {
                 className='rounded-md w-16 items-center bg-gray-300'>
                   Detail
               </button>
+              
             </div>
             
           </div>
@@ -67,6 +68,7 @@ function Dash() {
             </div>
             
           </div>
+        
           
       </div>
 
@@ -77,9 +79,6 @@ function Dash() {
           <Data_grafGAB/>
 
         </div>
-        <div className='ml-1 mt-1'>
-            <button className='rounded-md w-16 items-center bg-gray-300'>Detail</button>
-          </div>
       </div>
       
 

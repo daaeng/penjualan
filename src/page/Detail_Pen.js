@@ -2,12 +2,12 @@ import React from 'react'
 import Sidebar from '../component/Sidebar';
 import Navbar from '../component/Navbar/navbar';
 import Det_penjualan from '../component/Detail/Det_penjualan';
-import {useNavigate} from 'react-router-dom'
-import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+
+import '../App.css'
 
 const Detail_pen = () => {
 
-    const navigate = useNavigate()
+    
     // console.log(props.data_penjual)
 
     return(
@@ -16,23 +16,14 @@ const Detail_pen = () => {
 
             <div className="w-full min-h-screen bg-white flex flex-row" >
 
+                <Navbar/>
                 <Sidebar/>
 
-            <section className='flex-1 '>
-                <Navbar/>
-                <div className='flex justify-start mb-3 ml-2'>
-                    <button
-                        onClick = {() => navigate ('/')} 
-                        className='rounded-md px-1 items-center flex space-x-1 mt-1'>
-                        <MdOutlineArrowBackIosNew/>
-                        Dashboard
-                    </button>
-                </div>
+                <section className='flex-1 pt-2 mt-14'>
 
-                <Det_penjualan/>
+                    <Det_penjualan/>
                 
-            
-            </section>
+                </section>
 
             </div>
 

@@ -25,10 +25,7 @@ function Data_graf(){
 
     return(
         <>
-            <div style={{
-                width: 650
-                
-                }}>
+            <div style={{width: 730}}>
 
                 {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />
