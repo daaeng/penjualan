@@ -55,6 +55,10 @@ nav{
   z-index: 1;
 }
 
+section{
+  position: relative;
+}
+
 box{
   display: flexbox;
   align-items: center;
@@ -77,4 +81,8 @@ box{
     width: 100%;
   }
   
+  section{
+    position: relative;
+    margin-left: auto;
+  }
 }

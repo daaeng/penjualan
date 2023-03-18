@@ -2,8 +2,6 @@ import React from 'react'
 import Sidebar from '../component/Sidebar'
 import './Dash.css'
 import Dash from '../component/Dash/dash'
-
-//import Sidebar2 from '../component/Sidebar/sidebar2'
 import '../App.css'
 import Header from '../component/Header/header'
 
@@ -17,7 +15,8 @@ function Dashboard() {
         
           <Sidebar/>
           
-        <section className='flex-1'>
+        <section className={`flex-1 `}>
+          
           <Header/>
   
           <div className=" pt-2 mt-2 px-2">
