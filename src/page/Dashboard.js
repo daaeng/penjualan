@@ -2,9 +2,10 @@ import React from 'react'
 import Sidebar from '../component/Sidebar'
 import './Dash.css'
 import Dash from '../component/Dash/dash'
-import Navbar from '../component/Navbar/navbar'
+
 //import Sidebar2 from '../component/Sidebar/sidebar2'
 import '../App.css'
+import Header from '../component/Header/header'
 
 function Dashboard() {
   
@@ -14,11 +15,16 @@ function Dashboard() {
 
       <div className="w-full min-h-screen bg-white flex flex-row " >
         
-          <Navbar/>
           <Sidebar/>
           
         <section className='flex-1'>
-          <Dash/>
+          <Header/>
+  
+          <div className=" pt-2 mt-2 px-2">
+  
+            <Dash/>
+                        
+          </div>
         </section>
 
         {/* <section className="w-24 ">

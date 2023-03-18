@@ -2,26 +2,24 @@ import React from 'react'
 import {BiUserCircle, BiBell} from 'react-icons/bi'
 import { FiMail } from 'react-icons/fi'
 
-function Navbar() {
+function Header() {
   
   return (
 
     <>
-      <nav>
-        
-        <div className="pt-2 flex  space-x-3   bg-gray-50">
-          <div className='cursor-pointer flex flex-1 justify-end mb-2 mr-3 space-x-3 text-gray-500 items-center'>
+
+      <header className='flex flex-row bg-gray-100 space-x-2 justify-end'>
+        <div className=" flex  space-x-1  ">
+          <div className='flex flex-1 mb-1  space-x-4 text-gray-500 items-center'>
             <FiMail size={'25'}/>
             <BiBell size={'25'}/>
             <BiUserCircle size={'30'}/>
           </div>
         </div>
-      
-      </nav>
-
+      </header>
     </>
     
   )
 }
 
-export default Navbar;
+export default Header;

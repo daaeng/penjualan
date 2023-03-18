@@ -1,27 +1,26 @@
-import Navbar from "../component/Navbar/navbar"
 import Sidebar from "../component/Sidebar"
-import Penjualan from "../component/chart/penjualan"
-
+import '../App.css'
+import Detpenj from "../component/Det_pen/detpenj"
+import Header from "../component/Header/header"
 
 function Dpenjualan (){
     return(
         <>
             <div className="w-full min-h-screen bg-white flex flex-row " >
         
-                <Navbar/>
                 <Sidebar/>
-        
+                
                 <section className='flex-1'>
-                    <div className="bg-black pt-2 mt-10 px-2">
-                        halo
+                <Header/>
+                    <div className=" pt-2 mt-2 px-2">
+                        
+                        <Detpenj/>
                         
                     </div>
-                    <div className="ml-2 flex bg-gray-200">
-                        <Penjualan/>
-                    </div>
+                    
                 </section>
-
             </div>
+
         </>
     )
 }

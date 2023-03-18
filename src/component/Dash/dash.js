@@ -18,7 +18,7 @@ function Dash() {
     <>
 
       
-      <div className='px-14 flex-1 pt-14 ml-5 mr-8 mt-3'>
+      <div className='px-14 flex-1 pt-3 ml-5 mr-8 '>
 
         <Search/>
         
