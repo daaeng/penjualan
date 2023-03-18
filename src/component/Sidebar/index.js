@@ -23,7 +23,7 @@ function Sidebar() {
 
   return (
     <>
-            
+
             <nav className = {` bg-red-500 h-screen p-4 pt-10 ${open ? 'w-64' : 'w-20'} duration-300 relative`}>
                 <BsArrowLeftCircleFill 
                 className={`text-white bg-dark-purple text-2xl rounded-full 
