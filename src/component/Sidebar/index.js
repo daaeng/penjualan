@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // import Logo from '../../assets/logo.png'
 import { BiHomeAlt, BiGridAlt, BiIdCard } from 'react-icons/bi'
-import { MdShoppingCartCheckout } from 'react-icons/md'
+import { MdShoppingCartCheckout, MdPayments } from 'react-icons/md'
 import {BsArrowLeftCircleFill} from 'react-icons/bs'
 import {GiChessBishop} from 'react-icons/gi'
 import { BsBasket2 } from 'react-icons/bs'
@@ -17,6 +17,7 @@ function Sidebar() {
         {name:'Home', icon: <BiHomeAlt/>},
         {name:'Pelanggan', icon: <BiIdCard/>},
         {name:'Penjualan', icon: <MdShoppingCartCheckout/>},
+        {name:'Pembayaran', icon: <MdPayments/>},
         {name:'Item', icon: <BsBasket2/>},
         
     ];
