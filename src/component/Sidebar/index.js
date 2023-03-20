@@ -24,8 +24,7 @@ function Sidebar() {
 
   return (
     <>
-            
-        <nav className = {`fixed bg-red-500 h-screen p-2 pt-10 ${open ? 'w-48' : 'w-20'} duration-300 relative`}>
+        <nav className = {`bg-red-500 h-screen p-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
 
             <div className='py-2 px-2'>
                 
@@ -35,7 +34,7 @@ function Sidebar() {
                     onClick={()=> setOpen(!open)}/>
                         
 
-                <div className='inline-flex ml-1.5'>
+                <div className='inline-flex ml-1.5 mb-16'>
                             
                     <GiChessBishop className={`bg-white rounded-md text-4xl cursor-pointer block float-left mr-2 duration-500 ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
                     <h3 className={`text-white origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
@@ -44,15 +43,6 @@ function Sidebar() {
 
                 </div>
 
-            </div>
-                {/* <div className='flex flex-row items-center pt-8 '>
-                    <img src={Logo} alt='sakir' className='w-9 h-9 mr-2'/>
-                    <div>Shoping</div>
-                </div> */}
-
-                
-            <div  className='mt-16'>
-                                        
                 {menu.map((val, index) => {
                     return (
                         <>
@@ -60,7 +50,7 @@ function Sidebar() {
                                 key = {index} 
                                 to={val.path}
                                 activeclassName='active'
-                                className={`cursor-pointer no-underline flex flex-row duration-300 ${!open && 'active' }items-center text-gray-100 hover:bg-light-white hover:text-black rounded-xl px-2.5 py-4 -mr-5`} >
+                                className={`cursor-pointer no-underline flex flex-row duration-300 ${!open && 'active' }items-center text-gray-100 hover:bg-light-white hover:text-black rounded-xl  px-2.5 py-4 -ml-1 -mr-7`} >
                                 
                                         
                                         <div className={`ml-2 text-2xl `}>{val.icon}</div>
@@ -74,6 +64,7 @@ function Sidebar() {
                 })}
 
             </div>
+                
         </nav>
     </>
   )

@@ -11,17 +11,17 @@ function Dashboard() {
 
     <> 
 
-      <div className="w-full min-h-screen bg-white flex flex-row " >
-        
           <Sidebar/>
-          
-        <section className={`flex-1 `}>
-          
           <Header/>
-  
-          <div className=" pt-2 mt-2 px-2">
-  
+
+      <div className="bg-white" > 
+          
+        <section className={`flex-1`}>
+          
             <Dash/>
+  
+          <div className="container">
+  
                         
           </div>
         </section>

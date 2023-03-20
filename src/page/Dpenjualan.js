@@ -8,7 +8,7 @@ function Dpenjualan (){
     return(
         
         <>
-            <div className="w-full min-h-screen bg-white flex flex-row " >
+            <div className=" bg-white" >
         
                 <Sidebar/>
                 
