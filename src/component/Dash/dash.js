@@ -31,7 +31,7 @@ function Dash() {
 
       </div>
       
-      <div className='grid lg:grid-cols-4 gap-4 p-4 relative'>
+      <div className='grid lg:grid-cols-4 gap-4 p-4 relative ml-7 mr-8'>
 
           <div className='lg:col-span-2 col-span-1 flex justify-between w-full  p-4 rounded-lg bg-gray-100 shadow'>
 
@@ -39,7 +39,7 @@ function Dash() {
 
             <div className='flex justify-end mb-3'>
               <button
-                onClick = {() => navigate ('/d_pen')} 
+                onClick = {() => navigate ('/dpen')} 
                 className='rounded-md w-16 items-center bg-gray-300'>
                   Detail
               </button>

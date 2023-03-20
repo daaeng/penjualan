@@ -1,4 +1,5 @@
 //Data grafik
+import './App.css';
 import React from 'react';
 import {
     Chart as ChartJS,

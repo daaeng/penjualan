@@ -17,6 +17,256 @@ const Detpenj = () => {
 
             </div>
         </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        <div className="flex flex-row bg-green-500 ml-1 ">
+            <div className=" bg-red-100 px-1 py-1 cursor-pointer">
+                <button
+                 onClick = {() => navigate ('/')} 
+                 className='rounded-md items-center px-1 py-1 bg-gray-300'>
+                    Dashboard
+                </button>
+
+            </div>
+        </div>
+        
         </>
     )
 }
