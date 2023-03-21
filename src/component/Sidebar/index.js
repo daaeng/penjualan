@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 // import Logo from '../../assets/logo.png'
 //import { BiIdCard } from 'react-icons/bi'
-import { MdDashboard, MdHome, MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons/md'
-import {BsArrowLeftCircleFill, BsFillPersonVcardFill} from 'react-icons/bs'
+import {MdDashboard, MdHome, MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons/md'
+import {BsFillPersonVcardFill} from 'react-icons/bs'
 import {GiChessBishop} from 'react-icons/gi'
+import {FaBars} from 'react-icons/fa'
 //import { BsBasket2 } from 'react-icons/bs'
 import {NavLink, useNavigate} from 'react-router-dom'
 
-function Sidebar() {
+function Sidebar({Children}) {
 
     const navigate = useNavigate()
     const [open, setOpen] =  useState(true);
+    const geser = () => setOpen(!open);
 
     const menu = [
         {name:'Dashboard', icon: <MdDashboard/>, path:'/'},
@@ -23,16 +25,16 @@ function Sidebar() {
     ];
 
   return (
-    <>
-        <nav className = {`bg-red-500 h-screen p-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+    <>                                                                  
+        <nav className = {`bg-red-700 h-screen p-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
 
             <div className='py-2 px-2'>
                 
-                <BsArrowLeftCircleFill 
-                    className={`text-white bg-dark-purple text-2xl rounded-full 
-                    absolute -right-3 top-5 border border-dark-purple cursor-pointer ${!open && 'rotate-180'}` } 
-                    onClick={()=> setOpen(!open)}/>
-                        
+                <FaBars 
+                    className={` text-2xl
+                    absolute -right-8 top-5 cursor-pointer duration-75 ${!open && 'rotate-90'}` } 
+                    onClick={geser}/>
+                    {/* onClick={()=> setOpen(!open)}     */}
 
                 <div className='inline-flex ml-1.5 mb-16'>
                             
@@ -50,7 +52,9 @@ function Sidebar() {
                                 key = {index} 
                                 to={val.path}
                                 activeclassName='active'
-                                className={`cursor-pointer no-underline flex flex-row duration-300 ${!open && 'active' }items-center text-gray-100 hover:bg-light-white hover:text-black rounded-xl  px-2.5 py-4 -ml-1 -mr-7`} >
+                                className={`cursor-pointer no-underline flex flex-row duration-300 
+                                ${!open && 'active' }items-center text-gray-100 overflow-y-visible
+                                hover:bg-light-white hover:text-black rounded-xl px-2.5 py-4 -ml-1 -mr-7`} >
                                 
                                         
                                         <div className={`ml-2 text-2xl `}>{val.icon}</div>
@@ -64,7 +68,8 @@ function Sidebar() {
                 })}
 
             </div>
-                
+
+            <main>{Children}</main> 
         </nav>
     </>
   )

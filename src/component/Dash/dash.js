@@ -7,7 +7,7 @@ import Search from './search';
 import {useNavigate} from 'react-router-dom'
 // import DataGrafGAB from '../chart/dataGrafGAB';
 
-function Dash() {
+function Dash(open) {
 
   const navigate = useNavigate()
   
@@ -18,7 +18,7 @@ function Dash() {
     <>
 
       
-      <div className='px-14 flex-1 pt-3 ml-20 mr-3 '>
+      <div className={`px-14 flex-1 pt-3 mr-3 ${ open ? "ml-48" : "ml-20" }`}>
 
         <Search/>
         <Box/>

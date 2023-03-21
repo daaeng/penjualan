@@ -20,10 +20,6 @@ function Dashboard() {
           
             <Dash/>
   
-          <div className="container">
-  
-                        
-          </div>
         </section>
 
         {/* <section className="w-24 ">

@@ -8,12 +8,12 @@ function Dpenjualan (){
     return(
         
         <>
+            <Sidebar/>    
+            <Header/>
+            
             <div className=" bg-white" >
         
-                <Sidebar/>
-                
                 <section className='flex-1 '>
-                <Header/>
                     <div className=" pt-2 mt-2 px-2">
                         
                         <Detpenj/>
