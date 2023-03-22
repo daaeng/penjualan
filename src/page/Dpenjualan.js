@@ -1,24 +1,21 @@
 import '../App.css'
 import Detpenj from "../component/Det_pen/detpenj"
-import Sidebar from "../component/Sidebar"
 import Header from "../component/Header/header"
+import Sidebar from '../component/Sidebar/sidebar'
 
 function Dpenjualan (){
 
     return(
         
         <>
-            <Sidebar/>    
+            <Sidebar/>
             <Header/>
             
             <div className=" bg-white" >
         
                 <section className='flex-1 '>
-                    <div className=" pt-2 mt-2 px-2">
-                        
-                        <Detpenj/>
-                        
-                    </div>
+                    
+                    <Detpenj/>
                     
                 </section>
             </div>

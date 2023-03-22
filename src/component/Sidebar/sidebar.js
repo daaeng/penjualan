@@ -8,7 +8,7 @@ import {FaBars} from 'react-icons/fa'
 //import { BsBasket2 } from 'react-icons/bs'
 import {NavLink, useNavigate} from 'react-router-dom'
 
-function Sidebar({Children}) {
+function Sidebar() {
 
     const navigate = useNavigate()
     const [open, setOpen] =  useState(true);
@@ -26,9 +26,9 @@ function Sidebar({Children}) {
 
   return (
     <>                                                                  
-        <nav className = {`bg-red-700 h-screen p-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {`bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
 
-            <div className='py-2 px-2'>
+            <div className='py-2 px-3 overflow-hidden '>
                 
                 <FaBars 
                     className={` text-2xl
@@ -51,7 +51,7 @@ function Sidebar({Children}) {
                             <NavLink
                                 key = {index} 
                                 to={val.path}
-                                activeclassName='active'
+                                
                                 className={`cursor-pointer no-underline flex flex-row duration-300 
                                 ${!open && 'active' }items-center text-gray-100 overflow-y-visible
                                 hover:bg-light-white hover:text-black rounded-xl px-2.5 py-4 -ml-1 -mr-7`} >
@@ -68,8 +68,7 @@ function Sidebar({Children}) {
                 })}
 
             </div>
-
-            <main>{Children}</main> 
+ 
         </nav>
     </>
   )

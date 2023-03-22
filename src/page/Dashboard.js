@@ -1,22 +1,28 @@
 import React from 'react'
-import Sidebar from '../component/Sidebar'
+// import Sidebar from '../component/Sidebar/sidebar'
 import './Dash.css'
 import Dash from '../component/Dash/dash'
 import '../App.css'
 import Header from '../component/Header/header'
+import Sidebar from '../component/Sidebar/sidebar'
 
-function Dashboard() {
+function Dashboard(geser) {
+
+  // const geser = () =>{
+  //   return [open, setOpen] = useState(true);
+  // }
+  // const [open, setOpen] =  useState(true);
   
   return (
 
     <> 
-
+{/* onClick={()=> open.setOpen()} */}
           <Sidebar/>
-          <Header/>
+          <Header />
 
       <div className="bg-white" > 
           
-        <section className={`flex-1`}>
+        <section className={`flex-1 `}>
           
             <Dash/>
   
