@@ -1,18 +1,19 @@
-import {useState } from 'react'
-// import Logo from '../../assets/logo.png'
-//import { BiIdCard } from 'react-icons/bi'
+import React, {useState } from 'react'
 import {MdDashboard, MdHome, MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons/md'
 import {BsFillPersonVcardFill} from 'react-icons/bs'
 import {GiChessBishop} from 'react-icons/gi'
 import {FaBars} from 'react-icons/fa'
-//import { BsBasket2 } from 'react-icons/bs'
 import {NavLink, useNavigate} from 'react-router-dom'
+// import Logo from '../../assets/logo.png'
+//import { BiIdCard } from 'react-icons/bi'
+//import { BsBasket2 } from 'react-icons/bs'
+
 
 function Sidebar() {
 
     const navigate = useNavigate()
-    const [open, setOpen] =  useState(false);
-    const geser = () => setOpen(!open);
+    const [open, setOpen] =  useState(true);
+    // const geser = () => setOpen(!open);
 
     const menu = [
         {name:'Dashboard', icon: <MdDashboard/>, path:'/'},
@@ -26,14 +27,14 @@ function Sidebar() {
 
   return (
     <>                                                                  
-        <nav className = {`flex bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {` bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
             
             <div className='py-2 px-3 overflow-hidden '>
                 
                 <FaBars 
                     className={` text-2xl
                     absolute -right-8 top-5 cursor-pointer duration-75 ${!open && 'rotate-90'}` } 
-                    onClick={geser}/>
+                    onClick={()=> setOpen(!open)}/>
                     {/* onClick={()=> setOpen(!open)}     */}
 
                 <div className='inline-flex ml-1.5 mb-16'>
@@ -68,6 +69,7 @@ function Sidebar() {
                 })}
 
             </div>
+            
  
         </nav>
     </>

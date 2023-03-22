@@ -1,41 +1,41 @@
 import React from 'react'
-// import Sidebar from '../component/Sidebar/sidebar'
-import './Dash.css'
-import Dash from '../component/Dash/dash'
-import '../App.css'
+import Sidebar from '../component/Sidebar/sidebar';
 import Header from '../component/Header/header'
-import Sidebar from '../component/Sidebar/sidebar'
+import Dash from '../component/Dash/dash'
+// import Sidebar from '../component/Sidebar'
+// import './Dash.css'
+// import '../App.css'
 
-function Dashboard(geser) {
-
-  // const geser = () =>{
-  //   return [open, setOpen] = useState(true);
-  // }
-  // const [open, setOpen] =  useState(true);
+function Dashboard() {
   
   return (
 
     <> 
-{/* onClick={()=> open.setOpen()} */}
-          <Sidebar/>
-          <Header />
+
+      <Sidebar/>
+      <Header/>
+      
+      <section className={``}>
+        
+          <Dash/>
+
+      </section>
+
+
+      {/* <Sidebar/>
+          <Header/>
 
       <div className="bg-white" > 
           
-        <section className={`flex-1 `}>
-          
-            <Dash/>
-  
-        </section>
 
-        {/* <section className="w-24 ">
+        <section className="w-24 ">
           <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
             <BiBell size={'25'}/>
             <BiUserCircle size={'25'}/>
           </div>
-        </section> */}
+        </section>
 
-      </div>
+      </div> */}
       
     </>
     

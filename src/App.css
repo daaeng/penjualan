@@ -107,6 +107,6 @@ section{
   }
   
   section{
-    padding-left: calc(var(--nav-width) + 1rem);
+    padding-left: calc(var(--nav-width) + 3rem);
   } 
 } */
