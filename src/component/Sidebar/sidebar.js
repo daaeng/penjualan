@@ -27,7 +27,7 @@ function Sidebar() {
   return (
     <>                                                                  
         <nav className = {`bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
-
+            
             <div className='py-2 px-3 overflow-hidden '>
                 
                 <FaBars 
