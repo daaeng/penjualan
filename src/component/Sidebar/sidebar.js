@@ -11,7 +11,7 @@ import {NavLink, useNavigate} from 'react-router-dom'
 function Sidebar() {
 
     const navigate = useNavigate()
-    const [open, setOpen] =  useState(true);
+    const [open, setOpen] =  useState(false);
     const geser = () => setOpen(!open);
 
     const menu = [
@@ -26,7 +26,7 @@ function Sidebar() {
 
   return (
     <>                                                                  
-        <nav className = {`bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {`flex bg-red-700 h-screen py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
             
             <div className='py-2 px-3 overflow-hidden '>
                 
