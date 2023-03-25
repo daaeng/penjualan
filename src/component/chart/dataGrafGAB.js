@@ -1,5 +1,5 @@
 //Data grafik
-import './App.css';
+// import './App.css';
 import React from 'react';
 import {
     Chart as ChartJS,
@@ -29,7 +29,7 @@ function DataGrafGAB(){
 
     return(
         <>
-            <div style={{width: 1200}}>
+            <div style={{width: 750}}>
 
                 <Line options={options} data={data} />
 

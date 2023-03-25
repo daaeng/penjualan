@@ -1,5 +1,5 @@
 //Data grafik
-import React, { useRef } from 'react';
+import React from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,7 +9,7 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
-  import { Bar, getDatasetAtEvent, getElementsAtEvent } from 'react-chartjs-2';
+  import { Bar} from 'react-chartjs-2';
 
 function Pembayaran(){
 
@@ -22,23 +22,22 @@ function Pembayaran(){
         Legend
     );
 
-    const chartRef = useRef();
-    const onClick = (event) => {
-      console.log(getElementsAtEvent(chartRef.current, event));
-      console.log(getDatasetAtEvent(chartRef.current, event));
-      
-    }
+    // const chartRef = useRef();
+    // const onClick = (event) => {
+    //   console.log(getElementsAtEvent(chartRef.current, event));
+    //   console.log(getDatasetAtEvent(chartRef.current, event));
+    // }
 
     return(
         <>
             
-            <div style={{width: 730}}>
+            <div style={{width: 750}}>
 
                 <Bar 
                   options={options} 
-                  onClick={onClick} 
+                  // onClick={onClick} 
                   data={data} 
-                  ref={chartRef}
+                  // ref={chartRef}
                 />
 
             </div>
@@ -75,7 +74,3 @@ const data = {
       
   ]
 }
-
-
-
-
