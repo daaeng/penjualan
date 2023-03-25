@@ -1,9 +1,9 @@
 import React, {useState } from 'react'
 import {MdDashboard, MdHome, MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons/md'
-import {BsFillPersonVcardFill} from 'react-icons/bs'
+import {BsFillPersonVcardFill, BsArrowLeftCircleFill} from 'react-icons/bs'
 import {GiChessBishop} from 'react-icons/gi'
-import {FaBars} from 'react-icons/fa'
 import {NavLink, useNavigate} from 'react-router-dom'
+// import {FaBars} from 'react-icons/fa'
 // import Logo from '../../assets/logo.png'
 //import { BiIdCard } from 'react-icons/bi'
 //import { BsBasket2 } from 'react-icons/bs'
@@ -31,10 +31,10 @@ function Sidebar() {
             
             <div className='py-2 px-3 overflow-hidden '>
                 
-                <FaBars 
-                    className={` text-2xl
-                    absolute -right-8 top-5 cursor-pointer duration-75 ${!open && 'rotate-90'}` } 
-                    onClick={()=> setOpen(!open)}/>
+            <BsArrowLeftCircleFill 
+                        className={`text-red-700 bg-white text-2xl rounded-full 
+                        absolute -right-3 top-5 border border-dark-purple cursor-pointer ${!open && 'rotate-180'}` } 
+                        onClick={()=> setOpen(!open)}/>
                     {/* onClick={()=> setOpen(!open)}     */}
 
                 <div className='inline-flex ml-1.5 mb-16'>

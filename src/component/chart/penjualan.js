@@ -12,7 +12,7 @@ import {
   import { Bar } from 'react-chartjs-2';
 
 
-function Data_graf(){
+function Penjualan(){
 
     ChartJS.register(
         CategoryScale,
@@ -25,7 +25,7 @@ function Data_graf(){
 
     return(
         <>
-            <div style={{width: 730}}>
+            <div style={{width: 750}}>
 
                 {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />
@@ -36,9 +36,10 @@ function Data_graf(){
 
 }
 
-export default Data_graf
+export default Penjualan
 const options = {
     responsive: true,
+    // maintainaspectratio:false,
     plugins: {
       legend: {
         position: 'bottom',
@@ -62,7 +63,3 @@ const options = {
       },
     ]
   }
-
-
-
-

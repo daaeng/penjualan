@@ -11,7 +11,7 @@ function Dashboard() {
   return (
 
     <> 
-
+      
       <Sidebar/>
       <Header/>
       
@@ -20,22 +20,6 @@ function Dashboard() {
           <Dash/>
 
       </section>
-
-
-      {/* <Sidebar/>
-          <Header/>
-
-      <div className="bg-white" > 
-          
-
-        <section className="w-24 ">
-          <div className="pt-8 flex justify-end space-x-3 mr-5 items-center">
-            <BiBell size={'25'}/>
-            <BiUserCircle size={'25'}/>
-          </div>
-        </section>
-
-      </div> */}
       
     </>
     
