@@ -11,15 +11,23 @@ function Dashboard() {
   return (
 
     <> 
-      
-      <Sidebar/>
-      <Header/>
-      
-      <section className={``}>
-        
-          <Dash/>
+      <div>
+        <div>
+          <Sidebar/>
+          <Header/>
 
-      </section>
+        </div>
+
+        <div>
+          <section className={``}>
+            
+              <Dash/>
+
+          </section>
+
+        </div>
+      </div>
+      
       
     </>
     
