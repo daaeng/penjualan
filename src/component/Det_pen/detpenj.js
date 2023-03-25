@@ -7,6 +7,12 @@ const Detpenj = () => {
 
     return(
         <>
+            <div className={`ml-48 px-8 flex-1 pt-3`}>
+
+                <h2>Detail Penjualan</h2>
+            
+            </div>
+
             <div className="flex flex-row bg-green-500 ml-20 ">
                 <div className=" bg-red-100 px-1 py-1 cursor-pointer">
                     <button
