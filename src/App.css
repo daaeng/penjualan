@@ -100,7 +100,7 @@ section{
 
 .active{
   background: white;
-  color: black;
+  color: rgb(156, 0, 0);
   text-decoration: none;
 }
 
