@@ -2,9 +2,8 @@ import React from 'react'
 import Box from './box';
 import Penjualan from '../chart/penjualan.js';
 import Pembayaran from '../chart/pembayaran';
-
-import DateTimeR from '../dateRange/dateTimeR';
 import Tabled from '../Table/tabled';
+import DateTimeR from '../dateRange/dateTimeR';
 
 // import DatePicker from 'react-date-picker';
 // import DataGrafGAB from '../chart/dataGrafGAB';

@@ -16,11 +16,9 @@
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
     "mysql": "^2.18.1",
-    "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-chartjs-2": "^5.2.0",
     "react-date-picker": "^9.2.0",
-    "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
@@ -28,6 +26,7 @@
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "react-table": "^7.8.0",
+    "react-tailwindcss-datepicker": "^1.5.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
