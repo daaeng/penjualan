@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from "react"; 
 import Datepicker from "react-tailwindcss-datepicker"; 
 
@@ -30,3 +31,18 @@ const DateTimeR = () => {
   );
 }; 
 export default DateTimeR;
+=======
+import React from "react"
+
+// import {DateRangePickerComponent} from '@syncfusion/ej2-react-calendars'
+
+const DateTimeR = () => {
+  return(
+    <>
+      {/* <DateRangePickerComponent></DateRangePickerComponent> */}
+    </>
+  )
+}
+
+export default DateTimeR
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066

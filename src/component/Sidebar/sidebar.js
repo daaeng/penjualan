@@ -1,9 +1,14 @@
 import React, {useState } from 'react'
 import {MdDashboard, MdHome, MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons/md'
 import {BsFillPersonVcardFill, BsArrowLeftCircleFill} from 'react-icons/bs'
+<<<<<<< HEAD
 import {NavLink, useNavigate} from 'react-router-dom'
 import {SiBathasu} from 'react-icons/si'
 // import {GiChessBishop} from 'react-icons/gi'
+=======
+import {GiChessBishop} from 'react-icons/gi'
+import {NavLink, useNavigate} from 'react-router-dom'
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
 // import {FaBars} from 'react-icons/fa'
 // import Logo from '../../assets/logo.png'
 //import { BiIdCard } from 'react-icons/bi'
@@ -33,7 +38,11 @@ function Sidebar() {
             <div className='py-2 px-3 overflow-hidden '>
                 
             <BsArrowLeftCircleFill 
+<<<<<<< HEAD
                         className={`text-black bg-white text-2xl rounded-full 
+=======
+                        className={`text-red-700 bg-white text-2xl rounded-full 
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
                         absolute -right-3 top-5 border border-dark-purple cursor-pointer ${!open && 'rotate-180'}` } 
                         onClick={()=> setOpen(!open)}/>
                     {/* onClick={()=> setOpen(!open)}     */}

@@ -2,11 +2,19 @@ import React from 'react'
 import Box from './box';
 import Penjualan from '../chart/penjualan.js';
 import Pembayaran from '../chart/pembayaran';
+<<<<<<< HEAD
 import Tabled from '../Table/tabled';
 import DateTimeR from '../dateRange/dateTimeR';
 import DataGrafGAB from '../chart/dataGrafGAB';
 import {MdDownload, MdPrint} from 'react-icons/md'
 // import DatePicker from 'react-date-picker';
+=======
+import Tabled from '../table/tabled';
+import DateTimeR from '../dateRange/dateTimeR';
+
+// import DatePicker from 'react-date-picker';
+// import DataGrafGAB from '../chart/dataGrafGAB';
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
 // import { Table } from 'react-bootstrap';
 // import Search from './search';
 // import {useNavigate} from 'react-router-dom'
@@ -36,12 +44,18 @@ function Dash() {
 
         </div>
         
+<<<<<<< HEAD
         <div className='grid lg:grid-cols-4 gap-4 p-4 relative '>
             <div className='sm:w-auto md:w-1/2 lg:w-full lg:row-span-3 lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+=======
+        <div className='grid lg:grid-cols-3 gap-4 p-4 relative '>
+            <div className='sm:w-auto md:w-1/2 lg:w-full lg:row-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-100 shadow'>
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
 
               <Tabled/>
 
             </div>
+<<<<<<< HEAD
 
             <div className='items-center sm:w-auto md:w-1/2 lg:w-full lg:col-span-1  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
 
@@ -59,9 +73,32 @@ function Dash() {
                   Tanggal 3-5-2023 ~ 10-5-2023
                 </div>
               </h6>
+=======
+
+            <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-100 shadow'>
+
+              <Penjualan/>
+              
+              {/* <div className='justify-end mb-3'>
+                <button
+                  onClick = {() => navigate ('/dpen')} 
+                  className='rounded-md w-16 items-center bg-gray-300'>
+                    Detail
+                </button>
+                
+              </div> */}
+
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
               
             </div>
+
+            <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-100 shadow'>
+
+              <Pembayaran/>
+              
+            </div> 
             
+<<<<<<< HEAD
 
             <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
             
@@ -104,6 +141,12 @@ function Dash() {
 
           <h3 className='ml-7'>Tes tes</h3>
               <DataGrafGAB/>
+=======
+        </div>
+              {/* <DataGrafGAB/> */}
+
+          <h3 className='ml-7'>Tes tes</h3>
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
 
                   
       </div>

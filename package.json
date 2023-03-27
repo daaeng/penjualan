@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.11.13",
+    "@coreui/react": "^4.7.0",
+    "@syncfusion/ej2-react-calendars": "^21.1.35",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
     "chart.js": "^4.2.1",
+    "date-fns": "^2.29.3",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
@@ -19,14 +19,19 @@
     "react-bootstrap": "^2.7.2",
     "react-chartjs-2": "^5.2.0",
     "react-date-picker": "^9.2.0",
+    "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "react-table": "^7.8.0",
     "react-tailwindcss-datepicker": "^1.5.1",
+=======
+    "react-scroll": "^1.8.9",
+>>>>>>> 7c244e564ca1e5d6052bfab11f0b4ac401e5f066
     "web-vitals": "^2.1.4"
   },
   "scripts": {
