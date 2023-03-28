@@ -2,24 +2,7 @@
   --header-height: 3rem;
   --nav-width: 65px;
 
-  --nav-side: 7rem;
 }
-
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
-
-/* ::-webkit-scrollbar {
-  display: none;
-}
-.element::-webkit-scrollbar { width: 0 !important }
-
-html {
-  scrollbar-width: none;
-} */
 
 *{
   margin: 0;
@@ -133,6 +116,6 @@ section{
   }
   
   section{
-    margin-left: calc(var(--nav-side));
+    padding-left: calc(var(--nav-width) + 3rem);
   } 
 } */
