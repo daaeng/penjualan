@@ -31,7 +31,7 @@ function Pembayaran(){
     return(
         <>
             
-            <div style={{width: 750}}>
+            <div  style={{ position: "relative", height: "auto", width: "80vw" }}>
 
                 <Bar 
                   options={options} 
@@ -49,7 +49,10 @@ function Pembayaran(){
 export default Pembayaran
 
 const options = {
-    responsive: true,
+  responsive: true,
+  maintainAspectRatio: true,
+  aspectRatio: 2,
+
     plugins: {
       legend: {
         position: 'bottom',

@@ -5,7 +5,7 @@ import Pembayaran from '../chart/pembayaran';
 import Tabled from '../Table/tabled';
 import DateTimeR from '../dateRange/dateTimeR';
 import DataGrafGAB from '../chart/dataGrafGAB';
-import {MdDownload, MdPrint} from 'react-icons/md'
+// import {MdDownload, MdPrint} from 'react-icons/md'
 // import DatePicker from 'react-date-picker';
 // import { Table } from 'react-bootstrap';
 // import Search from './search';
@@ -22,9 +22,9 @@ function Dash() {
     <>
       <div className={`ml-48 mb-4`}>
 
-        <div className={`px-8 flex-1 pt-3`}>
+        <div className={`px-8 flex-1 pt-3 bg-`}>
 
-          <h2>Dashboard</h2>
+          <h2 className='font-mono text-white'>Dashboard</h2>
           <Box/>
 
           <div className='px-1 flex-1 pt-2 pb-2'>
@@ -37,7 +37,8 @@ function Dash() {
         </div>
         
         <div className='grid lg:grid-cols-4 gap-4 p-4 relative '>
-            <div className='sm:w-auto md:w-1/2 lg:w-full lg:row-span-3 lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+          
+            <div className='md:w-4/5 lg:w-full lg:row-span-3 overflow-scroll max-h-512 lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
 
               <Tabled/>
 
@@ -63,7 +64,7 @@ function Dash() {
             </div>
             
 
-            <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
             
               <Penjualan/>            
             
@@ -85,26 +86,40 @@ function Dash() {
               
             </div>
 
-            <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            {/* <div className='sm:w-auto md:w-1/2 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+
+              <DataGrafGAB/>
+              
+            </div>  */}
+
+            <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
 
               <Pembayaran/>
-
-              {/* <div className='flex-row justify-end mb-3'>
-
-                <div className='flex flex-1 -mt-4 -mr-4 space-x-2 bg-black text-gray-200 items-center px-1 py-1 rounded'>
-                  <MdDownload size={'20'} className='cursor-pointer'/>
-                  <MdPrint size={'20'} className='cursor-pointer'/>
-                </div>
-                
-              </div> */}
               
             </div> 
             
         </div>
 
           <h3 className='ml-7'>Tes tes</h3>
-              <DataGrafGAB/>
+              
 
+
+        
+        <div className='grid lg:grid-cols-3 gap-4 p-4 relative '>
+          
+          <div className='md:w-4/5 lg:w-full lg:row-span-2 overflow-scroll  lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+
+            <DataGrafGAB/>
+
+          </div>         
+
+          <div className='md:w-4/5 lg:w-full lg:row-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+
+              <Pembayaran/>
+              
+            </div> 
+          
+        </div>
                   
       </div>
       

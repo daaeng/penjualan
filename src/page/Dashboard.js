@@ -19,7 +19,7 @@ function Dashboard() {
         </div>
 
         <div>
-          <section className={``}>
+          <section className={`bg-marron max-h-128`}>
             
               <Dash/>
 

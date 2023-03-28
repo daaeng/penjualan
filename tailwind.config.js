@@ -11,6 +11,12 @@ module.exports = {
 
   theme: {
     extend: {
+      maxHeight:{
+        '128' : '32rem',
+        '256' : '64rem',
+        '512' : '128rem',
+        
+      },
       
       borderRadius: {
         '70px' : '70px',
@@ -18,7 +24,9 @@ module.exports = {
 
       colors : {
         'dark-purple' : '#081A51',
-        'light-white' : 'rgba(255, 255, 255, 0.18)'
+        'light-white' : 'rgba(255, 255, 255, 0.18)',
+        'darkgolden'  : 'rgb(184,134,11)',
+        'marron'      : 'rgb(128,0,0)',
       },
 
       screens: {

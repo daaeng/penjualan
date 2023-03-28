@@ -19,12 +19,11 @@ const DateTimeR = () => {
   return (
     <div className="rounded w-60 px-1 py-1 bg-gray-100">
       <Datepicker 
-        
         value={value} 
         onChange={handleValueChange} 
-        showShortcuts={true} 
+        showShortcuts={false} 
         /> 
-    
+       
     </div>
 
   );

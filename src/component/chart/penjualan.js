@@ -25,7 +25,7 @@ function Penjualan(){
 
     return(
         <>
-            <div style={{width: 750}}>
+            <div  style={{ position: "relative", height: "auto", width: "80vw" }}>
 
                 {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />
@@ -38,8 +38,11 @@ function Penjualan(){
 
 export default Penjualan
 const options = {
-    responsive: true,
-    // maintainaspectratio:false,
+  
+  responsive: true,
+  maintainAspectRatio: true,
+  aspectRatio: 2,
+  
     plugins: {
       legend: {
         position: 'bottom',

@@ -99,10 +99,16 @@ section{
 }
 
 .active{
-  background: white;
-  color: rgb(156, 0, 0);
+  background: maroon;
+  color: white;
   text-decoration: none;
 }
+
+/* table{
+  background: red;
+  height: 10rem;
+  overflow: scroll;
+} */
 
 
 /* @media only screen and (max-width : 1920px) {

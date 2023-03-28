@@ -29,7 +29,7 @@ function DataGrafGAB(){
 
     return(
         <>
-            <div style={{width: 750}}>
+            <div  style={{ position: "relative", height: "auto", width: "80vw" }}>
 
                 <Line options={options} data={data} />
 
@@ -44,6 +44,9 @@ export default DataGrafGAB
 
 const options = {
   responsive: true,
+  maintainAspectRatio: true,
+  aspectRatio: 2,
+
   plugins: {
     legend: {
       position: 'bottom'

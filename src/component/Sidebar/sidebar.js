@@ -41,7 +41,7 @@ function Sidebar() {
                 <div className='inline-flex ml-1.5 mb-16'>
                             
                     <SiBathasu className={`text-red-800 bg-black rounded-full text-4xl cursor-pointer 
-                                block float-left mr-2 duration-500 hover:text-indigo-800  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
+                                block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
                     <h3 className={`text-white cursor-pointer origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
                             Shoping
                     </h3>
