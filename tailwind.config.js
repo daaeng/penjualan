@@ -14,6 +14,7 @@ module.exports = {
       maxHeight:{
         '128' : '32rem',
         '256' : '64rem',
+        '270' : '70rem',
         '512' : '128rem',
         
       },
@@ -27,6 +28,7 @@ module.exports = {
         'light-white' : 'rgba(255, 255, 255, 0.18)',
         'darkgolden'  : 'rgb(184,134,11)',
         'marron'      : 'rgb(128,0,0)',
+        'lightgold'   : '#FFD779'
       },
 
       screens: {

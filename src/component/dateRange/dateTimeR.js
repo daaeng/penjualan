@@ -1,7 +1,7 @@
 import React, {useState} from "react"; 
 import Datepicker from "react-tailwindcss-datepicker"; 
 
-const DateTimeR = () => { 
+function DateTimeR () { 
 
   const [value, setValue] = useState({ 
 
@@ -17,14 +17,17 @@ const DateTimeR = () => {
   } 
 
   return (
-    <div className="rounded w-60 px-1 py-1 bg-gray-100">
-      <Datepicker 
-        value={value} 
-        onChange={handleValueChange} 
-        showShortcuts={false} 
-        /> 
-       
-    </div>
+    <>
+      <div className="rounded w-60 px-1 py-1 bg-gray-100">
+        <Datepicker 
+          value={value} 
+          onChange={handleValueChange} 
+          showShortcuts={false} 
+          /> 
+        
+        Hasil 
+      </div>
+    </>
 
   );
 }; 

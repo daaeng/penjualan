@@ -2,9 +2,10 @@ import React from 'react'
 import Header from '../component/Header/header'
 import Sidebar from '../component/Sidebar/sidebar'
 
-const Dpembayaran = () => {
+const Pelanggan = () => {
   return (
-    <div>
+    <> 
+      <div>
         <div>
           <Sidebar/>
           <Header/>
@@ -13,15 +14,17 @@ const Dpembayaran = () => {
 
         <div>
           <section className={`bg-marron max-h-128`}>
-            <div className={`ml-48 mb-4`}>
-              <h2 className='font-mono text-white'>Pembayaran</h2>
-              
-            </div>
+            
+              Pelanggan Detail
 
           </section>
+
         </div>
       </div>
+      
+      
+    </>
   )
 }
 
-export default Dpembayaran
+export default Pelanggan

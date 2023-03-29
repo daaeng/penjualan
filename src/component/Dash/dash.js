@@ -38,13 +38,14 @@ function Dash() {
         
         <div className='grid lg:grid-cols-4 gap-4 p-4 relative '>
           
-            <div className='md:w-4/5 lg:w-full lg:row-span-3 overflow-scroll max-h-512 lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            <div className='md:w-4/5 lg:w-full lg:row-span-2 overflow-scroll max-h-270 lg:col-span-2 flex justify-between 
+                            w-full  p-4 rounded-lg bg-gray-200 '>
 
               <Tabled/>
 
             </div>
 
-            <div className='items-center sm:w-auto md:w-1/2 lg:w-full lg:col-span-1  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            {/* <div className='items-center sm:w-auto md:w-1/2 lg:w-full lg:col-span-1  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
 
               <h5>
                 Data Penjualan & Pembayaran
@@ -61,7 +62,7 @@ function Dash() {
                 </div>
               </h6>
               
-            </div>
+            </div> */}
             
 
             <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
@@ -92,7 +93,7 @@ function Dash() {
               
             </div>  */}
 
-            <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            <div className='md:w-4/5 lg:w-full lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
 
               <Pembayaran/>
               
@@ -100,7 +101,7 @@ function Dash() {
             
         </div>
 
-          <h3 className='ml-7'>Tes tes</h3>
+          <h3 className='ml-7 bg-slate-50'>.</h3>
               
 
 

@@ -21,10 +21,13 @@ function Dashboard() {
         <div>
           <section className={`bg-marron max-h-128`}>
             
-              <Dash/>
+            <Dash/>
 
+            <div className='flex justify-end bg-marron text-white px-4 w-screen'>
+              Ini Paling Bawah
+
+            </div>
           </section>
-
         </div>
       </div>
       
