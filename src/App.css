@@ -19,10 +19,6 @@ html {
   scrollbar-width: none;
 }
 
-/* .container{
-  display: flex;
-} */
-
 main{
   width: 100%;
   padding: 20px;
@@ -96,6 +92,9 @@ nav{
 section{
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+
 }
 
 .active{

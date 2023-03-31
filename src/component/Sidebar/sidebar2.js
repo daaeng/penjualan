@@ -9,7 +9,7 @@ import {BsArrowLeftCircleFill, BsFillPersonVcardFill} from 'react-icons/bs'
 const Sidebar2 = ({children}) => {
 
     const navigate = useNavigate()
-    const [open, setOpen] =  useState(true);
+    const [open, setOpen] =  useState(false);
 
     const menu = [
         {name:'Dashboard', icon: <MdDashboard/>, path:'/'},

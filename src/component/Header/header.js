@@ -2,6 +2,7 @@ import React from 'react'
 import Search from '../Dash/search';
 import {HiUserCircle} from 'react-icons/hi'
 import {BsBellFill} from 'react-icons/bs'
+import { Dropdown } from 'react-bootstrap';
 // import { NavDropdown } from 'react-bootstrap';
 // import {NavLink} from 'react-router-dom'
 // import {Dropdown } from 'react-bootstrap';
@@ -18,20 +19,23 @@ function Header() {
           <div className='flex flex-1 mb-1 mr-2 space-x-3 text-yellow-600 items-center'>
             <Search/>
             <BsBellFill size={'30'} className='cursor-pointer'/>
-            <HiUserCircle size={'40'} className='cursor-pointer'/>
-          </div>
+            <div className='dropdown'>
+              <HiUserCircle size={'32'} className='cursor-pointer'/>
 
-          {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
-          </NavDropdown> */}
+            </div>
+
+            <Dropdown className=''>
+              <Dropdown.Toggle  variant='primary' className='text-white flex items-center'>
+                
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
 
         </div>
       </header>

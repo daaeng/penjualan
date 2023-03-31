@@ -28,7 +28,8 @@ module.exports = {
         'light-white' : 'rgba(255, 255, 255, 0.18)',
         'darkgolden'  : 'rgb(184,134,11)',
         'marron'      : 'rgb(128,0,0)',
-        'lightgold'   : '#FFD779'
+        'lightgold'   : '#FFD779',
+        'cobamerah'   : '#B30024',
       },
 
       screens: {

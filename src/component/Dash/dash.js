@@ -20,7 +20,7 @@ function Dash() {
   return (
 
     <>
-      <div className={`ml-48 mb-4`}>
+      <div className={`ml-48 mb-4 flex-wrap`}>
 
         <div className={`px-8 flex-1 pt-3 bg-`}>
 
@@ -101,7 +101,7 @@ function Dash() {
             
         </div>
 
-          <h3 className='ml-7 bg-slate-50'>.</h3>
+          <h3 className='ml-7 bg-slate-50'> tes tes</h3>
               
 
 
