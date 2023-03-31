@@ -18,7 +18,7 @@ function DateTimeR () {
 
   return (
     <>
-      <div className="rounded w-60 px-1 py-1 bg-gray-100">
+      <div className="rounded w-60 px-1 py-1 bg-gray-300">
         <Datepicker 
           value={value} 
           onChange={handleValueChange} 

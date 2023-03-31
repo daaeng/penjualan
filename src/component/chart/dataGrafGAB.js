@@ -29,7 +29,7 @@ function DataGrafGAB(){
 
     return(
         <>
-            <div  style={{ position: "relative", height: "auto", width: "80vw" }}>
+            <div  style={{ position: "relative", height: "auto", width: "80vw" }} className='bg-white rounded-lg'>
 
                 <Line options={options} data={data} />
 

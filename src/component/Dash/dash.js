@@ -24,12 +24,12 @@ function Dash() {
 
         <div className={`px-8 flex-1 pt-3 bg-`}>
 
-          <h2 className='font-mono text-white'>daeng Dashboard</h2>
+          <h2 className='font-mono text-white'>Dashboard</h2>
           <Box/>
 
           <div className='px-1 flex-1 pt-2 pb-2'>
           </div>
-            <div className=' flex flex-row text-gray-500 justify-end'>
+            <div className=' flex flex-row justify-end'>
               {/* <DatePicker onChange={onChange} value={value}/> */}
               <DateTimeR/>
             </div>
@@ -39,7 +39,7 @@ function Dash() {
         <div className='grid lg:grid-cols-4 gap-4 p-4 relative '>
           
             <div className='md:w-4/5 lg:w-full lg:row-span-2 overflow-scroll max-h-270 lg:col-span-2 flex justify-between 
-                            w-full  p-4 rounded-lg bg-gray-200 '>
+                            w-full  p-4 rounded-lg bg-gray-300 '>
 
               <Tabled/>
 
@@ -65,7 +65,7 @@ function Dash() {
             </div> */}
             
 
-            <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            <div className='md:w-4/5 lg:w-full lg:col-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-300 '>
             
               <Penjualan/>            
             
@@ -93,7 +93,7 @@ function Dash() {
               
             </div>  */}
 
-            <div className='md:w-4/5 lg:w-full lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+            <div className='md:w-4/5 lg:w-full lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-300 '>
 
               <Pembayaran/>
               
@@ -108,13 +108,13 @@ function Dash() {
         
         <div className='grid lg:grid-cols-3 gap-4 p-4 relative '>
           
-          <div className='md:w-4/5 lg:w-full lg:row-span-2 overflow-scroll  lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+          <div className='md:w-4/5 lg:w-full lg:row-span-2 overflow-scroll  lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-300 '>
 
             <DataGrafGAB/>
 
           </div>         
 
-          <div className='md:w-4/5 lg:w-full lg:row-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-200 '>
+          <div className='md:w-4/5 lg:w-full lg:row-span-2  flex justify-between w-full  p-4 rounded-lg bg-gray-300 '>
 
               <Pembayaran/>
               
