@@ -24,7 +24,7 @@ function Dash() {
 
         <div className={`px-8 flex-1 pt-3 bg-`}>
 
-          <h2 className='font-mono text-white'>Dashboard</h2>
+          <h2 className='font-mono text-white'>daeng Dashboard</h2>
           <Box/>
 
           <div className='px-1 flex-1 pt-2 pb-2'>
