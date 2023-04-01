@@ -1,7 +1,8 @@
 import '../App.css'
 import Detpenj from "../component/Det_pen/detpenj"
-import Header from "../component/Header/header"
-import Sidebar from '../component/Sidebar/sidebar'
+import Sdbar from '../component/Sidebar/sdbar'
+// import Header from "../component/Header/header"
+// import Sidebar from '../component/Sidebar/sidebar'
 
 function Dpenjualan (){
 
@@ -11,8 +12,9 @@ function Dpenjualan (){
 
             <div>
                 <div>
-                <Sidebar/>
-                <Header/>
+                {/* <Sidebar/>
+                <Header/> */}
+                <Sdbar/>
 
                 </div>
 

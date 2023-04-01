@@ -5,14 +5,15 @@ import {NavLink, useNavigate} from 'react-router-dom'
 import {SiBathasu} from 'react-icons/si'
 import {GiConverseShoe} from 'react-icons/gi'
 import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
-// import Search from '../Dash/search'
 import { HiUserCircle } from 'react-icons/hi'
+// import { BiSearch } from 'react-icons/bi'
 
 
 function Sdbar() {
 
     const navigate = useNavigate()
     const [open, setOpen] =  useState(false);
+    // const [buka, setbuka] =  useState(false);
     // const geser = () => setOpen(!open);
 
     const menu = [
@@ -27,21 +28,29 @@ function Sdbar() {
 
   return (
     <>   
-        <header className='flex flex-row w-screen space-x-2 justify-end '>
+        <header className='flex flex-row w-screen space-x-2 justify-end bg-dark-purple'>
             <div className=" flex  space-x-1">
-                <div className='flex-1 mb-1 space-x-3 text-black items-center grid lg:grid-cols-3 gap-1'>
+                <div className='flex-1 mb-1 space-x-3 text-white items-center grid lg:grid-cols-4 gap-1'>
                     
-                    <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer ml-3`} onClick={()=> setOpen(!open)}/>
+                    {/* <BiSearch size={'25'} className={`cursor-pointer ml-3`} onClick={()=> setbuka(!buka)}/> */}
+                    <TfiLayoutSidebarLeft size={'22'} className={`cursor-pointer ml-3`} onClick={()=> setOpen(!open)}/>
                     <BsBellFill size={'25'} className='cursor-pointer'/>
                     <HiUserCircle size={'32'} className='cursor-pointer'/>
-                    
-                </div>
 
-                    {/* <Search/> */}
+                </div>
+                {/* <div className={` ${buka ? 'w-48' : 'w-20'} `}>
+                    <div className='border border-gray-200 rounded-full w-full flex py-1 px-1 mt-1 items-center'>
+
+                        <input type={'text'} className = 'rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500' placeholder = ' Search'/>
+                        <button type='submit' className='md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
+                            <BiSearch/>
+                        </button>
+                    </div>
+                </div> */}
             </div>
         </header>
 
-        <nav className = {` bg-black h-screen mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {` bg-marron h-screen mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
             
             <div className='py-2 px-3 overflow-hidden '>
 
@@ -52,7 +61,7 @@ function Sdbar() {
 
                 <div className='inline-flex ml-1.5 mb-16'>
                             
-                    <SiBathasu className={`text-red-800 bg-black rounded-full text-4xl cursor-pointer 
+                    <SiBathasu className={`text-black bg-marron rounded-full text-4xl cursor-pointer 
                                 block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
                     <h3 className={`text-white cursor-pointer origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
                             Converse
@@ -61,7 +70,7 @@ function Sdbar() {
                 </div>
 
                 <div className='flex justify-center rotate-12 -mt-9 mb-2'>
-                    <GiConverseShoe className={`text-red-800 bg-black rounded-full text-4xl  
+                    <GiConverseShoe className={`text-white bg-marron rounded-full text-4xl  
                                     block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg] ml-4'}`}/>
 
                 </div>

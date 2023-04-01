@@ -6,7 +6,10 @@ const Tabled = () => {
         <>
             <div className="w-full">
                 <div>
-                    Tabel Data
+                    <h3>
+                        Tabel Data
+
+                    </h3>
                 </div>
                 <Table striped bordered hover size="sm bg-white">
                     <thead>
