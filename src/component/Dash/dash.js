@@ -20,7 +20,7 @@ function Dash() {
   return (
 
     <>
-      <div className={`ml-48 mb-4 flex-wrap`}>
+      <div className={`ml-20 mb-4 flex-wrap`}>
 
         <div className={`px-8 flex-1 pt-3 bg-`}>
 

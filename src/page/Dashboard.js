@@ -1,7 +1,8 @@
 import React from 'react'
-import Sidebar from '../component/Sidebar/sidebar';
-import Header from '../component/Header/header'
+// import Sidebar from '../component/Sidebar/sidebar';
+// import Header from '../component/Header/header'
 import Dash from '../component/Dash/dash'
+import Sdbar from '../component/Sidebar/sdbar';
 // import Sidebar from '../component/Sidebar'
 // import './Dash.css'
 // import '../App.css'
@@ -13,8 +14,9 @@ function Dashboard() {
     <> 
       <div>
         <div>
-          <Sidebar/>
-          <Header/>
+          {/* <Sidebar/>
+          <Header/> */}
+          <Sdbar/>
 
         </div>
 
