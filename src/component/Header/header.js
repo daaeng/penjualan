@@ -2,7 +2,7 @@ import React from 'react'
 import Search from '../Dash/search';
 import {HiUserCircle} from 'react-icons/hi'
 import {BsBellFill} from 'react-icons/bs'
-import { Dropdown } from 'react-bootstrap';
+// import { Dropdown } from 'react-bootstrap';
 // import { NavDropdown } from 'react-bootstrap';
 // import {NavLink} from 'react-router-dom'
 // import {Dropdown } from 'react-bootstrap';
@@ -23,18 +23,6 @@ function Header() {
               <HiUserCircle size={'32'} className='cursor-pointer'/>
 
             </div>
-
-            <Dropdown className=''>
-              <Dropdown.Toggle  variant='primary' className='text-white flex items-center'>
-                
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
           </div>
 
         </div>

@@ -6,14 +6,14 @@ import {SiBathasu} from 'react-icons/si'
 import {GiConverseShoe} from 'react-icons/gi'
 import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
 import { HiUserCircle } from 'react-icons/hi'
-// import { BiSearch } from 'react-icons/bi'
+import { BiSearch } from 'react-icons/bi'
 
 
 function Sdbar() {
 
     const navigate = useNavigate()
     const [open, setOpen] =  useState(false);
-    // const [buka, setbuka] =  useState(false);
+    const [buka, setbuka] =  useState(false);
     // const geser = () => setOpen(!open);
 
     const menu = [
@@ -28,29 +28,30 @@ function Sdbar() {
 
   return (
     <>   
-        <header className='flex flex-row w-screen space-x-2 justify-end bg-dark-purple'>
+        <header className='flex flex-row w-screen space-x-2 justify-end bg-white'>
             <div className=" flex  space-x-1">
-                <div className='flex-1 mb-1 space-x-3 text-white items-center grid lg:grid-cols-4 gap-1'>
-                    
-                    {/* <BiSearch size={'25'} className={`cursor-pointer ml-3`} onClick={()=> setbuka(!buka)}/> */}
-                    <TfiLayoutSidebarLeft size={'22'} className={`cursor-pointer ml-3`} onClick={()=> setOpen(!open)}/>
-                    <BsBellFill size={'25'} className='cursor-pointer'/>
-                    <HiUserCircle size={'32'} className='cursor-pointer'/>
+                <div className={`-mt-1 ${!buka ? null : 'w-64'} `}>
+                    <div className={`border border-gray-200 ${!buka  && 'hidden' } rounded-full w-full flex py-1 px-1 mt-1 items-center `}>
 
-                </div>
-                {/* <div className={` ${buka ? 'w-48' : 'w-20'} `}>
-                    <div className='border border-gray-200 rounded-full w-full flex py-1 px-1 mt-1 items-center'>
-
-                        <input type={'text'} className = 'rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500' placeholder = ' Search'/>
+                        <input type={'text'} className ={`rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500`} placeholder = ' Search'/>
                         <button type='submit' className='md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
-                            <BiSearch/>
+                            <BiSearch className='duration-300'/>
                         </button>
                     </div>
-                </div> */}
+                </div>
+
+                <div className='flex flex-1 mb-1 mr-2 space-x-3 text-marron items-center'>
+                    
+                    <BiSearch size={'25'} className={`cursor-pointer ml-3`} onClick={()=> setbuka(!buka)}/>
+                    <TfiLayoutSidebarLeft size={'22'} className={`cursor-pointer ml-3`} onClick={()=> setOpen(!open)}/>
+                    <BsBellFill size={'25'} className='cursor-pointer'/>
+                    <HiUserCircle size={'32'} className=''/>
+
+                </div>
             </div>
         </header>
 
-        <nav className = {` bg-marron h-screen mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {` bg-marron h-fit mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
             
             <div className='py-2 px-3 overflow-hidden '>
 
@@ -61,8 +62,8 @@ function Sdbar() {
 
                 <div className='inline-flex ml-1.5 mb-16'>
                             
-                    <SiBathasu className={`text-black bg-marron rounded-full text-4xl cursor-pointer 
-                                block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
+                    <SiBathasu className={`text-black hover:text-yellow-600 bg-marron rounded-full text-4xl cursor-pointer 
+                                block float-left mr-2 duration-500 ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
                     <h3 className={`text-white cursor-pointer origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
                             Converse
                     </h3>

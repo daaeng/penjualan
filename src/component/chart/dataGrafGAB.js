@@ -1,5 +1,3 @@
-//Data grafik
-// import './App.css';
 import React from 'react';
 import {
     Chart as ChartJS,
@@ -29,7 +27,7 @@ function DataGrafGAB(){
 
     return(
         <>
-            <div  style={{ position: "relative", height: "auto", width: "80vw" }} className='bg-white rounded-lg'>
+            <div className='bg-white rounded w-full'>
 
                 <Line options={options} data={data} />
 

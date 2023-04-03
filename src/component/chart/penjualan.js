@@ -25,7 +25,7 @@ function Penjualan(){
 
     return(
         <>
-            <div  style={{ position: "relative", height: "auto", width: "80vw" }} className='bg-white rounded-lg'>
+            <div className='bg-white rounded w-full'>
               
                 {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />

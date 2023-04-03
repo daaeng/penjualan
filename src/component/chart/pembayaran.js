@@ -31,7 +31,7 @@ function Pembayaran(){
     return(
         <>
             
-            <div  style={{ position: "relative", height: "auto", width: "80vw" }} className='bg-white rounded-lg'>
+            <div className='bg-white rounded w-full'>
 
                 <Bar 
                   options={options} 
