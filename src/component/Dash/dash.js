@@ -25,8 +25,6 @@ function Dash() {
 
         <div className={`px-8 flex-1 pt-3 bg-`}>
 
-          
-
           <h2 className='font-mono text-black'>Dashboard</h2>
           
           <div className='px-1 flex-1 pt-2 pb-2 text-gray-200'>
@@ -43,7 +41,7 @@ function Dash() {
 
         </div>
         
-        <div className='grid lg:grid-cols-4 gap-4 p-4 relative '>
+        <div className='grid lg:grid-cols-4 gap-4 p-4  '>
           
             <div className='lg:row-span-2 overflow-scroll max-h-270 lg:col-span-2 flex justify-between 
                             w-full  p-4 rounded-lg bg-gray-300 '>
@@ -68,7 +66,7 @@ function Dash() {
 
           <h3 className='ml-7 bg-slate-50'> tes tes</h3>
               
-        <div className='grid lg:grid-cols-3 gap-4 p-4 relative '>
+        <div className='grid lg:grid-cols-3 gap-4 p-4'>
           
           <div className='lg:row-span-2 overflow-scroll  lg:col-span-2 flex justify-between w-full  p-4 rounded-lg bg-gray-300 '>
 

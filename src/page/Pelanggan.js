@@ -1,20 +1,22 @@
 import React from 'react'
-import Header from '../component/Header/header'
 import Planggan from '../component/Plang/planggan'
-import Sidebar from '../component/Sidebar/sidebar'
+import Sdbar from '../component/Sidebar/sdbar'
+// import Header from '../component/Header/header'
+// import Sidebar from '../component/Sidebar/sidebar'
 
 const Pelanggan = () => {
   return (
     <> 
       <div>
         <div>
-          <Sidebar/>
-          <Header/>
+          {/* <Sidebar/>
+          <Header/> */}
+          <Sdbar/>
 
         </div>
 
         <div>
-          <section className={`bg-marron max-h-128`}>
+          <section className={``}>
             
             <Planggan/>
 

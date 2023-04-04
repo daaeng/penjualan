@@ -19,7 +19,7 @@ function Dpenjualan (){
                 </div>
 
                 <div>
-                <section className={`bg-marron max-h-128`}>
+                <section className={``}>
                     
                     <Detpenj/>
 
