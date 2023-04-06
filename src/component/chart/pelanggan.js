@@ -72,7 +72,7 @@ datasets: [
         ],
         borderWidth: 1,
     }
-]
+  ]
 }
 
 const options2 = {
@@ -125,5 +125,5 @@ datasets: [
         ],
         borderWidth: 1,
     }
-]
+  ]
 }

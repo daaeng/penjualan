@@ -23,8 +23,6 @@ function DataGrafGAB(){
       Legend
     );
 
-  
-
     return(
         <>
             <div className='bg-white rounded w-full'>

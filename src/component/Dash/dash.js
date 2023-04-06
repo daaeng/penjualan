@@ -1,9 +1,9 @@
 import React from 'react'
-import Box from './box';
+// import Box from './box';
 import Penjualan from '../chart/penjualan.js';
 import Pembayaran from '../chart/pembayaran';
 import Tabled from '../Table/tabled';
-import DateTimeR from '../dateRange/dateTimeR';
+// import DateTimeR from '../dateRange/dateTimeR';
 import DataGrafGAB from '../chart/dataGrafGAB';
 import PelangganChart from '../chart/pelanggan';
 // import Search from './search';
@@ -17,13 +17,13 @@ function Dash() {
   // const navigate = useNavigate()
   
   // const [value, onChange] = useState(new Date());
-
+  
   return (
 
     <>
-      <div className={`ml-24 mb-4 flex-wrap w-full`}>
+      {/* <div className={`ml-24 mb-4 flex-wrap w-full relative`}> */}
 
-        <div className={`px-8 flex-1 pt-3 bg-`}>
+        {/* <div className={`px-8 flex-1 pt-3 bg-`}>
 
           <h2 className='font-mono text-black'>Dashboard</h2>
           
@@ -32,14 +32,16 @@ function Dash() {
           </div>
           
           <Box/>
-
-
+          
+          
           <div className=' flex flex-row justify-end'>
-            {/* <DatePicker onChange={onChange} value={value}/> */}
+            <DatePicker onChange={onChange} value={value}/>
             <DateTimeR/>
-          </div>
-
-        </div>
+            </div>
+            
+          </div> */}
+        
+        <h3 className='ml-7 bg-slate-50 mt-2 -mb-4'> Data Grafik</h3>
         
         <div className='grid lg:grid-cols-4 gap-4 p-4  '>
           
@@ -64,7 +66,7 @@ function Dash() {
             
         </div>
 
-          <h3 className='ml-7 bg-slate-50'> tes tes</h3>
+        <h3 className='ml-7 bg-slate-50'> tes tes</h3>
               
         <div className='grid lg:grid-cols-3 gap-4 p-4'>
           
@@ -82,7 +84,7 @@ function Dash() {
           
         </div>
                   
-      </div>
+      {/* </div> */}
       
     </>
     

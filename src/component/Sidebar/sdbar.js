@@ -36,7 +36,7 @@ function Sdbar() {
 
   return (
     <>   
-        <header className='flex flex-row w-screen    space-x-2 justify-end bg-blue-100'>
+        <header className='flex flex-row w-screen  space-x-2 justify-end bg-blue-100'>
             <div className=" flex space-x-1">
 
                 <div className={`-mt-1 ${!buka ? null : 'w-64'} `}>
@@ -60,7 +60,7 @@ function Sdbar() {
                 </div>
             </div>
 
-            <div className={`bg-gray-200 mt-32 fixed ${bka ? 'mr-10' : 'show'}`}>
+            <div className={`bg-gray-500 mt-32 fixed ${bka ? 'mr-10' : 'show'}`}>
                 <ul className={`-ml-7 mr-1 mt-1 ${!bka  && 'hidden' }`}>
                     {menuHeader.map((val, index) => {
                         return (
@@ -71,9 +71,9 @@ function Sdbar() {
                                     
                                     className={`cursor-pointer no-underline flex flex-row duration-300 
                                     ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                                    hover:bg-light-white hover:text-yellow-600 px-2`} >
+                                    hover:bg-light-white hover:text-yellow-600  px-2`} >
                                     <div className={`mr-1 mt-0.5`}>{val.icon}</div>
-                                    <div className={`duration-50`} >{val.name}</div> 
+                                    <div className={`text-1xl duration-50`} >{val.name}</div> 
 
                                 </NavLink>
                             </>
@@ -83,26 +83,26 @@ function Sdbar() {
             </div>
         </header>
 
-        <nav className = {` bg-marron h-fit mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : 'w-20'} `}>
+        <nav className = {` bg-marron h-fit mt-3 ml-4 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : ' sm:w-10 md:w-16'} `}>
             
-            <div className='py-2 px-3 overflow-hidden '>
+            <div className='sm:p-1 md:p-3 items-center '>
 
                 {/* <BsArrowLeftCircleFill 
                     className={`text-black bg-white text-2xl rounded-full 
                     absolute -ml-5 top-5 border border-dark-purple cursor-pointer ${!open && 'rotate-180'}` } 
                     onClick={()=> setOpen(!open)}/> */}
 
-                <div className='inline-flex ml-1.5 mb-16'>
+                <div className='inline-flex justify-center mb-16'>
                             
                 <SiBathasu className={`text-dark-purple bg-marron rounded-full text-4xl cursor-pointer 
-                                block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
+                                float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg]'}`} onClick={()=> navigate('/')}/>
                     <h3 className={`text-white cursor-pointer origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
                             Converse
                     </h3>
 
                 </div>
 
-                <div className='flex justify-center rotate-12 -mt-14 mb-5'>
+                <div className='flex justify-center -ml-2 rotate-12 -mt-14 mb-5'>
                     <GiConverseShoe className={`text-white bg-marron rounded-full text-4xl  
                                     block float-left mr-2 duration-500 hover:text-yellow-600  ${!open && 'rotate-[360deg] ml-4'}`}/>
 
@@ -119,7 +119,7 @@ function Sdbar() {
                                 ${!open && 'active' }items-center text-gray-100 overflow-y-visible
                                 hover:bg-light-white hover:text-yellow-600 rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
                                 
-                                        <div className={`ml-2 text-2xl `}>{val.icon}</div>
+                                        <div className={`ml-1 text-2xl `}>{val.icon}</div>
                                         <div className={`ml-2 duration-50 ${!open && 'hidden' }`} >{val.name}</div> 
 
                             </NavLink>

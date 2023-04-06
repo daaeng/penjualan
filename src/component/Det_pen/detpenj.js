@@ -17,7 +17,7 @@ const Detpenj = () => {
                         _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
                     </div>
             
-                <div className="flex flex-row bg-green-500 ml-20 ">
+                <div className="flex flex-row bg-green-500 ">
                     <div className=" bg-red-100 px-1 py-1 cursor-pointer">
                         <button
                         onClick = {() => navigate ('/')} 
@@ -27,7 +27,7 @@ const Detpenj = () => {
 
                     </div>
                 </div>
-                <div className="flex flex-row bg-green-500 ml-48 ">
+                <div className="flex flex-row bg-green-500">
                     <div className=" bg-red-100 px-1 py-1 cursor-pointer">
                         <button
                         onClick = {() => navigate ('/')} 

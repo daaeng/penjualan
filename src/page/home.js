@@ -1,8 +1,31 @@
 import React from 'react'
+import Sdbar from '../component/Sidebar/sdbar'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+
+      <div>
+          <div>
+          {/* <Sidebar/>
+          <Header/> */}
+          <Sdbar/>
+
+          </div>
+
+          <div>
+          <section className={``}>
+              
+              <h1>
+                Home
+              </h1>
+
+          </section>
+          </div>
+      </div>
+        
+
+    </>
   )
 }
 

@@ -23,10 +23,6 @@ function Dpenjualan (){
                     
                     <Detpenj/>
 
-                    <div className='flex justify-end bg-marron text-white px-4 w-screen'>
-                    Ini Paling Bawah
-
-                    </div>
                 </section>
                 </div>
             </div>

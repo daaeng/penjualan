@@ -1,8 +1,9 @@
 import React from 'react'
+import Sdbar from '../component/Sidebar/sdbar';
+import Dashbor from '../component/Dash/dashbor';
 // import Sidebar from '../component/Sidebar/sidebar';
 // import Header from '../component/Header/header'
-import Dash from '../component/Dash/dash'
-import Sdbar from '../component/Sidebar/sdbar';
+// import Dash from '../component/Dash/dash'
 // import Sidebar from '../component/Sidebar'
 // import './Dash.css'
 // import '../App.css'
@@ -21,18 +22,18 @@ function Dashboard() {
         </div>
 
         <div>
-          <section className={`flex flex-wrap`}>
+          <section className={``}>
             
-            <Dash/>
+            {/* <Dash/> */}
+            <Dashbor/>
 
-            <div className='flex justify-end bg-marron text-white px-4 w-screen'>
+            {/* <div className='flex justify-end bg-marron text-white px-4 w-screen'>
               Ini Paling Bawah
-
-            </div>
+            </div> */}
+            
           </section>
         </div>
       </div>
-      
       
     </>
     

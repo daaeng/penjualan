@@ -27,13 +27,6 @@ function Header() {
 
         </div>
       </header>
-
-      {/* <div className='bg-red-200 flex flex-row text-gray-500 justify-end'>
-        contoh
-        <div className='bg-blue-300 mr-6 w-52 h-60'>
-          aaa
-        </div>
-      </div> */}
     </>
     
   )

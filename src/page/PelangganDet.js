@@ -13,7 +13,7 @@ const Pelanggan = () => {
         </div>
 
         <div>
-          <section className={`bg-marron max-h-128`}>
+          <section className={``}>
             
               Pelanggan Detail
 
@@ -21,7 +21,6 @@ const Pelanggan = () => {
 
         </div>
       </div>
-      
       
     </>
   )

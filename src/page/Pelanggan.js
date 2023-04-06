@@ -25,9 +25,9 @@ const Pelanggan = () => {
         </div>
       </div>
       
-            {/* <div className='flex justify-end bg-marron text-white px-4 w-screen'>
-              Ini Paling Bawah
-            </div> */}
+        {/* <div className='flex justify-end bg-marron text-white px-4 w-screen'>
+          Ini Paling Bawah
+        </div> */}
       
     </>
   )

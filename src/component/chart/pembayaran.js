@@ -43,7 +43,6 @@ function Pembayaran(){
             </div>
         </>
     )
-
 }
 
 export default Pembayaran

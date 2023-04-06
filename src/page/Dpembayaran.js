@@ -1,26 +1,23 @@
 import React from 'react'
-import Header from '../component/Header/header'
-import Sidebar from '../component/Sidebar/sidebar'
+import Sdbar from '../component/Sidebar/sdbar'
 
 const Dpembayaran = () => {
   return (
-    <div>
+    <>
+      <div>
         <div>
-          <Sidebar/>
-          <Header/>
+          
+          <Sdbar/>
 
         </div>
 
         <div>
-          <section className={`bg-marron max-h-128`}>
-            <div className={`ml-48 mb-4`}>
-              <h2 className='font-mono text-white'>Pembayaran</h2>
-              
-            </div>
-
+          <section className={`flex flex-wrap`}>
+            <h1>Pembayaran</h1>
           </section>
         </div>
       </div>
+    </>
   )
 }
 

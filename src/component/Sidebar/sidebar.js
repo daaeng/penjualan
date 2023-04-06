@@ -37,7 +37,6 @@ function Sidebar() {
                         className={`text-black bg-white text-2xl rounded-full 
                         absolute -right-3 top-5 border border-dark-purple cursor-pointer ${!open && 'rotate-180'}` } 
                         onClick={()=> setOpen(!open)}/>
-                    {/* onClick={()=> setOpen(!open)}     */}
 
                 <div className='inline-flex ml-1.5 mb-16'>
                             
@@ -46,7 +45,6 @@ function Sidebar() {
                     <h3 className={`text-white cursor-pointer origin-left font-medium text-2xl duration-300 ${!open && 'scale-0'}`}>
                             Converse
                     </h3>
-                    
 
                 </div>
 
@@ -65,22 +63,18 @@ function Sidebar() {
                                 
                                 className={`cursor-pointer no-underline flex flex-row duration-300 
                                 ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                                hover:bg-light-white hover:text-yellow-600 rounded-xl px-2.5 py-4 -ml-1 -mr-7`} >
-                                
+                                hover:bg-light-white hover:text-yellow-600 rounded-xl px-2.5 py-4 -ml-1 -mr-7`} > 
                                         
                                         <div className={`ml-2 text-2xl `}>{val.icon}</div>
                                         <div className={`ml-2 duration-50 ${!open && 'hidden' }`} >{val.name}</div> 
-                                        
                                 
-
                             </NavLink>
                         </>
                     );
                 })}
 
             </div>
-            
- 
+             
         </nav>
     </>
   )

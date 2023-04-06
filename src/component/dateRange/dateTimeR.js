@@ -18,14 +18,15 @@ function DateTimeR () {
 
   return (
     <>
-      <div className="rounded w-60 px-1 py-1 bg-red-200">
+      <div className="rounded w-60 px-1 py-1 bg-marron text-white">
+       
         <Datepicker 
           value={value} 
           onChange={handleValueChange} 
           showShortcuts={false} 
-          /> 
+        /> 
         
-          Hasil
+          Hasil 
       </div>
     </>
 
