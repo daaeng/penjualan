@@ -1,5 +1,6 @@
 import React from 'react'
 import Sdbar from '../component/Sidebar/sdbar'
+import Homepg from '../component/homep/homepg'
 
 const Home = () => {
   return (
@@ -7,18 +8,15 @@ const Home = () => {
 
       <div>
           <div>
-          {/* <Sidebar/>
-          <Header/> */}
-          <Sdbar/>
+          
+            <Sdbar/>
 
           </div>
 
           <div>
           <section className={``}>
               
-              <h1>
-                Home
-              </h1>
+              <Homepg/>
 
           </section>
           </div>

@@ -26,7 +26,7 @@ function DateTimeR () {
           showShortcuts={false} 
         /> 
         
-          Hasil 
+          
       </div>
     </>
 

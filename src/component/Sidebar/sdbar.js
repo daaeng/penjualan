@@ -39,11 +39,11 @@ function Sdbar() {
         <header className='flex flex-row w-screen  space-x-2 justify-end bg-blue-100'>
             <div className=" flex space-x-1">
 
-                <div className={`-mt-1 ${!buka ? null : 'w-64'} `}>
+                <div className={`-mt-1 ${!buka ? null : 'md:w-44 sm:w-40'} -mr-2`}>
                     <div className={`border border-gray-200 ${!buka  && 'hidden' } rounded-full w-full flex py-1 px-1 mt-1 items-center `}>
 
-                        <input type={'text'} className ={`rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500`} placeholder = ' Search'/>
-                        <button type='submit' className='md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
+                        <input type={'text'} className ={`sm:w-20 rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500`} placeholder = ' Search'/>
+                        <button type='submit' className='sm:-ml-16 md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
                             <BiSearch className='duration-300'/>
                         </button>
                     </div>
@@ -51,10 +51,10 @@ function Sdbar() {
 
                 <div className='flex flex-1 mb-1 mr-2 space-x-3 text-marron items-center'>
                     
-                    <BiSearch size={'25'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setbuka(!buka)}/>
-                    <TfiLayoutSidebarLeft size={'22'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
-                    <BsBellFill size={'25'} className='cursor-pointer  hover:text-darkgolden'/>
-                    <HiUserCircle size={'32'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
+                    <BiSearch size={'23'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setbuka(!buka)}/>
+                    <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+                    <BsBellFill size={'20'} className='cursor-pointer  hover:text-darkgolden'/>
+                    <HiUserCircle size={'28'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
                     
 
                 </div>

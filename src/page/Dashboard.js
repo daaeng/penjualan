@@ -15,21 +15,15 @@ function Dashboard() {
     <> 
       <div>
         <div>
-          {/* <Sidebar/>
-          <Header/> */}
+          
           <Sdbar/>
 
         </div>
 
         <div>
           <section className={``}>
-            
-            {/* <Dash/> */}
-            <Dashbor/>
 
-            {/* <div className='flex justify-end bg-marron text-white px-4 w-screen'>
-              Ini Paling Bawah
-            </div> */}
+            <Dashbor/>
             
           </section>
         </div>

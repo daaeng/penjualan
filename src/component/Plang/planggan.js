@@ -1,6 +1,7 @@
 import React from 'react'
-import {BsFillEmojiWinkFill} from 'react-icons/bs'
-import {FaEdit} from 'react-icons/fa'
+import Modet from './moDetPla';
+// import {BsFillEmojiWinkFill} from 'react-icons/bs'
+// import {FaEdit} from 'react-icons/fa'
 // import Modet from './moDetPla';
 
 function Planggan() {
@@ -8,17 +9,26 @@ function Planggan() {
   return (
 
     <>
-      <div className={`ml-24 mb-4 flex-wrap w-full`}>
+      <div className=' sm:ml-14 md:ml-20 mr-3'>
+          <div className='ml-2 mt-1'>
+              <h2 className='font-mono text-black'>
+                Pelanggan
+              </h2>
 
-        <div className={`px-8 flex-1 pt-3 bg-`}>
+              <div className='border ' />
 
-          <h2 className='font-mono text-black'>Pelanggan</h2>
+              <div className='mt-2 mb-2'>
+                <Modet/>
+              </div>
 
-          <div className='px-1 flex-1 pt-2 pb-2 text-gray-200'>
-          _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
           </div>
-            
-        </div>
+
+      </div>
+
+
+      {/* <div className={`ml-24 mb-4 flex-wrap w-full`}>
+
+        
         
         <div className='md:w-auto lg:w-full grid lg:grid-cols-3 gap-4 p-4  '>
 
@@ -45,7 +55,7 @@ function Planggan() {
         </div>
             <h3 className='ml-7'>Tes tes</h3>
       
-      </div>
+      </div> */}
       
     </>
     
