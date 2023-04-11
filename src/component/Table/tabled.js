@@ -36,7 +36,10 @@ const rows = [
 
 export default function Tabled() {
   return (
-    <div className='bg-white rounded-lg' style={{ height: 450, width: '100%' }}>
+    <div className='bg-white p-1 rounded-lg' style={{ height: 300, width: '100%' }}>
+      <h6>
+        Data Pelanggan
+      </h6> 
       <DataGrid
         rows={rows}
         columns={columns}

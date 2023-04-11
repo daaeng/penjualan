@@ -3,7 +3,7 @@ import Penjualan from '../chart/penjualan.js';
 import Tabled from '../Table/tabled';
 // import Pembayaran from '../chart/pembayaran';
 // import DataGrafGAB from '../chart/dataGrafGAB';
-// import PelangganChart from '../chart/pelanggan';
+import PelangganChart from '../chart/pelanggan';
 // import {MdDownload, MdPrint} from 'react-icons/md'
 
 function Dash() {
@@ -12,14 +12,19 @@ function Dash() {
     
     <>
       <div className='flex p-2'>
-        <div className='w-full p-1 bg-blue-100 rounded-lg'>
-          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2 rounded-md w-full'>
-            <div className='sm:col-span-2 md:col-span-2 lg:col-span-2'>
+        <div className='w-full p-1  rounded-lg'>
+          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 rounded-md w-full'>
+            
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2 row-span-2'>
+              <Penjualan/> 
+            </div>
+
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
               <Tabled/>
             </div>
-            
-            <div className='sm:col-span-2 md:col-span-2 lg:col-span-2'>
-              <Penjualan/> 
+
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+              <PelangganChart/>
             </div>
             
           </div>

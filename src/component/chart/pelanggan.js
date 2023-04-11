@@ -8,9 +8,9 @@ function PelangganChart(){
 
     return(
         <>
-            <div className='bg-white rounded w-full'>
+            <div className='bg-white rounded w-full p-1'>
                 <Pie options={options} data={data} />
-                <Pie options={options2} data={data2} />
+                {/* <Pie options={options2} data={data2} /> */}
 
             </div>
         </>
@@ -27,7 +27,7 @@ const options = {
   
     plugins: {
       legend: {
-        position: 'bottom'
+        position: 'right'
       },
       title: {
         display: true,
@@ -75,55 +75,55 @@ datasets: [
   ]
 }
 
-const options2 = {
-    responsive: true,
-    maintainAspectRatio: true,
-    aspectRatio: 2,
+// const options2 = {
+//     responsive: true,
+//     maintainAspectRatio: true,
+//     aspectRatio: 2,
   
-    plugins: {
-      legend: {
-        position: 'bottom'
-      },
-      title: {
-        display: true,
-        text: 'Chart Line Pembayaran',
-      },
-    },
-};
+//     plugins: {
+//       legend: {
+//         position: 'bottom'
+//       },
+//       title: {
+//         display: true,
+//         text: 'Chart Line Pembayaran',
+//       },
+//     },
+// };
 
-const data2 = {
-labels,
-datasets: [
-    {
-    label: 'Pembayaran',
-    data: [60, 30, 10, 50, 90, 75, 120, 60, 80, 90],
+// const data2 = {
+// labels,
+// datasets: [
+//     {
+//     label: 'Pembayaran',
+//     data: [60, 30, 10, 50, 90, 75, 120, 60, 80, 90],
 
-    backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 172, 102, 0.2)',
-        'rgba(193, 110, 21, 0.2)',
-        'rgba(255, 59, 69, 0.2)',            
+//     backgroundColor: [
+//         'rgba(255, 99, 132, 0.5)',
+//         'rgba(54, 162, 235, 0.2)',
+//         'rgba(255, 206, 86, 0.2)',
+//         'rgba(75, 192, 192, 0.2)',
+//         'rgba(153, 102, 255, 0.2)',
+//         'rgba(255, 159, 64, 0.2)',
+//         'rgba(255, 206, 86, 0.2)',
+//         'rgba(75, 172, 102, 0.2)',
+//         'rgba(193, 110, 21, 0.2)',
+//         'rgba(255, 59, 69, 0.2)',            
 
-    ],
-    borderColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 172, 102, 0.2)',
-        'rgba(153, 102, 215, 0.2)',
-        'rgba(255, 59, 69, 0.2)', 
-        ],
-        borderWidth: 1,
-    }
-  ]
-}
+//     ],
+//     borderColor: [
+//         'rgba(255, 99, 132, 0.5)',
+//         'rgba(54, 162, 235, 0.2)',
+//         'rgba(255, 206, 86, 0.2)',
+//         'rgba(75, 192, 192, 0.2)',
+//         'rgba(153, 102, 255, 0.2)',
+//         'rgba(255, 159, 64, 0.2)',
+//         'rgba(255, 206, 86, 0.2)',
+//         'rgba(75, 172, 102, 0.2)',
+//         'rgba(153, 102, 215, 0.2)',
+//         'rgba(255, 59, 69, 0.2)', 
+//         ],
+//         borderWidth: 1,
+//     }
+//   ]
+// }
