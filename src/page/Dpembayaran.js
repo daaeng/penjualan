@@ -12,7 +12,7 @@ const Dpembayaran = () => {
         </div>
 
         <div>
-          <section className={`flex flex-wrap`}>
+          <section className={`bg-gray-50 -mt-1`}>
             <h1>Pembayaran</h1>
           </section>
         </div>

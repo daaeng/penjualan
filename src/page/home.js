@@ -14,7 +14,7 @@ const Home = () => {
           </div>
 
           <div>
-          <section className={``}>
+          <section className={`bg-gray-50 -mt-1`}>
               
               <Homepg/>
 

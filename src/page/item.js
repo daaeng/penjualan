@@ -13,7 +13,7 @@ const Item = () => {
           </div>
 
           <div>
-          <section className={``}>
+          <section className={`bg-gray-50 -mt-1`}>
               
               <h1>
                 Item

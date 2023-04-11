@@ -19,7 +19,7 @@ function Dpenjualan (){
                 </div>
 
                 <div>
-                <section className={``}>
+                <section className={`bg-gray-50 -mt-1`}>
                     
                     <Detpenj/>
 
