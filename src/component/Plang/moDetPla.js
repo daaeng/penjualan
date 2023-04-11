@@ -33,7 +33,7 @@ const Modet = () => {
     return(
         <>
             <div className='flex justify-center'>
-                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-3 p-1 rounded-lg ml-2 mr-2 bg-marron w-full'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-3 p-1 rounded-lg ml-2 mr-2 w-full'>
                 
                 {mnPlg.map((val, index) =>{
                     return(
@@ -42,8 +42,8 @@ const Modet = () => {
                         <NavLink
                             key= {index}
                             to= {val.path}
-                            className={`md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-1 rounded-md w-auto bg-black`}>
-                            {/* <div className=''> */}
+                            className={`md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-1 rounded-md w-auto`}>
+
                                 <div className='grid lg:grid-cols-3 p-2  rounded-md text-marron bg-slate-200 hover:bg-slate-400 hover:text-white'>
                                     <h4 className='lg:col-span-2'>
                                     {val.icon1}
@@ -58,8 +58,6 @@ const Modet = () => {
                                     </h6>
                                 
                                 </div>  
-
-                            {/* </div> */}
                                                             
                         </NavLink>
                     

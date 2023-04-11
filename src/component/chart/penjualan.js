@@ -48,7 +48,7 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Bar Chart Penjualan',
+        text: 'Bar Chart Transaksi',
       },
   },
 };
@@ -62,6 +62,11 @@ export const data = {
       label: 'Penjualan',
       data: [60, 30, 10, 50, 90, 75, 120, 60, 80, 90],
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+    {
+      label: 'Pembayaran',
+      data: [50, 20, 30, 20, 60, 80, 90, 90, 75, 120],
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
   ]
 }
