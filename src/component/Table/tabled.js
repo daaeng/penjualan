@@ -36,17 +36,26 @@ const rows = [
 
 export default function Tabled() {
   return (
-    <div className='bg-white p-1 rounded-lg' style={{ height: 300, width: '100%' }}>
-      <h6>
-        Data Pelanggan
-      </h6> 
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        // checkboxSelection
-      />
-    </div>
+    
+    <>
+      <div className=''>
+        <div className='bg-white p-1 rounded-t-md'>
+          <h6>
+            Data Pelanggan
+          </h6> 
+        </div>
+        <div className='bg-white  rounded-lg' style={{ height: 570, width: '100%' }}>
+          
+          <DataGrid
+            className=''
+            rows={rows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            // checkboxSelection
+          />
+        </div>
+      </div>
+    </>
   );
 }

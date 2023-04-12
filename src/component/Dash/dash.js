@@ -16,11 +16,11 @@ function Dash() {
           <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 rounded-md w-full'>
             
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2 row-span-2'>
-              <Penjualan/> 
+              <Tabled/> 
             </div>
 
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
-              <Tabled/>
+              <Penjualan/>
             </div>
 
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>

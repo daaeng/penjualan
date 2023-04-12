@@ -21,7 +21,7 @@ function Dashboard() {
         </div>
 
         <div>
-          <section className={`bg-gray-50 -mt-1`}>
+          <section className={`bg-gray-100 -mt-1`}>
 
             <Dashbor/>
             
