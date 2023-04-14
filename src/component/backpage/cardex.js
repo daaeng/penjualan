@@ -14,6 +14,11 @@ export default function Cardex (props) {
             </div>
 
             <div className='bg-white w-full p-1 rounded-md '>
+                {/* <div className='flex flex-row items-center pt-8 '>
+                    <img src={Logo} alt='sakir' className='w-9 h-9 '/>
+                    <div>Shoping</div>
+                </div> */}
+
                 <SiShopee/>
                 <h6>
                     tes tes tes{/* {props.title()} */}
