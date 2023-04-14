@@ -10,6 +10,7 @@ import {
     Legend,
   } from 'chart.js';
   import { Bar } from 'react-chartjs-2';
+import Labeldt from '../backpage/label';
 
 function Penjualan(){
 
@@ -22,8 +23,16 @@ function Penjualan(){
         Legend
     );
 
+    const title = () => {
+      return ("Grafik Transaksi")
+    }
+
     return(
         <>
+          <div className='mb-1'>
+            <Labeldt title = {title}/>
+          </div>
+          
             <div className='bg-white rounded w-full'>
               
                 {/* <Detail_pen data={this.this.state.data} /> */}
