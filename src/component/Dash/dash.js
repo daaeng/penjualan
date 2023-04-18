@@ -5,6 +5,7 @@ import Tabled from '../Table/tabled';
 // import DataGrafGAB from '../chart/dataGrafGAB';
 import PelangganChart from '../chart/pelanggan';
 import Cardex from '../backpage/cardex.js';
+import CobaChart from '../chart/coba.js';
 // import {MdDownload, MdPrint} from 'react-icons/md'
 
 function Dash() {
@@ -48,9 +49,13 @@ function Dash() {
           </div>
 
         </div>
+
         
       </div>
 
+        <div>
+          <CobaChart/>
+        </div>
       
     </>
     
