@@ -53,7 +53,7 @@ function Dash() {
         
       </div>
 
-        <div>
+        <div className='max-w-7xl h-auto'>
           <CobaChart/>
         </div>
       
