@@ -4,28 +4,33 @@ import Tabled from '../Table/tabled';
 // import Pembayaran from '../chart/pembayaran';
 // import DataGrafGAB from '../chart/dataGrafGAB';
 import PelangganChart from '../chart/pelanggan';
-import Cardex from '../backpage/cardex.js';
+// import Cardex from '../backpage/cardex.js';
 import CobaChart from '../chart/coba.js';
+// import Labeldt from '../backpage/label.js';
 // import {MdDownload, MdPrint} from 'react-icons/md'
 
 function Dash() {
+
+  const title = () => {
+    return ("Data Pelanggan")
+  }
   
   return (
     
     <>
       <div className='flex p-2'>
         <div className='w-full p-1'>
-          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 rounded-md w-full'>
+          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 p-2 rounded-md w-full'>
             
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2 row-span-2'>
               <Tabled/> 
             </div>
 
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>
               <Penjualan/>
             </div>
 
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>
               <PelangganChart/>
             </div>
             
@@ -34,16 +39,25 @@ function Dash() {
         </div>
         
       </div>
-      <div className='flex p-2'>
-        <div className='w-full p-1'>
-          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 p-2 rounded-md w-full'>
+      {/* <div className='flex p-3 ml-1 mr-1'> 
+        <div className='w-full p-1 bg-marron'>
+        <div className='ml-1'>
+          <Labeldt title = {title}/>
+
+        </div>
           
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>
-              <Cardex/>
+          <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 rounded-md w-full'>
+            
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+              aa
             </div>
 
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>
-              
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+              bb
+            </div>
+
+            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
+              cc
             </div>
             
           </div>
@@ -51,7 +65,7 @@ function Dash() {
         </div>
 
         
-      </div>
+      </div> */}
 
         <div className='max-w-7xl h-auto'>
           <CobaChart/>

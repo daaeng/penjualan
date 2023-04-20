@@ -18,6 +18,13 @@ module.exports = {
         '300' : '100rem',
         
       },
+      height:{
+        '128' : '32rem',
+        '146' : '57rem',
+        '256' : '64rem',
+        '270' : '70rem',
+        '300' : '100rem',
+      },
       
       borderRadius: {
         '70px' : '70px',

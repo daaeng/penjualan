@@ -51,7 +51,7 @@ export default function Tabled() {
             <Labeldt title = {title}/>
           </div>
         </div>
-        <div className='bg-white  rounded-lg' style={{ height: 590, width: '100%' }}>
+        <div className='bg-white md:h-96 lg:h-146 rounded-lg' style={{ width: '100%' }}>
           
           <DataGrid
             className=''

@@ -3,6 +3,7 @@ import Box from './box'
 import DateTimeR from '../dateRange/dateTimeR'
 import Dash from './dash'
 import {MdDashboard} from 'react-icons/md'
+import Card3b from '../backpage/card3b'
 
 const Dashbor = () => {
     return(
@@ -28,6 +29,10 @@ const Dashbor = () => {
                 
                 <div> 
                     <Dash/>
+                </div>
+                
+                <div> 
+                    <Card3b/>
                 </div>
 
 
