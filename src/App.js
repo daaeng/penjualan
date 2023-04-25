@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Dashboard from "./page/Dashboard";
-import Dpenjualan from "./page/Dpenjualan";
+import Dpembelian from "./page/Dpembelian";
 import Pelanggan from "./page/Pelanggan";
 import Dpembayaran from "./page/Dpembayaran";
 import Home from "./page/home";
 import Item from "./page/item";
+import DetailChart from "./page/DetChart";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
           <Route path="/home" element = {<Home/>}/>
           <Route path="/pel" element = {<Pelanggan/>}/>
           <Route path="/dpem" element = {<Dpembayaran/>}/>
-          <Route path="/dpen" element = {<Dpenjualan/>}/>
+          <Route path="/dpbel" element = {<Dpembelian/>}/>
           <Route path="/item" element = {<Item/>}/>
+          <Route path="/detch" element = {<DetailChart/>}/>
           <Route path="*" element= {'NOT FOUND !'}/>
         </Routes>
       </Router>

@@ -22,7 +22,7 @@ function Sdbar() {
         {name:'Dashboard', icon: <MdDashboard/>, path:'/'},
         {name:'Home', icon: <MdHome/>, path:'/home'},
         {name:'Pelanggan', icon: <BsFillPersonVcardFill/>, path:'/pel'},
-        {name:'Penjualan', icon: <MdShoppingCartCheckout/>, path:'/dpen'},
+        {name:'Penjualan', icon: <MdShoppingCartCheckout/>, path:'/dpbel'},
         {name:'Pembayaran', icon: <MdPayments/>, path:'/dpem'},
         {name:'Item', icon: <MdShoppingBasket/>, path:'/item'},
         
@@ -72,8 +72,11 @@ function Sdbar() {
                                     className={`cursor-pointer no-underline flex flex-row duration-300 
                                     ${!open && 'active' }items-center text-gray-100 overflow-y-visible
                                     hover:bg-light-white hover:text-yellow-600  px-2`} >
-                                    <div className={`mr-1 mt-0.5`}>{val.icon}</div>
-                                    <div className={`text-1xl duration-50`} >{val.name}</div> 
+
+                                    <li>
+                                        <div className={`mr-1 mt-0.5`}>{val.icon}</div>
+                                        <div className={`text-1xl duration-50`} >{val.name}</div> 
+                                    </li>
 
                                 </NavLink>
                             </>

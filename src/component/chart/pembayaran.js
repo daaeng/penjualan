@@ -70,7 +70,7 @@ const data = {
   datasets: [
     {
       label: 'Pembayaran',
-      data: [50, 20, 30, 20, 60, 80, 90, 90, 75, 120],
+      data: [70, 20, 30, 20, 60, 80, 90, 90, 75, 100],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
       

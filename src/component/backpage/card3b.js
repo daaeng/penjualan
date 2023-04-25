@@ -1,11 +1,33 @@
 import React from 'react'
 import Labeldt from '../backpage/label.js';
+import Card3D from './card3d.js';
 
-
+//container
 function Card3b() {
 
   const title = () => {
-    return ("Data Pelanggan")
+    return ("Data e-Commerce")
+  }
+
+  const titleCard =()=>{
+    return(
+      ['Shopee']
+
+    )
+  }
+
+  const titleCard2 =()=>{
+    return(
+      ['TokoPedia']
+
+    )
+  }
+
+  const titleCard3 =()=>{
+    return(
+      ['Toko']
+
+    )
   }
   
   return (
@@ -19,23 +41,11 @@ function Card3b() {
         </div>
           
           <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2 rounded-md w-full'>
-            
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
-              aa
-            </div>
-
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
-              bb
-            </div>
-
-            <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-1'>
-              cc
-            </div>
-            
+            <Card3D titleCard= {titleCard}/> 
+            <Card3D titleCard= {titleCard2}/> 
+            <Card3D titleCard= {titleCard3}/> 
           </div>
-
         </div>
-
         
       </div>
       

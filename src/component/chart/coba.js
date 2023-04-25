@@ -12,7 +12,7 @@ import {
   } from 'chart.js';
 import { Bar, getDatasetAtEvent, getElementAtEvent,} from 'react-chartjs-2';
 
-function CobaChart(){
+function CobaChart(props){
 
     ChartJS.register(
         CategoryScale,
@@ -23,53 +23,52 @@ function CobaChart(){
         Legend
     );
 
-      const options = {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 2,
-      
-        plugins: {
-          legend: {
-            position: 'bottom',
-          },
-          title: {
-            display: true,
-            text: 'Bar Chart Pembayaran',
-          },
-        },
-      };
-        
-      const labels = ['01/01/2023', '01/02/2023', '01/03/2023', '01/04/2023', '01/05/2023', '01/06/2023', '01/07/2023', '01/08/2023', '01/09/2023', '01/10/2023'];
-        
-      const data = {
-        labels,
-        datasets: [
-          {
-            label: 'Pembayaran',
-            data: [50, 20, 30, 20, 60, 80, 90, 90, 75, 120],
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          },
-            
-        ]
-      }
+    const options = {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
 
-      // const printDatasetAtEvent = (datasets) => {
-      //   if (!datasets.length) return;
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
     
-      //   const datasetIndex = datasets[0].datasetIndex;
-    
-      //   console.log(data.datasets[datasetIndex].label);
-      // };
+      plugins: {
+        legend: {
+          position: 'bottom',
+        },
+        title: {
+          display: true,
+          text: 'Bar Chart Pembayaran',
+        },
+      },
+    };
+      
+    const labels = ['01/01/2023', '02/01/2023', '03/01/2023', '04/01/2023', '05/01/2023', '06/01/2023', '07/01/2023', '08/01/2023', '09/01/2023', '10/01/2023'];
+      
+    const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Pembayaran',
+          data: [25, 38, 3, 53, 46, 10, 2, 10, 60, 17],
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+          
+      ]
+    }
 
     const chartRef = useRef();
-    // const {datasetIndex} = datasets[0]. datasetIndex;
     const onClick = (event) => {
-        // printDatasetAtEvent(getDatasetAtEvent(chartRef, event));
+      const {current:chart} =chartRef;
 
+      if (!chart) {
+        return;
+      }
+      
       console.log(getElementAtEvent(chartRef.current, event));
       console.log(getDatasetAtEvent(chartRef.current, event));
-      
-      // printDatasetAtEvent(getDatasetAtEvent(chartRef, event));
     }
 
     return(

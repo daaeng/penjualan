@@ -12,7 +12,7 @@ import {
   import { Bar } from 'react-chartjs-2';
 import Labeldt from '../backpage/label';
 
-function Penjualan(){
+function Pembelian(){
 
     ChartJS.register(
         CategoryScale,
@@ -43,7 +43,7 @@ function Penjualan(){
     )
 }
 
-export default Penjualan
+export default Pembelian
 
 const options = {
   
@@ -68,7 +68,7 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'Penjualan',
+      label: 'Pembelian',
       data: [60, 30, 10, 50, 90, 75, 120, 60, 80, 90],
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
