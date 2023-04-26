@@ -3,7 +3,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import Labeldt from '../backpage/label';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  // { no: 'no', headerName: 'No', width:30},
+  { field: 'id', headerName: 'ID', width: 30 },
   { field: 'firstName', headerName: 'First name', width: 100 },
   { field: 'lastName', headerName: 'Last name', width: 100 },
   {
