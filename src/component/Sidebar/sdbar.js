@@ -8,6 +8,7 @@ import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
 import {HiUserCircle, HiUser, HiLogout} from 'react-icons/hi'
 import {BiSearch } from 'react-icons/bi'
 import {RiSettings3Fill } from 'react-icons/ri'
+// import { render } from '@testing-library/react'
 
 
 function Sdbar() {
@@ -34,7 +35,7 @@ function Sdbar() {
         
     ] 
 
-  return (
+    return (
     <>   
         <header className='flex flex-row w-screen  space-x-2 justify-end bg-blue-100'>
             <div className=" flex space-x-1">
@@ -63,23 +64,22 @@ function Sdbar() {
             <div className={`bg-gray-500 mt-32 fixed ${bka ? 'mr-10' : 'show'}`}>
                 <ul className={`-ml-7 mr-1 mt-1 ${!bka  && 'hidden' }`}>
                     {menuHeader.map((val, index) => {
-                        return (
-                            <>
-                                <NavLink
-                                    key = {index} 
-                                    to={val.path}
-                                    
-                                    className={`cursor-pointer no-underline flex flex-row duration-300 
-                                    ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                                    hover:bg-light-white hover:text-yellow-600  px-2`} >
+                        return(                 
 
-                                    <li>
-                                        <div className={`mr-1 mt-0.5`}>{val.icon}</div>
-                                        <div className={`text-1xl duration-50`} >{val.name}</div> 
-                                    </li>
+                            <NavLink
+                                key = {index} 
+                                to={val.path}
+                                
+                                className={`cursor-pointer no-underline flex flex-row duration-300 
+                                ${!open && 'active' }items-center text-gray-100 overflow-y-visible
+                                hover:bg-light-white hover:text-yellow-600  px-2`} >
 
-                                </NavLink>
-                            </>
+                                <li>
+                                    <div className={`mr-1 mt-0.5`}>{val.icon}</div>
+                                    <div className={`text-1xl duration-50`} >{val.name}</div> 
+                                </li>
+
+                            </NavLink>                           
                         );
                     })}
                 </ul>
@@ -113,7 +113,7 @@ function Sdbar() {
 
                 {menu.map((val, index) => {
                     return (
-                        <>
+
                             <NavLink
                                 key = {index} 
                                 to={val.path}
@@ -126,7 +126,7 @@ function Sdbar() {
                                         <div className={`ml-2 duration-50 ${!open && 'hidden' }`} >{val.name}</div> 
 
                             </NavLink>
-                        </>
+
                     );
                 })}
 
