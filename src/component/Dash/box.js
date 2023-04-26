@@ -8,19 +8,19 @@ import Box2 from './box2'
 function Box () {
   
   const menBox = [
-    {name:'Pelanggan', icon:<FaUsers size={'35'}/>, value:'1.865', color:'#FF9999', path:'/pel'},
-    {name:'Item', icon:<MdShoppingBasket size={'35'}/> , value:'1.865', color:'#FFFF99', path:'/item'},
-    {name:'Penjualan', icon:<MdShoppingCartCheckout size={'35'}/> , value:'1.865', color:'#99FF99', path:'/dpbel'},
-    {name:'Pembayaran', icon:<MdPayments size={'35'}/> , value:'1.865', color:'#99FFFF', path:'/dpem'},
+    {name:'Pelanggan', icon:<FaUsers size={'35'}/>, value:'1.865', color:'#B22222', path:'/pel'},
+    {name:'Item', icon:<MdShoppingBasket size={'35'}/> , value:'1.865', color:'#F4A460', path:'/item'},
+    {name:'Penjualan', icon:<MdShoppingCartCheckout size={'35'}/> , value:'1.865', color:'#32CD32', path:'/dpbel'},
+    {name:'Pembayaran', icon:<MdPayments size={'35'}/> , value:'1.865', color:'#1E90FF', path:'/dpem'},
     
   ]
 
   return (
     <>
       <div className='flex justify-center mt-4'>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 rounded-lg ml-2 w-full'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 rounded-lg ml-2 w-full'>
 
-          <div className='md:col-span-2 lg:row-span-2 lg:col-span-1 '>
+          <div className='sm:col-span-2 md:col-span-2 lg:row-span-2 lg:col-span-1 '>
             <Box2/>
           </div>
         
@@ -42,7 +42,7 @@ function Box () {
                       </h4>                    
                       
                       <div className='flex justify-end'>
-                        <div className='lg:row-span-2 p-2 w-16 h-14 ml-10 md:mt-0 rounded-md -mt-4 bg-marron flex justify-center hover:text-black text-darkgolden'>
+                        <div className='lg:row-span-2 md:mt-0 sm:-mt-1 p-2 w-16 h-14 ml-10 rounded-md -mt-4 bg-marron flex justify-center hover:text-black text-darkgolden'>
                           {val.icon}
                         </div>
                       </div>

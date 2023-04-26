@@ -23,8 +23,7 @@ const Modet = () => {
                 
                 {mnPlg.map((val, index) =>{
                     return(
-                    <>
-        
+                    
                         <NavLink
                             key= {index}
                             to= {val.path}
@@ -47,7 +46,6 @@ const Modet = () => {
                                                             
                         </NavLink>
                     
-                    </>
                     )
                 })}
                 
