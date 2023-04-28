@@ -1,6 +1,5 @@
 //Data grafik
 import React, {useRef} from 'react';
-// import { InteractionItem } from 'chart.js';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -12,7 +11,7 @@ import {
   } from 'chart.js';
 import { Bar, getDatasetAtEvent, getElementAtEvent,} from 'react-chartjs-2';
 
-function CobaChart(props){
+function CobaChart(){
 
     ChartJS.register(
         CategoryScale,

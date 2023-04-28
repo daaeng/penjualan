@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import Labeldt from '../backpage/label';
 
 const columns = [
@@ -24,10 +24,11 @@ const columns = [
   },
   { field: 'lastransaksi', headerName: 'Last Transaction', width: 125},
   { field: 'ttransaksi', headerName: 'Total Transaction', width: 125},
+  { field: 'detail', headerName: 'Detail', width: 125},
 ];
 
 const data = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35, lastransaksi: '01/01/2023', ttransaksi: 25 },
+  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35, lastransaksi: '01/01/2023', ttransaksi: 25, },
   { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42, lastransaksi: '02/01/2023', ttransaksi: 38 },
   { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 31, lastransaksi: '10/01/2023', ttransaksi: 17 },
   { id: 4, lastName: 'Stark', firstName: 'Arya', age: 19, lastransaksi: '03/01/2023', ttransaksi: 3 },
@@ -55,7 +56,8 @@ export default function Tabled() {
             <Labeldt title = {title}/>
           </div>
         </div>
-        <div className='bg-white sm:h-96 md:h-96 lg:h-256 rounded-lg' style={{ width: '100%' }}>
+
+        <div className='bg-white sm:h-96 md:h-96 lg:h-146 rounded-lg' style={{ width: '100%' }}>
           
           <DataGrid
             
@@ -64,6 +66,11 @@ export default function Tabled() {
             pageSize={5}
             rowsPerPageOptions={[5]}
             checkboxSelection
+
+            slots={{
+              toolbar: GridToolbar, 
+            }}
+
           />
         </div>
       </div>

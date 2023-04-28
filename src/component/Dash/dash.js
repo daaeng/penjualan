@@ -1,15 +1,19 @@
 import React from 'react'
 import Tabled from '../Table/tabled';
+// import CobaChart from '../chart/coba.js';
+import Pembelian from '../chart/pembelian.js';
+import PelangganChart from '../chart/pelanggan';
+import Labeldt from '../backpage/label.js';
+// import Cardex from '../backpage/cardex.js';
 // import Pembayaran from '../chart/pembayaran';
 // import DataGrafGAB from '../chart/dataGrafGAB';
-import PelangganChart from '../chart/pelanggan';
-// import Cardex from '../backpage/cardex.js';
-import CobaChart from '../chart/coba.js';
-import Pembelian from '../chart/pembelian.js';
-// import Labeldt from '../backpage/label.js';
 // import {MdDownload, MdPrint} from 'react-icons/md'
 
 function Dash() {
+
+  const title = () => {
+    return ("Grafik Transaksi")
+  }
   
   return (
     
@@ -23,6 +27,10 @@ function Dash() {
             </div>
 
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>
+              <div className='mb-1'>
+                  <Labeldt title = {title}/>
+              </div>
+
               <Pembelian/>
             </div>
 
@@ -36,9 +44,9 @@ function Dash() {
         
       </div>
 
-        <div className='max-w-7xl h-auto mb-2'>
+        {/* <div className='max-w-7xl h-auto mb-2'>
           <CobaChart/>
-        </div>
+        </div> */}
       
     </>
     

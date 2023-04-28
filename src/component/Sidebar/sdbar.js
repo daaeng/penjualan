@@ -22,10 +22,10 @@ function Sdbar() {
     const menu = [
         {name:'Dashboard', icon: <MdDashboard/>, path:'/'},
         {name:'Home', icon: <MdHome/>, path:'/home'},
-        {name:'Pelanggan', icon: <BsFillPersonVcardFill/>, path:'/pel'},
-        {name:'Penjualan', icon: <MdShoppingCartCheckout/>, path:'/dpbel'},
-        {name:'Pembayaran', icon: <MdPayments/>, path:'/dpem'},
-        {name:'Item', icon: <MdShoppingBasket/>, path:'/item'},
+        {name:'Sales', icon: <BsFillPersonVcardFill/>, path:'/pel'},
+        {name:'Logistik', icon: <MdShoppingCartCheckout/>, path:'/dpbel'},
+        {name:'Merchandise', icon: <MdPayments/>, path:'/dpem'},
+        {name:'Grosir', icon: <MdShoppingBasket/>, path:'/item'},
         
     ];
     const menuHeader = [
