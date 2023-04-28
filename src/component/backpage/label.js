@@ -10,8 +10,3 @@ export default function Labeldt (props) {
         </div>
       );
 }
-
-// constructor(props) {
-//     super(props);
-//     this.state = {title: "Data"};
-//   }

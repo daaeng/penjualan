@@ -1,24 +1,30 @@
 import React from 'react'
 import Sdbar from '../component/Sidebar/sdbar'
+import Grosir from '../component/Grosir/Grosir'
 
-const Dpembayaran = () => {
+const Ggrosir = () => {
   return (
     <>
+
       <div>
-        <div>
+          <div>
           
           <Sdbar/>
 
-        </div>
+          </div>
 
-        <div>
+          <div>
           <section className={`bg-gray-50 -mt-1`}>
-            <h1>Pembayaran</h1>
+              
+              <Grosir/>
+
           </section>
-        </div>
+          </div>
       </div>
+        
+
     </>
   )
 }
 
-export default Dpembayaran
+export default Ggrosir

@@ -1,23 +1,22 @@
 import React from 'react'
 import Sdbar from '../component/Sidebar/sdbar'
+import Finance from '../component/FinanceP/finance'
 
-const Item = () => {
+const Fnance = () => {
   return (
     <>
 
       <div>
           <div>
           
-          <Sdbar/>
+            <Sdbar/>
 
           </div>
 
           <div>
           <section className={`bg-gray-50 -mt-1`}>
               
-              <h1>
-                Item
-              </h1>
+              <Finance/>
 
           </section>
           </div>
@@ -28,4 +27,4 @@ const Item = () => {
   )
 }
 
-export default Item
+export default Fnance

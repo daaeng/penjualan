@@ -5,6 +5,7 @@ import Dash from './dash'
 import {MdDashboard} from 'react-icons/md'
 import Card3b from '../backpage/card3b'
 import History from './history'
+import FilterTime from '../backpage/filterTime'
 
 const Dashbor = () => {
     return(
@@ -15,12 +16,11 @@ const Dashbor = () => {
                         <h2 className='col-span-1 font-mono text-black items-center flex'>
                             <MdDashboard className='mr-1' size={'20'}/> Dashboard
                         </h2>
+
+                        <div className='col-span-1 flex justify-end items-center font-mono text-black '>
+                            <FilterTime />
+                        </div>
                         
-                        <p className='col-span-1 flex justify-end items-center font-mono text-black '>
-                            Dashboard
-                        </p>
-
-
                     </div>
 
                     <div className='border ' />

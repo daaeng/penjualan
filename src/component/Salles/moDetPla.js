@@ -7,12 +7,7 @@ const Modet = () => {
     
     const mnPlg = [
         {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},
-        {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},        
-        {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},        
-        {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},        
-        {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},        
-        {name:'Pelanggan', icon:<BsFillEmojiWinkFill size={'35'}/>, icon1: <FaEdit size={'20'}/>},        
-        
+  
       ]
   
     
