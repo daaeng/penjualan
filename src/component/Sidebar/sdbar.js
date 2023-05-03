@@ -35,6 +35,18 @@ function Sdbar() {
     return (
     <>   
         <header className='grid grid-cols-2 p-2 bg-marron rounded-bl-3xl '>
+            <div className='flex col-span-1 -mr-2 -mt-2 -mb-4'>
+                <div className='flex justify-end bg-red-800 w-full'>
+                    .
+                </div>
+            </div>
+
+            <div className='flex col-span-1 -mr-2 -mt-2 -mb-4'>
+                <div className='flex justify-end bg-red-900 w-full'>
+                    .
+                </div>
+            </div>
+
             <div className='col-span-1 ml-2'>  
                 <div className={`lg:w-48 md:w-44 sm:w-32`}>
                     <img src={Logo} alt='sakir' className={`cursor-pointer duration-500 hover:text-yellow-600`} onClick={()=> navigate('/dash')} />
@@ -65,7 +77,7 @@ function Sdbar() {
                 </div>
             </div>
 
-            <div className='flex justify-end -mr-150 bg-black'>
+            <div className='col-span-2 flex justify-end bg-black'>
                 <div className={`flex rounded-b-xl bg-gray-500 fixed ${bka ? 'mr-10' : 'show'}`}>
                     <ul className={`-ml-7 mr-1 mt-1 ${!bka  && 'hidden' }`}>
                         {menuHeader.map((val, index) => {
@@ -88,6 +100,7 @@ function Sdbar() {
                     </ul>
                 </div>
             </div>
+
         </header>
         
         <nav className = {`top-16 bg-marron h-fit mt-3 lg:ml-4 md:ml-4 sm:ml-1 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
@@ -101,7 +114,7 @@ function Sdbar() {
                             to={val.path}               
                             className={`cursor-pointer no-underline flex flex-row duration-300 
                             ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                            hover:bg-light-white hover:text-yellow-600 rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
+                            hover:bg-light-white hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
                                     <div className={`ml-1 text-2xl `}>
                                         {val.icon}
                                     </div>

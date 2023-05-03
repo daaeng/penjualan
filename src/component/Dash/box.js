@@ -32,10 +32,10 @@ function Box () {
                 key= {index}
                 to= {val.path}
                 style={{ background: val.color }}
-                className={`md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-2 rounded-t-md shadow-md`}>
+                className={`md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-2 rounded-t-70px shadow-md`}>
                     
                   <div  
-                      className='grid lg:grid-cols-2 -mt-4 px-3 py-1 w-auto rounded-xl text-redd bg-slate-300 hover:bg-light-white hover:text-black'>
+                      className='grid lg:grid-cols-2 -mt-4 px-3 py-1 w-auto rounded-md text-redd bg-slate-300 hover:bg-white hover:text-black'>
                       
                       <h4 className='lg:col-span-1 mt-2'>
                         {val.value} 

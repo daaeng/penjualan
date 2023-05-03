@@ -1,32 +1,33 @@
 import React, {useState } from 'react'
 import {BiTimeFive } from 'react-icons/bi'
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import DateTimeR from '../dateRange/dateTimeR'
+import Box2 from '../Dash/box2';
 
 export default function FilterTime () {
 
     const [bka, setBka] =  useState(false);
 
-    const mnFilterTime = [
-        {name:'Last', path:'-'},
-        {name:'1 Hour', path:''},
-        {name:' 2 Hours', path:''},
-        {name:' 3 Hours', path:''},
-        {name:' 6 Hours', path:''},
-        {name:' 1 Day', path:''},
-        {name:' 2 Days', path:''},
-        {name:' 3 Days', path:''},
-        {name:' 1 Week', path:''},
-        {name:' 2 Weeks', path:''},
-        {name:' 3 Weeks', path:''},
-        {name:' 4 Weeks', path:''},
-        {name:' 1 Month', path:''},
-        {name:' 2 Months', path:''},
-        {name:' 3 Months', path:''},
-        {name:' 6 Months', path:''},
-        {name:' 1 Year', path:''},
+    // const mnFilterTime = [
+    //     {name:'Last', path:'-'},
+    //     {name:'1 Hour', path:''},
+    //     {name:' 2 Hours', path:''},
+    //     {name:' 3 Hours', path:''},
+    //     {name:' 6 Hours', path:''},
+    //     {name:' 1 Day', path:''},
+    //     {name:' 2 Days', path:''},
+    //     {name:' 3 Days', path:''},
+    //     {name:' 1 Week', path:''},
+    //     {name:' 2 Weeks', path:''},
+    //     {name:' 3 Weeks', path:''},
+    //     {name:' 4 Weeks', path:''},
+    //     {name:' 1 Month', path:''},
+    //     {name:' 2 Months', path:''},
+    //     {name:' 3 Months', path:''},
+    //     {name:' 6 Months', path:''},
+    //     {name:' 1 Year', path:''},
         
-    ]
+    // ]
     
       return (
         <>
@@ -46,7 +47,13 @@ export default function FilterTime () {
                         <div className='flex justify-end'>
                             <DateTimeR/>
                         </div>
-                        <div className='flex space-x-1'>
+
+                        <div className='flex gap-1 mt-3'>
+                            <Box2/>
+                            <Box2/>
+                        </div>
+
+                        {/* <div className='flex space-x-1'>
                             {mnFilterTime.map((val, index) => {
                                 return(                 
 
@@ -66,7 +73,7 @@ export default function FilterTime () {
                                 );
                             })}
 
-                        </div>
+                        </div> */}
                     </ul>
 
                 </div>
