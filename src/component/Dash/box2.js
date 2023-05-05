@@ -22,7 +22,7 @@ function Box2() {
       }
     return(
         <>
-            <div className='flex'></div>
+            <div className='flex'>
                 <div className='bg-blue-100 shadow-md p-2 rounded-md w-full '>
                     <Labeldt title = {title} />
 
