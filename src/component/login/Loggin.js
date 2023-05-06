@@ -143,7 +143,7 @@ function Loggin () {
                                         <button type='button' 
                                                 onClick={()=> navigate('/dash')}
                                                 className='p-1 w-20 rounded-md bg-slate-400 hover:bg-green-500' >
-                                            Log in
+                                            Dashboard
                                         </button>    
                                         
                                         <button type='button' 
