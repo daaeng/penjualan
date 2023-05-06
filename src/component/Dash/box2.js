@@ -1,21 +1,22 @@
 import React from 'react'
 import Labeldt from '../backpage/label'
-// import axios from 'axios'
-
+import axios from 'axios'
+// import {baseURL} from '../config/api/axios'
 
 function Box2() {
-    // const baseURL = 'https://jsonplaceholder.typicode.com/users'
-    // const [post, setpost] =  React.useState(null)
+    const baseURL = 'https://dummyjson.com'
+    const URL = '/users'
+    const [post, setpost] =  React.useState(null)
 
-    // React.useEffect(() => {
-    //     axios.get(baseURL).then ((data) => {
-    //         console.log(data);
-    //         setpost(data?.data)
-    //     })
+    React.useEffect(() => {
+        axios.get(baseURL+URL).then ((data) => {
+            console.log(data);
+            setpost(data?.data)
+        })
         
-    // }, [])
+    }, [])
 
-    // if(!post) return null
+    if(!post) return null
 
     const title = () => {
         return ("Produk Terlaris")

@@ -1,18 +1,18 @@
+
 import React from 'react'
 import Logo from '../../assets/log.png'
 import {useRef, useState, useEffect, useContext} from 'react'
 import AuthContext from '../../context/AuthProvider'
-import axios from '../config/axios'
-// import {baseURL} from '../component/config/axios.js'
-// import { useNavigate } from 'react-router-dom'
+import axios from '../config/api/axios'
+import { useNavigate } from 'react-router-dom'
 
-const LOGIN_URL = `/auth/login`
+const LOGIN_URL = "https://dummyjson.com/users";
 
-const Loggin = () => {
+function Loggin () {
 
     const {setAuth} = useContext(AuthContext);  
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const userRef = useRef();
     const errRef = useRef();
@@ -20,7 +20,7 @@ const Loggin = () => {
     const [user, setUser] = useState('');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false); 
 
     useEffect(() => {
         userRef.current.focus();
@@ -38,7 +38,8 @@ const Loggin = () => {
             JSON.stringify({ user, pwd }),
             {
               headers: { "Content-Type": "application/json" },
-              withCredentials: true,
+              credentials: true,
+              origin: true,
             }
           );
           const accessToken = response?.data?.accessToken;
@@ -59,6 +60,8 @@ const Loggin = () => {
           }
           errRef.current.focus();
         }
+        console.log(user, pwd);
+        console.log(origin);
       };
     
     return(
@@ -77,7 +80,7 @@ const Loggin = () => {
 
                 {/* Gambar */}
                     <div className="">
-                        <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-full rounded-l-xl cursor-pointer duration-500 hover:text-yellow-600`} />
+                        <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-48 rounded-l-xl cursor-pointer duration-500 hover:text-yellow-600`} />
                     </div>
 
                     {/* Login */}
@@ -132,20 +135,30 @@ const Loggin = () => {
                                     </div>
 
                                     {/* Login Button */}
-                                    <div className="flex justify-center rounded-lg p-1 bg-blue-400 hover:text-white">
-                                        <button> Sign in</button>
-                                        {/* <button type='button' 
+                                    <div className='mt-1'>
+                                        <button className="flex justify-center w-full rounded-lg p-1 bg-blue-400 hover:text-white">
+                                            Sign in
+                                        </button>
+
+                                        <button type='button' 
                                                 onClick={()=> navigate('/dash')}
                                                 className='p-1 w-20 rounded-md bg-slate-400 hover:bg-green-500' >
                                             Log in
-                                        </button>     */}
+                                        </button>    
+                                        
+                                        <button type='button' 
+                                                onClick={()=> navigate('/')}
+                                                className='p-1 w-20 rounded-md bg-slate-400 hover:bg-green-500' >
+                                            Sign up
+                                        </button>    
+                                        
                                     </div>
 
                                     
 
                                 </div>
 
-                                <div className='mt-4 -mb-10'>
+                                <div className='mt-3 md:-mb-14 lg:-mb-20'>
                                     <div className='text-red-700 flex w-full justify-center rounded items-center'>
                                         <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live='assertive'>
                                             {errMsg}
