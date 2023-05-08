@@ -1,3 +1,61 @@
+// https://jasonwatmore.com/post/2019/02/01/react-role-based-authorization-tutorial-with-example
+
+// const {setAuth} = useContext(AuthContext);  
+
+
+    // const userRef = useRef();
+    // const errRef = useRef();
+
+    // const [user, setUser] = useState('');
+    // const [pwd, setPwd] = useState('');
+    // const [errMsg, setErrMsg] = useState('');
+    // const [success, setSuccess] = useState(false); 
+
+    // useEffect(() => {
+    //     userRef.current.focus();
+    // }, [])
+
+    // useEffect(() => {
+    //     setErrMsg('');
+    // }, [user, pwd])
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //       const response = await axios
+    //       .post(
+    //         LOGIN_URL,
+    //         JSON.stringify({ user, pwd }),
+    //         {
+    //           headers: { "Content-Type": "application/json" },
+    //           credentials: true,
+    //           origin: true,
+    //         }
+    //       );
+    //       const accessToken = response?.data?.accessToken;
+    //       const roles = response?.data?.roles;
+    //       setAuth({ user, pwd, roles, accessToken });
+    //     //   setUser("");
+    //     //   setPwd("");
+    //       setSuccess(true);
+    //     } catch (err) {
+    //       if (!err?.response) {
+    //         setErrMsg("Server belum merespon");
+    //       } else if (err.response?.status === 400) {
+    //         setErrMsg("Missing Username or Password");
+    //       } else if (err.response?.status === 401) {
+    //         setErrMsg("Unauthorized");
+    //       } else {
+    //         setErrMsg("Login Failed");
+    //       }
+    //       errRef.current.focus();
+    //     }
+    //     console.log(user, pwd);
+    //     console.log(origin);
+    //   };
+
+    //-------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 // https://jsonplaceholder.typicode.com/posts
 // https://jsonplaceholder.typicode.com/users

@@ -1,3 +1,6 @@
-// const cors = require('cors');
+export default function errorHandler(error) {
 
-// app.use(cors());
+  if (error) {
+    console.log(error.response)
+  }
+}
