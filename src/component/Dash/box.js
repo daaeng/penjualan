@@ -3,6 +3,7 @@ import {MdShoppingCartCheckout, MdPayments, MdShoppingBasket } from 'react-icons
 import {FaUsers} from 'react-icons/fa'
 import {NavLink } from 'react-router-dom'
 import Box2 from './box2'
+import Labeldt from '../backpage/label'
 // import { render } from '@testing-library/react'
 
 function Box () {
@@ -15,13 +16,20 @@ function Box () {
     
   ]
 
+  const title = () => {
+    return ("Produk Terlaris")
+  }
+
   return (
     <>
       <div className='flex justify-center mt-4'>
         <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 rounded-lg ml-2 w-full'>
 
           <div className='sm:col-span-2 md:col-span-2 lg:row-span-2 lg:col-span-1 '>
-            <Box2/>
+            <div className='bg-marron shadow-md p-2 rounded-md w-full '>
+              <Labeldt title = {title} />
+              <Box2/>
+            </div>
           </div>
         
           {menBox.map((val, index) =>{  

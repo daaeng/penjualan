@@ -1,5 +1,4 @@
 import React from 'react'
-import Labeldt from '../backpage/label'
 // import axios from 'axios'
 // import {baseURL} from '../config/api/axios'
 
@@ -18,16 +17,13 @@ function Box2() {
 
     // if(!post) return null
 
-    const title = () => {
-        return ("Produk Terlaris")
-      }
+    
+
     return(
         <>
             <div className='flex'>
-                <div className='bg-marron shadow-md p-2 rounded-md w-full '>
-                    <Labeldt title = {title} />
 
-                    <div className='bg-slate-50 p-1 rounded-md mt-2 h-40'>
+                    <div className='bg-slate-50 p-1 rounded-md mt-2 h-40 w-full'>
                         isi konten, barang paling laris di atas
 
                         {/* <div>
@@ -45,7 +41,7 @@ function Box2() {
                         
                     </div>
                 </div>
-            </div>
+            
         </>
     )
 }

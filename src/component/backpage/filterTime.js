@@ -42,7 +42,7 @@ export default function FilterTime () {
             </div>
 
             <div className='flex justify-end'>
-                <div className={`flex bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
+                <div className={`flex bg-redd rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
                     <ul className={`-ml-7 mr-1 mt-1 ${!bka  && 'hidden' }`}>
                         <div className='flex justify-end'>
                             <DateTimeR/>

@@ -1,15 +1,15 @@
 import React, {useState } from 'react'
 import {NavLink, useNavigate} from 'react-router-dom'
-import {MdShoppingBasket } from 'react-icons/md'
-import {SiAudiomack} from 'react-icons/si'
+import Logo from '../../assets/CandiWhite.png'
 import {FiLogOut} from 'react-icons/fi'
-import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
-import {HiUserCircle, HiUser, HiLogout} from 'react-icons/hi'
-import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
-import {RiSettings3Fill } from 'react-icons/ri'
 import {FaBoxOpen } from 'react-icons/fa'
 import {AiFillTags } from 'react-icons/ai'
-import Logo from '../../assets/CandiWhite.png'
+import {SiAudiomack} from 'react-icons/si'
+import {RiSettings3Fill } from 'react-icons/ri'
+import {MdShoppingBasket } from 'react-icons/md'
+import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
+import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
+import {HiUserCircle, HiUser, HiLogout} from 'react-icons/hi'
 
 function Sdbar() {
 
@@ -31,6 +31,10 @@ function Sdbar() {
         {name:'Settings', icon: <RiSettings3Fill/>, path:''},
         {name:'Logout', icon: <HiLogout/>, path:'/'},
     ] 
+
+    const logout = () => {
+        localStorage.removeItem("User");
+    };
 
     return (
     <>   
@@ -71,7 +75,7 @@ function Sdbar() {
                         <BiSearch size={'23'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setbuka(!buka)}/>
                         <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
                         <HiUserCircle size={'28'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
-                        <FiLogOut size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={()=> navigate('/')}/>
+                        <FiLogOut onSubmit={logout} size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={()=> navigate('/')}/>
                       
                     </div>
                 </div>
