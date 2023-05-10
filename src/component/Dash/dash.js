@@ -32,6 +32,7 @@ function Dash() {
               </div>
 
               <Pembelian/>
+              
             </div>
 
             <div className='bg-blue-100 p-2 sm:col-span-2 md:col-span-2 lg:col-span-2'>

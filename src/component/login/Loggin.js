@@ -80,9 +80,10 @@ function Loggin () {
         } catch (err) {
           if (!err?.response) {
             setErrMsg("Server belum merespon");
-          } else if (err.response?.data?.errors) {
-            setErrMsg(err.response?.data?.errors);
           } 
+        //   else if (err.response?.data?.errors) {
+        //     setErrMsg(err.response?.data?.errors);
+        //   } 
         //   else if (err.response?.data?.success === false) {
         //     setErrMsg("Missing Username or Password");
         //   } else if (err.response?.data?.status === 401) {
