@@ -34,8 +34,9 @@ function Sdbar() {
 
     const LogOut = () => {
         localStorage.removeItem("userData")
-        // sessionStorage.removeItem("User")
+        sessionStorage.removeItem("userData")
         localStorage.clear()
+        console.log('Sudah Log Out');
         navigate('/')
     };
 
@@ -56,7 +57,8 @@ function Sdbar() {
 
             <div className='col-span-1 ml-2'>  
                 <div className={`lg:w-48 md:w-44 sm:w-32`}>
-                    <img src={Logo} alt='sakir' className={`cursor-pointer duration-500 hover:text-yellow-600`} onClick={()=> navigate('/dash')} />
+                {/* onClick={()=> navigate('/dash')} */}
+                    <img src={Logo} alt='sakir' className={`cursor-pointer duration-500 hover:text-yellow-600`}  />
                 </div>
             </div>
 

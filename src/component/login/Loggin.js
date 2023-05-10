@@ -38,11 +38,11 @@ function Loggin () {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false); 
 
-    useEffect(() => {
-        if(localStorage.getItem('userData')){
-            navigate('/')
-        }
-    })
+    // useEffect(() => {
+    //     if(sessionStorage.getItem('userData')){
+    //         navigate('/')
+    //     }
+    // },[navigate])
 
     useEffect(() => {
         userRef.current.focus();
@@ -65,30 +65,30 @@ function Loggin () {
               origin: true,
             }
           );
-          localStorage.setItem("User", JSON.stringify(response?.data));
-        //   sessionStorage.setItem("User", JSON.stringify(response?.data));
+          localStorage.setItem("userData", JSON.stringify(response?.data));
+          sessionStorage.setItem("userData", JSON.stringify(response));
           const accessToken = response?.data?.accessToken;
           const roles = response?.data?.roles;
           setAuth({ username, password, roles, accessToken });
-          setUser("");
+          setUser("Username / Password invalid");
           setPwd("");
           setSuccess(response?.data?.success);
-          console.log(response?.data?.nama);
+            console.log(response?.data?.nama);
+            // console.log('Log In');
         } catch (err) {
           if (!err?.response) {
             setErrMsg("Server belum merespon");
-          } else if (err.response?.errors) {
-            setErrMsg("Missing Username or Password");
-          } else if (err.response?.success === false) {
-            setErrMsg("Missing Username or Password");
-          } else if (err.response?.status === 401) {
-            setErrMsg("Unauthorized");
+          } else if (err.response?.data?.errors) {
+        //     setErrMsg("Missing Username or Password");
+        //   } else if (err.response?.data?.success === false) {
+        //     setErrMsg("Missing Username or Password");
+        //   } else if (err.response?.data?.status === 401) {
+        //     setErrMsg("Unauthorized");
           } else {
             setErrMsg("Login Failed");
           }
           errRef.current.focus();
         }
-        console.log(username, password);
         console.log(origin);
       };
     
@@ -108,39 +108,14 @@ function Loggin () {
                                 </h1>
 
                                 <div className=''>
-                                    {/* <button onClick={()=> navigate('//')}
-                                            className='p-1 w-full rounded-md bg-lime-300 hover:bg-lime-500' >
-                                        back
-                                    </button>  */}
-                                    
                                     <button onClick={()=> navigate('/dash')}
                                             className='p-1 w-full rounded-md bg-blue-300 hover:bg-blue-500' >
                                         Dashboard
-                                    </button>
-
-                                    {/* <div className='sm:p-1 md:p-3 items-center bg-redd flex rounded-xl'>
-                                        {menu.map((val, index) => {
-                                            return (
-                                                <NavLink
-                                                    key = {index} 
-                                                    to={val.path}               
-                                                    className={`cursor-pointer no-underline flex flex-row duration-300 
-                                                    items-center text-gray-100 overflow-y-visible gap-2 
-                                                    hover:bg-light-white hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
-                                                            <div className={`ml-1 text-2xl `}>{val.icon}</div>
-                                                            <div className={`ml-2 duration-50 `} >{val.name}</div> 
-                                                </NavLink>
-                                            );
-                                        })}
-
-                                    </div> */}
-                                    
-
+                                    </button>                          
                                 </div>
 
                             </div>
                         </div>
-
 
                     </div>
                 </section>
@@ -202,34 +177,9 @@ function Loggin () {
                                     
                                     </div>
 
-                                    {/* lupa Password ? */}
-                                    {/* <div className="flex justify-end hover:text-redd cursor-pointer">
-                                        Lupa Password ?
-                                    </div> */}
-
-                                    {/* Login Button */}
                                     <div className='mt-5'>
                                         <button className='w-full p-1 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
-                                        {/* <button
-                                                className={"w-full text-white font-bold py-2 px-4 rounded mt-1  focus:outline-none " + (input.Username == '' || input.Password == '' ? "bg-gray-400 cursor-not-allowed" : "bg-red-600 hover:bg-red-800" )}
-                                                type="button" onClick={() => {
-                                                    if (input.Username != '' && input.Password != '') {
-                                                    submit()
-                                                    }
-                                                }}>
-                                            Login
-                                        </button> */}
-
-                                        {/* <button type='button' 
-                                                onClick={()=> navigate('/dash')}
-                                                className='p-1 w-20 rounded-md bg-slate-400 hover:bg-green-500' >
-                                            Dashboard
-                                        </button> */}
-                                        
-                                        
-                                    </div>
-
-                                    
+                                    </div>                                  
 
                                 </div>
 
