@@ -57,8 +57,7 @@ function Sdbar() {
 
             <div className='col-span-1 ml-2'>  
                 <div className={`lg:w-48 md:w-44 sm:w-32`}>
-                {/* onClick={()=> navigate('/dash')} */}
-                    <img src={Logo} alt='sakir' className={`cursor-pointer duration-500 hover:text-yellow-600`}  />
+                    <img src={Logo} alt='sakir' onClick={()=> navigate('/dash')} className={`cursor-pointer duration-500 hover:text-yellow-600`}  />
                 </div>
             </div>
 

@@ -32,9 +32,9 @@ const Dashbor = () => {
 
                 </div>
                     
-                <div className='flex justify-end'>
-                    {/* <DateTimeR/> */}
-                </div>
+                {/* <div className='flex justify-end'>
+                    <DateTimeR/>
+                </div> */}
                 
                 <div> 
                     <Dash/>

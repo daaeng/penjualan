@@ -49,6 +49,7 @@ function Loggin () {
     }, [])
 
     useEffect(() => {
+        if(!{username,password})
         setErrMsg('');
     }, [username, password])
 
@@ -70,21 +71,24 @@ function Loggin () {
           const accessToken = response?.data?.accessToken;
           const roles = response?.data?.roles;
           setAuth({ username, password, roles, accessToken });
-          setUser("Username / Password invalid");
-          setPwd("");
+          setUser("");
+          setPwd("");        
+          setErrMsg(response?.data?.errors)
           setSuccess(response?.data?.success);
             console.log(response?.data?.nama);
-            // console.log('Log In');
+            console.log(response?.data?.errors);
         } catch (err) {
           if (!err?.response) {
             setErrMsg("Server belum merespon");
           } else if (err.response?.data?.errors) {
-        //     setErrMsg("Missing Username or Password");
-        //   } else if (err.response?.data?.success === false) {
+            setErrMsg(err.response?.data?.errors);
+          } 
+        //   else if (err.response?.data?.success === false) {
         //     setErrMsg("Missing Username or Password");
         //   } else if (err.response?.data?.status === 401) {
         //     setErrMsg("Unauthorized");
-          } else {
+        //   }
+           else {
             setErrMsg("Login Failed");
           }
           errRef.current.focus();
@@ -147,7 +151,7 @@ function Loggin () {
                                         <label htmlFor='Username'>
                                             Username
                                         </label>
-
+                                        
                                         <input 
                                             type='text'
                                             id='Username'
@@ -174,6 +178,7 @@ function Loggin () {
                                             required                                            
                                             className="text-gray-500 p-1 rounded-md flex flex-row mb-2 w-72" 
                                         />
+                                        
                                     
                                     </div>
 
@@ -185,6 +190,7 @@ function Loggin () {
 
                                 <div className='mt-3 md:-mb-14 lg:-mb-20'>
                                     <div className='text-red-700 flex w-full justify-center rounded items-center'>
+                                        
                                         <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live='assertive'>
                                             {errMsg}
                                         </p>
