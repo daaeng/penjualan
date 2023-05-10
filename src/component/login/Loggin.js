@@ -39,6 +39,12 @@ function Loggin () {
     const [success, setSuccess] = useState(false); 
 
     useEffect(() => {
+        if(localStorage.getItem('userData')){
+            navigate('/')
+        }
+    })
+
+    useEffect(() => {
         userRef.current.focus();
     }, [])
 
@@ -60,6 +66,7 @@ function Loggin () {
             }
           );
           localStorage.setItem("User", JSON.stringify(response?.data));
+        //   sessionStorage.setItem("User", JSON.stringify(response?.data));
           const accessToken = response?.data?.accessToken;
           const roles = response?.data?.roles;
           setAuth({ username, password, roles, accessToken });

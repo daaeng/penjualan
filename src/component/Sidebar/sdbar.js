@@ -9,7 +9,7 @@ import {RiSettings3Fill } from 'react-icons/ri'
 import {MdShoppingBasket } from 'react-icons/md'
 import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
-import {HiUserCircle, HiUser, HiLogout} from 'react-icons/hi'
+import {HiUserCircle, HiUser} from 'react-icons/hi'
 
 function Sdbar() {
 
@@ -29,11 +29,14 @@ function Sdbar() {
     const menuHeader = [
         {name:'Profile', icon: <HiUser/>, path:''},
         {name:'Settings', icon: <RiSettings3Fill/>, path:''},
-        {name:'Logout', icon: <HiLogout/>, path:'/'},
+        // {name:'Logout', icon: <HiLogout/>, path:'/'},
     ] 
 
-    const logout = () => {
-        localStorage.removeItem("User");
+    const LogOut = () => {
+        localStorage.removeItem("userData")
+        // sessionStorage.removeItem("User")
+        localStorage.clear()
+        navigate('/')
     };
 
     return (
@@ -75,7 +78,8 @@ function Sdbar() {
                         <BiSearch size={'23'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setbuka(!buka)}/>
                         <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
                         <HiUserCircle size={'28'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
-                        <FiLogOut onSubmit={logout} size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={()=> navigate('/')}/>
+                        
+                        <FiLogOut  size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={LogOut}/>
                       
                     </div>
                 </div>
