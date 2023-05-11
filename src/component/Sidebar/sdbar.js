@@ -32,6 +32,13 @@ function Sdbar() {
         // {name:'Logout', icon: <HiLogout/>, path:'/'},
     ] 
 
+    // const autoRun =()=> {
+    //     function cekLobby = sessionStorage(getItem('userData'))
+    //     if (cekLobby) {
+            
+    //     }
+    // }
+
     const LogOut = () => {
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")

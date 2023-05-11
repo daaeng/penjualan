@@ -1,35 +1,32 @@
-
 import axios from '../config/api/axios'
 import Logo from '../../assets/log.png'
-import AuthContext from '../../context/AuthProvider'
-import React, { useContext, useEffect, useRef, useState } from 'react'
-
+import useAuth from '../../hooks/useAuth'
+import React, { useEffect, useRef, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { FaBoxOpen } from 'react-icons/fa'
+import { AiFillTags } from 'react-icons/ai'
+import { SiAudiomack } from 'react-icons/si'
+import { BiMoneyWithdraw } from 'react-icons/bi'
+import { MdShoppingBasket } from 'react-icons/md'
 // import { toast } from 'react-toastify'
 // import { Router } from 'react-router-dom'
-// import { NavLink } from 'react-router-dom'
-// import { SiAudiomack } from 'react-icons/si'
-// import { BiMoneyWithdraw } from 'react-icons/bi'
-// import { FaBoxOpen } from 'react-icons/fa'
-// import { AiFillTags } from 'react-icons/ai'
-// import { MdDashboard, MdShoppingBasket } from 'react-icons/md'
-import { useNavigate } from 'react-router-dom'
 
+const LOGIN_URL = '/api/Auth/Login';
 
 function Loggin () {
-    const LOGIN_URL = '/api/Auth/Login';
     
-    // const menu = [
-    //     {name:'Dashboard', icon: <MdDashboard/>, path:'/dash'},
-    //     {name:'Sales', icon: <SiAudiomack/>, path:'/sales'},
-    //     {name:'Finance', icon: <BiMoneyWithdraw/>, path:'/finance'},
-    //     {name:'Logistik', icon: <FaBoxOpen/>, path:'/Logistik'},
-    //     {name:'Merchandise', icon: <AiFillTags/>, path:'/MD'},
-    //     {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
-    // ];
+    const menu = [
+        // {name:'Dashboard', icon: <MdDashboard/>, path:'/dash'},
+        {name:'Sales', icon: <SiAudiomack/>, path:'/sales'},
+        {name:'Finance', icon: <BiMoneyWithdraw/>, path:'/finance'},
+        {name:'Logistik', icon: <FaBoxOpen/>, path:'/Logistik'},
+        {name:'Merchandise', icon: <AiFillTags/>, path:'/MD'},
+        {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
+    ];
 
-    const navigate = useNavigate()
-    const {setAuth} = useContext(AuthContext);  
+    // const navigate = useNavigate()
 
+    const {setAuth} = useAuth(useAuth)  
     const userRef = useRef();
     const errRef = useRef();
 
@@ -75,11 +72,12 @@ function Loggin () {
           setPwd("");        
           setErrMsg(response?.data?.errors)
           setSuccess(response?.data?.success);
+            console.log('Login');
             console.log(response?.data?.nama);
             console.log(response?.data?.errors);
         } catch (err) {
           if (!err?.response) {
-            setErrMsg("Server belum merespon");
+            setErrMsg("Server Belum Merespon");
           } 
         //   else if (err.response?.data?.errors) {
         //     setErrMsg(err.response?.data?.errors);
@@ -94,7 +92,7 @@ function Loggin () {
           }
           errRef.current.focus();
         }
-        console.log(origin);
+        // console.log(origin);
       };
     
     
@@ -112,11 +110,33 @@ function Loggin () {
                                     Login Berhasil
                                 </h1>
 
-                                <div className=''>
-                                    <button onClick={()=> navigate('/dash')}
+                                <div className='flex items-center'>
+                                    {/* <button onClick={()=> navigate('/dash')}
                                             className='p-1 w-full rounded-md bg-blue-300 hover:bg-blue-500' >
                                         Dashboard
-                                    </button>                          
+                                    </button>     
+                                     */}
+                                    <div className='sm:p-1 md:p-3 lg:p-3 items-center bg-marron flex '>
+
+                                        {menu.map((val, index) => {
+                                            return (
+                                                <NavLink
+                                                    key = {index} 
+                                                    to={val.path}               
+                                                    className={`cursor-pointer no-underline flex flex-row duration-300 items-center 
+                                                                text-gray-100 overflow-y-visible hover:bg-light-white 
+                                                                hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
+
+                                                            <div className={`ml-1 text-2xl `}>
+                                                                {val.icon}
+                                                            </div>
+
+                                                            <div className={`ml-2 duration-50`} >{val.name}</div> 
+                                                </NavLink>
+                                            );
+                                        })}
+
+                                    </div>                     
                                 </div>
 
                             </div>
@@ -183,14 +203,14 @@ function Loggin () {
                                     
                                     </div>
 
-                                    <div className='mt-5'>
-                                        <button className='w-full p-1 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
+                                    <div className='mt-4'>
+                                        <button className='w-full p-2 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
                                     </div>                                  
 
                                 </div>
 
                                 <div className='mt-3 md:-mb-14 lg:-mb-20'>
-                                    <div className='text-red-700 flex w-full justify-center rounded items-center'>
+                                    <div className='text-red-700 flex w-full justify-center rounded items-center font-mono'>
                                         
                                         <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live='assertive'>
                                             {errMsg}

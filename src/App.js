@@ -10,6 +10,7 @@ import Ggrosir from "./page/Ggrosir";
 import Login from "./page/Login";
 
 function App() {
+  
   return (
     <>
       <Router>
@@ -18,10 +19,15 @@ function App() {
           <Route path="/" element = {<Login/>}/>
 
           <Route path="/dash" element = {<Dashboard/>}/>
+
           <Route path="/sales" element = {<Psale/>}/>
+          
           <Route path="/finance" element = {<Fnance/>}/>
+          
           <Route path="/Logistik" element = {<Logstik/>}/>
+          
           <Route path="/MD" element = {<MdMerhcain/>}/>
+
           <Route path="/Grosir" element = {<Ggrosir/>}/>
 
           <Route path="*" element= {'NOT FOUND !'}/>

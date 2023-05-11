@@ -7,7 +7,8 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://192.168.21.70:13541",
+  baseURL: "http://apisrc25.lan",
+  // baseURL: "https://192.168.21.70:13541",
 });
 
 
