@@ -1,35 +1,66 @@
 import React, {useState } from 'react'
 import {BiTimeFive } from 'react-icons/bi'
-// import { NavLink } from 'react-router-dom';
-// import DateTimeR from '../dateRange/dateTimeR'
-import Box2 from '../Dash/box2';
+import Labeldt from './label';
+import DateTimeR from '../dateRange/dateTimeR';
+// import * as React from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
 
 export default function FilterTime () {
 
     const [bka, setBka] =  useState(false);
 
-    // const mnFilterTime = [
-    //     {name:'Last', path:'-'},
-    //     {name:'1 Hour', path:''},
-    //     {name:' 2 Hours', path:''},
-    //     {name:' 3 Hours', path:''},
-    //     {name:' 6 Hours', path:''},
-    //     {name:' 1 Day', path:''},
-    //     {name:' 2 Days', path:''},
-    //     {name:' 3 Days', path:''},
-    //     {name:' 1 Week', path:''},
-    //     {name:' 2 Weeks', path:''},
-    //     {name:' 3 Weeks', path:''},
-    //     {name:' 4 Weeks', path:''},
-    //     {name:' 1 Month', path:''},
-    //     {name:' 2 Months', path:''},
-    //     {name:' 3 Months', path:''},
-    //     {name:' 6 Months', path:''},
-    //     {name:' 1 Year', path:''},
+    const menuFlt = [
+        {name:'This Week', path:''},
+        {name:'This Month', path:''},
+        {name:'This Year', path:''},
+        {name:'Last Weeks ', path:''},
+        {name:'Last Months ', path:''},
+        {name:'Last Years ', path:''},
         
-    // ]
+    ] 
+
+    const title = () => {
+        return ("Filter Waktu")
+    }
+
+    const [checked, setChecked] = useState(false)
     
-      return (
+    const handleChange = () => {
+       if( setChecked(!checked)) {
+            
+       }
+    }
+
+    const [value, setValue] = React.useState('');
+    const [error, setError] = React.useState(false);
+    const [setHelperText] = React.useState('Choose wisely');
+
+    const handleRadioChange = (event) => {
+        setValue(event.target.value);
+        setHelperText(' ');
+        setError(false);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (value === 'best') {
+        setHelperText('You got it!');
+        setError(false);
+        } else if (value === 'worst') {
+        setHelperText('Sorry, wrong answer!');
+        setError(true);
+        } else {
+        setHelperText('Please select an option.');
+        setError(true);
+        }
+    };
+    
+
+    return (
         <>
             <div className=''>
                 <h6 className='flex items-center -mb-2'>
@@ -42,17 +73,68 @@ export default function FilterTime () {
             </div>
 
             <div className='flex justify-end'>
-                <div className={` bg-redd rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
-                    {/* <div className='p-1 flex justify-end'>
-                        <DateTimeR/>
-                    </div> */}
+                <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
+                    
                     <ul className={`-ml-7 mr-1 ${!bka  && 'hidden' }`}>
-
-                        <div className='flex gap-1 mt-1'>
-                            <Box2/>
-                            <Box2/>
+                        <div className='-mb-2'>
+                            <Labeldt title = {title} />
                         </div>
 
+                        <div className='grid grid-cols-3 w-147 p-1'>
+                            <div className='row-span-2 flex'>
+                                <div className='flex-row p-2 text-white w-32'>
+                                    
+                                    {menuFlt.map((val, index) => {
+                                        return(                 
+                                            <button
+                                                key = {index} 
+                                                to={val.path}
+                                                
+                                                className={`cursor-pointer no-underline flex flex-row duration-300 
+                                                        text-gray-100 overflow-y-visible hover:bg-light-white hover:rounded-md 
+                                                        hover:text-black w-28 `} >
+
+                                                <li className='flex items-center'>
+                                                    <div className={`mr-1 mt-0.5 `}>{val.icon}</div>
+                                                    <div className={`text-1xl duration-50`} >{val.name}</div> 
+                                                </li>
+                                            </button>                           
+                                        );
+                                    })}
+                              
+                                </div>
+                                <div className='p-2 text-white flex-row '>
+                                    <input type='checkbox' checked={checked} onChange={handleChange} className='mr-1'/>
+                                    Versus 
+                                    
+                                    <div className='ml-5'>
+                                        
+                                    <form onSubmit={handleSubmit}>
+                                        <FormControl error={error} variant="standard">
+                                            <RadioGroup
+                                            aria-labelledby="demo-error-radios"
+                                            name="quiz"
+                                            value={value}
+                                            onChange={handleRadioChange}
+                                            >
+                                            <FormControlLabel value="best" control={<Radio />} label="Last Month" />
+                                            <FormControlLabel value="worst" control={<Radio />} label="Last Year" />
+                                            </RadioGroup>
+                                
+                                        </FormControl>
+                                    </form>
+
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                            <div className='flex col-span-2'>
+                                <div className='flex gap-1 mt-1 bg-blue-100 -ml-5'>
+                                    <DateTimeR/>
+                                </div>
+
+                            </div>
+                        </div>
                     </ul>
 
                 </div>
@@ -60,10 +142,5 @@ export default function FilterTime () {
 
         </>
 
-        // <div className=''>
-        //     <h6>
-        //         {props.title()}
-        //     </h6> 
-        // </div>
       );
 }

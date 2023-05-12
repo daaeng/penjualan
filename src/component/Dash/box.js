@@ -4,6 +4,7 @@ import {FaUsers} from 'react-icons/fa'
 import {NavLink } from 'react-router-dom'
 import Box2 from './box2'
 import Labeldt from '../backpage/label'
+import CobaChart from '../chart/coba'
 // import { render } from '@testing-library/react'
 
 function Box () {
@@ -19,54 +20,69 @@ function Box () {
   const title = () => {
     return ("Produk Terlaris")
   }
+  
+  const isibox = () => {
+    return (
+      <>
+        <CobaChart/>
+      </>
+    )
+  }
 
   return (
     <>
       <div className='flex justify-center mt-4'>
-        <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 rounded-lg ml-2 w-full'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 w-full'>
 
-          <div className='sm:col-span-2 md:col-span-2 lg:row-span-2 lg:col-span-1 '>
+          <div className='sm:col-span-2 md:col-span-2 lg:col-span-1 h-fit'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 p-2 rounded-lg ml-2 w-full'>
+              {menBox.map((val, index) =>{  
+                
+                return(
+                  
+                  <NavLink
+                    key= {index}
+                    to= {val.path}
+                    style={{ background: val.color }}
+                    className={`sm:col-span-1 md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-2 rounded-t-70px shadow-md w-auto`}>
+                        
+                      <div  
+                          className='grid sm:col-span-1 lg:grid-cols-2 -mt-4 px-3 py-1 w-auto rounded-md text-redd bg-slate-300 hover:bg-white hover:text-black'>
+                          
+                          <h4 className='lg:col-span-1 mt-2'>
+                            {val.value} 
+                          </h4>                    
+                          
+                          <div className='flex justify-end items-center'>
+                            <div className='lg:row-span-2 md:mt-0 sm:-mt-1 sm:ml-6 p-2 w-16 h-14 ml-10 rounded-md -mt-4 bg-redd flex justify-center hover:text-black text-darkgolden'>
+                              {val.icon}
+                            </div>
+                          </div>
+                          
+                          <h6 className='lg:col-span-1'>
+                            {val.name}
+                          </h6>
+                      
+                      </div>  
+                                                    
+                  </NavLink> 
+                  
+                )
+              })}
+            
+            </div>
+
+          </div>
+
+          <div className='sm:mt-4 sm:col-span-2 md:mt-4 md:col-span-2 lg:mt-0 lg:row-span-2 lg:col-span-2 ml-4'>
             <div className='bg-marron shadow-md p-2 rounded-md w-full '>
               <Labeldt title = {title} />
-              <Box2/>
+              <Box2 isibox = {isibox}/>
             </div>
           </div>
-        
-          {menBox.map((val, index) =>{  
-            
-            return(
-              
-              <NavLink
-                key= {index}
-                to= {val.path}
-                style={{ background: val.color }}
-                className={`md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-2 rounded-t-70px shadow-md`}>
-                    
-                  <div  
-                      className='grid lg:grid-cols-2 -mt-4 px-3 py-1 w-auto rounded-md text-redd bg-slate-300 hover:bg-white hover:text-black'>
-                      
-                      <h4 className='lg:col-span-1 mt-2'>
-                        {val.value} 
-                      </h4>                    
-                      
-                      <div className='flex justify-end items-center'>
-                        <div className='lg:row-span-2 md:mt-0 sm:-mt-1 sm:ml-6 p-2 w-16 h-14 ml-10 rounded-md -mt-4 bg-redd flex justify-center hover:text-black text-darkgolden'>
-                          {val.icon}
-                        </div>
-                      </div>
-                      
-                      <h6 className='lg:col-span-1'>
-                        {val.name}
-                      </h6>
-                  
-                  </div>  
-                                                
-              </NavLink> 
-              
-            )
-          })}
-        
+
         </div>
+        
 
       </div>
 

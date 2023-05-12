@@ -2,7 +2,7 @@ import React from 'react'
 // import axios from 'axios'
 // import {baseURL} from '../config/api/axios'
 
-function Box2() {
+function Box2(props) {
     // const baseURL = 'https://dummyjson.com'
     // const URL = '/users'
     // const [post, setpost] =  React.useState(null)
@@ -23,9 +23,9 @@ function Box2() {
         <>
             <div className='flex'>
 
-                    <div className='bg-slate-50 p-1 rounded-md mt-2 h-40 w-full'>
+                    <div className='bg-slate-50 p-1 rounded-md mt-2 h-fit w-full'>
                         isi konten, barang paling laris di atas
-
+                        {props.isibox()}
                         {/* <div>
                             Nama User
                             {post.map((user, i) => {

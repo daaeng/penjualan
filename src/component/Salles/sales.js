@@ -13,7 +13,6 @@ function Sales() {
     <>
       <div className=' sm:ml-14 md:ml-20 mr-3'>
           <div className='ml-2 mt-1'>
-
               <div className='grid grid-cols-2'>  
                   <h2 className='col-span-1 font-mono text-black items-center flex'>
                     <SiAudiomack className='mr-1' size={'20'}/>Sales
@@ -24,6 +23,9 @@ function Sales() {
                   </div>
               </div>
               <div className='border ' />
+              <p className=''>
+                Welcome, user
+              </p>
           </div>
 
           <div className='mt-2 mb-2'>
