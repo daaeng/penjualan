@@ -28,14 +28,25 @@ function Box () {
       </>
     )
   }
-
+  
+  // const isibox2 = () => {
+  //   return (
+  //     <>
+        
+  //       <CobaChart/>
+  //     </>
+  //   )
+  // }
+  
   return (
     <>
       <div className='flex justify-center mt-4'>
-        <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 w-full'>
+        
+        <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-2 w-full'>
 
           <div className='sm:col-span-2 md:col-span-2 lg:col-span-1 h-fit'>
-            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 p-2 rounded-lg ml-2 w-full'>
+            
+            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 p-2 rounded-lg  w-full'>
               {menBox.map((val, index) =>{  
                 
                 return(
@@ -47,7 +58,8 @@ function Box () {
                     className={`sm:col-span-1 md:col-span-1 lg:col-span-1 cursor-pointer no-underline p-2 rounded-t-70px shadow-md w-auto`}>
                         
                       <div  
-                          className='grid sm:col-span-1 lg:grid-cols-2 -mt-4 px-3 py-1 w-auto rounded-md text-redd bg-slate-300 hover:bg-white hover:text-black'>
+                          className='grid sm:col-span-1 lg:grid-cols-2 0
+                           p-1 w-auto rounded-md text-redd -mt-4 bg-slate-300 hover:bg-white hover:text-black'>
                           
                           <h4 className='lg:col-span-1 mt-2'>
                             {val.value} 
@@ -74,12 +86,14 @@ function Box () {
 
           </div>
 
-          <div className='sm:mt-4 sm:col-span-2 md:mt-4 md:col-span-2 lg:mt-0 lg:row-span-2 lg:col-span-2 ml-4'>
+          <div className='sm:mt-4 sm:col-span-2 md:mt-3 md:col-span-2 lg:-mt-2 lg:row-span-2 lg:col-span-2 p-2'>
             <div className='bg-marron shadow-md p-2 rounded-md w-full '>
               <Labeldt title = {title} />
               <Box2 isibox = {isibox}/>
             </div>
           </div>
+
+
 
         </div>
         

@@ -24,7 +24,7 @@ function Box2(props) {
             <div className='flex'>
 
                     <div className='bg-slate-50 p-1 rounded-md mt-2 h-fit w-full'>
-                        isi konten, barang paling laris di atas
+                        {/* isi konten, barang paling laris di atas */}
                         {props.isibox()}
                         {/* <div>
                             Nama User
