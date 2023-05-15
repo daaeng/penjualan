@@ -10,6 +10,14 @@ import {MdShoppingBasket } from 'react-icons/md'
 import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
+import { ToastContainer, toast } from 'react-toastify'
+// import axios from '../config/api/axios'
+// import axios from '../config/api/axios'
+
+
+// const LOGOut_URL = '/api/Auth/LogOff?token=';
+
+
 
 function Sdbar() {
 
@@ -32,23 +40,32 @@ function Sdbar() {
         // {name:'Logout', icon: <HiLogout/>, path:'/'},
     ] 
 
-    // const autoRun =()=> {
-    //     function cekLobby = sessionStorage(getItem('userData'))
-    //     if (cekLobby) {
-            
-    //     }
+    // useEffect = () => {
+    //     axios.get()
     // }
+
+    const sToastLogIn =() =>{
+        toast.success('Log Out Berhasil !', {
+            position: toast.POSITION.TOP_CENTER
+        })
+        console.log('dah masuk');
+    }
 
     const LogOut = () => {
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")
         localStorage.clear()
+        sToastLogIn()
         console.log('Sudah Log Out');
+        // return alert('Yakin anda ingin Log out', navigate('/'))
         navigate('/')
     };
 
     return (
     <>   
+        <ToastContainer/>
+        
+        
         <header className='grid grid-cols-2 p-2 bg-marron rounded-bl-3xl '>
             <div className='flex col-span-1 h-9 -mr-5 -mt-6 -mb-10'>
                 <div className='flex justify-end ml-60 rounded-bl-70px bg-red-800 w-full'>

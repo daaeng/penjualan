@@ -66,7 +66,7 @@ function Box () {
                           </h4>                    
                           
                           <div className='flex justify-end items-center'>
-                            <div className='lg:row-span-2 md:mt-0 sm:-mt-1 sm:ml-6 p-2 w-16 h-14 ml-10 rounded-md -mt-4 bg-redd flex justify-center hover:text-black text-darkgolden'>
+                            <div className='lg:row-span-2 md:-mt-0 sm:-mt-10 sm:ml-6 p-2 w-16 h-14 ml-10 rounded-md -mt-4 bg-redd flex justify-center hover:text-black text-darkgolden'>
                               {val.icon}
                             </div>
                           </div>

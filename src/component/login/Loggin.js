@@ -8,10 +8,11 @@ import { AiFillTags } from 'react-icons/ai'
 import { SiAudiomack } from 'react-icons/si'
 import { BiMoneyWithdraw } from 'react-icons/bi'
 import { MdShoppingBasket } from 'react-icons/md'
-// import { toast } from 'react-toastify'
-// import { Router } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
-const LOGIN_URL = '/api/Auth/Login';
+const LOGIN_URL = '/api/Auth/Login'
+// const RefToken = '/api/Auth/refresh'
 
 function Loggin () {
     
@@ -33,14 +34,31 @@ function Loggin () {
     const [username, setUser] = useState('');
     const [password, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false); 
+    const [success, setSuccess] = useState(''); 
 
-    // useEffect(() => {
-    //     if(sessionStorage.getItem('userData')){
-    //         navigate('/')
-    //     }
-    // },[navigate])
+    // Server mati
+    const sToastMErr = () =>{
+        toast.error('Server Tidak Merespon', {
+            position: toast.POSITION.TOP_CENTER
+        })
+        console.log('Servet Offlane');
+    }
 
+    //Salah Usernam and Password
+    const sToastU = () =>{
+        toast.warning('Username dan Password salah', {
+            position: toast.POSITION.TOP_CENTER
+        })
+    }
+
+    //Login success
+    // const sToastLogIn =() =>{
+    //     toast.success('Login Berhasil, Selamat Datang...!', {
+    //         position: toast.POSITION.TOP_CENTER
+    //     })
+    //     console.log('dah masuk');
+    // }
+    
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -70,27 +88,28 @@ function Loggin () {
           setAuth({ username, password, roles, accessToken });
           setUser("");
           setPwd("");        
-          setErrMsg(response?.data?.errors)
-          setSuccess(response?.data?.success);
-            console.log('Login');
+          setErrMsg(sToastU(response?.data?.errors))
+          
+          setSuccess(response?.data?.success)
+            console.log('Pengecekan');
             console.log(response?.data?.nama);
             console.log(response?.data?.errors);
         } catch (err) {
-          if (!err?.response) {
-            setErrMsg("Server Belum Merespon");
-          } 
-        //   else if (err.response?.data?.errors) {
-        //     setErrMsg(err.response?.data?.errors);
-        //   } 
+        if (!err?.response) {
+            setErrMsg(sToastMErr(err.response));
+        } 
+            else if (err.response?.data?.errors) {
+            setErrMsg(err.response?.data?.errors);
+        } 
         //   else if (err.response?.data?.success === false) {
         //     setErrMsg("Missing Username or Password");
         //   } else if (err.response?.data?.status === 401) {
         //     setErrMsg("Unauthorized");
         //   }
-           else {
+        else {
             setErrMsg("Login Failed");
-          }
-          errRef.current.focus();
+        }
+        errRef.current.focus();
         }
         // console.log(origin);
       };
@@ -98,19 +117,20 @@ function Loggin () {
     
     return(
         <>
-            {success ?(
+            {success ?( 
                 <section>
+                    
                     <div>
                         <div className="flex bg-slate-100 rounded-xl">
                             <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-48 rounded-l-xl duration-500 hover:text-yellow-600`} />
                             {/* Login */}
                             <div className="sm:p-1 md:p-2 lg:p-24">
                                 
-                                <h1 className='flex justify-center'>
+                                <h1 className='flex justify-center text-green-500'>
                                     Login Berhasil
                                 </h1>
 
-                                <div className='flex items-center'>
+                                <div className='flex-row items-center'>
                                     {/* <button onClick={()=> navigate('/dash')}
                                             className='p-1 w-full rounded-md bg-blue-300 hover:bg-blue-500' >
                                         Dashboard
@@ -212,6 +232,7 @@ function Loggin () {
                                 <div className='mt-3 md:-mb-14 lg:-mb-20'>
                                     <div className='text-red-700 flex w-full justify-center rounded items-center font-mono'>
                                         
+                                        <ToastContainer/>
                                         <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live='assertive'>
                                             {errMsg}
                                         </p>
