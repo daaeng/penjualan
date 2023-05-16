@@ -66,7 +66,7 @@ function Sdbar() {
         <ToastContainer/>
         
         
-        <header className='grid grid-cols-2 p-2 bg-marron rounded-bl-3xl '>
+        <header className='grid grid-cols-2 p-2 h-20 bg-marron rounded-bl-3xl '>
             <div className='flex col-span-1 h-9 -mr-5 -mt-6 -mb-10'>
                 <div className='flex justify-end ml-60 rounded-bl-70px bg-red-800 w-full'>
                     
@@ -136,7 +136,7 @@ function Sdbar() {
 
         </header>
         
-        <nav className = {`top-16 bg-marron h-fit mt-3 lg:ml-4 md:ml-4 sm:ml-1 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
+        <nav className = {`top-16 bg-marron h-fit mt-5 lg:ml-4 md:ml-4 sm:ml-1 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             
             <div className='sm:p-1 md:p-3 items-center '>
 

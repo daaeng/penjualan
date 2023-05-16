@@ -21,7 +21,7 @@ function DateTimeR () {
       <div className="rounded w-72 px-1 py-1 bg-marron text-white">
        
         <Datepicker 
-          datepicker-autohide={false}
+          onHide={false}
           value={value} 
           onChange={handleValueChange} 
           showShortcuts={true} 

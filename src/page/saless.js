@@ -13,7 +13,7 @@ const Psale = () => {
         </div>
 
         <div>
-          <section className={`bg-gray-50 -mt-1`}>
+          <section className={`-mt-1`}>
             
             <Sales/>
 
