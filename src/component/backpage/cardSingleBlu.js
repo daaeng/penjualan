@@ -1,4 +1,5 @@
 import React from "react";
+import { MdPointOfSale } from "react-icons/md";
 
 const CardSingleBlu = (props) => {
     return(
@@ -11,23 +12,23 @@ const CardSingleBlu = (props) => {
                 </div>
                 
                 <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-5 md:mr-5 md:mb-4 md:mt-3
-                    p-1 px-2 w-auto relative rounded-md text-black bg-abucream hover:bg-light-white hover:text-black'>
+                    p-1 px-2 w-auto relative rounded-md text-black 
+                    bg-gradient-to-l from-light-white to-blue-200 
+                    hover:bg-light-white hover:text-black'>
                     
                     <h6 className='lg:col-span-1'>
                         {props.atasBru()}
                     </h6>                    
                     
                     <div className="flex justify-end lg:row-span-3 mt-1 mr-1 -mb-2 items-center ">
-                        <div className=" bg-blue-600 p-3 rounded-lg mr-2">
-                            {props.kananBru()}
-                        </div>
+                        <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45" size={'70'}/>
                     </div>  
                     
                     <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2'>
                         {props.bwhBru()}
                     </div>
 
-                    <p className="lg:col-span-2 text-redd text-xs mb-1">
+                    <p className="lg:col-span-2 font-bold text-redd text-xs mb-1">
                         ▼ 11% Last Month
                     </p>
                 
