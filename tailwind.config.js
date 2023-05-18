@@ -19,7 +19,7 @@ module.exports = {
         
       },
       height:{
-        '34'  : '130px',
+        '34'  : '131px',
         '128' : '32rem',
         '140' : '50rem',
         '146' : '57rem',
@@ -39,6 +39,7 @@ module.exports = {
       },
       
       margin:{
+        '34'  : '130px',
         '128' : '32rem',
         '140' : '50rem',
         '146' : '57rem',
@@ -61,6 +62,8 @@ module.exports = {
         'redd'        : '#B22222',
         'lightgold'   : '#FFD779',
         'cobamerah'   : '#B30024',
+        'abucream'   : '#D9D9D9',
+        'htmcerah'   : '#454545',
       },
 
       screens: {
@@ -70,7 +73,7 @@ module.exports = {
           // Sidebar appears at 768px, so revert to `sm:` styles between 768px
           // and 868px, after which the main content area is wide enough again to
           // apply the `md:` styles.
-          {'min': '400px', 'max': '767px'},
+          {'min': '500px', 'max': '767px'},
           {'min': '468px'}
         ],
         'lg': '1100px',

@@ -120,13 +120,16 @@ function Loggin () {
             {success ?( 
                 <section>
                     
-                    <div>
+                    <div className=''>
                         <div className="flex bg-slate-100 rounded-xl">
-                            <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-48 rounded-l-xl duration-500 hover:text-yellow-600`} />
-                            {/* Login */}
-                            <div className="sm:p-1 md:p-2 lg:p-24">
+                            <div>
+                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-48 rounded-l-xl duration-500 hover:text-yellow-600`} />
+
+                            </div>
+                            
+                            <div className="sm:p-1 md:p-3 lg:p-24  ">
                                 
-                                <h1 className='flex justify-center text-green-500'>
+                                <h1 className='flex justify-center text-green-500 '>
                                     Login Berhasil
                                 </h1>
 

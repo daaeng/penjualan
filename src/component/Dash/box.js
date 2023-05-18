@@ -38,7 +38,7 @@ function Box () {
   const atas = () => {
     return (
       <>
-        Hai
+        Piutang
       </>
     )
   }
@@ -46,7 +46,7 @@ function Box () {
   const kanan = () => {
     return (
       <>
-        Hai
+        Gambar
       </>
     )
   }
@@ -54,7 +54,7 @@ function Box () {
   const bwh = () => {
     return (
       <>
-        Hai
+        841.110
       </>
     )
   }
@@ -64,7 +64,7 @@ function Box () {
   const atasIjo = () => {
     return (
       <>
-        Hai
+        Pembayaran
       </>
     )
   }
@@ -72,7 +72,7 @@ function Box () {
   const kananIjo = () => {
     return (
       <>
-        Hai
+        Gambar
       </>
     )
   }
@@ -80,7 +80,7 @@ function Box () {
   const bwhIjo = () => {
     return (
       <>
-        Hai
+        724.859
       </>
     )
   }
@@ -90,7 +90,7 @@ function Box () {
   const atasKng = () => {
     return (
       <>
-        Hai
+        Item Terjual
       </>
     )
   }
@@ -98,7 +98,7 @@ function Box () {
   const kananKng = () => {
     return (
       <>
-        Hai
+        Gambar
       </>
     )
   }
@@ -106,7 +106,7 @@ function Box () {
   const bwhKng = () => {
     return (
       <>
-        Hai
+        1.257.924
       </>
     )
   }
@@ -116,7 +116,7 @@ function Box () {
   const atasBru = () => {
     return (
       <>
-        Hai
+        Penjualan
       </>
     )
   }
@@ -124,7 +124,7 @@ function Box () {
   const kananBru = () => {
     return (
       <>
-        Hai
+        Gambar
       </>
     )
   }
@@ -132,7 +132,7 @@ function Box () {
   const bwhBru = () => {
     return (
       <>
-        Hai
+        736.142
       </>
     )
   }
@@ -145,15 +145,13 @@ function Box () {
 
           <div className='sm:col-span-2 md:col-span-2 lg:col-span-1 h-fit'>
             
-            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-4 p-2 rounded-lg  w-full'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-3 p-2 rounded-lg  w-full'>
 
-              <CardSingleRed atas = {atas} kanan = {kanan} bwh = {bwh}/>
-              <CardSingleGree atasIjo = {atasIjo} kananIjo = {kananIjo} bwhIjo = {bwhIjo}/>
-              <CardSingleYell atasKng = {atasKng} kananKng = {kananKng} bwhKng = {bwhKng}/>
-              <CardSingleBlu atasBru = {atasBru} kananBru = {kananBru} bwhBru = {bwhBru}/>
+                <CardSingleRed atas = {atas} kanan = {kanan} bwh = {bwh}/>
+                <CardSingleGree atasIjo = {atasIjo} kananIjo = {kananIjo} bwhIjo = {bwhIjo}/>
+                <CardSingleYell atasKng = {atasKng} kananKng = {kananKng} bwhKng = {bwhKng}/>
+                <CardSingleBlu atasBru = {atasBru} kananBru = {kananBru} bwhBru = {bwhBru}/>
 
-             
-            
             </div>
 
           </div>
@@ -166,7 +164,7 @@ function Box () {
           </div>
 
         </div>
-
+    
       </div>
         
     </>
