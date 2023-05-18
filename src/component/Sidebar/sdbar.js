@@ -44,7 +44,7 @@ function Sdbar() {
     //     axios.get()
     // }
 
-    const sToastLogIn =() =>{
+    const sToastLogOut =() =>{
         toast.success('Log Out Berhasil !', {
             position: toast.POSITION.TOP_CENTER
         })
@@ -55,7 +55,7 @@ function Sdbar() {
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")
         localStorage.clear()
-        sToastLogIn()
+        sToastLogOut()
         console.log('Sudah Log Out');
         // return alert('Yakin anda ingin Log out', navigate('/'))
         navigate('/')

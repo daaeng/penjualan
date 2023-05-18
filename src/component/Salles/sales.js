@@ -2,9 +2,7 @@ import React from 'react'
 import { SiAudiomack } from 'react-icons/si';
 import FilterTime from '../backpage/filterTime';
 import Box from '../Dash/box';
-// import {BsFillEmojiWinkFill} from 'react-icons/bs'
-// import {FaEdit} from 'react-icons/fa'
-
+import GabCard from '../backpage/GabCard/GabCard';
 
 function Sales() {
 
@@ -30,7 +28,11 @@ function Sales() {
 
           <div className='mt-2 mb-2'>
               <Box/>
-          </div>
+          </div>  
+
+          <div>
+            <GabCard/>
+          </div>        
 
       </div>
       

@@ -54,7 +54,7 @@ module.exports = {
       },
 
       colors : {
-        'dark-purple' : '#081A51',
+        'dark-blue' : '#1939D8',
         'light-white' : 'rgba(255, 255, 255, 0.18)',
         'darkgolden'  : 'rgb(184,134,11)',
         'marron'      : '#E32222',

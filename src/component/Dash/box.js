@@ -145,7 +145,8 @@ function Box () {
 
           <div className='sm:col-span-2 md:col-span-2 lg:col-span-1 h-fit'>
             
-            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-3 p-2 rounded-lg  w-full'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-3 p-2 rounded-lg  w-full
+                            md:text-lg sm:text-sm '>
 
                 <CardSingleRed atas = {atas} kanan = {kanan} bwh = {bwh}/>
                 <CardSingleGree atasIjo = {atasIjo} kananIjo = {kananIjo} bwhIjo = {bwhIjo}/>
@@ -164,7 +165,7 @@ function Box () {
           </div>
 
         </div>
-    
+
       </div>
         
     </>
