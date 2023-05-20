@@ -11,7 +11,7 @@ function Login (){
     return(
         
         <>
-            <div className='h-full w-full sm:py-56 md:py-64 lg:p-44 bg-gray-200'>
+            <div className='h-full w-full sm:py-56 md:py-60 fixed lg:p-52'>
                 <div className='md:p-16 lg:p-28 mb-14'>           
                     <div className="flex justify-center p-2 -mb-1">
                         <div className="inset-0 h-full ">

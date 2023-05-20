@@ -33,7 +33,6 @@ function Sales() {
           <div>
             <GabCard/>
           </div>        
-
       </div>
       
     </>

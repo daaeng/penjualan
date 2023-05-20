@@ -1,12 +1,11 @@
 import React from "react";
-import { MdPointOfSale } from "react-icons/md";
 
 const CardSingleBlu = (props) => {
     return(
         <>
             <div className="">
                 <div className="flex justify-end">
-                    <div className='bg-blue-600 sm:w-28 md:w-34 lg:w-72 rounded-tl-full relative sm:h-28 md:h-34 -mb-36'>
+                    <div className='bg-blue-600 sm:w-28 md:w-34 lg:w-72 rounded-tl-full relative sm:h-24 md:h-28 lg:h-34 -mb-36'>
                     </div>
 
                 </div>
@@ -19,15 +18,16 @@ const CardSingleBlu = (props) => {
                         {props.atasBru()}
                     </h6>                    
                     
-                    <div className="flex justify-end lg:row-span-3 mt-1 mr-1 -mb-2 items-center ">
-                        <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/>
+                    <div className="flex justify-end lg:row-span-3 mr-1 -mb-2 items-center ">
+                        {props.kananBru()}
+                        {/* <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/> */}
                     </div>  
                     
-                    <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-16 md:-mt-16 lg:-mt-0 '>
+                    <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-14 md:-mt-14 lg:-mt-0 '>
                         {props.bwhBru()}
                     </div>
 
-                    <p className="lg:col-span-2 font-bold text-redd text-xs mb-1 sm:-mt-4 md:-mt-4 lg:-mt-0">
+                    <p className="lg:col-span-2 font-bold text-redd text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">
                         ▼ 11% Last Month
                     </p>
                 

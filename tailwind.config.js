@@ -74,7 +74,7 @@ module.exports = {
           // and 868px, after which the main content area is wide enough again to
           // apply the `md:` styles.
           {'min': '500px', 'max': '767px'},
-          {'min': '468px'}
+          {'min': '480px'}
         ],
         'lg': '1100px',
         'xl': '1400px',

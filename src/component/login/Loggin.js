@@ -41,7 +41,7 @@ function Loggin () {
         toast.error('Server Tidak Merespon', {
             position: toast.POSITION.TOP_CENTER
         })
-        console.log('Servet Offlane');
+        console.log('Server Offlane');
     }
 
     //Salah Usernam and Password
@@ -117,8 +117,9 @@ function Loggin () {
     
     return(
         <>
-            {success ?( 
+            {success ? ( 
                 <section>
+                    <ToastContainer/>
                     
                     <div className=''>
                         <div className="flex bg-slate-100 rounded-xl">
