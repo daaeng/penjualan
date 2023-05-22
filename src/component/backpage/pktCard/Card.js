@@ -1,31 +1,41 @@
 import React from "react";
+import { FaRegMoneyBillAlt } from "react-icons/fa";
 
 const Card =() => {
+
+    // const bgCol =[
+    //     {name:'Piutang', icon:'', collr:''},
+    //     {name:'Pembayaran', icon:'', collr:''},
+    //     {name:'Item Terjual', icon:'', collr:''},
+    //     {name:'Penjualan', icon:'', collr:''},
+    // ]
+
     return(
         <>
-            <div className="">
+            <div className="p-2">
 
-                
-                <div className="flex justify-start">
-                    <div className='bg-redd sm:w-28 md:w-34 lg:w-72 rounded-tr-full relative sm:h-28 md:h-28 -mb-36 '>
+                <div className='flex w-full rounded-xl bg-red-100 overflow-hidden cursor-pointer'>
+                    <div className="flex justify-start bg-marron rounded-r-full  
+                                    lg:w-20 md:w-16 sm:w-8 md:h-auto sm:h-20">
+                        <div className="lg:py-5 md:py-3 sm:py-2 px-2.5 -rotate-45 text-5xl text-light-white">
+                            <FaRegMoneyBillAlt/>
+                        </div>
                     </div>
+                    
+                    <div className="lg:p-2 md:p-1 ml-1">
+                        <h6 className='sm:text-sm mb-0 md:text-base'>
+                            Jdul
+                        </h6>                    
+                        
+                        <div className='sm:text-lg md:text-xl'>
+                            Angka
+                        </div>
 
-                </div>
-                
-                <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-5 md:mr-5 md:mb-4 md:mt-3
-                    p-1 px-2 cursor-pointer w-auto relative rounded-md text-black bg-abucream hover:bg-light-white hover:text-black'>
-                    
-                    <h6 className='lg:col-span-1'>
-                        Jdul
-                    </h6>                    
-                    
-                    <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2'>
-                        Angka
+                        <p className="sm:text-xs md:text-sm mb-0">
+                            ▲ 9% Last Month
+                        </p>
+
                     </div>
-
-                    <p className="lg:col-span-2 text-green-700 text-xs mb-1">
-                        ▲ 9% Last Month
-                    </p>
                 
                 </div>  
             </div>

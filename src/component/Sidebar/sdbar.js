@@ -48,7 +48,7 @@ function Sdbar() {
         toast.success('Log Out Berhasil !', {
             position: toast.POSITION.TOP_CENTER
         })
-        console.log('dah masuk');
+        console.log('proses');
     }
 
     const LogOut = () => {

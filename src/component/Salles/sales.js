@@ -33,6 +33,22 @@ function Sales() {
           <div>
             <GabCard/>
           </div>        
+
+          <div className='ml-2 mt-3'>
+            <h6>
+              Penjualan
+            </h6>
+              <div className='border ml-20 -mt-4'/>
+          </div>
+
+          <div className='ml-2 mt-3'>
+            <h6>
+              Piutang
+            </h6>
+              <div className='border ml-20 -mt-4'/>
+          </div>
+          
+
       </div>
       
     </>

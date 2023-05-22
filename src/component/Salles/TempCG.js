@@ -1,10 +1,11 @@
-import CardSingleRed from '../backpage/cardSingleRed'
-import CardSingleGree from '../backpage/cardSinglegree'
-import CardSingleYell from '../backpage/cardSingleYell'
-import CardSingleBlu from '../backpage/cardSingleBlu'
+
 import { FaRegMoneyBillAlt } from 'react-icons/fa'
 import { BsBoxSeamFill } from "react-icons/bs";
 import { MdPayments, MdPointOfSale } from 'react-icons/md'
+import CardSingleRed from '../backpage/CardSingle/cardSingleRed';
+import CardSingleGree from '../backpage/CardSingle/cardSinglegree';
+import CardSingleYell from '../backpage/CardSingle/cardSingleYell';
+import CardSingleBlu from '../backpage/CardSingle/cardSingleBlu';
 
 const TempCG = () => {
 
