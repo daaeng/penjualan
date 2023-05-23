@@ -76,7 +76,7 @@ export default function FilterTime () {
         <>
             <div>
                 <div className='bg-red-900 text-white w-fit rounded-lg p-1 items-center'>
-                    <h6 className='flex items-center mb-0 justify-end'>
+                    <h6 className='flex items-center mb-0 justify-end sm:text-xs md:text-xs lg:text-base'>
                         Time '1 Hour' 
                         <div className='bg-marron text-white cursor-pointer rounded-md p-1'>
                             <BiTimeFive onClick={() => setBka(!bka)}/>
