@@ -7,9 +7,9 @@ import {AiFillTags } from 'react-icons/ai'
 import {SiAudiomack} from 'react-icons/si'
 import {RiSettings3Fill } from 'react-icons/ri'
 import {MdShoppingBasket } from 'react-icons/md'
-import {TfiLayoutSidebarLeft} from 'react-icons/tfi'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
+import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
 import { ToastContainer, toast } from 'react-toastify'
 // import axios from '../config/api/axios'
 // import axios from '../config/api/axios'
@@ -88,11 +88,11 @@ function Sdbar() {
             <div className='col-span-1 mr-2 flex justify-end items-center font-mono text-black '>
                 <div className=" flex space-x-1">
 
-                    <div className={`-mt-1 ${!buka ? null : 'md:w-44 sm:w-40'} -mr-2`}>
+                    <div className={`-mt-1 ${!buka ? null : 'md:w-44 sm:w-28'} -mr-2`}>
                         <div className={`border border-gray-200 ${!buka  && 'hidden' } rounded-full w-full flex py-1 px-1 mt-1 items-center `}>
 
                             <input type={'text'} className ={`sm:w-20 rounded flex-1 ml-1 mr-16 focus:outline-none focus:ring focus:border-blue-500`} placeholder = ' Search'/>
-                            <button type='submit' className='sm:-ml-16 md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
+                            <button type='submit' className='sm:-ml-20 md:-ml-14 mr-1 bg-gray-200 px-1 py-1 rounded-md hover:bg-green-100'>
                                 <BiSearch className='duration-300'/>
                             </button>
                         </div>
@@ -101,7 +101,7 @@ function Sdbar() {
                     <div className='flex flex-1 mb-1 mr-2 space-x-3 text-white items-center'>
                         
                         <BiSearch size={'23'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setbuka(!buka)}/>
-                        <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+                        {/* <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/> */}
                         <HiUserCircle size={'28'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
                         
                         <FiLogOut  size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={LogOut}/>
@@ -136,25 +136,30 @@ function Sdbar() {
 
         </header>
         
-        <nav className = {`top-16 bg-marron h-fit mt-5 lg:ml-4 md:ml-4 sm:ml-1 rounded-xl py-2 pt-10 duration-300 ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
-            
-            <div className='sm:p-1 md:p-3 items-center '>
+        <nav className = {`top-16 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
+            <div className=' -ml-4'>
+                <TbLayoutSidebarRightCollapse size={'25'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+            </div>
+            <div className={`duration-50 ${!open && 'hidden'}`}>
+                <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>
 
-                {menu.map((val, index) => {
-                    return (
-                        <NavLink
-                            key = {index} 
-                            to={val.path}               
-                            className={`cursor-pointer no-underline flex flex-row duration-300 
-                            ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                            hover:bg-light-white hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
-                                    <div className={`ml-1 text-2xl `}>
-                                        {val.icon}
-                                    </div>
-                                    <div className={`ml-2 duration-50 ${!open && 'hidden'}`} >{val.name}</div> 
-                        </NavLink>
-                    );
-                })}
+                    {menu.map((val, index) => {
+                        return (
+                            <NavLink
+                                key = {index} 
+                                to={val.path}               
+                                className={`cursor-pointer no-underline flex flex-row duration-300 
+                                ${!open && 'active' }items-center text-gray-100 overflow-y-visible
+                                hover:bg-light-white hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
+                                        <div className={`ml-1 text-2xl `}>
+                                            {val.icon}
+                                        </div>
+                                        <div className={`ml-2 duration-50 ${!open && 'hidden'}`} >{val.name}</div> 
+                            </NavLink>
+                        );
+                    })}
+
+                </div>
 
             </div>
             

@@ -3,13 +3,6 @@ import React from "react";
 
 const Card = (props) => {
 
-    // const bgCol =[
-    //     {name:'Piutang', number:'', icon:<FaRegMoneyBillAlt/>, color:''},
-    //     {name:'Pembayaran', number:'', icon:'', color:''},
-    //     {name:'Item Terjual', number:'', icon:'<BsBoxSeamFill/>', color:''},
-    //     {name:'Penjualan', number:'', icon:'', color:''},
-    // ]
-
     return(
         <>
             <div className="p-2 bg-slate-100">

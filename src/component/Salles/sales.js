@@ -4,13 +4,14 @@ import FilterTime from '../backpage/filterTime';
 import Box from '../Dash/box';
 import GabCard from '../backpage/GabCard/GabCard';
 import DataPenjual from './DataPenjual';
+import DataPiutang from './DataPiutang';
 
 function Sales() {
 
   return (
 
     <>
-      <div className=' sm:ml-14 md:ml-20 mr-3'>
+      <div className=' sm:ml-8 md:ml-8 mr-3'>
           <div className='ml-2 mt-1'>
               <div className='grid grid-cols-2'>  
                   <h2 className='col-span-1 font-mono text-black items-center flex'>
@@ -52,7 +53,15 @@ function Sales() {
               Piutang
             </h6>
               <div className='border ml-20 -mt-4'/>
+
+            <div>
+               <DataPiutang/>
+            </div>
           </div>
+
+          <div className='border mb-2'/>
+
+        
           
 
       </div>

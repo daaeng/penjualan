@@ -1,91 +1,56 @@
 import React from "react";
-import Card from "../pktCard/Card";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
+import GabCard3rd from "./GabCard3rd";
+
 
 const GabCard =() => {
 
-    // -----------------------------------
-    // ------------ ~ Data 1 ~ -----------
-    const lgo =() => {
-        return(
-            <>
-                <FaRegMoneyBillAlt/>
-            </>
-        )
-    }
+    // // -----------------------------------
+    // // ------------ ~ Data 1 ~ -----------
+    // const jdl =() => {
+    //     return('Piutang')
+    // }
     
-    const jdl =() => {
-        return('Piutang')
-    }
-    
-    const ang =() => {
-        return('1.296.541')
-    }
+    // const ang =() => {
+    //     return('1.296.541')
+    // }
 
-    // ------------------------
-    // ------------ ~ Data 2 ~ -----------
-    const lgo1 =() => {
-        return(
-            <>
-                <FaRegMoneyBillAlt/>
-            </>
-        )
-    }
+    // // ------------------------
+    // // ------------ ~ Data 2 ~ -----------   
+    // const jdl1 =() => {
+    //     return('Pembayaran')
+    // }
     
-    const jdl1 =() => {
-        return('Pembayaran')
-    }
-    
-    const ang1 =() => {
-        return('85.314.631')
-    }
+    // const ang1 =() => {
+    //     return('85.314.631')
+    // }
 
-    // ------------------------
-    // ------------ ~ Data 3 ~ -----------
-    const lgo2 =() => {
-        return(
-            <>
-                <FaRegMoneyBillAlt/>
-            </>
-        )
-    }
+    // // ------------------------
+    // // ------------ ~ Data 3 ~ -----------
+    // const jdl2 =() => {
+    //     return('Item Terjual')
+    // }
     
-    const jdl2 =() => {
-        return('Item Terjual')
-    }
-    
-    const ang2 =() => {
-        return('71.296.541')
-    }
+    // const ang2 =() => {
+    //     return('71.296.541')
+    // }
 
-    // ------------------------
-    // ------------ ~ Data 4 ~ -----------
-    const lgo3 =() => {
-        return(
-            <>
-                <FaRegMoneyBillAlt/>
-            </>
-        )
-    }
+    // // ------------------------
+    // // ------------ ~ Data 4 ~ -----------   
+    // const jdl3 =() => {
+    //     return('penjualan')
+    // }
     
-    const jdl3 =() => {
-        return('penjualan')
-    }
-    
-    const ang3 =() => {
-        return('461.637.189.137')
-    }
+    // const ang3 =() => {
+    //     return('461.637.189.137')
+    // }
 
     return(
         <>
             <div className="mb-2">
-                <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-                    <Card lgo = {lgo} jdl = {jdl} ang = {ang}/>
-                    <Card lgo = {lgo1} jdl = {jdl1} ang = {ang1}/>
-                    <Card lgo = {lgo2} jdl = {jdl2} ang = {ang2}/>
-                    <Card lgo = {lgo3} jdl = {jdl3} ang = {ang3}/>
+                    <GabCard3rd/>
+                {/* <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
                     
-                </div>
+                </div> */}
             </div>
         </>
     )

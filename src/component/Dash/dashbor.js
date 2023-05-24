@@ -3,8 +3,6 @@ import Box from './box'
 // import DateTimeR from '../dateRange/dateTimeR'
 import Dash from './dash'
 import {MdDashboard} from 'react-icons/md'
-import Card3b from '../backpage/card3b'
-import History from './history'
 import FilterTime from '../backpage/filterTime'
 
 const Dashbor = () => {
@@ -39,24 +37,7 @@ const Dashbor = () => {
                 <div> 
                     <Dash/>
                 </div>
-                
-                <div> 
-                    <Card3b/>
-                </div>
-
-                <div className='mb-2'>
-                    <div className='grid grid-cols-3 p-2'> 
-                        
-                        <History className='col-span-1'/>
-                        
-                        <div className='col-span-2'>
-                            <History />
-                        </div>
-                    </div>
-
-                </div>
-
-
+            
 
             </div>
         </>

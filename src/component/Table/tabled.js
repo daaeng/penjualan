@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import Labeldt from '../backpage/label';
-// import Logo2 from '../../assets/L_Candi.png'
 
 const columns = [
   // { no: 'no', headerName: 'No', width:30},
@@ -43,26 +41,13 @@ const data = [
   
 ];
 
-const title = () => {
-  return ("Data Pelanggan")
-}
-
 export default function Tabled() {
   return (
     
     <>
       <div className=''>
-        <div className=''>
-          <div className='mb-1'>
-            <Labeldt title = {title}/>
-          </div>
-        </div>
-
-        <div className='bg-white sm:h-96 md:h-96 lg:h-146 rounded-lg' style={{ width: '100%' }}>
-          {/* <div>
-            <img src={Logo2} alt='sakir' className={`w-20 cursor-pointer float-left duration-500`} />
-          </div> */}
-          
+        
+        <div className='bg-white sm:h-96 md:h-96 lg:h-128 rounded-lg' style={{ width: '100%' }}>
           <DataGrid
             
             rows={data}
