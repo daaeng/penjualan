@@ -1,9 +1,9 @@
 import React from "react"
 
-const GabCard3rd = () => {
+const GabCard4th = () => {
     return(
         <>
-            <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 gap-2">
+            <div className="grid lg:grid-cols-1 md:grid-cols-4 sm:grid-cols-4 sm:gap-1 md:gap-2 lg:gap-1">
                 <div className="mt-3 lg:col-span-1 md:col-span-2 sm:col-span-2">
                     <div className="flex justify-start">
                         <div className='bg-red-600 sm:w-28 md:w-34 lg:w-72 rounded-tr-full relative sm:h-20 md:h-24 lg:h-28 -mb-28 '>
@@ -12,8 +12,8 @@ const GabCard3rd = () => {
                     </div>
                     
                     <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-3 md:mr-5 md:mb-4 md:mt-2
-                        p-1 px-2 w-auto relative rounded-md text-marron  
-                        bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
+                        p-1 px-2 w-auto relative rounded-md text-yellow-400  
+                        bg-gradient-to-r from-light-white to-red-200 hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
                             {/* {props.JdlMrh()} */}
@@ -40,8 +40,8 @@ const GabCard3rd = () => {
                     </div>
                     
                     <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-3 md:mr-5 md:mb-4 md:mt-2
-                        p-1 px-2 w-auto relative rounded-md text-green-700
-                        bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
+                        p-1 px-2 w-auto relative rounded-md text-dark-blue
+                        bg-gradient-to-l from-light-white to-green-200 hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
                             {/* {props.JdlIjo()} */}
@@ -68,8 +68,8 @@ const GabCard3rd = () => {
                     </div>
                     
                     <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-3 md:mr-5 md:mb-4 md:mt-2
-                        p-1 px-2 w-auto relative rounded-md text-yellow-700
-                        bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
+                        p-1 px-2 w-auto relative rounded-md text-teal-600
+                        bg-gradient-to-r from-light-white to-yellow-200 hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
                             {/* {props.JdlKng()} */}
@@ -96,8 +96,8 @@ const GabCard3rd = () => {
                     </div>
                     
                     <div className='grid sm:ml-2 sm:mr-2 sm:mb-2 sm:mt-1 sm:col-span-1 lg:grid-cols-2 md:ml-3 md:mr-5 md:mb-4 md:mt-2
-                        p-1 px-2 w-auto relative rounded-md text-blue-700
-                        bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
+                        p-1 px-2 w-auto relative rounded-md text-orange-500
+                        bg-gradient-to-l from-light-white to-blue-200 hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
                             {/* {props.JdlBr()} */}
@@ -120,4 +120,4 @@ const GabCard3rd = () => {
     )
 }
 
-export default GabCard3rd
+export default GabCard4th

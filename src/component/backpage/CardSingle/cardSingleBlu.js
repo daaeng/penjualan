@@ -14,7 +14,7 @@ const CardSingleBlu = (props) => {
                     p-1 px-2 w-auto relative rounded-md text-orange-500
                     bg-gradient-to-l from-light-white to-blue-200 hover:bg-light-white hover:text-black cursor-pointer'>
                     
-                    <h6 className='lg:col-span-1'>
+                    <h6 className='lg:col-span-1 sm:text-xs md:text-sm lg:text-base'>
                         {props.atasBru()}
                     </h6>                    
                     
@@ -23,7 +23,7 @@ const CardSingleBlu = (props) => {
                         {/* <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/> */}
                     </div>  
                     
-                    <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-xl md:text-3xl lg:text-4xl'>
+                    <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-lg md:text-3xl lg:text-4xl'>
                         {props.bwhBru()}
                     </div>
 

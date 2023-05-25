@@ -26,6 +26,8 @@ function Sdbar() {
     const [buka, setbuka] =  useState(false);
     const [bka, setBka] =  useState(false);
 
+    // const hdlClose = () => setOpen(false)
+
     const menu = [
         // {name:'Dashboard', icon: <MdDashboard/>, path:'/dash'},
         {name:'Sales', icon: <SiAudiomack/>, path:'/sales'},
@@ -137,8 +139,8 @@ function Sdbar() {
         </header>
         
         <nav className = {`top-16 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
-            <div className=' -ml-4'>
-                <TbLayoutSidebarRightCollapse size={'25'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+            <div className=' -ml-5'>
+                <TbLayoutSidebarRightCollapse size={'28'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
             <div className={`duration-50 ${!open && 'hidden'}`}>
                 <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>

@@ -28,8 +28,8 @@ function Box () {
             <TempCG/>
           </div>
 
-          <div className='sm:mt-4 sm:col-span-2 md:mt-3 md:col-span-2 lg:-mt-2 lg:row-span-2 lg:col-span-2 p-2 mb-3'>
-            <div className='bg-marron shadow-md p-2 rounded-md w-full '>
+          <div className='sm:mt-2 sm:col-span-2 md:mt-3 md:col-span-2 lg:-mt-2 lg:row-span-2 lg:col-span-2 p-2 mb-3'>
+            <div className='bg-marron shadow-md lg:p-3 md:p-2 sm:p-1 rounded-md w-full '>
               <Labeldt title = {title} />
               <Box2 isibox = {isibox}/>
             </div>

@@ -11,7 +11,7 @@ function Sales() {
   return (
 
     <>
-      <div className=' sm:ml-8 md:ml-8 mr-3'>
+      <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
           <div className='ml-2 mt-1'>
               <div className='grid grid-cols-2'>  
                   <h2 className='col-span-1 font-mono text-black items-center flex'>
@@ -28,7 +28,7 @@ function Sales() {
               </p>
           </div>
 
-          <div className='mt-2 mb-1'>
+          <div className='mt-2 '>
               <Box/>
           </div>  
 
@@ -59,7 +59,8 @@ function Sales() {
             </div>
           </div>
 
-          <div className='border mb-2'/>
+          {/* Line Border */}
+          <div className='border mt-2 mb-2'/>
 
         
           

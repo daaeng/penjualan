@@ -1,7 +1,8 @@
 import React from "react"
-import CobaChart from "../chart/coba"
 import Tabled from "../Table/tabled"
-import GabCard3rd from "../backpage/GabCard/GabCard3rd"
+import GabCard4th from "../backpage/GabCard/GabCard4th"
+import DataGrafGAB from "../chart/dataGrafGAB"
+import PelangganChart from "../chart/pelanggan"
 
 const DataPenjual = (props) => {
 
@@ -10,8 +11,8 @@ const DataPenjual = (props) => {
             <div>
                 <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-3">
                     <div className="lg:col-span-1 md:col-span-1 sm:col-span-2">
-                        <div className="p-3 mt-3 bg-marron">
-                            <CobaChart/>
+                        <div className="lg:p-3 md:p-2 sm:p-1 mt-3 bg-marron">
+                            <DataGrafGAB/>
 
                         </div>
                     </div>
@@ -25,9 +26,17 @@ const DataPenjual = (props) => {
                     
                 </div>
 
-                <div className="">
-                    <GabCard3rd/>    
+                <div className="grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 sm:gap-1 md:gap-2 lg:gap-4">
+                    <div className="lg:col-span-1 md:col-span-1 sm:col-span-1 bg-marron p-3 h-fit mt-3">
+                        <PelangganChart/>
+                    </div>
+
+                    <div className="lg:col-span-2 md:col-span-1 sm:col-span-1 ">
+                        <GabCard4th/>    
+                    </div>
+
                 </div>
+
             </div>
 
             
