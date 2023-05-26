@@ -12,7 +12,7 @@ function Sales() {
 
     <>
       <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
-          <div className='ml-2 mt-1'>
+          <div className='mt-1'>
               <div className='grid grid-cols-2'>  
                   <h2 className='col-span-1 font-mono text-black items-center flex'>
                     <SiAudiomack className='mr-1' size={'20'}/>Dashboard
@@ -36,11 +36,11 @@ function Sales() {
             <GabCard/>
           </div>        
 
-          <div className='ml-2 mt-3'>
+          <div className='ml-2 mt-3 '>
             <h6>
               Penjualan
             </h6>
-              <div className='border ml-20 -mt-4'/>
+              <div className='border ml-20 -mt-4 mb-2'/>
 
             <div>
               <DataPenjual/>
@@ -52,7 +52,7 @@ function Sales() {
             <h6>
               Piutang
             </h6>
-              <div className='border ml-20 -mt-4'/>
+              <div className='border ml-20 -mt-4 mb-2'/>
 
             <div>
                <DataPiutang/>

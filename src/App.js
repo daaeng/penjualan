@@ -8,6 +8,9 @@ import Logstik from "./page/Logstik";
 import MdMerhcain from "./page/MdMerhcain";
 import Ggrosir from "./page/Ggrosir";
 import Login from "./page/Login";
+import SalesDetPiutang from "./page/SalesDetail/SalesDetPiutang";
+import SalesDetPembayaran from "./page/SalesDetail/SalesDetPembayaran";
+import SalesDetPenjualan from "./page/SalesDetail/SalesDetPenjualan";
 
 function App() {
   
@@ -21,6 +24,9 @@ function App() {
           <Route path="/dash" element = {<Dashboard/>}/>
 
           <Route path="/sales" element = {<Psale/>}/>
+          <Route path="/detpiutang" element = {<SalesDetPiutang/>} />
+          <Route path="/detpembayaran" element = {<SalesDetPembayaran/>} />
+          <Route path="/detpenjualan" element = {<SalesDetPenjualan/>} />
           
           <Route path="/finance" element = {<Fnance/>}/>
           

@@ -5,7 +5,12 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import Datepicker from "react-tailwindcss-datepicker"; 
+import { addDays } from 'date-fns';
+import { DateRangePicker } from 'react-date-range';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
+// import Datepicker from "react-tailwindcss-datepicker"; 
+
 
 export default function FilterTime () {
 
@@ -58,18 +63,26 @@ export default function FilterTime () {
         }
     };
 
-    const [vDate, setVDate] = useState({ 
+    const [state, setState] = useState([
+        {
+          startDate: new Date(),
+          endDate: addDays(new Date(), 7),
+          key: 'selection'
+        }
+      ]);
 
-        startDate: new Date().setHours(-168) , 
-        endDate: new Date()
+    // const [vDate, setVDate] = useState({ 
+
+    //     startDate: new Date().setHours(-168) , 
+    //     endDate: new Date()
     
-      }); 
+    //   }); 
     
-      const handleValueChange = (newvDate) => {
-        console.log("newValue:", newvDate); 
-        setVDate(newvDate); 
+    //   const handleValueChange = (newvDate) => {
+    //     console.log("newValue:", newvDate); 
+    //     setVDate(newvDate); 
     
-      } 
+    //   } 
     
 
     return (
@@ -93,7 +106,7 @@ export default function FilterTime () {
                                 <Labeldt title = {title} />
                             </div>
 
-                            <div className='w-128 p-1 -mb-28'>
+                            <div className='lg:w-256 md:w-96 p-1 -mb-28'>
                                 <div className='flex'>
                                     
                                     <div className='p-2 text-white'>
@@ -124,17 +137,25 @@ export default function FilterTime () {
 
                             </div>
                             
-                            <div className='flex justify-end'>
+                            <div className='flex ml-44'>
                                 <div className='flex gap-1 mt-1 p-1 -ml-5'>
                                     
-                                    <div className="rounded w-72 px-1 py-1 bg-marron text-white">
+                                    <div className="rounded w-full p-2 bg-blue-400 text-black">
     
-                                        <Datepicker 
+                                        {/* <Datepicker 
                                         value={vDate} 
                                         onChange={handleValueChange} 
                                         showShortcuts={true} 
-                                        /> 
+                                        />  */}
                                         
+                                        <DateRangePicker
+                                            onChange={item => setState([item.selection])}
+                                            showSelectionPreview={true}
+                                            moveRangeOnFirstSelection={false}
+                                            months={2}
+                                            ranges={state}
+                                            direction="horizontal"
+                                        />
                                         
                                     </div>
 

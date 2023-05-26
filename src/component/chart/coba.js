@@ -52,7 +52,7 @@ function CobaChart(){
         {
           label: 'Pembayaran',
           data: [25, 38, 3, 53, 46, 10, 2, 10, 60, 17],
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          backgroundColor: 'rgba(255, 112, 92, 0.7)',
         },
           
       ]

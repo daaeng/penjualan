@@ -8,7 +8,7 @@ function PelangganChart(){
 
     return(
         <>
-            <div className='bg-white rounded w-full p-1'>
+            <div className='bg-white rounded w-full p-2'>
                 <Pie options={options} data={data} />
                 {/* <Pie options={options2} data={data2} /> */}
 
@@ -27,7 +27,7 @@ const options = {
   
     plugins: {
       legend: {
-        position: 'bottom'
+        position: 'right'
       },
       title: {
         display: true,
@@ -46,16 +46,16 @@ datasets: [
     data: [50, 20, 30, 20, 60, 80, 90, 90, 75, 120],
 
     backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 172, 102, 0.2)',
-        'rgba(193, 110, 21, 0.2)',
-        'rgba(255, 59, 69, 0.2)',            
+        'rgba(255, 10, 55)',
+        'rgba(54, 80, 235)',
+        'rgba(255, 206, 86)',
+        'rgba(70, 192, 10)',
+        'rgba(153, 102, 255)',
+        'rgba(255, 159, 64)',
+        'rgba(255, 206, 86)',
+        'rgba(127, 255, 212)',
+        'rgba(135, 206, 250)',
+        'rgba(255, 182, 193)',            
 
     ],
     borderColor: [

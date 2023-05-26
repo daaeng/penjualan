@@ -3,7 +3,7 @@ import React from "react"
 const GabCard4th = () => {
     return(
         <>
-            <div className="grid lg:grid-cols-1 md:grid-cols-4 sm:grid-cols-4 sm:gap-1 md:gap-2 lg:gap-1">
+            <div className="grid lg:grid-cols-2 md:grid-cols-4 sm:grid-cols-4 sm:gap-1 md:gap-2 lg:gap-1">
                 <div className="mt-3 lg:col-span-1 md:col-span-2 sm:col-span-2">
                     <div className="flex justify-start">
                         <div className='bg-red-600 sm:w-28 md:w-34 lg:w-72 rounded-tr-full relative sm:h-20 md:h-24 lg:h-28 -mb-28 '>
