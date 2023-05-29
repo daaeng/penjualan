@@ -22,15 +22,6 @@ import {
 
 function Pembelian(){
 
-    // ChartJS.register(
-    //     CategoryScale,
-    //     LinearScale,
-    //     BarElement,
-    //     Title,
-    //     Tooltip,
-    //     Legend
-    // );
-
     ChartJS.register(
       CategoryScale,
       LinearScale,
@@ -69,7 +60,7 @@ const options = {
       },
       title: {
         display: true,
-        text: 'Line Chart Transaksi',
+        text: 'Grafik Sales',
       },
   },
 };

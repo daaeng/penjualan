@@ -102,14 +102,42 @@ export default function FilterTime () {
                     <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
                         
                         <ul className={`-ml-7 mr-1 ${!bka  && 'hidden' }`}>
-                            <div className='-mb-2'>
+                            <div className='-mb-2 ml-1'>
                                 <Labeldt title = {title} />
                             </div>
 
-                            <div className='lg:w-256 md:w-96 p-1 -mb-28'>
+                            <div className='flex mt-2 ml-7 w-full'>
+                                <div className='flex mt-1 p-1 -ml-7'>
+                                    
+                                    <div className="rounded w-full p-2 bg-blue-400 text-black">
+    
+                                        {/* <Datepicker 
+                                        value={vDate} 
+                                        onChange={handleValueChange} 
+                                        showShortcuts={true} 
+                                        />  */}
+                                        
+                                        <DateRangePicker
+                                            onChange={item => setState([item.selection])}
+                                            showSelectionPreview={true}
+                                            moveRangeOnFirstSelection={false}
+                                            months={2}
+                                            ranges={state}
+                                            direction="horizontal"
+                                            preventSnapRefocus={true}
+                                            calendarFocus="backwards"
+                                        />
+                                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className='flex flex-rowlg:w-147 md:w-96 p-1 '>
                                 <div className='flex'>
                                     
-                                    <div className='p-2 text-white'>
+                                    <div className='p-1 text-white'>
                                         <input type='checkbox' checked={checked} onChange={handleChange} className='mr-1'/>
                                         Versus 
                                         
@@ -137,33 +165,8 @@ export default function FilterTime () {
 
                             </div>
                             
-                            <div className='flex ml-44'>
-                                <div className='flex gap-1 mt-1 p-1 -ml-5'>
-                                    
-                                    <div className="rounded w-full p-2 bg-blue-400 text-black">
-    
-                                        {/* <Datepicker 
-                                        value={vDate} 
-                                        onChange={handleValueChange} 
-                                        showShortcuts={true} 
-                                        />  */}
-                                        
-                                        <DateRangePicker
-                                            onChange={item => setState([item.selection])}
-                                            showSelectionPreview={true}
-                                            moveRangeOnFirstSelection={false}
-                                            months={2}
-                                            ranges={state}
-                                            direction="horizontal"
-                                        />
-                                        
-                                    </div>
-
-                                </div>
-
-                            </div>
                             
-                            <div className='flex justify-end mt-1 mr-3'>
+                            <div className='flex justify-end -mt-12 mr-3'>
                                 <button className='px-1 py-1 w-28 bg-blue-100 rounded-lg'>
                                     Apply
                                 </button>

@@ -111,7 +111,7 @@ function Loggin () {
         }
         errRef.current.focus();
         }
-        // console.log(origin);
+        console.log(origin);
       };
     
     
@@ -122,24 +122,20 @@ function Loggin () {
                     <ToastContainer/>
                     
                     <div className=''>
-                        <div className="flex bg-slate-100 rounded-xl">
+                        <div className="flex bg-slate-100 rounded-xl h-fit">
                             <div>
-                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-0 lg:w-48 rounded-l-xl duration-500 hover:text-yellow-600`} />
+                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-48 lg:w-52 rounded-l-xl duration-500 hover:text-yellow-600`} />
 
                             </div>
                             
-                            <div className="sm:p-1 md:p-3 lg:p-24  ">
+                            <div className="sm:p-1 md:p-3 lg:p-16  ">
                                 
                                 <h1 className='flex justify-center text-green-500 '>
                                     Login Berhasil
                                 </h1>
 
                                 <div className='flex-row items-center'>
-                                    {/* <button onClick={()=> navigate('/dash')}
-                                            className='p-1 w-full rounded-md bg-blue-300 hover:bg-blue-500' >
-                                        Dashboard
-                                    </button>     
-                                     */}
+                                    
                                     <div className='sm:p-1 md:p-3 lg:p-3 items-center bg-marron flex '>
 
                                         {menu.map((val, index) => {

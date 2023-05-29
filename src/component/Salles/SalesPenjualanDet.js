@@ -3,8 +3,9 @@ import { SiAudiomack } from "react-icons/si";
 import { VscDebugStepBack } from "react-icons/vsc";
 import FilterTime from "../backpage/filterTime";
 import TablePiutang from "../backpage/Tabel/TabelPiutang";
-import ChartKNN from "../chart/ChartKNN";
 import { useNavigate } from "react-router-dom";
+import Pembayaran from "../chart/pembayaran";
+import TabelPenjualan from "../backpage/Tabel/TabelPenjualan";
 
 const SalesPiutangDet =() => {
 
@@ -37,7 +38,7 @@ const SalesPiutangDet =() => {
                         </div>
 
                         <div className="underline ml-1">
-                            Piutang
+                            Penjualan
                         </div>
 
                     </div>
@@ -45,7 +46,7 @@ const SalesPiutangDet =() => {
 
                 <div className='ml-2 mt-3 '>
                     <h3>
-                        Piutang
+                        Penjualan
                     </h3>
                     <div className='border ml-36 -mt-5 mb-2'/>
 
@@ -55,7 +56,7 @@ const SalesPiutangDet =() => {
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
                         <div className="col-span-1 p-2 bg-marron">
-                            <ChartKNN/>
+                            <Pembayaran/>
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
@@ -63,8 +64,13 @@ const SalesPiutangDet =() => {
                         </div>
 
                     </div>
-
                     
+                    <div className="p-2 bg-slate-400 mt-1">
+                        Custom Table
+                        <div className="bg-white p-1">
+                            <TabelPenjualan/>
+                        </div>
+                    </div>
                 </div>
 
 

@@ -25,7 +25,7 @@ function ChartKNN(){
     return(
         <>
           
-            <div className='bg-white rounded w-full'>
+            <div className='bg-white rounded w-full p-1'>
               
                 {/* <Detail_pen data={this.this.state.data} /> */}
                 <Bar options={options} data={data} />

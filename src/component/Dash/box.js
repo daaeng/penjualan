@@ -7,7 +7,7 @@ import TempCG from '../Salles/TempCG'
 function Box () {
   
   const title = () => {
-    return ("Grafik Transaksi")
+    return ("Grafik Sales")
   }
   
   const isibox = () => {

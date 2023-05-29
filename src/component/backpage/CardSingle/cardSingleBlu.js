@@ -1,10 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CardSingleBlu = (props) => {
+
+    const navigate = useNavigate()
+
     return(
         <>
-            <div className="">
-                <div className="flex justify-end">
+            <div className="" onClick={()=> navigate('/detpenjualan')}>
+                <div className="flex justify-end" >
                     <div className='bg-blue-600 sm:w-28 md:w-34 lg:w-72 rounded-tl-full relative sm:h-22 md:h-28 lg:h-34 -mb-36'>
                     </div>
 

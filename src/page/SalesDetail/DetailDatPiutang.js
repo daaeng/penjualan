@@ -1,9 +1,8 @@
 import React from "react";
 import Sdbar from "../../component/Sidebar/sdbar";
-import SalesPenjualanDet from "../../component/Salles/SalesPenjualanDet";
+import DdPiutang from "../../component/Salles/DetailDataPiutang/DdPiutang";
 
-
-const SalesDetPenjualan = () => {
+const DetailDatPiutang = () => {
     return(
         <>
             <div>
@@ -16,7 +15,7 @@ const SalesDetPenjualan = () => {
                 <div>
                 <section className={`-mt-1`}>
                     
-                    <SalesPenjualanDet/>
+                    <DdPiutang/>
 
                 </section>
 
@@ -26,4 +25,4 @@ const SalesDetPenjualan = () => {
     )
 }
 
-export default SalesDetPenjualan
+export default DetailDatPiutang
