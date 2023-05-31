@@ -1,13 +1,7 @@
 //Data grafik
 import React from 'react';
 import {
-    // Chart as ChartJS,
-    // CategoryScale,
-    // LinearScale,
-    // BarElement,
-    // Title,
-    // Tooltip,
-    // Legend,
+    
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
@@ -20,20 +14,22 @@ import {
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
 
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Filler,
+    Legend
+  );
+
 function Pembelian(){
 
-    ChartJS.register(
-      CategoryScale,
-      LinearScale,
-      PointElement,
-      LineElement,
-      Title,
-      Tooltip,
-      Filler,
-      Legend
-    );
+  
 
-    return(
+  return(
         <>
           
             <div className='bg-white rounded w-full'>

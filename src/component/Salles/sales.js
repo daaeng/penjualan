@@ -5,6 +5,7 @@ import Box from '../Dash/box';
 import GabCard from '../backpage/GabCard/GabCard';
 import DataPenjual from './DataPenjual';
 import DataPiutang from './DataPiutang';
+import ChartSales from '../chart/ChartSales';
 
 function Sales() {
 
@@ -31,6 +32,13 @@ function Sales() {
           <div className='mt-2 '>
               <Box/>
           </div>  
+
+          <div className='p-1'>
+            <div className='bg-blue-300 p-2'>
+              <ChartSales/>
+              aaaaaaaaaaaaa
+            </div>
+          </div>
 
           <div className='p-1'>
             <GabCard/>

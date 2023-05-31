@@ -82,7 +82,7 @@ function Loggin () {
             }
           );
           localStorage.setItem("userData", JSON.stringify(response?.data));
-          sessionStorage.setItem("userData", JSON.stringify(response));
+          sessionStorage.setItem("userData", JSON.stringify(response.data));
           const accessToken = response?.data?.accessToken;
           const roles = response?.data?.roles;
           setAuth({ username, password, roles, accessToken });

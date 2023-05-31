@@ -11,13 +11,12 @@ import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
 import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
 import { ToastContainer, toast } from 'react-toastify'
+import axios from '../config/api/axios'
 // import axios from '../config/api/axios'
 // import axios from '../config/api/axios'
 
 
-// const LOGOut_URL = '/api/Auth/LogOff?token=';
-
-
+const LOGOut_URL = '/api/Auth/LogOff?token='
 
 function Sdbar() {
 
@@ -54,6 +53,25 @@ function Sdbar() {
     }
 
     const LogOut = () => {
+
+        
+        // const token = sessionStorage.getItem('userData')
+        // if(token) {
+        //     const axiosConfig = {
+        //         headers : {
+        //             Accept : "application/json",
+        //             Authorization : `Bearer` + JSON.parse(sessionStorage.getItem('userData')).refreshToken
+        //         }
+        //     }
+            axios.put(LOGOut_URL, {
+                token : sessionStorage.getItem('userData').refreshToken
+            }).then((response) => {
+                console.log(response);
+                console.log('Cek Logout Dulu...!');
+            })
+        // }
+        
+
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")
         localStorage.clear()
