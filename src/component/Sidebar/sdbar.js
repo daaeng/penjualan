@@ -16,7 +16,7 @@ import axios from '../config/api/axios'
 // import axios from '../config/api/axios'
 
 
-const LOGOut_URL = '/api/Auth/LogOff?token='
+const LOGOut_URL = '/api/Auth/LogOff'
 
 function Sdbar() {
 
@@ -54,7 +54,6 @@ function Sdbar() {
 
     const LogOut = () => {
 
-        
         // const token = sessionStorage.getItem('userData')
         // if(token) {
         //     const axiosConfig = {
@@ -63,14 +62,20 @@ function Sdbar() {
         //             Authorization : `Bearer` + JSON.parse(sessionStorage.getItem('userData')).refreshToken
         //         }
         //     }
-            axios.put(LOGOut_URL, {
-                token : sessionStorage.getItem('userData').refreshToken
-            }).then((response) => {
-                console.log(response);
-                console.log('Cek Logout Dulu...!');
-            })
+            // axios.put(LOGOut_URL, {
+            //     token : sessionStorage.getItem('userData').refreshToken
+            // }).then((response) => {
+            //     console.log(response);
+            //     console.log('Cek Logout Dulu...!');
+            // })
         // }
-        
+
+        axios.put(LOGOut_URL, {
+            token: sessionStorage.getItem('userData').refreshToken
+        }).then((response) => {
+            console.log(response);
+            console.log('~~~~~~~~~~~~~~~~');
+        })        
 
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")
@@ -84,7 +89,6 @@ function Sdbar() {
     return (
     <>   
         <ToastContainer/>
-        
         
         <header className='grid grid-cols-2 p-2 h-20 bg-marron rounded-bl-3xl '>
             <div className='flex col-span-1 h-9 -mr-5 -mt-6 -mb-10'>

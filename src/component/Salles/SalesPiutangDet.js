@@ -30,7 +30,7 @@ const SalesPiutangDet =() => {
                     </div>
                     <div className='border ' />
                     <div className="flex p-1">
-                        <div className="cursor-pointer p-1 text-lg flex items-center -mt-2" onClick={BackBack}>
+                        <div className="cursor-pointer font-bold p-1 text-lg flex items-center -mt-2" onClick={BackBack}>
                             <VscDebugStepBack />
 
                             Dashboard,  

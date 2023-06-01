@@ -18,10 +18,7 @@ const DataPiutang = () => {
                         <GabCard2nd/>
                     </div>
                 </div>
-
-
             </div>
-
         </>
     )
 }

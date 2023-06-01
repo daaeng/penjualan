@@ -2,7 +2,7 @@ import axios from '../config/api/axios'
 import Logo from '../../assets/log.png'
 import useAuth from '../../hooks/useAuth'
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { FaBoxOpen } from 'react-icons/fa'
 import { AiFillTags } from 'react-icons/ai'
 import { SiAudiomack } from 'react-icons/si'
@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const LOGIN_URL = '/api/Auth/Login'
-// const RefToken = '/api/Auth/refresh'
+// const Refre_URL = '/api/Auth/refresh'
 
 function Loggin () {
     
@@ -25,7 +25,7 @@ function Loggin () {
         {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
     ];
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const {setAuth} = useAuth(useAuth)  
     const userRef = useRef();
@@ -61,7 +61,13 @@ function Loggin () {
     
     useEffect(() => {
         userRef.current.focus();
-    }, [])
+        if(sessionStorage.getItem('userData'))
+        {
+            navigate('/sales')
+        } else{
+            console.log('~ Session Kosong ~');
+        }
+    }, [navigate])
 
     useEffect(() => {
         if(!{username,password})
@@ -81,6 +87,19 @@ function Loggin () {
               origin: true,
             }
           );
+          
+        //   const resp = await axios
+        //   .post(
+        //     Refre_URL,
+        //     ({ username, password }),
+        //     {
+        //       headers: { "Content-Type": "multipart/form-data" },
+        //       credentials: true,
+        //       origin: true,
+        //     }
+        //   );
+        //   console.log(resp, ' Refresh Token');
+
           localStorage.setItem("userData", JSON.stringify(response?.data));
           sessionStorage.setItem("userData", JSON.stringify(response.data));
           const accessToken = response?.data?.accessToken;
@@ -124,7 +143,7 @@ function Loggin () {
                     <div className=''>
                         <div className="flex bg-slate-100 rounded-xl h-fit">
                             <div>
-                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-48 lg:w-52 rounded-l-xl duration-500 hover:text-yellow-600`} />
+                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-40 lg:w-fit rounded-l-xl duration-500 hover:text-yellow-600`} />
 
                             </div>
                             

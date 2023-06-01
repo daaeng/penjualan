@@ -70,7 +70,6 @@ import {
                 console.log(errors.messages);
             })
         }
-
     },[])
 
     return(

@@ -12,6 +12,11 @@ const DdPiutang = () => {
         navigate('/detpiutang')
         console.log('Mundur');
     }
+    
+    const BacktoDas =() => {
+        navigate('/sales')
+        console.log('Mundur');
+    }
 
     return(
         <>
@@ -29,11 +34,17 @@ const DdPiutang = () => {
                     <div className='border ' />
 
                     <div className="flex p-1">
-                        <div className="cursor-pointer p-1 text-lg" onClick={Backto}>
+                        <div className="cursor-pointer font-bold p-1 text-lg flex items-center -mt-2" >
                             <VscDebugStepBack />
+                            
+                            <div onClick={BacktoDas}>
+                                Dashboard, 
+                            </div>
+                            
+                            <div className="ml-1" onClick={Backto}>
+                                Piutang
+                            </div>
                         </div>
-
-                            Dashboard, Piutang
 
                         <div className="underline ml-1">
                             Detail Customer Piutang
@@ -41,6 +52,12 @@ const DdPiutang = () => {
 
                     </div>
                     
+                </div>
+
+                <div>
+                    <div>
+                        ~ ? ~
+                    </div>
                 </div>                
 
             </div>

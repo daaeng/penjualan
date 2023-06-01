@@ -1,15 +1,12 @@
 import * as React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { DataGrid, GridActionsCellItem, GridToolbar } from '@mui/x-data-grid';
 // import EditIcon from '@mui/icons-material/Edit';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { BiStreetView } from 'react-icons/bi';
 
 export default function TablePiutang() {
 
-  // const navigate = useNavigate()
-
-  // const handleEditClick =() => {
-  //   // navigate('/DetailDatPiutang')
-  // }
+  const navigate = useNavigate()
 
   const columns = [
     // { no: 'no', headerName: 'No', width:30},
@@ -34,26 +31,26 @@ export default function TablePiutang() {
     { field: 'lastransaksi', headerName: 'Last Transaction', width: 125},
     { field: 'ttransaksi', headerName: 'Total Transaction', width: 125},
     { field: 'detail', headerName: 'Detail', width: 125},
-    // {
-    //   field: 'actions',
-    //   type: 'actions',
-    //   headerName: 'Actions',
-    //   width: 100,
-    //   cellClassName: 'actions',
-    //   getActions: ({ id }) => {
-    //     // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
+    {
+      field: 'actions',
+      type: 'actions',
+      headerName: 'View',
+      width: 55,
+      cellClassName: 'actions',
+      getActions: ({ id }) => {
+        // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
 
-    //     return [
-    //       <GridActionsCellItem
-    //         icon={<EditIcon />}
-    //         label="Edit"
-    //         className="textPrimary"
-    //         onClick={()=> navigate('/DetailDatPiutang')}
-    //         color="inherit"
-    //       />,
-    //     ];
-    //   },
-    // },
+        return [
+          <GridActionsCellItem
+            icon={<BiStreetView size={'20'}/>}
+            label="Edit"
+            className="textPrimary"
+            onClick={()=> navigate('/DetailDatPiutang')}
+            color="inherit"
+          />,
+        ];
+      },
+    },
   ];
 
   const data = [
@@ -68,9 +65,7 @@ export default function TablePiutang() {
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 18, lastransaksi: '07/01/2023', ttransaksi: 2 },
     { id: 10, lastName: 'Zahro', firstName: 'Aulia', age: 24, lastransaksi: '04/01/2023', ttransaksi: 53 },
     
-    
   ];
-
 
   return (
     

@@ -72,18 +72,13 @@ export default function FilterTime () {
       ]);
 
     // const [vDate, setVDate] = useState({ 
-
     //     startDate: new Date().setHours(-168) , 
-    //     endDate: new Date()
-    
-    //   }); 
-    
+    //     endDate: new Date()   
+    //   });   
     //   const handleValueChange = (newvDate) => {
     //     console.log("newValue:", newvDate); 
     //     setVDate(newvDate); 
-    
     //   } 
-    
 
     return (
         <>
@@ -95,12 +90,10 @@ export default function FilterTime () {
                             <BiTimeFive onClick={() => setBka(!bka)}/>
                         </div>
                     </h6>
-
                 </div>
 
                 <div className='flex justify-end'>
-                    <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>
-                        
+                    <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>                      
                         <ul className={`-ml-7 mr-1 ${!bka  && 'hidden' }`}>
                             <div className='-mb-2 ml-1'>
                                 <Labeldt title = {title} />
@@ -110,13 +103,11 @@ export default function FilterTime () {
                                 <div className='flex mt-1 p-1 -ml-7'>
                                     
                                     <div className="rounded w-full p-2 bg-blue-400 text-black">
-    
                                         {/* <Datepicker 
                                         value={vDate} 
                                         onChange={handleValueChange} 
                                         showShortcuts={true} 
-                                        />  */}
-                                        
+                                        />  */} 
                                         <DateRangePicker
                                             onChange={item => setState([item.selection])}
                                             showSelectionPreview={true}
@@ -126,12 +117,9 @@ export default function FilterTime () {
                                             direction="horizontal"
                                             preventSnapRefocus={true}
                                             calendarFocus="backwards"
-                                        />
-                                        
+                                        />                             
                                     </div>
-
                                 </div>
-
                             </div>
 
                             <div className='flex flex-rowlg:w-147 md:w-96 p-1 '>
@@ -141,30 +129,24 @@ export default function FilterTime () {
                                         <input type='checkbox' checked={checked} onChange={handleChange} className='mr-1'/>
                                         Versus 
                                         
-                                        <div className='ml-5'>
-                                            
-                                        <form onSubmit={handleSubmit}>
-                                            <FormControl error={error} variant="standard">
-                                                <RadioGroup
-                                                aria-labelledby="demo-error-radios"
-                                                name="quiz"
-                                                value={value}
-                                                onChange={handleRadioChange}
-                                                >
-                                                <FormControlLabel value="best" control={<Radio />} label="Last Month" />
-                                                <FormControlLabel value="worst" control={<Radio />} label="Last Year" />
-                                                </RadioGroup>
-                                    
-                                            </FormControl>
-                                        </form>
-
+                                        <div className='ml-5'>  
+                                            <form onSubmit={handleSubmit}>
+                                                <FormControl error={error} variant="standard">
+                                                    <RadioGroup
+                                                        aria-labelledby="demo-error-radios"
+                                                        name="quiz"
+                                                        value={value}
+                                                        onChange={handleRadioChange}
+                                                        >
+                                                    <FormControlLabel value="best" control={<Radio />} label="Last Month" />
+                                                    <FormControlLabel value="worst" control={<Radio />} label="Last Year" />
+                                                    </RadioGroup>
+                                                </FormControl>
+                                            </form>
                                         </div>                                    
                                     </div>
                                 </div>
-                                
-
                             </div>
-                            
                             
                             <div className='flex justify-end -mt-12 mr-3'>
                                 <button className='px-1 py-1 w-28 bg-blue-100 rounded-lg'>
@@ -172,30 +154,23 @@ export default function FilterTime () {
                                 </button>
                             </div>
                         </ul>
-
                     </div>
                 </div>
-
             </div>
-
         </>
-
       );
 }
 
 
-// <div className='flex-row p-2 text-white w-32'>
-                                        
+// <div className='flex-row p-2 text-white w-32'>                                      
 // {menuFlt.map((val, index) => {
 //     return(                 
 //         <button
 //             key = {index} 
-//             to={val.path}
-            
+//             to={val.path}          
 //             className={`cursor-pointer no-underline flex flex-row duration-300 
 //                     text-gray-100 overflow-y-visible hover:bg-light-white hover:rounded-md 
 //                     hover:text-black w-28 `} >
-
 //             <li className='flex items-center'>
 //                 <div className={`mr-1 mt-0.5 `}>{val.icon}</div>
 //                 <div className={`text-1xl duration-50`} >{val.name}</div> 
@@ -203,5 +178,4 @@ export default function FilterTime () {
 //         </button>                           
 //     );
 // })}
-
 // </div>
