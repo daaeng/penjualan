@@ -70,12 +70,12 @@ function Sdbar() {
             // })
         // }
 
-        axios.put(LOGOut_URL, {
-            token: sessionStorage.getItem('userData').refreshToken
-        }).then((response) => {
-            console.log(response);
-            console.log('~~~~~~~~~~~~~~~~');
-        })        
+        // axios.put(LOGOut_URL, {
+        //     token: sessionStorage.getItem('userData').refreshToken
+        // }).then((response) => {
+        //     console.log(response);
+        //     console.log('~~~~~~~~~~~~~~~~');
+        // })        
 
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")

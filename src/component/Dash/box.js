@@ -1,8 +1,8 @@
 import React, {} from 'react'
 import Box2 from './box2'
 import Labeldt from '../backpage/label'
-import Pembelian from '../chart/pembelian'
 import TempCG from '../Salles/TempCG'
+import ChartSales from '../chart/ChartSales'
 
 function Box () {
   
@@ -13,7 +13,7 @@ function Box () {
   const isibox = () => {
     return (
       <>
-        <Pembelian/>
+        <ChartSales/>
       </>
     )
   }

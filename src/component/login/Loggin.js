@@ -2,7 +2,7 @@ import axios from '../config/api/axios'
 import Logo from '../../assets/log.png'
 import useAuth from '../../hooks/useAuth'
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { FaBoxOpen } from 'react-icons/fa'
 import { AiFillTags } from 'react-icons/ai'
 import { SiAudiomack } from 'react-icons/si'
@@ -25,7 +25,7 @@ function Loggin () {
         {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
     ];
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const {setAuth} = useAuth(useAuth)  
     const userRef = useRef();
@@ -46,9 +46,15 @@ function Loggin () {
 
     //Salah Usernam and Password
     const sToastU = () =>{
-        toast.warning('Username dan Password salah', {
+        toast.warning('Username dan Password Sudah Login', {
             position: toast.POSITION.TOP_CENTER
         })
+    }
+    
+    const sToastFailLog = () =>{
+        toast.warning('Login Failed', {
+            position: toast.POSITION.TOP_CENTER
+        },[])
     }
 
     //Login success
@@ -59,15 +65,15 @@ function Loggin () {
     //     console.log('dah masuk');
     // }
     
-    useEffect(() => {
-        userRef.current.focus();
-        if(sessionStorage.getItem('userData'))
-        {
-            navigate('/sales')
-        } else{
-            console.log('~ Session Kosong ~');
-        }
-    }, [navigate])
+    // useEffect(() => {
+    //     userRef.current.focus();
+    //     if(sessionStorage.getItem('userData'))
+    //     {
+    //         navigate('/sales')
+    //     } else{
+    //         console.log('~ Session Kosong ~');
+    //     }
+    // }, [navigate])
 
     useEffect(() => {
         if(!{username,password})
@@ -126,7 +132,7 @@ function Loggin () {
         //     setErrMsg("Unauthorized");
         //   }
         else {
-            setErrMsg("Login Failed");
+            setErrMsg(sToastFailLog());
         }
         errRef.current.focus();
         }

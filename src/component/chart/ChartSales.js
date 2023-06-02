@@ -13,6 +13,7 @@ import {
     Legend,
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
+import Loadeer from "../backpage/Loader/Loadeer";
 
   ChartJS.register(
     CategoryScale,
@@ -67,7 +68,7 @@ import {
                 }
             })
             .catch((errors) => {
-                console.log(errors.messages);
+                console.log(errors.message);
             })
         }
     },[])
@@ -77,9 +78,11 @@ import {
             <div className="bg-white rounded w-full p-1">
                 <div className="flex-wrap">
                     {chart !== null? (
-                        <Line data={chart}/>
+                        <Line options={options} data={chart}/>
                     ):(
-                        <div>~ Chart Data Kosong ~</div>
+                        <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
+                            <Loadeer/>
+                        </div>
                     )}
                 </div>
             </div>
@@ -87,3 +90,20 @@ import {
     )
 }
 export default ChartSales
+
+const options = {
+  
+  responsive: true,
+  maintainAspectRatio: true,
+  aspectRatio: 2,
+  
+    plugins: {
+      legend: {
+        position: 'bottom',
+      },
+      title: {
+        display: true,
+        // text: 'CEK CEK CEK NAMA',
+      },
+  },
+};

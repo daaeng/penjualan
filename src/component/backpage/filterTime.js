@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import {BiTimeFive } from 'react-icons/bi'
 import Labeldt from './label';
 import Radio from '@mui/material/Radio';
@@ -9,22 +9,27 @@ import { addDays } from 'date-fns';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import axios from '../config/api/axios';
 // import Datepicker from "react-tailwindcss-datepicker"; 
 
+const baseURL = '/API/Dashboard/GetSalesByRangeDate?'
+// withCompare=true&comparison=lm&withDetail=true
 
 export default function FilterTime () {
 
     const [bka, setBka] =  useState(false);
 
-    // const menuFlt = [
-    //     {name:'This Week', path:''},
-    //     {name:'This Month', path:''},
-    //     {name:'This Year', path:''},
-    //     {name:'Last Weeks ', path:''},
-    //     {name:'Last Months ', path:''},
-    //     {name:'Last Years ', path:''},
-        
-    // ] 
+    useEffect(() => {
+        axios.get(baseURL, {
+            withCompare : '',
+            comparison : '',
+            withDetail: '',
+        }).then ((response) => {
+            console.log(response.data);
+
+        })
+
+    })
 
     const title = () => {
         return ("Filter Waktu")
@@ -66,10 +71,10 @@ export default function FilterTime () {
     const [state, setState] = useState([
         {
           startDate: new Date(),
-          endDate: addDays(new Date(), 7),
+          endDate: addDays(new Date(), -7),
           key: 'selection'
         }
-      ]);
+    ]);
 
     // const [vDate, setVDate] = useState({ 
     //     startDate: new Date().setHours(-168) , 
@@ -82,18 +87,21 @@ export default function FilterTime () {
 
     return (
         <>
-            <div>
-                <div className='bg-red-900 text-white w-fit rounded-lg p-1 items-center'>
-                    <h6 className='flex items-center mb-0 justify-end sm:text-xs md:text-xs lg:text-base'>
-                        Time '1 Hour' 
-                        <div className='bg-marron text-white cursor-pointer rounded-md p-1'>
-                            <BiTimeFive onClick={() => setBka(!bka)}/>
-                        </div>
-                    </h6>
+            <div className='relative'>
+                <div className='w-full flex justify-end -mb-14 ' onClick={() => setBka(!bka)}>
+                    <div className='bg-red-900 text-white w-fit rounded-lg p-1 items-center'>
+                        <h6 className='flex items-center mb-0 justify-end sm:text-xs md:text-xs lg:text-base'>
+                            Time '1 Hour' 
+                            <div className='bg-marron text-white cursor-pointer rounded-md p-1'>
+                                <BiTimeFive />
+                            </div>
+                        </h6>
+                    </div>
+
                 </div>
 
                 <div className='flex justify-end'>
-                    <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit fixed mt-4 ${bka ? 'mr-0' : 'show'}`}>                      
+                    <div className={` bg-marron rounded-tl-xl rounded-bl-xl rounded-br-xl w-fit mt-16 ${bka ? 'mr-0' : 'show'}`}>                      
                         <ul className={`-ml-7 mr-1 ${!bka  && 'hidden' }`}>
                             <div className='-mb-2 ml-1'>
                                 <Labeldt title = {title} />
