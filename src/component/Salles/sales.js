@@ -25,7 +25,7 @@ function Sales() {
             </div>
             
             <div>
-              <div className='flex justify-end items-center font-mono text-black -mb-5 mr-2'>
+              <div className='flex justify-end items-center font-mono text-black -mt-8 -mb-3 mr-2'>
                   <FilterTime />
               </div>
             </div>

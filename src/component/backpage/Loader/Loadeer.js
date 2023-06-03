@@ -7,7 +7,9 @@ const Loadeer = () => {
             <svg className="items-center animate-spin h-10 w-10 -mt-1 mr-3 " viewBox="0 0 24 24">
                 <BiLoaderCircle/>
             </svg>
-            Loading...
+            <div className="animate-pulse">
+                Loading...
+            </div>
         </>
     )
 }

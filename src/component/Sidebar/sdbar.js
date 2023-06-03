@@ -11,12 +11,10 @@ import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
 import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
 import { ToastContainer, toast } from 'react-toastify'
-import axios from '../config/api/axios'
-// import axios from '../config/api/axios'
+import AlertQuit from '../backpage/AlertQuit'
 // import axios from '../config/api/axios'
 
-
-const LOGOut_URL = '/api/Auth/LogOff'
+// const LOGOut_URL = '/api/Auth/LogOff?token='
 
 function Sdbar() {
 
@@ -24,8 +22,6 @@ function Sdbar() {
     const [open, setOpen] =  useState(false);
     const [buka, setbuka] =  useState(false);
     const [bka, setBka] =  useState(false);
-
-    // const hdlClose = () => setOpen(false)
 
     const menu = [
         // {name:'Dashboard', icon: <MdDashboard/>, path:'/dash'},
@@ -53,37 +49,18 @@ function Sdbar() {
     }
 
     const LogOut = () => {
-
         // const token = sessionStorage.getItem('userData')
-        // if(token) {
-        //     const axiosConfig = {
-        //         headers : {
-        //             Accept : "application/json",
-        //             Authorization : `Bearer` + JSON.parse(sessionStorage.getItem('userData')).refreshToken
-        //         }
-        //     }
-            // axios.put(LOGOut_URL, {
-            //     token : sessionStorage.getItem('userData').refreshToken
-            // }).then((response) => {
-            //     console.log(response);
-            //     console.log('Cek Logout Dulu...!');
-            // })
-        // }
-
         // axios.put(LOGOut_URL, {
-        //     token: sessionStorage.getItem('userData').refreshToken
-        // }).then((response) => {
-        //     console.log(response);
-        //     console.log('~~~~~~~~~~~~~~~~');
-        // })        
-
+        //     params: token.refreshToken
+        // })   
+        
         localStorage.removeItem("userData")
         sessionStorage.removeItem("userData")
         localStorage.clear()
         sToastLogOut()
         console.log('Sudah Log Out');
-        // return alert('Yakin anda ingin Log out', navigate('/'))
-        navigate('/')
+        return alert('Yakin anda ingin Log out', navigate('/'))
+        // navigate('/')
     };
 
     return (
@@ -159,6 +136,10 @@ function Sdbar() {
             </div>
 
         </header>
+
+        <div className='p-2 -mb-8'>
+            <AlertQuit/>
+        </div>
         
         <nav className = {`top-16 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             <div className=' -ml-5'>

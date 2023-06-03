@@ -76,7 +76,7 @@ import Loadeer from "../backpage/Loader/Loadeer";
     return(
         <>
             <div className="bg-white rounded w-full p-1">
-                <div className="flex-wrap">
+                <div className="flex-wrap items-center">
                     {chart !== null? (
                         <Line options={options} data={chart}/>
                     ):(

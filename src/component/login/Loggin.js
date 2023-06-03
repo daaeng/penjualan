@@ -38,7 +38,7 @@ function Loggin () {
 
     // Server mati
     const sToastMErr = () =>{
-        toast.error('Server Tidak Merespon', {
+        toast.error('Server Offlane', {
             position: toast.POSITION.TOP_CENTER
         })
         console.log('Server Offlane');
@@ -93,18 +93,6 @@ function Loggin () {
               origin: true,
             }
           );
-          
-        //   const resp = await axios
-        //   .post(
-        //     Refre_URL,
-        //     ({ username, password }),
-        //     {
-        //       headers: { "Content-Type": "multipart/form-data" },
-        //       credentials: true,
-        //       origin: true,
-        //     }
-        //   );
-        //   console.log(resp, ' Refresh Token');
 
           localStorage.setItem("userData", JSON.stringify(response?.data));
           sessionStorage.setItem("userData", JSON.stringify(response.data));
@@ -126,11 +114,6 @@ function Loggin () {
             else if (err.response?.data?.errors) {
             setErrMsg(err.response?.data?.errors);
         } 
-        //   else if (err.response?.data?.success === false) {
-        //     setErrMsg("Missing Username or Password");
-        //   } else if (err.response?.data?.status === 401) {
-        //     setErrMsg("Unauthorized");
-        //   }
         else {
             setErrMsg(sToastFailLog());
         }
@@ -149,7 +132,7 @@ function Loggin () {
                     <div className=''>
                         <div className="flex bg-slate-100 rounded-xl h-fit">
                             <div>
-                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-40 lg:w-fit rounded-l-xl duration-500 hover:text-yellow-600`} />
+                                <img src={Logo} alt='sakir' className={`sm:w-0 md:w-32 lg:w-fit rounded-l-xl duration-500 hover:text-yellow-600`} />
 
                             </div>
                             
