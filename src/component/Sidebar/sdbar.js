@@ -12,9 +12,10 @@ import {HiUserCircle, HiUser} from 'react-icons/hi'
 import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
 import { ToastContainer, toast } from 'react-toastify'
 import AlertQuit from '../backpage/AlertQuit'
-// import axios from '../config/api/axios'
+import axios from '../config/api/axios'
 
-// const LOGOut_URL = '/api/Auth/LogOff?token='
+const LOGOut_URL = '/api/Auth/LogOff?token=a26da23c-103b-4ad4-8e24-a752c8dfb3b8'
+// const LOGOut_URL = '/api/Auth/LogOff'
 
 function Sdbar() {
 
@@ -47,18 +48,83 @@ function Sdbar() {
         })
         console.log('proses');
     }
-
-    const LogOut = () => {
-        // const token = sessionStorage.getItem('userData')
-        // axios.put(LOGOut_URL, {
-        //     params: token.refreshToken
-        // })   
+    
+    const sToastLogOutFail =() =>{
+        toast.warning('Log Out Batal !', {
+            position: toast.POSITION.TOP_CENTER
+        })
+        console.log('proses');
+    }
+    
+    const LogOut = async () => {
         
-        localStorage.removeItem("userData")
-        sessionStorage.removeItem("userData")
-        localStorage.clear()
-        sToastLogOut()
-        console.log('Sudah Log Out');
+        try{
+            // const axiosConfig = {
+            //     header : {
+            //         Accept : 'application/json',
+            //         Authorization : `Bearer ${refreshToken}`
+            //     }
+            // }
+        
+            // const refToken = sessionStorage.getItem('userData')
+            // console.log(refToken);
+            // axios.put(LOGOut_URL, 
+            //     {
+            //         params : {
+            //             token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8",
+            //         }
+            //     }
+            // ).then((response) => {
+            //     console.log(response);
+            //     console.log(response.data?.success);
+            //     console.log(response.data?.errors);
+            //     console.log(LOGOut_URL, );
+            //     sToastLogOut()
+            // })
+
+            axios.put(LOGOut_URL, {
+                params : 
+                {
+                    token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8"
+                }
+            })
+            .then((response) => {
+                console.log(response.data);
+                console.log(response.data?.success);
+                console.log(response.data?.errors);
+                localStorage.removeItem("userData")
+                sessionStorage.removeItem("userData")
+                localStorage.clear()
+                sToastLogOut()
+            })
+            .catch((error) => {
+                console.error(error.data?.errors);
+            })
+        }
+        catch {
+            console.log('Gagal');
+            sToastLogOutFail(   )
+        }
+
+        // axios.put(LOGOut_URL, {
+        //     params: {
+        //         token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8"
+                
+        //     }
+        // })
+        // .then((response) => {
+        //     console.log(response.data);
+        //     console.log(response.data?.success);
+        //     console.log(response.data?.errors);
+        //     sToastLogOut()
+        // }).catch(errors => {
+        //     console.log(errors);
+        // })
+        
+        // localStorage.removeItem("userData")
+        // sessionStorage.removeItem("userData")
+        // localStorage.clear()
+        // console.log('Sudah Log Out');
         return alert('Yakin anda ingin Log out', navigate('/'))
         // navigate('/')
     };

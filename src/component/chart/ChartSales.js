@@ -49,17 +49,17 @@ import Loadeer from "../backpage/Loader/Loadeer";
                         labels : response.data.data.map((indiData) => indiData.tgl),
                         datasets : [
                             {
-                                label : 'Amount Compare',
-                                fill: true,
-                                data : response.data.data.map((indiData) => indiData.amCompare),
-                                backgroundColor: 'rgba(53, 162, 235, 0.5)',
-                            },
-                            {
                                 label : 'Amount',
                                 fill: true,
                                 data : response.data.data.map((indiData) => indiData.am),
-                                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                            }
+                                backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                            },
+                            {
+                                label : 'Amount Compare',
+                                fill: true,
+                                data : response.data.data.map((indiData) => indiData.amCompare),
+                                backgroundColor: 'rgba(53, 162, 235, 0.7)',
+                            },
                         ]
                     })
                 }

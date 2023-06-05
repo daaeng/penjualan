@@ -12,7 +12,6 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const LOGIN_URL = '/api/Auth/Login'
-// const Refre_URL = '/api/Auth/refresh'
 
 function Loggin () {
     
@@ -174,7 +173,7 @@ function Loggin () {
                 </section>
             ):(
 
-                <section className="flex rounded-xl bg-slate-200 shadow-lg">
+                <section className="flex rounded-xl bg-red-200 shadow-lg">
                     
 
                 {/* Gambar */}
