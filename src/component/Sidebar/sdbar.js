@@ -1,7 +1,6 @@
 import React, {useState } from 'react'
 import {NavLink, useNavigate} from 'react-router-dom'
 import Logo from '../../assets/CandiWhite.png'
-import {FiLogOut} from 'react-icons/fi'
 import {FaBoxOpen } from 'react-icons/fa'
 import {AiFillTags } from 'react-icons/ai'
 import {SiAudiomack} from 'react-icons/si'
@@ -10,12 +9,8 @@ import {MdShoppingBasket } from 'react-icons/md'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
 import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
-import { ToastContainer, toast } from 'react-toastify'
-import AlertQuit from '../backpage/AlertQuit'
-import axios from '../config/api/axios'
-
-const LOGOut_URL = '/api/Auth/LogOff?token=a26da23c-103b-4ad4-8e24-a752c8dfb3b8'
-// const LOGOut_URL = '/api/Auth/LogOff'
+import { ToastContainer } from 'react-toastify'
+import AlertDialog from '../backpage/AlertMod/AlertDialog'
 
 function Sdbar() {
 
@@ -37,97 +32,6 @@ function Sdbar() {
         {name:'Settings', icon: <RiSettings3Fill/>, path:''},
         // {name:'Logout', icon: <HiLogout/>, path:'/'},
     ] 
-
-    // useEffect = () => {
-    //     axios.get()
-    // }
-
-    const sToastLogOut =() =>{
-        toast.success('Log Out Berhasil !', {
-            position: toast.POSITION.TOP_CENTER
-        })
-        console.log('proses');
-    }
-    
-    const sToastLogOutFail =() =>{
-        toast.warning('Log Out Batal !', {
-            position: toast.POSITION.TOP_CENTER
-        })
-        console.log('proses');
-    }
-    
-    const LogOut = async () => {
-        
-        try{
-            // const axiosConfig = {
-            //     header : {
-            //         Accept : 'application/json',
-            //         Authorization : `Bearer ${refreshToken}`
-            //     }
-            // }
-        
-            // const refToken = sessionStorage.getItem('userData')
-            // console.log(refToken);
-            // axios.put(LOGOut_URL, 
-            //     {
-            //         params : {
-            //             token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8",
-            //         }
-            //     }
-            // ).then((response) => {
-            //     console.log(response);
-            //     console.log(response.data?.success);
-            //     console.log(response.data?.errors);
-            //     console.log(LOGOut_URL, );
-            //     sToastLogOut()
-            // })
-
-            axios.put(LOGOut_URL, {
-                params : 
-                {
-                    token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8"
-                }
-            })
-            .then((response) => {
-                console.log(response.data);
-                console.log(response.data?.success);
-                console.log(response.data?.errors);
-                localStorage.removeItem("userData")
-                sessionStorage.removeItem("userData")
-                localStorage.clear()
-                sToastLogOut()
-            })
-            .catch((error) => {
-                console.error(error.data?.errors);
-            })
-        }
-        catch {
-            console.log('Gagal');
-            sToastLogOutFail(   )
-        }
-
-        // axios.put(LOGOut_URL, {
-        //     params: {
-        //         token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8"
-                
-        //     }
-        // })
-        // .then((response) => {
-        //     console.log(response.data);
-        //     console.log(response.data?.success);
-        //     console.log(response.data?.errors);
-        //     sToastLogOut()
-        // }).catch(errors => {
-        //     console.log(errors);
-        // })
-        
-        // localStorage.removeItem("userData")
-        // sessionStorage.removeItem("userData")
-        // localStorage.clear()
-        // console.log('Sudah Log Out');
-        return alert('Yakin anda ingin Log out', navigate('/'))
-        // navigate('/')
-    };
 
     return (
     <>   
@@ -171,7 +75,8 @@ function Sdbar() {
                         {/* <TfiLayoutSidebarLeft size={'20'} className={`cursor-pointer  hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/> */}
                         <HiUserCircle size={'28'} className={`cursor-pointer  hover:text-darkgolden`} onClick={() => setBka(!bka)}/>
                         
-                        <FiLogOut  size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={LogOut}/>
+                        <AlertDialog/>
+                        {/* <FiLogOut  size={'20'} className='cursor-pointer  hover:text-darkgolden' onClick={LogOut}/> */}
                       
                     </div>
                 </div>
@@ -202,10 +107,6 @@ function Sdbar() {
             </div>
 
         </header>
-
-        <div className='p-2 -mb-8'>
-            <AlertQuit/>
-        </div>
         
         <nav className = {`top-16 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             <div className=' -ml-5'>
@@ -238,5 +139,5 @@ function Sdbar() {
     </>
   )
 }
-
+    
 export default Sdbar;
