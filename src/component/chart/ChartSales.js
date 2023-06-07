@@ -26,8 +26,8 @@ import Loadeer from "../backpage/Loader/Loadeer";
     Legend
   );
 
-  const baseURL = '/API/Dashboard/GetSalesByRangeDate?withCompare=true&comparison=lm&withDetail=true'
-  
+  const baseURL = '/API/Dashboard/GetSalesByRangeDate'
+//   ?withCompare=true&comparison=lm&withDetail=true
   const ChartSales = () => {
       
     const [chart, setChart] = useState(null)
@@ -68,7 +68,8 @@ import Loadeer from "../backpage/Loader/Loadeer";
                 }
             })
             .catch((errors) => {
-                console.log(errors.message);
+                console.log(errors.message)
+                console.log('Error Guys..!');
             })
         }
     },[])

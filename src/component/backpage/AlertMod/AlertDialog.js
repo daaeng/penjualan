@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
 
 // const LOGOut_URL = '/api/Auth/LogOff?token=a26da23c-103b-4ad4-8e24-a752c8dfb3b8'
-const LOGOut_URL = '/api/Auth/LogOff'
+const LOGOut_URL = '/api/Auth/LogOff?token='
 
 export default function AlertDialog() {
 
@@ -32,89 +32,64 @@ export default function AlertDialog() {
     console.log('Log Out Done');
   }
 
-  // const sToastLogOutFail =() =>{
-  //     toast.warning('Log Out Batal !', {
-  //         position: toast.POSITION.TOP_CENTER
-  //     })
-  //     console.log('proses');
-  // }
+  const sToastLogOutFail =() =>{
+      toast.warning('Log Out Batal !', {
+          position: toast.POSITION.TOP_CENTER
+      })
+      console.log('Proses LogOut Gagal');
+      // navigate('/sales')
+  }
 
+  React.useEffect(() => {
+    let userData = sessionStorage.getItem('userData')
+      if(!userData){
+        navigate('/')
+        console.log('~~~~~~~~~~~~~~~ Session not available ~~~~~~~~~~~~~~~');
+      } 
+  })
   const LogOut = () => {
 
-      axios.put(LOGOut_URL, {
-        params : {
-          token : ''
-        }
-      }).then((response) => {
-        console.log(response.data?.errors);
-        sToastLogOut()
-        navigate('/')
-      }).catch((error) => {
-        console.error(error.data?.errors);
-        // sToastLogOutFail()
-        // console.log('Log Out Problem');
-      })
+    let userData = sessionStorage.getItem('userData')
+    let str = JSON.parse(userData).refreshToken
+    console.log(str);
 
-    // try{
-    //     axios.put(LOGOut_URL, {
-    //         params : 
-    //         {
-    //             token : '33558a4f-613b-426c-a27c-3a613124a4f1'
-    //         }
-    //     })
-    //     .then((response) => {
-    //         console.log(response.data);
-    //         console.log(response.data?.success);
-    //         console.log(response.data?.errors);
-    //         localStorage.removeItem("userData")
-    //         sessionStorage.removeItem("userData")
-    //         localStorage.clear()
-    //         sToastLogOut()
-    //     })
-    //     .catch((error) => {
-    //       console.error(error.data?.errors);
-    //       sToastLogOutFail()
-    //     })
-    // }
-    // catch {
-    //     console.log('Gagal');
-    //     sToastLogOutFail()
-    // }
-
-    //````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
-    // axios.put(LOGOut_URL, {
-    //     params: {
-    //         token : "a26da23c-103b-4ad4-8e24-a752c8dfb3b8"       
-    //     }
-    // })
-    // .then((response) => {
-    //     console.log(response.data);
-    //     console.log(response.data?.success);
-    //     console.log(response.data?.errors);
-    //     sToastLogOut()
-    // }).catch(errors => {
-    //     console.log(errors);
-    // })
+    try{
+        axios.put(`${LOGOut_URL}` + str)
+        .then((response) => {
+            console.log(response.data);
+            console.log(response.data?.success);
+            console.log(response.data?.errors);
+            sessionStorage.removeItem("userData")
+            localStorage.removeItem("userData")
+            localStorage.clear()
+            sToastLogOut()
+            navigate('/')
+        })
+        .catch((error) => {
+          console.error(error.data?.errors);
+          sToastLogOutFail()
+        })
+    }
+    catch {
+        console.log('Gagal');
+        sToastLogOutFail()
+    }
     
-    // `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
-    // localStorage.removeItem("userData")
-    // sessionStorage.removeItem("userData")
-    // localStorage.clear()
-    // console.log('Sudah Log Out');
-    // navigate('/')
-    // sToastLogOut()
+    sessionStorage.removeItem("userData")
+    localStorage.removeItem("userData")
+    localStorage.clear()
+    console.log('Sudah Log Out');
+    navigate('/')
+
 }
 
   return (
     <div>
-      {/* <FiLogOut  variant="outlined" onClick={handleClickOpen}/> */}
       <ToastContainer/>
-
       <div className='cursor-pointer'>
         <FiLogOut variant="outlined" size={20} onClick={handleClickOpen}/>
-          {/* Open alert dialog
-        </FiLogOut> */}
       </div>
+      
       <Dialog
         open={open}
         onClose={handleClose}
@@ -127,7 +102,7 @@ export default function AlertDialog() {
     
         <DialogActions>
           <Button onClick={handleClose}>Batal</Button>
-          <Button onClick={LogOut} autoFocus>
+          <Button className='hover:text-red-400' onClick={LogOut} autoFocus>
             Keluar
           </Button>
         </DialogActions>

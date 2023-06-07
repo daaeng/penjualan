@@ -2,7 +2,7 @@ import axios from '../config/api/axios'
 import Logo from '../../assets/log.png'
 import useAuth from '../../hooks/useAuth'
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { FaBoxOpen } from 'react-icons/fa'
 import { AiFillTags } from 'react-icons/ai'
 import { SiAudiomack } from 'react-icons/si'
@@ -24,7 +24,7 @@ function Loggin () {
         {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
     ];
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const {setAuth} = useAuth(useAuth)  
     const userRef = useRef();
@@ -40,21 +40,35 @@ function Loggin () {
         toast.error('Server Offlane', {
             position: toast.POSITION.TOP_CENTER
         })
-        console.log('Server Offlane');
+        console.log('Server Offline');
     }
 
     //Salah Usernam and Password
     const sToastU = () =>{
-        toast.warning('Username dan Password Sudah Login', {
+        toast.warning('User Sudah Login pada perangkat lain', {
             position: toast.POSITION.TOP_CENTER
         })
     }
     
     const sToastFailLog = () =>{
-        toast.warning('Login Failed', {
+        toast.warning('Username dan Password Salah', {
             position: toast.POSITION.TOP_CENTER
         },[])
     }
+
+    // useEffect(() => {    
+        
+    // }, [])
+
+    useEffect(() => {    
+      let userData = sessionStorage.getItem('userData')
+      if(userData){
+        navigate('/sales')
+        console.log('Ads Data');
+      } else{
+        console.log('~~~~~~~~~~~~~~~ Mau Login ? ~~~~~~~~~~~~~~~');
+      }
+    }, [navigate])
 
     //Login success
     // const sToastLogIn =() =>{
