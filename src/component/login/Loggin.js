@@ -66,7 +66,7 @@ function Loggin () {
         navigate('/sales')
         console.log('Ads Data');
       } else{
-        console.log('~~~~~~~~~~~~~~~ Mau Login ? ~~~~~~~~~~~~~~~');
+        console.log('~~~~~ Mau Login ? ~~~~~');
       }
     }, [navigate])
 
