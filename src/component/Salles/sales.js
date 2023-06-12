@@ -1,10 +1,11 @@
 import React from 'react'
 import { SiAudiomack } from 'react-icons/si';
-import FilterTime from '../backpage/filterTime';
 import Box from '../Dash/box';
 import GabCard from '../backpage/GabCard/GabCard';
 import DataPenjual from './DataPenjual';
 import DataPiutang from './DataPiutang';
+// import FilterTime from '../backpage/filterTime';
+// import FilTime from '../backpage/FilTime';
 
 function Sales() {
 
@@ -24,11 +25,12 @@ function Sales() {
               </div>
             </div>
             
-            <div>
+            {/* <div>
               <div className='flex justify-end items-center font-mono text-black -mt-8 -mb-3 mr-2'>
                   <FilterTime />
+                  <FilTime/>
               </div>
-            </div>
+            </div> */}
 
             <div className='mt-2 '>
                 <Box/>

@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CardSingleGree = (props) => {
+
+    const navigate = useNavigate()
+
     return(
         <>
-            <div className="">
+            <div className="" onClick={()=> navigate('/detpembayaran')}>
                 <div className="flex justify-end">
                     <div className='bg-green-600 sm:w-28 md:w-34 lg:w-72 rounded-bl-full relative sm:h-22 md:h-28 lg:h-34 -mb-36'>
                     </div>

@@ -8,7 +8,7 @@ import {RiSettings3Fill } from 'react-icons/ri'
 import {MdShoppingBasket } from 'react-icons/md'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
-import {TbLayoutSidebarRightCollapse} from 'react-icons/tb'
+import {AiOutlineRadiusUpright} from 'react-icons/ai'
 import { ToastContainer } from 'react-toastify'
 import AlertDialog from '../backpage/AlertMod/AlertDialog'
 
@@ -108,11 +108,11 @@ function Sdbar() {
 
         </header>
         
-        <nav className = {`top-16 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
+        <nav className = {`top-20 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             <div className=' -ml-5'>
-                <TbLayoutSidebarRightCollapse size={'28'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+                <AiOutlineRadiusUpright size={'24'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
-            <div className={`duration-50 ${!open && 'hidden'}`}>
+            <div className={`duration-300 ${!open && 'hidden'}`}>
                 <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>
 
                     {menu.map((val, index) => {

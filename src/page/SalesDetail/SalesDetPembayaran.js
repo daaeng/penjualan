@@ -1,5 +1,6 @@
 import React from "react";
 import Sdbar from "../../component/Sidebar/sdbar";
+import SalesPembayranDet from "../../component/Salles/SalesPembayranDet";
 
 const SalesDetPembayaran = () => {
     return(
@@ -14,7 +15,7 @@ const SalesDetPembayaran = () => {
                 <div>
                 <section className={`-mt-1`}>
                     
-                    SalesDetPembayaran
+                    <SalesPembayranDet/>
 
                 </section>
 

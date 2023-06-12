@@ -47,16 +47,17 @@ export default function AlertDialog() {
         console.log('~~~~~~~~~~~~~~~ Session not available ~~~~~~~~~~~~~~~');
       } 
   })
+  
   const LogOut = () => {
 
     let userData = sessionStorage.getItem('userData')
     let str = JSON.parse(userData).refreshToken
-    console.log(str);
+    // console.log(str);
 
     try{
         axios.put(`${LOGOut_URL}` + str)
         .then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             console.log(response.data?.success);
             console.log(response.data?.errors);
             sessionStorage.removeItem("userData")

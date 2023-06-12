@@ -47,7 +47,7 @@ const SalesPiutangDet =() => {
                     <h3>
                         Piutang
                     </h3>
-                    <div className='border ml-36 -mt-5 mb-2'/>
+                    <div className='border ml-52 -mt-5 mb-2'/>
 
                 </div>
 
