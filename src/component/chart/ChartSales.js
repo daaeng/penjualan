@@ -26,8 +26,8 @@ import Loadeer from "../backpage/Loader/Loadeer";
     Legend
   );
 
-  const baseURL = '/API/Dashboard/GetSalesByRangeDate'
-//   ?withCompare=true&comparison=lm&withDetail=true
+  const baseURL = '/API/Dashboard/getSalesRetur'
+
   const ChartSales = () => {
       
     const [chart, setChart] = useState(null)
@@ -43,22 +43,28 @@ import Loadeer from "../backpage/Loader/Loadeer";
                 }
             }
             axios.get(baseURL, axiosConfig).then((response) => {
-                // console.log(response.data);
-                if(response.data.data.length > 0) {
+                console.log(response.data);
+                if(response.data.result.data.length > 0) {
                     setChart({
-                        labels : response.data.data.map((indiData) => indiData.tgl),
+                        labels : response.data.result.data.map((indiData) => indiData.tgl),
                         datasets : [
                             {
-                                label : 'Amount',
+                                label : 'amNett',
                                 fill: true,
-                                data : response.data.data.map((indiData) => indiData.am),
-                                backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                                data : response.data.result.data.map((indiData) => indiData.amNett),
+                                backgroundColor: 'rgba(250, 0, 0, 0.3)',
                             },
+                            // {
+                            //     label : 'amSR',
+                            //     fill: true,
+                            //     data : response.data.result.data.map((indiData) => indiData.amSR),
+                            //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                            // },
                             {
-                                label : 'Amount Compare',
+                                label : 'amSI',
                                 fill: true,
-                                data : response.data.data.map((indiData) => indiData.amCompare),
-                                backgroundColor: 'rgba(53, 162, 235, 0.7)',
+                                data : response.data.result.data.map((indiData) => indiData.amSI),
+                                backgroundColor: 'rgba(49, 217, 234, 0.5)',
                             },
                         ]
                     })

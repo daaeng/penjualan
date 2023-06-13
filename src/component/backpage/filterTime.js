@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import {BiTimeFive } from 'react-icons/bi'
 import Labeldt from './label';
 import Radio from '@mui/material/Radio';
@@ -9,11 +9,11 @@ import { addDays } from 'date-fns';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import axios from '../config/api/axios';
+// import axios from '../config/api/axios';
 // import Datepicker from "react-tailwindcss-datepicker"; 
 // const baseURL = '/API/Dashboard/GetSalesByRangeDate?'
 
-const baseURL = '/API/Dashboard/getSalesGrossByDate'
+// const baseURL = '/API/Dashboard/getSalesGrossByDate'
 // https://192.168.21.70:13541/API/Dashboard/getSalesGrossByDate
 // withCompare=true&comparison=lm&withDetail=true
 
@@ -21,16 +21,16 @@ export default function FilterTime () {
 
     const [bka, setBka] =  useState(false);
 
-    useEffect(() => {
-        axios.get(baseURL, {
-            withCompare : '',
-            comparison : '',
-            withDetail: '',
-        }).then ((response) => {
-            console.log(response.data);
-        })
+    // useEffect(() => {
+    //     axios.get(baseURL, {
+    //         withCompare : '',
+    //         comparison : '',
+    //         withDetail: '',
+    //     }).then ((response) => {
+    //         console.log(response.data);
+    //     })
 
-    })
+    // })
 
     const title = () => {
         return ("Filter Waktu")
