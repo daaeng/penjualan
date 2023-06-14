@@ -1,7 +1,7 @@
 
 import { FaRegMoneyBillAlt } from 'react-icons/fa'
 import { BsBoxSeamFill } from "react-icons/bs";
-import { MdPayments, MdPointOfSale } from 'react-icons/md'
+import { MdPayments } from 'react-icons/md'
 import CardSingleRed from '../backpage/CardSingle/cardSingleRed';
 import CardSingleGree from '../backpage/CardSingle/cardSinglegree';
 import CardSingleYell from '../backpage/CardSingle/cardSingleYell';
@@ -89,29 +89,29 @@ const TempCG = () => {
     
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Card Bru >---------------------------------------------------------------------------------------------------------------------------------
-    const atasBru = () => {
-        return (
-        <>
-            Penjualan
-        </>
-        )
-    }
+    // const atasBru = () => {
+    //     return (
+    //     <>
+    //         Penjualan
+    //     </>
+    //     )
+    // }
 
-    const kananBru = () => {
-        return (
-        <>
-            <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
-        </>
-        )
-    }
+    // const kananBru = () => {
+    //     return (
+    //     <>
+    //         <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
+    //     </>
+    //     )
+    // }
 
-    const bwhBru = () => {
-        return (
-        <>
-            736.142
-        </>
-        )
-    }
+    // const bwhBru = () => {
+    //     return (
+    //     <>
+    //         736.142
+    //     </>
+    //     )
+    // }
 
     return(
         <>
@@ -121,7 +121,7 @@ const TempCG = () => {
                 <CardSingleRed atas = {atas} kanan = {kanan} bwh = {bwh} className='grid lg:col-span-1 md:col-span-2'/>
                 <CardSingleGree atasIjo = {atasIjo} kananIjo = {kananIjo} bwhIjo = {bwhIjo} className='grid lg:col-span-1 md:col-span-2'/>
                 <CardSingleYell atasKng = {atasKng} kananKng = {kananKng} bwhKng = {bwhKng} className='grid lg:col-span-1 md:col-span-2'/>
-                <CardSingleBlu atasBru = {atasBru} kananBru = {kananBru} bwhBru = {bwhBru} className='grid lg:col-span-1 md:col-span-2'/>
+                <CardSingleBlu className='grid lg:col-span-1 md:col-span-2'/>
 
             </div>
         </>

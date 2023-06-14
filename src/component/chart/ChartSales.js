@@ -44,26 +44,26 @@ import Loadeer from "../backpage/Loader/Loadeer";
             }
             axios.get(baseURL, axiosConfig).then((response) => {
                 console.log(response.data);
-                if(response.data.result.data.length > 0) {
+                if(response.data.data.length > 0) {
                     setChart({
-                        labels : response.data.result.data.map((indiData) => indiData.tgl),
+                        labels : response.data.data.map((indiData) => indiData.tgl),
                         datasets : [
                             {
                                 label : 'amNett',
                                 fill: true,
-                                data : response.data.result.data.map((indiData) => indiData.amNett),
+                                data : response.data.data.map((indiData) => indiData.amNett),
                                 backgroundColor: 'rgba(250, 0, 0, 0.3)',
                             },
                             // {
                             //     label : 'amSR',
                             //     fill: true,
-                            //     data : response.data.result.data.map((indiData) => indiData.amSR),
+                            //     data : response.data.data.map((indiData) => indiData.amSR),
                             //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
                             // },
                             {
                                 label : 'amSI',
                                 fill: true,
-                                data : response.data.result.data.map((indiData) => indiData.amSI),
+                                data : response.data.data.map((indiData) => indiData.amSI),
                                 backgroundColor: 'rgba(49, 217, 234, 0.5)',
                             },
                         ]

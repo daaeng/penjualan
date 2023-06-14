@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "../../config/api/axios";
+import { MdPointOfSale } from "react-icons/md";
+// import Loadeer from "../Loader/Loadeer";
 
-const CardSingleBlu = (props) => {
+const baseURL = '/API/Dashboard/getSalesRetur?'
+
+
+const CardSingleBlu = () => {
 
     const navigate = useNavigate()
+
+    function tkStDate(year, month) {
+        return new Date(year, month, 1);
+    }
+
+    const tgl = new Date()
+    const firstDate = tkStDate(
+        tgl.getFullYear(),
+        tgl.getMonth()
+    )
+
+    useEffect(() => {
+        let data1 = tgl
+        let data2 = firstDate
+
+        axios.get(baseURL, {
+            params : {
+                comparison : 'LM',
+                isAsper : true,
+                startDate : data2,
+                endDate : data1
+            }
+        }).then(response => {
+            console.log(response.data);
+        })
+    })
+
+    // if(!post) return null
 
     return(
         <>
@@ -19,16 +53,15 @@ const CardSingleBlu = (props) => {
                     bg-gradient-to-l from-light-white to-blue-200 hover:bg-light-white hover:text-black cursor-pointer'>
                     
                     <h6 className='lg:col-span-1 sm:text-xs md:text-sm lg:text-base'>
-                        {props.atasBru()}
+                        aaaaa
                     </h6>                    
                     
                     <div className="flex justify-end lg:row-span-3 mr-1 -mb-2 items-center ">
-                        {props.kananBru()}
-                        {/* <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/> */}
+                        <MdPointOfSale className="sm:w-0 md:w-fit text-blue-600 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
                     </div>  
                     
                     <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-lg md:text-3xl lg:text-4xl'>
-                        {props.bwhBru()}
+                        ccccc
                     </div>
 
                     <p className="lg:col-span-2 font-bold text-redd text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">

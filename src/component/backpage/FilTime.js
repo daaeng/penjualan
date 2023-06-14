@@ -19,13 +19,6 @@ const FilTime =() => {
         endDate: new Date()
     });
 
-    // const PickDate = () => (
-    //     {
-    //         startDate: new Date(),
-    //         endDate: new Date()
-    //     }
-    // )
-
     const handleTglChange = (newTgl) => {
         console.log("newValue:", newTgl);
         setTgl(newTgl);
@@ -37,21 +30,15 @@ const FilTime =() => {
         console.log(data1);
         console.log(data2);
 
-        axios.get(`${baseURL}startDate=` + data1 + '&endDate=' + data2).then((response) => {
-            console.log(response);
+        axios.get(baseURL, {
+            params: {
+                startDate : data1,
+                endDate : data2
+            }
+        }).then(response => {
+            console.log(response.data.data);
         })
     }
-
-    // useEffect(() => {
-    //     axios.get(baseURL, {
-    //         withCompare : '',
-    //         comparison : '',
-    //         withDetail: '',
-    //     }).then ((response) => {
-    //         console.log(response.data);
-    //     })
-
-    // })
 
     // const [checked, setChecked] = useState(false)
     // const handleChange = () => {
@@ -96,8 +83,8 @@ const FilTime =() => {
                     </div>
                 </div>
                 <div className={`duration-50 fixed mt-5 ${!open && 'hidden'}`}>
-                    <div className='items-center rounded-xl bg-redd p-2 w-146 '>
-                        <div className="w-64 flex justify-end">
+                    <div className='items-center rounded-xl bg-redd p-2 w-128 '>
+                        <div className="w-68 flex justify-end">
                             <Datepicker
                                 value={tgl}
                                 onChange={handleTglChange}
@@ -135,9 +122,12 @@ const FilTime =() => {
                         </div> */}
                     </div>
                     
-                    <div onClick={UbahTgl} 
-                        className="bg-blue-50 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
-                        Apply
+                    <div className="flex justify-end">
+                        <div onClick={UbahTgl} 
+                            className="bg-slate-200 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
+                            Apply
+                        </div>
+
                     </div>
 
                 </div>
