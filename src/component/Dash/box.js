@@ -3,7 +3,7 @@ import Box2 from './box2'
 import Labeldt from '../backpage/label'
 import TempCG from '../Salles/TempCG'
 import ChartSales from '../chart/ChartSales'
-import FilTime from '../backpage/FilTime'
+// import FilTime from '../backpage/FilTime'
 
 function Box () {
   
@@ -34,9 +34,9 @@ function Box () {
               <Labeldt title = {title} />
 
               <div>
-              <div className='flex justify-end items-center font-mono text-black -mt-5 -mb-2 mr-2'>
+              {/* <div className='flex justify-end items-center font-mono text-black -mt-5 -mb-2 mr-2'>
                   <FilTime/>
-              </div>
+              </div> */}
             </div>
 
               <Box2 isibox = {isibox}/>

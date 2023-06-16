@@ -14,6 +14,7 @@ import {
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
 import Loadeer from "../backpage/Loader/Loadeer";
+import FilTime from "../backpage/FilTime";
 
   ChartJS.register(
     CategoryScale,
@@ -26,7 +27,7 @@ import Loadeer from "../backpage/Loader/Loadeer";
     Legend
   );
 
-  const baseURL = '/API/Dashboard/getSalesRetur'
+  const baseURL = '/API/Dashboard/getSalesRetur?'
 
   const ChartSales = () => {
       
@@ -36,13 +37,18 @@ import Loadeer from "../backpage/Loader/Loadeer";
 
         const token = sessionStorage.getItem('userData')
         if(token){
-            const axiosConfig = {
-                headers : {
-                    Accept : "application/json",
-                    Authorization : `Bearer ${token}`
+            // const axiosConfig = {
+            //     headers : {
+            //         Accept : "application/json",
+            //         Authorization : `Bearer ${token}`
+            //     }
+            // }
+            axios.get(baseURL,{
+                params : {
+                    startDate : '',
+                    endDate : ''
                 }
-            }
-            axios.get(baseURL, axiosConfig).then((response) => {
+            }).then((response) => {
                 console.log(response.data);
                 if(response.data.data.length > 0) {
                     setChart({
@@ -83,7 +89,11 @@ import Loadeer from "../backpage/Loader/Loadeer";
     return(
         <>
             <div className="bg-white rounded w-full p-1">
-                <div className="flex-wrap items-center">
+                <div className='flex justify-end items-center font-mono text-black -mt-2 '>
+                    <FilTime />
+                </div>
+
+                <div className="flex-wrap items-center -mt-5">
                     {chart !== null? (
                         <Line options={options} data={chart}/>
                     ):(

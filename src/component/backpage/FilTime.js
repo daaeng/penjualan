@@ -83,7 +83,7 @@ const FilTime =() => {
                     </div>
                 </div>
                 <div className={`duration-50 fixed mt-5 ${!open && 'hidden'}`}>
-                    <div className='items-center rounded-xl bg-redd p-2 w-128 '>
+                    <div className='items-center rounded-xl bg-redd p-2 w-135 '>
                         <div className="w-68 flex justify-end">
                             <Datepicker
                                 value={tgl}
