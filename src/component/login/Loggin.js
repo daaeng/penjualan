@@ -57,18 +57,14 @@ function Loggin () {
     }
 
     // useEffect(() => {    
-        
-    // }, [])
-
-    useEffect(() => {    
-      let userData = sessionStorage.getItem('userData')
-      if(userData){
-        navigate('/sales')
-        console.log('Ads Data');
-      } else{
-        console.log('~~~~~ Mau Login ? ~~~~~');
-      }
-    }, [navigate])
+    //   let userData = sessionStorage.getItem('userData')
+    //   if(userData){
+    //     navigate('/sales')
+    //     console.log('Ads Data');
+    //   } else{
+    //     console.log('~~~~~ Mau Login ? ~~~~~');
+    //   }
+    // }, [navigate])
 
     //Login success
     // const sToastLogIn =() =>{

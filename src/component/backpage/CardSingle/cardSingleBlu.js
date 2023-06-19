@@ -2,6 +2,7 @@ import React, { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../../config/api/axios";
 import { MdPointOfSale } from "react-icons/md";
+import Loadeer from "../Loader/Loadeer";
 // import Loadeer from "../Loader/Loadeer";
 
 const baseURL = '/API/Dashboard/getSalesRetur?'
@@ -63,7 +64,7 @@ const CardSingleBlu = () => {
     //     }
     // })
 
-    return(
+    return (
         <>
             {/* {data.map((dataObj, index) => {
                 
@@ -95,11 +96,17 @@ const CardSingleBlu = () => {
                                         </p>
                                     )
                                 })}
+
+                                <div className="flex lg:text-xl md:text-lg sm:text-base justify-center text-black mb-2 mt-2">
+                                    <Loadeer/>
+                                </div>
+                                
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  
                                 {/* {dataObj.diffSIPerc} % */}
                                 {/* ▼ 11% Last Month */}
+                            
                                 {data.map((dataObj, index) => {
                                     if (dataObj.diffSIPerc < 0) {
                                         return(
@@ -112,8 +119,9 @@ const CardSingleBlu = () => {
                                             ▲ {dataObj.diffSIPerc}% Last Month
                                         </div>
                                     }
-                                   
+                                    
                                 })}
+                            
                             </div>
                         
                         </div>    
