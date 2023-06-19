@@ -4,8 +4,8 @@ import { VscDebugStepBack } from "react-icons/vsc";
 import FilterTime from "../backpage/filterTime";
 import TablePiutang from "../backpage/Tabel/TabelPiutang";
 import { useNavigate } from "react-router-dom";
-import Pembayaran from "../chart/pembayaran";
 import TabelPenjualan from "../backpage/Tabel/TabelPenjualan";
+import Penjualan from "../chart/Penjualan";
 
 const SalesPiutangDet =() => {
 
@@ -56,7 +56,7 @@ const SalesPiutangDet =() => {
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
                         <div className="col-span-1 p-2 bg-marron">
-                            <Pembayaran/>
+                            <Penjualan/>
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">

@@ -1,4 +1,5 @@
 import React from "react";
+import { MdPayments } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const CardSingleGree = (props) => {
@@ -19,16 +20,15 @@ const CardSingleGree = (props) => {
                     bg-gradient-to-l from-light-white to-green-200 hover:bg-light-white hover:text-black cursor-pointer'>
                     
                     <h6 className='lg:col-span-1 sm:text-xs md:text-sm lg:text-base'>
-                        {props.atasIjo()}
+                        Pembayaran
                     </h6>                    
                     
                     <div className="flex justify-end lg:row-span-3 mr-1 -mb-2 items-center ">
-                        {props.kananIjo()}
-                        {/* <MdPayments className="sm:w-0 md:w-fit text-green-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/> */}
+                        <MdPayments className="sm:w-0 md:w-fit text-green-600 -rotate-45 md:mb-2 lg:mb-0" size={'70'}/>
                     </div>  
                     
                     <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-lg md:text-3xl lg:text-4xl'>
-                        {props.bwhIjo()}
+                        Angka
                     </div>
 
                     <p className="lg:col-span-2 font-bold text-green-700 text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">

@@ -49,7 +49,7 @@ import FilTime from "../backpage/FilTime";
                     endDate : ''
                 }
             }).then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 if(response.data.data.length > 0) {
                     setChart({
                         labels : response.data.data.map((indiData) => indiData.tgl),
@@ -99,6 +99,7 @@ import FilTime from "../backpage/FilTime";
                     ):(
                         <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
                             <Loadeer/>
+                            {console.log('Loading')}
                         </div>
                     )}
                 </div>

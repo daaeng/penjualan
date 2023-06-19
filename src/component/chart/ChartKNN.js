@@ -1,5 +1,6 @@
 //Data grafik
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "../config/api/axios";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,35 +11,90 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import Loadeer from "../backpage/Loader/Loadeer";
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const baseURL = '/API/Dashboard/getSalesRetur?'
 
 function ChartKNN(){
 
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-  );
+  const [chart, setChart] = useState(null)
 
-    return(
-        <>
-          
-            <div className='bg-white rounded w-full p-1'>
-              
-                {/* <Detail_pen data={this.this.state.data} /> */}
-                <Bar options={options} data={data} />
+  useEffect(() => {
 
+      const token = sessionStorage.getItem('userData')
+      if(token){
+          axios.get(baseURL,{
+              params : {
+                  startDate : '',
+                  endDate : ''
+              }
+          }).then((response) => {
+              // console.log(response.data);
+              if(response.data.data.length > 0) {
+                  setChart({
+                      labels : response.data.data.map((indiData) => indiData.tgl),
+                      datasets : [
+                          {
+                              label : 'amNett',
+                              fill: true,
+                              data : response.data.data.map((indiData) => indiData.amNett),
+                              backgroundColor: 'rgba(250, 0, 0, 0.3)',
+                          },
+                          // {
+                          //     label : 'amSR',
+                          //     fill: true,
+                          //     data : response.data.data.map((indiData) => indiData.amSR),
+                          //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                          // },
+                          {
+                              label : 'amSI',
+                              fill: true,
+                              data : response.data.data.map((indiData) => indiData.amSI),
+                              backgroundColor: 'rgba(49, 217, 234, 0.5)',
+                          },
+                      ]
+                  })
+              }
+              else{
+                  console.log('Tidak Ada Data');
+              }
+          })
+          .catch((errors) => {
+              console.log(errors.message)
+              console.log('Error Guys..!');
+          })
+      }
+  },[])
+
+  return(
+    <>
+      <div className='bg-white rounded w-full p-1'>
+        {chart !== null? (
+            <Bar options={options} data={chart}/>
+        ):(
+            <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
+                <Loadeer/>
+                {console.log('Loading')}
             </div>
-        </>
-    )
+        )}
+          {/* <Detail_pen data={this.this.state.data} /> */}
+          {/* <Bar options={options} data={data} /> */}
+      </div>
+    </>
+  )
 }
 
 export default ChartKNN
 
 const options = {
-
     indexAxis: 'y',
     elements: {
         bar: {
@@ -55,90 +111,4 @@ const options = {
         text: 'Chart.js Horizontal Bar Chart',
         },
     },
-  
-//   responsive: true,
-//   maintainAspectRatio: true,
-//   aspectRatio: 2,
-  
-//     plugins: {
-//       legend: {
-//         position: 'bottom',
-//       },
-//       title: {
-//         display: true,
-//         text: 'Line Chart Transaksi',
-//       },
-//   },
 };
-  
-const labels = ['01/01', '01/02', '01/03', '01/04', '01/05', '01/06', '01/07', '01/08', '01/09', '01/10'];
-  
-export const data = {
-  labels,
-  datasets: [
-    {
-      fill: true,
-      label: 'Pembelian',
-      data: [60, 30, 10, 50, 90, 75, 120, 60, 80, 90],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-      
-    },
-    // {
-    //   fill: true,
-    //   label: 'Pembayaran',
-    //   data: [50, 20, 30, 20, 60, 80, 90, 90, 75, 120],
-    //   backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      
-    // },
-
-
-  ]
-}
-
-// Pengambilan data tertentu
-// mengambil data am , dan am compare
-
-// "data": [
-//     {
-//       "tgl": "2023-05-20T00:00:00",
-//       "am": 1735963003,
-//       "tglCompare": "2023-04-20T00:00:00",
-//       "amCompare": 2063135021
-//     },
-//     {
-//       "tgl": "2023-05-21T00:00:00",
-//       "am": 1435400666,
-//       "tglCompare": "2023-04-21T00:00:00",
-//       "amCompare": 878816628
-//     },
-//     {
-//       "tgl": "2023-05-22T00:00:00",
-//       "am": 276468000,
-//       "tglCompare": "2023-04-22T00:00:00",
-//       "amCompare": 0
-//     },
-//     {
-//       "tgl": "2023-05-23T00:00:00",
-//       "am": 0,
-//       "tglCompare": "2023-04-23T00:00:00",
-//       "amCompare": 0
-//     },
-//     {
-//       "tgl": "2023-05-24T00:00:00",
-//       "am": 0,
-//       "tglCompare": "2023-04-24T00:00:00",
-//       "amCompare": 1930992200
-//     },
-//     {
-//       "tgl": "2023-05-25T00:00:00",
-//       "am": 0,
-//       "tglCompare": "2023-04-25T00:00:00",
-//       "amCompare": 2270982870
-//     },
-//     {
-//       "tgl": "2023-05-26T00:00:00",
-//       "am": 0,
-//       "tglCompare": "2023-04-26T00:00:00",
-//       "amCompare": 1601993761
-//     }
-//   ],

@@ -1,13 +1,13 @@
 import React, {useState } from "react";
-// import { DateRangePicker } from "react-date-range";
-// import { addDays } from 'date-fns';
 import Datepicker from "react-tailwindcss-datepicker";
 import { BiTime } from "react-icons/bi";
+import axios from "../config/api/axios";
+// import { DateRangePicker } from "react-date-range";
+// import { addDays } from 'date-fns';
 // import Radio from '@mui/material/Radio';
 // import RadioGroup from '@mui/material/RadioGroup';
 // import FormControlLabel from '@mui/material/FormControlLabel';
 // import FormControl from '@mui/material/FormControl';
-import axios from "../config/api/axios";
 
 const baseURL = '/API/Dashboard/getSalesRetur?'
 
@@ -40,13 +40,6 @@ const FilTime =() => {
         })
     }
 
-    // const [checked, setChecked] = useState(false)
-    // const handleChange = () => {
-    //     if( setChecked(!checked)) {
-                
-    //     }
-    // }
-
     // const [value, setValue] = React.useState('');
     // const [error, setError] = React.useState(false);
     // const [setHelperText] = React.useState('Choose wisely');
@@ -60,10 +53,10 @@ const FilTime =() => {
     // const handleSubmit = (event) => {
     //     event.preventDefault();
 
-    //     if (value === 'best') {
+    //     if (value === 'LM') {
     //     setHelperText('You got it!');
     //     setError(false);
-    //     } else if (value === 'worst') {
+    //     } else if (value === 'LY') {
     //     setHelperText('Sorry, wrong answer!');
     //     setError(true);
     //     } else {
@@ -90,11 +83,10 @@ const FilTime =() => {
                                 onChange={handleTglChange}
                             />
                         </div>
-                        {/* <div className="">
-                            <div className="">
+
+                        {/* <div className="flex">
+                            <div className="flex">
                                 <div className='p-1 text-white'>
-                                    <input type='checkbox' checked={checked} onChange={handleChange} className='mr-1'/>
-                                    Versus 
                                     
                                     <div className='ml-5'>  
                                         <form onSubmit={handleSubmit}>
@@ -105,21 +97,27 @@ const FilTime =() => {
                                                     value={value}
                                                     onChange={handleRadioChange}
                                                     >
-                                                <FormControlLabel value="best" control={<Radio />} label="Last Month" />
-                                                <FormControlLabel value="worst" control={<Radio />} label="Last Year" />
+                                                <FormControlLabel value="LM" control={<Radio />} label="Last Month" />
+                                                <FormControlLabel value="LY" control={<Radio />} label="Last Year" />
                                                 </RadioGroup>
                                             </FormControl>
                                         </form>
                                     </div>                                    
                                 </div>
 
-                                <div>
-                                    Branch
-                                </div>
                             </div>
+                                
+                            <div className="flex p-1 text-marron mt-2">
+                                |
+                            </div>
+                            <div className="flex p-1 text-white mt-2">
+                                Branch
+                            </div>
+
                             <div className="flex justify-end">
                             </div>
                         </div> */}
+
                     </div>
                     
                     <div className="flex justify-end">

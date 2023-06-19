@@ -16,12 +16,10 @@ const GabCard3rd = () => {
                         bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
-                            {/* {props.JdlMrh()} */}
-                            11111111
+                            ABCDE
                         </h6>                    
                         
                         <div className='lg:col-span-2 font-bold mb-2 ml-2 sm:-mt-2 md:-mt-3 lg:-mt-1 sm:text-base md:text-3xl lg:text-4xl'>
-                            {/* {props.AngMrh()} */}
                             333.333.333.333
                         </div>
 
@@ -44,12 +42,10 @@ const GabCard3rd = () => {
                         bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
-                            {/* {props.JdlIjo()} */}
-                            11111111111111
+                            ABCDE
                         </h6>                    
                         
                         <div className='lg:col-span-2 font-bold mb-2 ml-2 sm:-mt-2 md:-mt-3 lg:-mt-1 sm:text-base md:text-3xl lg:text-4xl'>
-                            {/* {props.AngIjo()} */}
                             333.333.333.333
                         </div>
 
@@ -72,12 +68,10 @@ const GabCard3rd = () => {
                         bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
-                            {/* {props.JdlKng()} */}
-                            11111111111111
+                            ABCDE
                         </h6>                    
                         
                         <div className='lg:col-span-2 font-bold mb-2 ml-2 sm:-mt-2 md:-mt-3 lg:-mt-1 sm:text-base md:text-3xl lg:text-4xl'>
-                            {/* {props.AngKng()} */}
                             333.333.333.333
                         </div>
 
@@ -100,12 +94,10 @@ const GabCard3rd = () => {
                         bg-gradient-to-t from-slate-400 to-abucream hover:bg-light-white hover:text-black cursor-pointer'>
                         
                         <h6 className='lg:col-span-2 mb-2 sm:text-sm md:text-base'>
-                            {/* {props.JdlBr()} */}
-                            11111111111111
+                            ABCDE
                         </h6>                    
                         
                         <div className='lg:col-span-2 font-bold mb-2 ml-2 sm:-mt-2 md:-mt-3 lg:-mt-1 sm:text-base md:text-3xl lg:text-4xl'>
-                            {/* {props.AngBr()} */}
                             333.333.333.333
                         </div>
 

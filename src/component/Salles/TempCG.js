@@ -11,81 +11,81 @@ const TempCG = () => {
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Card mrh >---------------------------------------------------------------------------------------------------------------------------------  
-    const atas = () => {
-        return (
-        <>
-            Piutang
-        </>
-        )
-    }
+    // const atas = () => {
+    //     return (
+    //     <>
+    //         Piutang
+    //     </>
+    //     )
+    // }
     
-    const kanan = () => {
-        return (
-        <>
-            <FaRegMoneyBillAlt className="sm:w-0 md:w-fit text-red-400 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
-        </>
-        )
-    }
+    // const kanan = () => {
+    //     return (
+    //     <>
+    //         <FaRegMoneyBillAlt className="sm:w-0 md:w-fit text-red-400 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
+    //     </>
+    //     )
+    // }
  
-    const bwh = () => {
-        return (
-        <>
-            841.110
-        </>
-        )
-    }
+    // const bwh = () => {
+    //     return (
+    //     <>
+    //         841.110
+    //     </>
+    //     )
+    // }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Card Ijo >---------------------------------------------------------------------------------------------------------------------------------
-    const atasIjo = () => {
-        return (
-        <>
-            Pembayaran
-        </>
-        )
-    }
+    // const atasIjo = () => {
+    //     return (
+    //     <>
+    //         Pembayaran
+    //     </>
+    //     )
+    // }
 
-    const kananIjo = () => {
-        return (
-        <>
-            <MdPayments className="sm:w-0 md:w-fit text-green-600 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
-        </>
-        )
-    }
+    // const kananIjo = () => {
+    //     return (
+    //     <>
+    //         <MdPayments className="sm:w-0 md:w-fit text-green-600 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
+    //     </>
+    //     )
+    // }
 
-    const bwhIjo = () => {
-        return (
-        <>
-            724.859
-        </>
-        )
-    }
+    // const bwhIjo = () => {
+    //     return (
+    //     <>
+    //         724.859
+    //     </>
+    //     )
+    // }
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Card Kng >---------------------------------------------------------------------------------------------------------------------------------
-    const atasKng = () => {
-        return (
-        <>
-            Item Terjual
-        </>
-        )
-    }
+    // const atasKng = () => {
+    //     return (
+    //     <>
+    //         Item Terjual
+    //     </>
+    //     )
+    // }
 
-    const kananKng = () => {
-        return (
-        <>
-            <BsBoxSeamFill className="sm:w-0 md:w-fit text-yellow-400 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
-        </>
-        )
-    }
+    // const kananKng = () => {
+    //     return (
+    //     <>
+    //         <BsBoxSeamFill className="sm:w-0 md:w-fit text-yellow-400 -rotate-45 sm:-mt-5 md:mb-2 lg:-mb-7" size={'70'}/>
+    //     </>
+    //     )
+    // }
 
-    const bwhKng = () => {
-        return (
-        <>
-            1.257.924
-        </>
-        )
-    }
+    // const bwhKng = () => {
+    //     return (
+    //     <>
+    //         1.257.924
+    //     </>
+    //     )
+    // }
     
     //-------------------------------------------------------------------------------------------------------------------------------------------
     //Card Bru >---------------------------------------------------------------------------------------------------------------------------------
@@ -118,9 +118,9 @@ const TempCG = () => {
             <div className='grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-1 p-2 rounded-lg  w-full
                             md:text-lg sm:text-sm '>
 
-                <CardSingleRed atas = {atas} kanan = {kanan} bwh = {bwh} className='grid lg:col-span-1 md:col-span-2'/>
-                <CardSingleGree atasIjo = {atasIjo} kananIjo = {kananIjo} bwhIjo = {bwhIjo} className='grid lg:col-span-1 md:col-span-2'/>
-                <CardSingleYell atasKng = {atasKng} kananKng = {kananKng} bwhKng = {bwhKng} className='grid lg:col-span-1 md:col-span-2'/>
+                <CardSingleRed className='grid lg:col-span-1 md:col-span-2'/>
+                <CardSingleGree className='grid lg:col-span-1 md:col-span-2'/>
+                <CardSingleYell className='grid lg:col-span-1 md:col-span-2'/>
                 <CardSingleBlu className='grid lg:col-span-1 md:col-span-2'/>
 
             </div>

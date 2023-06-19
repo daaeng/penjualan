@@ -7,7 +7,7 @@ module.exports = {
     "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
   ],
 
-  darkMode: true,
+  darkMode: ['class', '[data-mode="dark"]'],
 
   theme: {
     extend: {

@@ -2,7 +2,7 @@ import React from 'react'
 import Tabled from '../Table/tabled';
 // import CobaChart from '../chart/coba.js';
 import Pembelian from '../chart/pembelian.js';
-import PelangganChart from '../chart/pelanggan';
+import PelangganChart from '../chart/ChartPie';
 import Labeldt from '../backpage/label.js';
 // import Cardex from '../backpage/cardex.js';
 // import Pembayaran from '../chart/pembayaran';

@@ -2,7 +2,6 @@ import React, { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../../config/api/axios";
 import { MdPointOfSale } from "react-icons/md";
-import Loadeer from "../Loader/Loadeer";
 // import Loadeer from "../Loader/Loadeer";
 
 const baseURL = '/API/Dashboard/getSalesRetur?'
@@ -30,10 +29,10 @@ const CardSingleBlu = () => {
 
         axios.get(baseURL, {
             params : {
+                startDate : data2,
+                endDate : data1,    
                 comparison : 'LM',
                 isAsper : true,
-                startDate : data2,
-                endDate : data1
             }
         }).then(response => {
             setData(response.data.data)
@@ -46,25 +45,7 @@ const CardSingleBlu = () => {
        dataInfo()
     })
 
-    // useEffect((dataObj) => {
-    //     if (dataObj.diffSIPerc < 0) {
-    //         return(
-    //             <>
-    //                 <div className=" text-redd">
-    //                     ▼ {dataObj.diffSIPerc} %
-    //                 </div>
-    //             </>
-    //         )
-    //     } else {
-    //         <>
-    //             <div className=" text-green-700">
-    //                 ▲ {dataObj.diffSIPerc} %
-    //             </div>
-    //         </>
-    //     }
-    // })
-
-    return (
+    return(
         <>
             {/* {data.map((dataObj, index) => {
                 
@@ -96,17 +77,10 @@ const CardSingleBlu = () => {
                                         </p>
                                     )
                                 })}
-
-                                <div className="flex lg:text-xl md:text-lg sm:text-base justify-center text-black mb-2 mt-2">
-                                    <Loadeer/>
-                                </div>
-                                
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  
-                                {/* {dataObj.diffSIPerc} % */}
-                                {/* ▼ 11% Last Month */}
-                            
+
                                 {data.map((dataObj, index) => {
                                     if (dataObj.diffSIPerc < 0) {
                                         return(
@@ -119,9 +93,8 @@ const CardSingleBlu = () => {
                                             ▲ {dataObj.diffSIPerc}% Last Month
                                         </div>
                                     }
-                                    
+                                   
                                 })}
-                            
                             </div>
                         
                         </div>    
