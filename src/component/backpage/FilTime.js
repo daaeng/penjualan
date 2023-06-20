@@ -2,6 +2,8 @@ import React, {useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 import { BiTime } from "react-icons/bi";
 import axios from "../config/api/axios";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 // import { DateRangePicker } from "react-date-range";
 // import { addDays } from 'date-fns';
 // import Radio from '@mui/material/Radio';
@@ -25,45 +27,49 @@ const FilTime =({onChange}) => {
     }
 
     const UbahTgl = () => {
+        // dtlDrDown()
+        let data = drDown.value
         let data1 = tgl.startDate
         let data2 = tgl.endDate
-        console.log(data1);
-        console.log(data2);
+        console.log('filter', data);
+        console.log('filter', data1);
+        console.log('filter', data2);
 
         axios.get(baseURL, {
             params: {
                 startDate : data1,
-                endDate : data2
+                endDate : data2,
+                comparioson : drDown
             }
         }).then(response => {
             console.log(response.data.data);
         })
     }
 
-    // const [value, setValue] = React.useState('');
-    // const [error, setError] = React.useState(false);
-    // const [setHelperText] = React.useState('Choose wisely');
+    // change : function(event){
+    //     this.state.{value:event.target.value}
+    // }
 
-    // const handleRadioChange = (event) => {
-    //     setValue(event.target.value);
-    //     setHelperText(' ');
-    //     setError(false);
-    // };
+    const [drDown, setDrDown] = useState([])
+    const optChange =(value) => {
+        console.log("newValue:", value);
+        setDrDown(value);
+        // let dataDr = value.value
+    }
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
+    // const dtlDrDown =() => {
+    //     let vaDr = drDown.value
+    //     console.log('Filtime', vaDr);
+    // }
 
-    //     if (value === 'LM') {
-    //     setHelperText('You got it!');
-    //     setError(false);
-    //     } else if (value === 'LY') {
-    //     setHelperText('Sorry, wrong answer!');
-    //     setError(true);
-    //     } else {
-    //     setHelperText('Please select an option.');
-    //     setError(true);
-    //     }
-    // };
+    const options = [
+        { value: 'LD', label: 'Last Day', },
+        { value: 'LW', label: 'Last Week' },
+        { value: 'LM', label: 'Last Month' },
+        { value: 'LQ', label: 'Last Quarter' },
+        { value: 'LY', label: 'Last Year' },
+    ];
+    const defaultOption = options[null];
 
     return(
         <>
@@ -84,6 +90,11 @@ const FilTime =({onChange}) => {
                             />
                         </div>
 
+                        <Dropdown options={options}  
+                                    onChange={optChange} 
+                                    value={defaultOption} 
+                                    placeholder="-" 
+                                    className="w-46 text-sm mt-1"/>
                         {/* <div className="flex">
                             <div className="flex">
                                 <div className='p-1 text-white'>
@@ -121,8 +132,7 @@ const FilTime =({onChange}) => {
                     </div>
                     
                     <div className="flex justify-end">
-                        <div onClick={() => UbahTgl(onChange(tgl.startDate, tgl.endDate))}
-                            // UbahTgl(tgl.startDate, tgl.endDate) 
+                        <div onClick={() => UbahTgl(onChange(tgl.startDate, tgl.endDate, drDown.value))}
                             className="bg-blue-200 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
                             Apply
                         </div>

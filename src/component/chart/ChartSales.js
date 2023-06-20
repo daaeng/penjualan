@@ -35,53 +35,64 @@ import FilTime from "../backpage/FilTime";
 
     const [Start, setStart] = useState([])
     const [Last, setLast] = useState([])
-
-    const UbahTgl = (startDate, endDate) => {
-        console.log(startDate, 'tgl awal');
-        console.log(endDate, 'tgl akhir');
+    const [Compare, setComp] = useState([])
+    const UbahTgl = (startDate, endDate, value) => {
+        console.log('tgl awal', startDate);
+        console.log('tgl akhir', endDate);
+        console.log('Compare', value);
         setStart(startDate)
         setLast(endDate)
+        setComp(value)
     }
 
+    // const [drDown, setDrDown] = useState([])
+    // const options =(value) => {
+    //     console.log(value);
+    //     // setDrDown(value)
+    // }
+
     useEffect(() => {
-        // UbahTgl()
-        // const token = sessionStorage.getItem('userData')
+
         if(UbahTgl){
-            // const axiosConfig = {
-            //     headers : {
-            //         Accept : "application/json",
-            //         Authorization : `Bearer ${token}`
-            //     }
-            // }
             axios.get(baseURL,{
                 params : {
                     startDate : Start,
-                    endDate : Last
+                    endDate : Last, 
+                    comparison : Compare
                 }
             }).then((response) => {
                 // console.log(response.data);
                 if(response.data.data.length > 0) {
+                    // if(comparison = null){
+
+                    // } else{
+
+                    // }
                     setChart({
                         labels : response.data.data.map((indiData) => indiData.tgl),
                         datasets : [
-                            {
-                                label : 'amNett',
-                                fill: true,
-                                data : response.data.data.map((indiData) => indiData.amNett),
-                                backgroundColor: 'rgba(250, 0, 0, 0.3)',
-                            },
                             // {
-                            //     label : 'amSR',
+                            //     label : 'amNett',
                             //     fill: true,
-                            //     data : response.data.data.map((indiData) => indiData.amSR),
-                            //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                            //     data : response.data.data.map((indiData) => indiData.amNett),
+                            //     backgroundColor: 'rgba(250, 0, 0, 0.3)',
                             // },
+
                             {
                                 label : 'amSI',
                                 fill: true,
                                 data : response.data.data.map((indiData) => indiData.amSI),
                                 backgroundColor: 'rgba(49, 217, 234, 0.5)',
                             },
+                           
+                            //Data Compare
+                            {
+                                label : 'amSICompare',
+                                fill: true,
+                                data : response.data.data.map((indiData) => indiData.amSICompare),
+                                backgroundColor: 'rgba(45, 167, 25, 0.5)',
+                            },
+                            //~~~~~~~~~~~~~~~~~~~~~
                         ]
                     })
                 }
@@ -94,7 +105,7 @@ import FilTime from "../backpage/FilTime";
                 console.log('Error Guys..!');
             })
         }
-    },[Start, Last])
+    },[Start, Last, Compare])
 
     return(
         <>
