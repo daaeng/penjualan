@@ -56,10 +56,6 @@ function Loggin () {
         },[])
     }
 
-    // useEffect(() => {    
-        
-    // }, [])
-
     useEffect(() => {    
       let userData = sessionStorage.getItem('userData')
       if(userData){
@@ -119,7 +115,7 @@ function Loggin () {
           setSuccess(response?.data?.success)
             console.log('Pengecekan');
             console.log(response?.data?.nama);
-            console.log(response?.data?.errors);
+            console.log('Error',response?.data?.errors);
         } catch (err) {
         if (!err?.response) {
             setErrMsg(sToastMErr(err.response));
@@ -187,7 +183,7 @@ function Loggin () {
                 </section>
             ):(
 
-                <section className="flex rounded-xl bg-red-200 shadow-lg">
+                <section className="flex rounded-xl bg-red-100 shadow-lg">
                     
 
                 {/* Gambar */}

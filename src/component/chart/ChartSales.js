@@ -33,10 +33,20 @@ import FilTime from "../backpage/FilTime";
       
     const [chart, setChart] = useState(null)
 
-    useEffect(() => {
+    const [Start, setStart] = useState([])
+    const [Last, setLast] = useState([])
 
-        const token = sessionStorage.getItem('userData')
-        if(token){
+    const UbahTgl = (startDate, endDate) => {
+        console.log(startDate, 'tgl awal');
+        console.log(endDate, 'tgl akhir');
+        setStart(startDate)
+        setLast(endDate)
+    }
+
+    useEffect(() => {
+        // UbahTgl()
+        // const token = sessionStorage.getItem('userData')
+        if(UbahTgl){
             // const axiosConfig = {
             //     headers : {
             //         Accept : "application/json",
@@ -45,8 +55,8 @@ import FilTime from "../backpage/FilTime";
             // }
             axios.get(baseURL,{
                 params : {
-                    startDate : '',
-                    endDate : ''
+                    startDate : Start,
+                    endDate : Last
                 }
             }).then((response) => {
                 // console.log(response.data);
@@ -84,18 +94,20 @@ import FilTime from "../backpage/FilTime";
                 console.log('Error Guys..!');
             })
         }
-    },[])
+    },[Start, Last])
 
     return(
         <>
             <div className="bg-white rounded w-full p-1">
                 <div className='flex justify-end items-center font-mono text-black -mt-2 '>
-                    <FilTime />
+                    <FilTime  onChange={UbahTgl}/>
                 </div>
 
                 <div className="flex-wrap items-center -mt-5">
                     {chart !== null? (
-                        <Line options={options} data={chart}/>
+                        <>
+                            <Line options={options} data={chart}/>
+                        </>
                     ):(
                         <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
                             <Loadeer/>

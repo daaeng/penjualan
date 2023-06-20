@@ -11,7 +11,7 @@ import axios from "../config/api/axios";
 
 const baseURL = '/API/Dashboard/getSalesRetur?'
 
-const FilTime =() => {
+const FilTime =({onChange}) => {
 
     const [open, setOpen] =  useState();
     const [tgl, setTgl] = useState({
@@ -121,8 +121,9 @@ const FilTime =() => {
                     </div>
                     
                     <div className="flex justify-end">
-                        <div onClick={UbahTgl} 
-                            className="bg-slate-200 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
+                        <div onClick={() => UbahTgl(onChange(tgl.startDate, tgl.endDate))}
+                            // UbahTgl(tgl.startDate, tgl.endDate) 
+                            className="bg-blue-200 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
                             Apply
                         </div>
 
