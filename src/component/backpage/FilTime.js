@@ -4,12 +4,6 @@ import { BiTime } from "react-icons/bi";
 import axios from "../config/api/axios";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-// import { DateRangePicker } from "react-date-range";
-// import { addDays } from 'date-fns';
-// import Radio from '@mui/material/Radio';
-// import RadioGroup from '@mui/material/RadioGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import FormControl from '@mui/material/FormControl';
 
 const baseURL = '/API/Dashboard/getSalesRetur?'
 
@@ -45,10 +39,6 @@ const FilTime =({onChange}) => {
             console.log(response.data.data);
         })
     }
-
-    // change : function(event){
-    //     this.state.{value:event.target.value}
-    // }
 
     const [drDown, setDrDown] = useState([])
     const optChange =(value) => {
