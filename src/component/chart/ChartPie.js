@@ -32,19 +32,6 @@ function ChartPie(){
                   setChart({
                       labels : response.data.data.map((indiData) => indiData.tgl),
                       datasets : [
-                          // {
-                          //     label : 'amNett',
-                          //     fill: true,
-                          //     data : response.data.data.map((indiData) => indiData.amNett),
-                          //     // backgroundColor: 'rgba(250, 0, 0, 0.3)',
-                              
-                          // },
-                          // {
-                          //     label : 'amSR',
-                          //     fill: true,
-                          //     data : response.data.data.map((indiData) => indiData.amSR),
-                          //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
-                          // },
                           {
                               label : 'amSI',
                               data : response.data.data.map((indiData) => indiData.amSI),
@@ -98,7 +85,7 @@ function ChartPie(){
               {chart !== null? (
                   <Pie options={options} data={chart}/>
               ):(
-                  <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
+                  <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-56 md:p-44 sm:p-24">
                       <Loadeer/>
                       {/* {console.log('Loading')} */}
                   </div>

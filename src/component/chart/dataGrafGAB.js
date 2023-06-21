@@ -84,7 +84,7 @@ function DataGrafGAB(){
             {chart !== null? (
                 <Line options={options} data={chart}/>
             ):(
-                <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
+                <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-56 md:p-44 sm:p-24">
                     <Loadeer/>
                     {/* {console.log('Loading')} */}
                 </div>

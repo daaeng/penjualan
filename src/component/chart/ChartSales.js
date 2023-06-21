@@ -29,7 +29,7 @@ import FilTime from "../backpage/FilTime";
 
   const baseURL = '/API/Dashboard/getSalesRetur?'
 
-  const ChartSales = () => {
+const ChartSales = () => {
       
     const [chart, setChart] = useState(null)
 
@@ -58,7 +58,9 @@ import FilTime from "../backpage/FilTime";
                 params : {
                     startDate : Start,
                     endDate : Last, 
-                    comparison : Compare
+                    comparison : Compare,
+                    branch : '',
+                    onlyDiva : '',
                 }
             }).then((response) => {
                 // console.log(response.data);

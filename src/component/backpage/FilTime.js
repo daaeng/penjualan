@@ -22,10 +22,13 @@ const FilTime =({onChange}) => {
 
     const UbahTgl = () => {
         // dtlDrDown()
-        let data = drDown.value
         let data1 = tgl.startDate
         let data2 = tgl.endDate
+        let data = drDown.value
+        let dataBr = brDown.value
+
         console.log('filter', data);
+        console.log('Filter', dataBr);
         console.log('filter', data1);
         console.log('filter', data2);
 
@@ -33,7 +36,9 @@ const FilTime =({onChange}) => {
             params: {
                 startDate : data1,
                 endDate : data2,
-                comparioson : drDown
+                comparioson : drDown,
+                branch : '',
+                onlyDiva :'',
             }
         }).then(response => {
             console.log(response.data.data);
@@ -47,11 +52,6 @@ const FilTime =({onChange}) => {
         // let dataDr = value.value
     }
 
-    // const dtlDrDown =() => {
-    //     let vaDr = drDown.value
-    //     console.log('Filtime', vaDr);
-    // }
-
     const options = [
         { value: 'LD', label: 'Last Day', },
         { value: 'LW', label: 'Last Week' },
@@ -59,7 +59,52 @@ const FilTime =({onChange}) => {
         { value: 'LQ', label: 'Last Quarter' },
         { value: 'LY', label: 'Last Year' },
     ];
+    
     const defaultOption = options[null];
+    
+    const [brDown, setBrDown] = useState([])
+    const [showDd, setShowDd] = useState([])
+    
+    const BranchDt = (value) => {
+        console.log('Branch : ',value);
+        setBrDown(value)
+
+        let userDt = sessionStorage.getItem('userData')
+        // console.log('user', userDt);
+
+        let str = JSON.parse(userDt).userCategID
+        let str2 = JSON.parse(userDt).userJabID
+        console.log('userCategID:', str, ',userJabID:', str2 );
+        
+        if(userDt){
+            setShowDd(
+                {
+                    dtDrDn : [
+                        { value: 'all retail', label: 'All Retail', },
+                        { value: 'retail', label: 'Retail', },
+                    ]
+                }
+                // {
+                    // dtDrDn : [
+                        // { value: 'all retail', label: 'All Retail', },
+                        // { value: 'retail', label: 'Retail', },
+                    // ]
+                // }
+            )
+            
+        } else{
+            // setShowDd(
+            //     {
+            //         dtDrDn: [
+            //             { value: 'grosir', label: 'All Retail', },
+            //             { value: 'all grosir', label: 'Retail', },
+            //             { value: 'onlyDiva', label: 'Only Diva', },
+            //         ]
+            //     }
+            // )
+            console.log('gagal');
+        }
+    }
 
     return(
         <>
@@ -72,7 +117,7 @@ const FilTime =({onChange}) => {
                     </div>
                 </div>
                 <div className={`duration-50 fixed mt-5 ${!open && 'hidden'}`}>
-                    <div className='items-center rounded-xl bg-redd p-2 w-135 '>
+                    <div className='items-center rounded-xl bg-redd p-2 w-135'>
                         <div className="w-68 flex justify-end">
                             <Datepicker
                                 value={tgl}
@@ -80,44 +125,40 @@ const FilTime =({onChange}) => {
                             />
                         </div>
 
-                        <Dropdown options={options}  
-                                    onChange={optChange} 
-                                    value={defaultOption} 
-                                    placeholder="-" 
-                                    className="w-46 text-sm mt-1"/>
-                        {/* <div className="flex">
-                            <div className="flex">
-                                <div className='p-1 text-white'>
-                                    
-                                    <div className='ml-5'>  
-                                        <form onSubmit={handleSubmit}>
-                                            <FormControl error={error} variant="standard">
-                                                <RadioGroup
-                                                    aria-labelledby="demo-error-radios"
-                                                    name="quiz"
-                                                    value={value}
-                                                    onChange={handleRadioChange}
-                                                    >
-                                                <FormControlLabel value="LM" control={<Radio />} label="Last Month" />
-                                                <FormControlLabel value="LY" control={<Radio />} label="Last Year" />
-                                                </RadioGroup>
-                                            </FormControl>
-                                        </form>
-                                    </div>                                    
+                        <div className="grid grid-cols-3">
+                            <div className="p-1 w-full col-span-1">
+                                <div className="text-white">
+                                    Versus
+                                </div>
+                                <Dropdown options={options}  
+                                            onChange={optChange} 
+                                            value={defaultOption} 
+                                            placeholder="Pilih Compare" 
+
+                                            className="w-46 text-sm mt-1"/>
+                            </div>
+
+                            <div className="w-full p-1 col-span-2">                                
+                                <div className="text-white">
+                                    Branch
                                 </div>
 
-                            </div>
-                                
-                            <div className="flex p-1 text-marron mt-2">
-                                |
-                            </div>
-                            <div className="flex p-1 text-white mt-2">
-                                Branch
-                            </div>
+                                <div className="flex">
+                                    <div>
+                                        
+                                    </div>
+                                    <div className="flex">
+                                        <Dropdown options={showDd}  
+                                                onChange={BranchDt} 
+                                                value={defaultOption} 
+                                                placeholder="Pilih Branch" 
 
-                            <div className="flex justify-end">
+                                                className="w-46 text-sm mt-1 "/>
+                                    </div>
+
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
 
                     </div>
                     
