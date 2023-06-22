@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { SiAudiomack } from 'react-icons/si';
 import Box from '../Dash/box';
 import GabCard from '../backpage/GabCard/GabCard';
@@ -8,6 +8,18 @@ import DataPiutang from './DataPiutang';
 // import FilTime from '../backpage/FilTime';
 
 function Sales() {
+
+  const [data, setData] = useState([])
+
+  const showName =() =>{
+    let gett = sessionStorage.getItem('userData')
+    let getNama = JSON.parse(gett).nama
+    setData(getNama)
+  }
+
+  useEffect(() => {
+    showName()
+  },[])
 
   return (
 
@@ -20,7 +32,7 @@ function Sales() {
               </h2>
               <div className='border ' />
                 <p className='sm:text-xs md:text-xs lg:text-base'>
-                  Welcome, user
+                  Welcome, {data}
                 </p>
               </div>
             </div>

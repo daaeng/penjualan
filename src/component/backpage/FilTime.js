@@ -16,7 +16,7 @@ const FilTime =({onChange}) => {
     });
 
     const handleTglChange = (newTgl) => {
-        console.log("newValue:", newTgl);
+        console.log("Range Date:", newTgl);
         setTgl(newTgl);
     }
 
@@ -37,7 +37,7 @@ const FilTime =({onChange}) => {
                 startDate : data1,
                 endDate : data2,
                 comparioson : drDown,
-                branch : '',
+                branch : brDown,
                 onlyDiva :'',
             }
         }).then(response => {
@@ -47,7 +47,7 @@ const FilTime =({onChange}) => {
 
     const [drDown, setDrDown] = useState([])
     const optChange =(value) => {
-        console.log("newValue:", value);
+        console.log("Compare:", value);
         setDrDown(value);
         // let dataDr = value.value
     }
@@ -60,51 +60,80 @@ const FilTime =({onChange}) => {
         { value: 'LY', label: 'Last Year' },
     ];
     
+    // const options2 = [
+    //     { value: 'retail', label: 'Retail', },
+    //     { value: 'all retail', label: 'All Retail', },
+    // ];
+
+    // const options3 = [
+    //     { value: 'grosir', label: 'Grosir', },
+    //     { value: 'all grosir', label: 'All Grosir', },
+    //     { value: 'onlyDiva', label: 'Only Diva', },
+    // ];
+    
+    const optionsAll = [
+        { value: 'retail', label: 'Retail', },
+        { value: 'all retail', label: 'All Retail', },
+        { value: 'grosir', label: 'Grosir', },
+        { value: 'all grosir', label: 'All Grosir', },
+        { value: 'onlyDiva', label: 'Only Diva', },
+    ];
+
+    // const showDropDown =() => {
+    //     let userDt = sessionStorage.getItem('userData')
+    //     let categ = JSON.parse(userDt).userCategID
+    //     let jabid = JSON.parse(userDt).userJabID
+    //     console.log('userCategID:', categ, ',userJabID:', jabid );
+    // }
+
     const defaultOption = options[null];
     
     const [brDown, setBrDown] = useState([])
-    const [showDd, setShowDd] = useState([])
-    
-    const BranchDt = (value) => {
-        console.log('Branch : ',value);
-        setBrDown(value)
-
-        let userDt = sessionStorage.getItem('userData')
-        // console.log('user', userDt);
-
-        let str = JSON.parse(userDt).userCategID
-        let str2 = JSON.parse(userDt).userJabID
-        console.log('userCategID:', str, ',userJabID:', str2 );
-        
-        if(userDt){
-            setShowDd(
-                {
-                    dtDrDn : [
-                        { value: 'all retail', label: 'All Retail', },
-                        { value: 'retail', label: 'Retail', },
-                    ]
-                }
-                // {
-                    // dtDrDn : [
-                        // { value: 'all retail', label: 'All Retail', },
-                        // { value: 'retail', label: 'Retail', },
-                    // ]
-                // }
-            )
-            
-        } else{
-            // setShowDd(
-            //     {
-            //         dtDrDn: [
-            //             { value: 'grosir', label: 'All Retail', },
-            //             { value: 'all grosir', label: 'Retail', },
-            //             { value: 'onlyDiva', label: 'Only Diva', },
-            //         ]
-            //     }
-            // )
-            console.log('gagal');
-        }
+    const BranchDt =(value) => {
+        console.log("Branch:", value);
+        setBrDown(value);
     }
+
+    // const [showDd, setShowDd] = useState([])
+    
+    // const BranchDt = (value) => {
+    //     console.log('Branch : ',value);
+    //     setBrDown(value)
+    //     let dataBr = brDown.value 
+    //     console.log(dataBr);
+
+    //     let userDt = sessionStorage.getItem('userData')
+    //     // console.log('user', userDt);
+
+    //     let str = JSON.parse(userDt).userCategID
+    //     let str2 = JSON.parse(userDt).userJabID
+    //     console.log('userCategID:', str, ',userJabID:', str2 );
+        
+    //     if(userDt){
+    //         setBrDown(
+    //             options2
+    //             // {
+    //             //     dtDrDn : [
+    //             //         { value: 'all retail', label: 'All Retail', },
+    //             //         { value: 'retail', label: 'Retail', },
+    //             //     ]
+    //             // }
+    //         )
+            
+    //     } else{
+    //         setBrDown(
+    //             options3
+    //             // {
+    //             //     dtDrDn: [
+    //             //         { value: 'grosir', label: 'All Retail', },
+    //             //         { value: 'all grosir', label: 'Retail', },
+    //             //         { value: 'onlyDiva', label: 'Only Diva', },
+    //             //     ]
+    //             // }
+    //         )
+    //         console.log('gagal');
+    //     }
+    // }
 
     return(
         <>
@@ -131,11 +160,11 @@ const FilTime =({onChange}) => {
                                     Versus
                                 </div>
                                 <Dropdown options={options}  
-                                            onChange={optChange} 
-                                            value={defaultOption} 
-                                            placeholder="Pilih Compare" 
+                                    onChange={optChange} 
+                                    value={defaultOption} 
+                                    placeholder="Pilih Compare" 
 
-                                            className="w-46 text-sm mt-1"/>
+                                    className="w-46 text-sm mt-1"/>
                             </div>
 
                             <div className="w-full p-1 col-span-2">                                
@@ -148,12 +177,55 @@ const FilTime =({onChange}) => {
                                         
                                     </div>
                                     <div className="flex">
-                                        <Dropdown options={showDd}  
+                                        <Dropdown 
+                                            options={optionsAll}  
+                                            onChange={BranchDt} 
+                                            value={defaultOption} 
+                                            placeholder="Pilih Branch" 
+
+                                            className="w-46 text-sm mt-1 "/>
+
+                                        {/* {options2.map((val, idx) => (
+                                           val.value <= 15
+                                            ? 
+                                            (<Dropdown options={options2}  
+                                                key={idx}
                                                 onChange={BranchDt} 
                                                 value={defaultOption} 
-                                                placeholder="Pilih Branch" 
+                                                placeholder="Pilih Branch"  />)
+                                            : 
+                                            (<Dropdown options={options3}  
+                                                key={idx}
+                                                onChange={BranchDt} 
+                                                value={defaultOption} 
+                                                placeholder="Pilih Branch"  />)
+                                        ))} */}
 
-                                                className="w-46 text-sm mt-1 "/>
+                                        {/* {options2 !== null ? 
+                                            (
+                                                <>  
+                                                    <Dropdown 
+                                                    options={options2}  
+                                                    onChange={BranchDt} 
+                                                    value={defaultOption} 
+                                                    placeholder="Pilih Branch" 
+
+                                                    className="w-46 text-sm mt-1 "/>
+                                                </>
+                                            ): (
+                                                <>
+                                                    <Dropdown 
+                                                    options={options3}  
+                                                    onChange={BranchDt} 
+                                                    value={defaultOption} 
+                                                    placeholder="Pilih Branch" 
+
+                                                    className="w-46 text-sm mt-1 "/>
+                                                </>
+                                            )
+                                        
+                                        } */}
+
                                     </div>
 
                                 </div>
