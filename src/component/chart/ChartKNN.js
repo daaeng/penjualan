@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const baseURL = '/API/Dashboard/getSalesRetur?'
+const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 function ChartKNN(){
 
@@ -48,12 +48,6 @@ function ChartKNN(){
                               data : response.data.data.map((indiData) => indiData.amNett),
                               backgroundColor: 'rgba(250, 0, 0, 0.3)',
                           },
-                          // {
-                          //     label : 'amSR',
-                          //     fill: true,
-                          //     data : response.data.data.map((indiData) => indiData.amSR),
-                          //     backgroundColor: 'rgba(53, 162, 235, 0.5)',
-                          // },
                           {
                               label : 'amSI',
                               fill: true,

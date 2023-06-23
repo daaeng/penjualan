@@ -4,7 +4,7 @@ import axios from "../../config/api/axios";
 import { MdPointOfSale } from "react-icons/md";
 // import Loadeer from "../Loader/Loadeer";
 
-const baseURL = '/API/Dashboard/getSalesRetur?'
+const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 
 const CardSingleBlu = () => {
@@ -23,26 +23,19 @@ const CardSingleBlu = () => {
         tgl.getMonth()
     )
 
-    const dataInfo = () => {
-        let data1 = tgl
-        let data2 = firstDate
+    let data1 = tgl
+    let data2 = firstDate
 
-        axios.get(baseURL, {
-            params : {
-                startDate : data2,
-                endDate : data1,    
-                comparison : 'LM',
-                isAsper : true,
-            }
-        }).then(response => {
-            setData(response.data.data)
-            
-        })
-
-    }
-
-    useEffect(() => {
-       dataInfo()
+    axios.get(baseURL, {
+        params : {
+            startDate : data2,
+            endDate : data1,    
+            comparison : 'LM',
+            isAsper : true,
+        }
+    }).then(response => {
+        setData(response.data.data)
+        
     })
 
     return(

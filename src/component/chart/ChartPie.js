@@ -5,7 +5,7 @@ import { Pie } from 'react-chartjs-2';
 import Loadeer from "../backpage/Loader/Loadeer";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const baseURL = '/API/Dashboard/getSalesRetur?'
+const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 function ChartPie(){
 

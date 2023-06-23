@@ -19,7 +19,7 @@ function Sales() {
 
   useEffect(() => {
     showName()
-  },[])
+  },[data])
 
   return (
 
