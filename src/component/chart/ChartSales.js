@@ -36,13 +36,18 @@ const ChartSales = () => {
     const [Start, setStart] = useState([])
     const [Last, setLast] = useState([])
     const [Compare, setComp] = useState([])
-    const UbahTgl = (startDate, endDate, value) => {
+    const [Branch, setBranch] = useState([])
+    const UbahTgl = (startDate, endDate, drDown,brDown) => {
+        let dataCom = drDown.value
+        let dataBr = brDown.value
         console.log('tgl awal', startDate);
         console.log('tgl akhir', endDate);
-        console.log('Compare', value);
+        console.log('Compare', dataCom);
+        console.log('Branch', dataBr);
         setStart(startDate)
         setLast(endDate)
-        setComp(value)
+        setComp(dataCom)
+        setBranch(dataBr)
     }
 
     // const [drDown, setDrDown] = useState([])
@@ -59,7 +64,7 @@ const ChartSales = () => {
                     startDate : Start,
                     endDate : Last, 
                     comparison : Compare,
-                    branch : '',
+                    branch : Branch,
                     onlyDiva : '',
                 }
             }).then((response) => {
@@ -107,7 +112,7 @@ const ChartSales = () => {
                 console.log('Error Guys..!');
             })
         }
-    },[Start, Last, Compare])
+    },[Start, Last, Compare, Branch])
 
     return(
         <>

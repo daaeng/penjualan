@@ -2,6 +2,7 @@ import React, { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../../config/api/axios";
 import { MdPointOfSale } from "react-icons/md";
+import Loadeer from "../Loader/Loadeer";
 // import Loadeer from "../Loader/Loadeer";
 
 const baseURL = '/rptReact/Dashboard/getSalesRetur?'
@@ -23,19 +24,26 @@ const CardSingleBlu = () => {
         tgl.getMonth()
     )
 
-    let data1 = tgl
-    let data2 = firstDate
+    const dataInfo = () => {
+        let data1 = tgl
+        let data2 = firstDate
 
-    axios.get(baseURL, {
-        params : {
-            startDate : data2,
-            endDate : data1,    
-            comparison : 'LM',
-            isAsper : true,
-        }
-    }).then(response => {
-        setData(response.data.data)
-        
+        axios.get(baseURL, {
+            params : {
+                startDate : data2,
+                endDate : data1,    
+                comparison : 'LM',
+                isAsper : true,
+            }
+        }).then(response => {
+            setData(response.data.data)
+
+        })
+
+    }
+
+    useEffect(() => {
+        dataInfo()
     })
 
     return(
@@ -63,13 +71,23 @@ const CardSingleBlu = () => {
                             </div>  
                             
                             <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-lg md:text-3xl lg:text-4xl'>
-                                {data.map((dataObj, index) => {
-                                    return(
-                                        <p key = {index} className="mb-0">
-                                            {dataObj.amSI}
-                                        </p>
-                                    )
-                                })}
+                                {data !== null ? (
+                                    <>
+                                        {data.map((dataObj, index) => {
+                                            return(
+                                                <p key = {index} className="mb-0">
+                                                    {dataObj.amSI}
+                                                </p>
+                                            )
+                                        })}
+                                    </>
+
+                                ) : (
+                                    <>
+                                        <Loadeer/>
+                                    </>
+                                )}
+
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  

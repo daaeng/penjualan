@@ -1,7 +1,7 @@
 import React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-export default function Tabled(props) {
+const Tabled = (props) => {
 
   return (  
     <>
@@ -26,3 +26,5 @@ export default function Tabled(props) {
     </>
   );
 }
+
+export default Tabled

@@ -4,7 +4,7 @@ import GabCard4th from "../backpage/GabCard/GabCard4th"
 // import DataGrafGAB from "../chart/dataGrafGAB"
 import ChartPie from "../chart/ChartPie"
 import SalesBySalesman from "./DataTab/SalesBySalesman"
-import SalesByCustomer from "./DataTab/SalesByCustomer"
+// import SalesByCustomer from "./DataTab/SalesByCustomer"
 
 const DataPenjual = () => {
 
@@ -22,7 +22,7 @@ const DataPenjual = () => {
                     <div className="lg:col-span-1 md:col-span-1 sm:col-span-2">
                         <div className="lg:p-3 md:p-2 sm:p-1 mt-3 bg-blue-200">
                             {/* <DataGrafGAB/> */}
-                            <SalesByCustomer/>
+                            {/* <SalesByCustomer/> */}
                         </div>
                     </div>
                 </div>
