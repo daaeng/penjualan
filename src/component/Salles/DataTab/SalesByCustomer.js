@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from "react";
 import Tabled from "../../Table/tabled";
 import axios from "../../config/api/axios";
+import Labeldt from "../../backpage/label";
 
 const baseURL = '/rptReact/Dashboard/getSalesByCustomer'
 
@@ -19,6 +20,10 @@ const columns = [
 const SalesByCustomer =() => {
     
     const [data, setData] = useState([])
+
+    const title = () => {
+        return ("Tabel Sales by Salesman")
+    }
     
     const dataTab = () => {
         axios.get(baseURL)
@@ -32,6 +37,10 @@ const SalesByCustomer =() => {
     },[])
     return(
         <>
+            <div>
+                <Labeldt title = {title} />
+            </div>
+
             <Tabled data={data} columns={columns}/>
         </>
     )

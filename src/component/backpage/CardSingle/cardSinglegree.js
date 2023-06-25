@@ -2,7 +2,7 @@ import React from "react";
 import { MdPayments } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const CardSingleGree = (props) => {
+const CardSingleGree = () => {
 
     const navigate = useNavigate()
 

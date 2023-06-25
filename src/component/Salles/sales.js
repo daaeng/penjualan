@@ -37,13 +37,6 @@ function Sales() {
                 </p>
               </div>
             </div>
-            
-            {/* <div>
-              <div className='flex justify-end items-center font-mono text-black -mt-8 -mb-3 mr-2'>
-                  <FilterTime />
-                  <FilTime/>
-              </div>
-            </div> */}
 
             <div className='mt-2 -mb-7'>
                 <Box/>

@@ -15,12 +15,6 @@ function ChartPie(){
 
       const token = sessionStorage.getItem('userData')
       if(token){
-          // const axiosConfig = {
-          //     headers : {
-          //         Accept : "application/json",
-          //         Authorization : `Bearer ${token}`
-          //     }
-          // }
           axios.get(baseURL,{
               params : {
                   startDate : '',
@@ -35,7 +29,6 @@ function ChartPie(){
                           {
                               label : 'amSI',
                               data : response.data.data.map((indiData) => indiData.amSI),
-                              // backgroundColor: 'rgba(49, 217, 234, 0.5)',
                               backgroundColor: [
                                 'rgba(255, 10, 55)',
                                 'rgba(54, 80, 235)',

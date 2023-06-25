@@ -7,18 +7,13 @@ const Psale = () => {
     <> 
       <div>
         <div>
-
           <Sdbar/>
-
         </div>
 
         <div>
           <section className={`-mt-1`}>
-            
             <Sales/>
-
           </section>
-
         </div>
       </div>
       

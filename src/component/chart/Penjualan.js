@@ -38,7 +38,6 @@ function Penjualan(){
                     endDate : ''
                 }
             }).then((response) => {
-                // console.log(response.data);
                 if(response.data.data.length > 0) {
                     setChart({
                         labels : response.data.data.map((indiData) => indiData.tgl),

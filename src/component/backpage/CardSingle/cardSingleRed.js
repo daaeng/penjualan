@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const CardSingleRed = (props) => {
+const CardSingleRed = () => {
 
     const navigate = useNavigate()
 

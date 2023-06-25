@@ -7,9 +7,6 @@ const GabCard =() => {
         <>
             <div className="mb-2">
                 <GabCard3rd/>
-                {/* <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-                    
-                </div> */}
             </div>
         </>
     )

@@ -29,10 +29,6 @@ const Dashbor = () => {
                     <Box/>
 
                 </div>
-                    
-                {/* <div className='flex justify-end'>
-                    <DateTimeR/>
-                </div> */}
                 
                 <div> 
                     <Dash/>
