@@ -40,13 +40,13 @@ export default function AlertDialog() {
       // navigate('/sales')
   }
 
-  // React.useEffect(() => {
-  //   let userData = sessionStorage.getItem('userData')
-  //     if(!userData){
-  //       navigate('/')
-  //       console.log('~~~~~ Session not available ~~~~~');
-  //     } 
-  // })
+  React.useEffect(() => {
+    let userData = sessionStorage.getItem('userData')
+      if(!userData){
+        navigate('/')
+        console.log('~~~~~ Session not available ~~~~~');
+      } 
+  })
   
   const LogOut = () => {
 
