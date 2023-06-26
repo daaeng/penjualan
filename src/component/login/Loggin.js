@@ -183,7 +183,7 @@ function Loggin () {
                 </section>
             ):(
 
-                <section className="flex rounded-xl bg-red-100 shadow-lg">
+                <section className="flex rounded-xl bg-red-50 shadow-lg">
                     
 
                 {/* Gambar */}

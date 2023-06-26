@@ -22,7 +22,7 @@ import Loadeer from '../backpage/Loader/Loadeer';
       Legend
   );
 
-const baseURL = '/API/Dashboard/getSalesRetur?'
+const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 function Penjualan(){
 

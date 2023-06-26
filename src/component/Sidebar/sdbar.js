@@ -105,7 +105,6 @@ function Sdbar() {
                     </ul>
                 </div>
             </div>
-
         </header>
         
         <nav className = {`top-20 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
@@ -132,9 +131,7 @@ function Sdbar() {
                     })}
 
                 </div>
-
-            </div>
-            
+            </div>            
         </nav>
     </>
   )

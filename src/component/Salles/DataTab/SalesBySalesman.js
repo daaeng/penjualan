@@ -10,11 +10,11 @@ const columns = [
     { field: 'code', headerName: 'Code', width: 120 },
     { field: 'description', headerName: 'Name', width: 150 },
     { field: 'amSI', headerName: 'amSI', type: 'number', width: 120,},
-    { field: 'percSI', headerName: 'percSI', type: 'number', width: 80,},
+    { field: 'percSI', headerName: 'SI %', type: 'number', width: 80,},
     { field: 'amSR', headerName: 'amSR', type: 'number', width: 120},
-    { field: 'percSR', headerName: 'percSR', type: 'number', width: 80},
+    { field: 'percSR', headerName: 'SR %', type: 'number', width: 80},
     { field: 'amNett', headerName: 'amNett', type: 'number', width: 120},
-    { field: 'percNett', headerName: 'percNett', width: 80},
+    { field: 'percNett', headerName: 'Nett %', width: 80},
 ];
 
 const SalesBySalesman =() => {   
@@ -38,7 +38,7 @@ const SalesBySalesman =() => {
 
     return(
         <>
-            <div>
+            <div className="mb-1">
                 <Labeldt title = {title} />
             </div>
 

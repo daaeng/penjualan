@@ -24,6 +24,46 @@ const CardSingleBlu = () => {
         tgl.getMonth()
     )
 
+    function numberWithCommas(x) {
+        x = x.toString();
+        var pattern = /(-?\d+)(\d{3})/;
+        while (pattern.test(x))
+            x = x.replace(pattern, "$1.$2");
+        return x;
+        // console.log(numberWithCommas(1000))
+    }
+
+    // const [perc, setPerc] = useState
+    // function percent() {
+    //     data((dt, idx) => {
+    //         if(dt.diffSIPerc < 0){
+    //             return(
+    //                 <div key={idx}>
+    //                     ▼ {dt.diffSIPerc}% Last Month
+    //                 </div>
+    //             )
+    //         } else{
+    //             <div>
+    //                 ▲ {dt.diffSIPerc}% Last Month
+    //             </div>
+    //         }
+    //     })
+        // {data.map((dataObj, index) => {
+        //     if (dataObj.diffSIPerc < 0) {
+        //         return(
+        //             <div key = {index} className=" text-redd">
+        //                 ▼ {dataObj.diffSIPerc}% Last Month
+        //             </div>
+        //         )
+        //     } else {
+        //         <div key = {index} className=" text-green-700">
+        //             ▲ {dataObj.diffSIPerc}% Last Month
+        //         </div>
+        //     }
+           
+        // })}
+    // }
+
     const dataInfo = () => {
         let data1 = tgl
         let data2 = firstDate
@@ -76,7 +116,7 @@ const CardSingleBlu = () => {
                                         {data.map((dataObj, index) => {
                                             return(
                                                 <p key = {index} className="mb-0">
-                                                    {dataObj.amSI}
+                                                    {numberWithCommas(dataObj.amSI  )}
                                                 </p>
                                             )
                                         })}
@@ -84,15 +124,17 @@ const CardSingleBlu = () => {
 
                                 ) : (
                                     <>
-                                        <Loadeer/>
+                                        <div className="flex lg:text-xl md:text-lg sm:text-base justify-center p-1">
+                                            <Loadeer/>
+                                        </div>
                                     </>
                                 )}
 
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  
-
-                                {data.map((dataObj, index) => {
+                                percent '%'
+                                {/* {data.map((dataObj, index) => {
                                     if (dataObj.diffSIPerc < 0) {
                                         return(
                                             <div key = {index} className=" text-redd">
@@ -105,7 +147,7 @@ const CardSingleBlu = () => {
                                         </div>
                                     }
                                    
-                                })}
+                                })} */}
                             </div>
                         
                         </div>    

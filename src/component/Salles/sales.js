@@ -3,7 +3,7 @@ import { SiAudiomack } from 'react-icons/si';
 import Box from '../Dash/box';
 import GabCard from '../backpage/GabCard/GabCard';
 import DataPenjual from './DataPenjual';
-import DataPiutang from './DataPiutang';
+// import DataPiutang from './DataPiutang';
 // import FilterTime from '../backpage/filterTime';
 // import FilTime from '../backpage/FilTime';
 
@@ -42,9 +42,9 @@ function Sales() {
                 <Box/>
             </div>  
 
-            <div className='p-1'>
+            {/* <div className='p-1'>
               <GabCard/>
-            </div>        
+            </div>         */}
 
             <div className='ml-2 mt-3 '>
               <h6>
@@ -58,7 +58,7 @@ function Sales() {
 
             </div>
 
-            <div className='ml-2 mt-3'>
+            {/* <div className='ml-2 mt-3'>
               <h6>
                 Piutang
               </h6>
@@ -67,7 +67,7 @@ function Sales() {
               <div>
                 <DataPiutang/>
               </div>
-            </div>
+            </div> */}
 
         {/* Line Border */}
         <div className='border mt-2 mb-2'/>

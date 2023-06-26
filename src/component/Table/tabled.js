@@ -6,7 +6,6 @@ const Tabled = (props) => {
   return (  
     <>
       <div className=''>
-        ~ Judul Label ~
         <div className='bg-white sm:h-96 md:h-128= lg:h-128 rounded-lg' style={{ width: '100%' }}>
           <DataGrid
             

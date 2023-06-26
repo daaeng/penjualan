@@ -37,6 +37,7 @@ const ChartSales = () => {
     const [Last, setLast] = useState([])
     const [Compare, setComp] = useState([])
     const [Branch, setBranch] = useState([])
+    
     const UbahTgl = (startDate, endDate, drDown,brDown) => {
         let dataCom = drDown.value
         let dataBr = brDown.value
@@ -70,11 +71,6 @@ const ChartSales = () => {
             }).then((response) => {
                 // console.log(response.data);
                 if(response.data.data.length > 0) {
-                    // if(comparison = null){
-
-                    // } else{
-
-                    // }
                     setChart({
                         labels : response.data.data.map((indiData) => indiData.tgl),
                         datasets : [

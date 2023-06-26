@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const baseURL = '/rptReact/Dashboard/getSalesRetur?'
+const baseURL = '/rptReact/Dashboard/getSalesByBranch?'
 
 function ChartKNN(){
 
@@ -40,19 +40,13 @@ function ChartKNN(){
               // console.log(response.data);
               if(response.data.data.length > 0) {
                   setChart({
-                      labels : response.data.data.map((indiData) => indiData.tgl),
+                      labels : response.data.data.map((indiData) => indiData.description),
                       datasets : [
-                          {
-                              label : 'amNett',
-                              fill: true,
-                              data : response.data.data.map((indiData) => indiData.amNett),
-                              backgroundColor: 'rgba(250, 0, 0, 0.3)',
-                          },
                           {
                               label : 'amSI',
                               fill: true,
                               data : response.data.data.map((indiData) => indiData.amSI),
-                              backgroundColor: 'rgba(49, 217, 234, 0.5)',
+                              backgroundColor: 'rgba(210, 38, 30, 0.5)',
                           },
                       ]
                   })
@@ -76,7 +70,7 @@ function ChartKNN(){
         ):(
             <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
                 <Loadeer/>
-                {console.log('Loading')}
+                {/* {console.log('Loading')} */}
             </div>
         )}
           {/* <Detail_pen data={this.this.state.data} /> */}
