@@ -45,6 +45,7 @@ module.exports = {
       margin:{
         '34'  : '130px',
         '128' : '32rem',
+        '135' : '40rem',
         '140' : '50rem',
         '146' : '57rem',
         '150' : '60rem',
@@ -54,6 +55,7 @@ module.exports = {
       },
       
       borderRadius: {
+        '45px' : '45px',
         '70px' : '70px',
       },
 

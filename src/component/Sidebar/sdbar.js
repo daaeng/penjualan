@@ -8,7 +8,7 @@ import {RiSettings3Fill } from 'react-icons/ri'
 import {MdShoppingBasket } from 'react-icons/md'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
-import {BsPalette2} from 'react-icons/bs'
+import {GiHexagonalNut} from 'react-icons/gi'
 import { ToastContainer } from 'react-toastify'
 import AlertDialog from '../backpage/AlertMod/AlertDialog'
 
@@ -37,7 +37,7 @@ function Sdbar() {
     <>   
         <ToastContainer/>
         
-        <header className='grid grid-cols-2 p-2 h-20 bg-marron rounded-bl-3xl '>
+        <header className='grid grid-cols-2 p-2 h-20 bg-marron rounded-bl-45px'>
             <div className='flex col-span-1 h-9 -mr-5 -mt-6 -mb-10'>
                 <div className='flex justify-end ml-60 rounded-bl-70px bg-red-800 w-full'>
                     
@@ -50,7 +50,7 @@ function Sdbar() {
                 </div>
             </div>
 
-            <div className='col-span-1 ml-2'>  
+            <div className='col-span-1 ml-5'>  
                 <div className={`lg:w-48 md:w-44 `}>
                     <img src={Logo} alt='sakir' onClick={()=> navigate('/dash')} className={`cursor-pointer duration-500 hover:text-yellow-600`}  />
                 </div>
@@ -108,8 +108,8 @@ function Sdbar() {
         </header>
         
         <nav className = {`top-20 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
-            <div className=' -ml-5'>
-                <BsPalette2 size={'24'} className={`rotate-12 cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+            <div className=' -ml-4'>
+                <GiHexagonalNut size={'24'} className={`rotate-12 cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
             <div className={`duration-300 ${!open && 'hidden'}`}>
                 <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>

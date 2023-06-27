@@ -33,37 +33,6 @@ const CardSingleBlu = () => {
         // console.log(numberWithCommas(1000))
     }
 
-    // const [perc, setPerc] = useState
-    // function percent() {
-    //     data((dt, idx) => {
-    //         if(dt.diffSIPerc < 0){
-    //             return(
-    //                 <div key={idx}>
-    //                     ▼ {dt.diffSIPerc}% Last Month
-    //                 </div>
-    //             )
-    //         } else{
-    //             <div>
-    //                 ▲ {dt.diffSIPerc}% Last Month
-    //             </div>
-    //         }
-    //     })
-        // {data.map((dataObj, index) => {
-        //     if (dataObj.diffSIPerc < 0) {
-        //         return(
-        //             <div key = {index} className=" text-redd">
-        //                 ▼ {dataObj.diffSIPerc}% Last Month
-        //             </div>
-        //         )
-        //     } else {
-        //         <div key = {index} className=" text-green-700">
-        //             ▲ {dataObj.diffSIPerc}% Last Month
-        //         </div>
-        //     }
-           
-        // })}
-    // }
-
     const dataInfo = () => {
         let data1 = tgl
         let data2 = firstDate
@@ -85,6 +54,18 @@ const CardSingleBlu = () => {
     useEffect(() => {
         dataInfo()
     })
+
+    // const perc = data.map((dtObj, idx) => {
+    //     if (data.length < 0 ) {
+    //         <div key = {idx} className=" text-redd">
+    //             ▼ {dtObj.diffSIPerc}% Last Month
+    //         </div>
+    //     } else {
+    //         <div key = {idx} className=" text-green-700">
+    //             ▲ {dtObj.diffSIPerc}% Last Month
+    //         </div>
+    //     }
+    // })
 
     return(
         <>
@@ -118,7 +99,7 @@ const CardSingleBlu = () => {
                                                 <p key = {index} className="mb-0">
                                                     {numberWithCommas(dataObj.amSI  )}
                                                 </p>
-                                            )
+                                            )   
                                         })}
                                     </>
 
@@ -133,21 +114,21 @@ const CardSingleBlu = () => {
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  
-                                percent '%'
-                                {/* {data.map((dataObj, index) => {
+                                {/* percent '%' */}
+                                {data.map((dataObj, index) => {
                                     if (dataObj.diffSIPerc < 0) {
                                         return(
                                             <div key = {index} className=" text-redd">
                                                 ▼ {dataObj.diffSIPerc}% Last Month
                                             </div>
-                                        )
+                                          )
                                     } else {
                                         <div key = {index} className=" text-green-700">
                                             ▲ {dataObj.diffSIPerc}% Last Month
                                         </div>
                                     }
                                    
-                                })} */}
+                                },[])}
                             </div>
                         
                         </div>    

@@ -27,40 +27,53 @@ function ChartKNN(){
 
   const [chart, setChart] = useState(null)
 
+  function tkStDate(year, month) {
+    return new Date(year, month, 1);
+  }
+
+  const tgl = new Date()
+  const firstDate = tkStDate(
+    tgl.getFullYear(),
+    tgl.getMonth()
+  )
+
   useEffect(() => {
 
-      const token = sessionStorage.getItem('userData')
-      if(token){
-          axios.get(baseURL,{
-              params : {
-                  startDate : '',
-                  endDate : ''
-              }
-          }).then((response) => {
-              // console.log(response.data);
-              if(response.data.data.length > 0) {
-                  setChart({
-                      labels : response.data.data.map((indiData) => indiData.description),
-                      datasets : [
-                          {
-                              label : 'amSI',
-                              fill: true,
-                              data : response.data.data.map((indiData) => indiData.amSI),
-                              backgroundColor: 'rgba(210, 38, 30, 0.5)',
-                          },
-                      ]
-                  })
-              }
-              else{
-                  console.log('Tidak Ada Data');
-              }
-          })
-          .catch((errors) => {
-              console.log(errors.message)
-              console.log('Error Guys..!');
-          })
-      }
-  },[])
+    let data1 = tgl
+    let data2 = firstDate
+
+    const token = sessionStorage.getItem('userData')
+    if(token){
+        axios.get(baseURL,{
+            params : {
+                startDate : data2,
+                endDate : data1
+            }
+        }).then((response) => {
+            // console.log(response.data);
+            if(response.data.data.length > 0) {
+                setChart({
+                    labels : response.data.data.map((indiData) => indiData.description),
+                    datasets : [
+                        {
+                            label : 'amSI',
+                            fill: true,
+                            data : response.data.data.map((indiData) => indiData.amSI),
+                            backgroundColor: 'rgba(210, 38, 30, 0.5)',
+                        },
+                    ]
+                })
+            }
+            else{
+                console.log('Tidak Ada Data');
+            }
+        })
+        .catch((errors) => {
+            console.log(errors.message)
+            console.log('Error Guys..!');
+        })
+    }
+  })
 
   return(
     <>
@@ -68,7 +81,7 @@ function ChartKNN(){
         {chart !== null? (
             <Bar options={options} data={chart}/>
         ):(
-            <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-72 md:p-56 sm:p-24">
+            <div className="flex lg:text-xl md:text-lg sm:text-base justify-center lg:p-40 md:p-32 sm:p-24">
                 <Loadeer/>
                 {/* {console.log('Loading')} */}
             </div>
@@ -96,7 +109,7 @@ const options = {
         },
         title: {
         display: true,
-        text: 'Chart.js Horizontal Bar Chart',
+        text: 'Chart Sales Branch',
         },
     },
 };

@@ -95,14 +95,16 @@ const FilTime =({onChange}) => {
         <>
             <div className = {`flex justify-end h-fit py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
                 <div className=' -ml-5 text-white' onClick={()=> setOpen(!open)}>
-                    <div className="bg-redd p-1 flex justify-end w-fit rounded-lg items-center">
-                        Filter
-                        <BiTime size={'28'} className={`cursor-pointer hover:text-darkgolden ml-3`} />
+                    <div className="bg-redd p-1 flex justify-end w-fit rounded-lg cursor-default items-center">
+                        <div className="flex justify-end items-center">
+                            Filter
+                            <BiTime size={'28'} className={`cursor-pointer hover:text-darkgolden ml-3`} />
+                        </div>
                         
                     </div>
                 </div>
-                <div className={`duration-50 fixed mt-5 ${!open && 'hidden'}`}>
-                    <div className='items-center rounded-xl bg-redd p-2 w-135'>
+                <div className={`duration-500 lg:-ml-135 md:-ml-96 sm:-ml-72 -mb-52 mt-5 ${!open && 'hidden'}`}>
+                    <div className='items-center rounded-xl bg-redd p-2 lg:w-135 md:w-96 sm:w-72'>
                         <div className="w-68 flex justify-end">
                             <Datepicker
                                 value={tgl}

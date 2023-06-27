@@ -1,7 +1,7 @@
 import React from 'react'
 import { SiAudiomack } from 'react-icons/si';
 import Box from '../Dash/box';
-import GabCard from '../backpage/GabCard/GabCard';
+// import GabCard from '../backpage/GabCard/GabCard';
 import DataPenjual from './DataPenjual';
 // import DataPiutang from './DataPiutang';
 // import FilterTime from '../backpage/filterTime';
@@ -25,13 +25,13 @@ function Sales() {
 
     <>
       <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
-        <div className='mt-1'>
+        <div className='mt-3'>
             <div className=''>  
-              <h2 className='font-mono text-black items-center flex'>
+              <h2 className='font-mono text-black items-center flex cursor-default -mb-0'>
                 <SiAudiomack className='mr-1' size={'20'}/>Dashboard
               </h2>
               <div className='border ' />
-                <p className='sm:text-xs md:text-xs lg:text-base'>
+                <p className='sm:text-xs md:text-xs lg:text-base cursor-default'>
                   Welcome, 
                   {/* {data} */}
                 </p>
@@ -46,7 +46,7 @@ function Sales() {
               <GabCard/>
             </div>         */}
 
-            <div className='ml-2 mt-3 '>
+            <div className='ml-2 mt-3 cursor-default'>
               <h6>
                 Penjualan
               </h6>
