@@ -25,8 +25,27 @@ const TopSalesSubCat1 =() => {
         return ("Tabel Top Sales Sub Cat 1")
     }
     
+    function tkStDate(year, month) {
+        return new Date(year, month, 1);
+      }
+    
+    const tgl = new Date()
+    const firstDate = tkStDate(
+    tgl.getFullYear(),
+    tgl.getMonth()
+    )
+    
     const dataTab = () => {
-        axios.get(baseURL)
+
+        let data1 = tgl
+        let data2 = firstDate
+        
+        axios.get(baseURL, {
+            params : {
+                startDate : data2,
+                endDate : data1
+            }
+        })
         .then((response) => {
         setData(response.data.data)
         })
@@ -34,7 +53,7 @@ const TopSalesSubCat1 =() => {
 
     useEffect(() =>{
         dataTab()
-    },[])
+    })
 
     return(
         <>

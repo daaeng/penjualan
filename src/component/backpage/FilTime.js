@@ -15,7 +15,7 @@ const FilTime =({onChange}) => {
 
     const [open, setOpen] =  useState();
     const [tgl, setTgl] = useState({
-        startDate: new Date().setHours(-168),
+        startDate: new Date().setHours(-144),
         endDate: new Date()
     });
 

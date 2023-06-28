@@ -8,7 +8,7 @@ const baseURL ='/rptReact/Dashboard/getTop10SalesByItemCateg'
 const columns = [
     { field: 'id', headerName: 'ID', width: 30 },
     { field: 'code', headerName: 'Code', width: 120 },
-    { field: 'description', headerName: 'Name', width: 150 },
+    { field: 'description', headerName: 'Category', width: 150 },
     { field: 'amSI', headerName: 'amSI', type: 'number', width: 120,},
     { field: 'percSI', headerName: 'SI %', type: 'number', width: 80,},
     { field: 'amSR', headerName: 'amSR', type: 'number', width: 120},
