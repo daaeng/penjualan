@@ -4,11 +4,13 @@ import axios from "../../config/api/axios";
 import Labeldt from "../../backpage/label";
 import { GridActionsCellItem } from "@mui/x-data-grid";
 import { BiStreetView } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const baseURL = '/rptReact/Dashboard/getSalesBySalesman'
 
 
 const SalesBySalesman =() => {   
+    const navigate = useNavigate()
     const columns = [
         {
             field: 'actions',
@@ -16,7 +18,7 @@ const SalesBySalesman =() => {
             headerName: 'View',
             width: 55,
             cellClassName: 'actions',
-            getActions: ({ id }) => {
+            getActions: (id) => {
               // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
         
               return [
@@ -25,7 +27,7 @@ const SalesBySalesman =() => {
                     icon={<BiStreetView size={'20'}/>}
                     label="Edit"
                     className="textPrimary"
-                    onClick={()=> alert (id)}
+                    onClick={()=> amblDt(id)}
                     color="inherit"
                 />,
               ];
@@ -44,8 +46,14 @@ const SalesBySalesman =() => {
 
     const [data, setData] = useState([])
 
-    // let tabId = data.map((tabData) => tabData.id)
-    // console.log(tabId);
+    // const [select, setSelect] = useState([])
+
+    const amblDt =(id) => {
+        let sell = (id.row?.code)
+        // setSelect(sell)
+        console.log('datanya select',sell);
+        navigate('/detdtsalesman', sell)
+    }
 
     const title = () => {
         return ("Tabel Sales by Salesman")
@@ -63,13 +71,15 @@ const SalesBySalesman =() => {
     
     const dataTab = () => {
 
+        // let getRow = select
         let data1 = tgl
         let data2 = firstDate
         
         axios.get(baseURL, {
             params : {
                 startDate : data2,
-                endDate : data1
+                endDate : data1,
+                // salesman : getRow
             }
         })
         .then((response) => {
@@ -87,7 +97,7 @@ const SalesBySalesman =() => {
                 <Labeldt title = {title} />
             </div>
 
-            <Tabled data={data} columns={columns}/>
+            <Tabled data={data} columns={columns} />
         </>
     )
 }
