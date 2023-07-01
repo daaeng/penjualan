@@ -67,7 +67,23 @@ const FilTime =({onChange}) => {
     
     const defaultOption = options[null];
 
-    const showDropDown = () => {
+    // const showDropDown = () => {
+    //     let dt = sessionStorage.getItem('userData')
+    //     let user = JSON.parse(dt).code
+    //     axios.get(BranchURL,{
+    //         params : {
+    //             user : user,
+    //         }
+    //     }).then((resp) => {
+    //         let data = (resp.data.data)
+    //         // let dataVl = (resp.data.data.map((sdrop) => sdrop.code))
+    //         setCodeDrop(data)
+    //     }, minuteTO)
+    // }
+
+    const minuteTO = 600000
+    // // 10-menit
+    useEffect(()=> {
         let dt = sessionStorage.getItem('userData')
         let user = JSON.parse(dt).code
         axios.get(BranchURL,{
@@ -78,11 +94,7 @@ const FilTime =({onChange}) => {
             let data = (resp.data.data)
             // let dataVl = (resp.data.data.map((sdrop) => sdrop.code))
             setCodeDrop(data)
-        })
-    }
-
-    useEffect(()=> {
-        showDropDown()
+        }, minuteTO)
     },[])
     
     const [brDown, setBrDown] = useState([])

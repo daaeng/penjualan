@@ -25,16 +25,22 @@ const SalesByCustomer =() => {
         return ("Tabel Sales by Customer")
     }
     
-    const dataTab = () => {
+    // const dataTab = () => {
+    //     axios.get(baseURL)
+    //     .then((response) => {
+    //     setData(response.data.data)
+    //     })
+    // }
+
+    const minuteTO = 600000
+    // 10-menit refersh hitungan ~ MS ~
+    useEffect(() =>{
         axios.get(baseURL)
         .then((response) => {
         setData(response.data.data)
-        })
-    }
-
-    useEffect(() =>{
-        dataTab()
+        }, minuteTO)
     },[])
+    
     return(
         <>
             <div className="mb-1">

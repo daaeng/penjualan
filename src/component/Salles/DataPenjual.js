@@ -1,18 +1,18 @@
 import React from "react"
 // import Tabled from "../Table/tabled"
-import GabCard4th from "../backpage/GabCard/GabCard4th"
 // import DataGrafGAB from "../chart/dataGrafGAB"
-import SalesBySalesman from "./DataTab/SalesBySalesman"
-import SalesByCustomer from "./DataTab/SalesByCustomer"
+import Labeldt from "../backpage/label"
 import ChartKNN from "../chart/ChartKNN"
+import GabCard4th from "../backpage/GabCard/GabCard4th"
 import TopSalesman from "./DataTab/TopSalesman"
 import TopCustomer from "./DataTab/TopCustomer"
-import TopSalesBrand from "./DataTab/TopSalesBrand"
 import TopItemCateg from "./DataTab/TopItemCateg"
+import TopSalesBrand from "./DataTab/TopSalesBrand"
+import SalesBySalesman from "./DataTab/SalesBySalesman"
+import SalesByCustomer from "./DataTab/SalesByCustomer"
 import TopSalesSubCat1 from "./DataTab/TopSalesSubCat1"
 import TopSalesSubCat2 from "./DataTab/TopSalesSubCat2"
 import TopSalesSubCat3 from "./DataTab/TopSalesSubCat3"
-import Labeldt from "../backpage/label"
 
 const DataPenjual = () => {
 

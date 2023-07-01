@@ -3,10 +3,6 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 const Tabled = (props) => {
 
-  // const handleChange = () => {
-
-  // }
-
   return (  
     <>
       <div className=''>
@@ -17,8 +13,8 @@ const Tabled = (props) => {
             columns={props.columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
-            onRowSelectionModelChange={props.dtSelection}
-            checkboxSelection
+            // checkboxSelection
+            // onRowSelectionModelChange={props.dtSelection}
 
             slots={{
               toolbar: GridToolbar, 

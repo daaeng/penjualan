@@ -65,31 +65,28 @@ const SalesBySalesman =() => {
     
     const tgl = new Date()
     const firstDate = tkStDate(
-    tgl.getFullYear(),
-    tgl.getMonth()
+        tgl.getFullYear(),
+        tgl.getMonth()
     )
-    
-    const dataTab = () => {
-
-        // let getRow = select
-        let data1 = tgl
-        let data2 = firstDate
         
+    const [start, setStart] = useState([])
+    const [end, setEnd] = useState([])
+    setStart(firstDate)
+    setEnd(tgl)
+    
+    const minuteTO = 600000
+    // // 10-menit refersh hitungan ~ MS ~
+    useEffect(() =>{
         axios.get(baseURL, {
             params : {
-                startDate : data2,
-                endDate : data1,
-                // salesman : getRow
+                startDate : start,
+                endDate : end,
             }
         })
         .then((response) => {
         setData(response.data.data)
-        })
-    }
-
-    useEffect(() =>{
-        dataTab()
-    })
+        }, minuteTO)
+    },[start, end])
 
     return(
         <>

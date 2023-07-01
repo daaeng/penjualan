@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../config/api/axios";
-import {
-    
+import {    
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
@@ -11,7 +10,7 @@ import {
     Tooltip,
     Filler,
     Legend,
-  } from 'chart.js';
+} from 'chart.js';
 //   import {
 //     Chart,
 //     getDatasetAtEvent,
@@ -38,7 +37,6 @@ import FilTime from "../backpage/FilTime";
 const ChartSales = () => {
       
     const [chart, setChart] = useState(null)
-
     const [Start, setStart] = useState([])
     const [Last, setLast] = useState([])
     const [Compare, setComp] = useState([])
@@ -57,12 +55,8 @@ const ChartSales = () => {
         setBranch(dataBr)
     }
 
-    // const [drDown, setDrDown] = useState([])
-    // const options =(value) => {
-    //     console.log(value);
-    //     // setDrDown(value)
-    // }
-
+    const minuteTO = 600000
+    // 10-menit refersh hitungan ~ MS ~
     useEffect(() => {
 
         if(UbahTgl){
@@ -75,7 +69,6 @@ const ChartSales = () => {
                     onlyDiva : '',
                 }
             }).then((response) => {
-                // console.log(response.data);
                 if(response.data.data.length > 0) {
                     setChart({
                         labels : response.data.data.map((indiData) => indiData.tgl),
@@ -103,7 +96,7 @@ const ChartSales = () => {
                             },
                             //~~~~~~~~~~~~~~~~~~~~~
                         ]
-                    })
+                    }, minuteTO)
                 }
                 else{
                     console.log('Tidak Ada Data');
@@ -115,6 +108,38 @@ const ChartSales = () => {
             })
         }
     },[Start, Last, Compare, Branch])
+
+    const footer = (tooltipItems) => {
+        let chrTool = (tooltipItems)
+        console.log(chrTool);
+
+        //ini data percobaan
+        let sum = 0;      
+        tooltipItems.forEach(function(tooltipItem) {
+            sum += tooltipItem.parsed.y;
+        });
+        return 'Sum: ' + sum;
+    }
+
+    const options = {
+  
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 2,
+        
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            title: {
+              display: true,
+              // text: 'CEK CEK CEK NAMA',
+            },
+            callbacks: {
+              footer: footer,
+            }
+        },
+    };
 
     return(
         <>
@@ -141,21 +166,6 @@ const ChartSales = () => {
 }
 export default ChartSales
 
-const options = {
-  
-  responsive: true,
-  maintainAspectRatio: true,
-  aspectRatio: 2,
-  
-    plugins: {
-      legend: {
-        position: 'bottom',
-      },
-      title: {
-        display: true,
-        // text: 'CEK CEK CEK NAMA',
-      },
-  },
-};
+
 
 

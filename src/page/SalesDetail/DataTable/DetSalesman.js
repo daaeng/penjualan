@@ -1,6 +1,6 @@
 import React from "react";
 import Sdbar from "../../../component/Sidebar/sdbar";
-import SalesDetSalesman from "../../../component/Salles/DataTab/SalesDetSalesman";
+import DetSale from "../../../component/Salles/ViewDetail/DetSale";
 
 const DetSalesman = () => {
     return(
@@ -13,7 +13,7 @@ const DetSalesman = () => {
                 <div>
                 <section className={`-mt-1`}>
                     
-                    <SalesDetSalesman/>
+                    <DetSale/>
 
                 </section>
 

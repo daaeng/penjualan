@@ -7,9 +7,7 @@ import axios from '../../config/api/axios';
 import { ToastContainer, toast } from 'react-toastify'
 import { FiLogOut } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
-// import { useEffect } from 'react';
 
-// const LOGOut_URL = '/api/Auth/LogOff?token=a26da23c-103b-4ad4-8e24-a752c8dfb3b8'
 const LOGOut_URL = '/api/Auth/LogOff?token='
 
 export default function AlertDialog() {

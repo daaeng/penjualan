@@ -25,11 +25,13 @@ const TopItemCateg =() => {
         return ("Tabel Top Item Category")
     }
     
+    const minuteTO = 600000
+    // 10-menit refersh hitungan ~ MS ~
     const dataTab = () => {
         axios.get(baseURL)
         .then((response) => {
         setData(response.data.data)
-        })
+        }, minuteTO)
     }
 
     useEffect(() =>{

@@ -13,7 +13,9 @@ const CardSingleBlu = () => {
     const navigate = useNavigate()
 
     const [data, setData] = useState([])
-
+    const [start, setStart] = useState([])
+    const [end, setEnd] = useState([])
+    
     function tkStDate(year, month) {
         return new Date(year, month, 1);
     }
@@ -32,28 +34,40 @@ const CardSingleBlu = () => {
         return x;
         // console.log(numberWithCommas(1000))
     }
+    
+    setStart(firstDate)
+    setEnd(tgl)
+    
+    // const dataInfo = () => {
+    //     if (dataTime) {
+    //         axios.get(baseURL, {
+    //             params : {
+    //                 startDate : start,
+    //                 endDate : end,    
+    //                 comparison : 'LM',
+    //                 isAsper : true,
+    //             }
+    //         }).then(response => {
+    //             setData(response.data.data)
+    //         })
+    //     }
+    // }
 
-    const dataInfo = () => {
-        let data1 = tgl
-        let data2 = firstDate
-
+    const minuteTO = 600000
+    // 10-menit
+    useEffect(() => {
         axios.get(baseURL, {
             params : {
-                startDate : data2,
-                endDate : data1,    
+                startDate : start,
+                endDate : end,    
                 comparison : 'LM',
                 isAsper : true,
             }
         }).then(response => {
             setData(response.data.data)
 
-        })
-
-    }
-
-    useEffect(() => {
-        dataInfo()
-    })
+        },minuteTO)
+    },[start, end])
 
     // const perc = data.map((dtObj, idx) => {
     //     if (data.length < 0 ) {
