@@ -14,6 +14,15 @@ const FilTime =({onChange}) => {
     const [drDown, setDrDown] = useState([])
 
     const [open, setOpen] =  useState();
+
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
+
     const [tgl, setTgl] = useState({
         startDate: new Date().setHours(-144),
         endDate: new Date()
@@ -106,7 +115,8 @@ const FilTime =({onChange}) => {
     return(
         <>
             <div className = {`flex justify-end h-fit py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
-                <div className=' -ml-5 text-white' onClick={()=> setOpen(!open)}>
+                <div className=' -ml-5 text-white' onClick={()=> handleClickOpen}>
+                {/* setOpen(!open) */}
                     <div className="bg-redd p-1 flex justify-end w-fit rounded-lg cursor-default items-center">
                         <div className="flex justify-end items-center">
                             Filter
@@ -115,7 +125,12 @@ const FilTime =({onChange}) => {
                         
                     </div>
                 </div>
-                <div className={`duration-500 lg:-ml-135 md:-ml-96 sm:-ml-72 -mb-52 mt-5 ${!open && 'hidden'}`}>
+                <div
+                    onClose={handleClose} 
+                    className={`duration-500 lg:-ml-135 md:-ml-96 sm:-ml-72 -mb-52 mt-5 `}
+                    >
+                    {/* ${!open && 'hidden'} */}
+                    
                     <div className='items-center rounded-xl bg-redd p-2 lg:w-135 md:w-96 sm:w-72'>
                         <div className="w-68 flex justify-end">
                             <Datepicker
@@ -163,7 +178,9 @@ const FilTime =({onChange}) => {
                     </div>
                     
                     <div className="flex justify-end">
-                        <div onClick={() => UbahTgl(onChange(tgl.startDate, tgl.endDate, drDown, brDown))}
+                        <div
+                            onClose={handleClose} 
+                            onClick={() => UbahTgl(onChange(tgl.startDate, tgl.endDate, drDown, brDown))}
                             className="bg-blue-200 font-bold cursor-pointer hover:text-green-200 hover:bg-green-600 rounded-lg mt-2 mr-1 p-1 w-20 flex justify-center">
                             Apply
                         </div>
