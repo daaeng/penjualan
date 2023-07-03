@@ -38,42 +38,42 @@ function DataGrafGAB(){
           //         Authorization : `Bearer ${token}`
           //     }
           // }
-          axios.get(baseURL,{
-              params : {
-                  startDate : '',
-                  endDate : ''
-              }
-          }).then((response) => {
-              // console.log(response.data);
-              if(response.data.data.length > 0) {
-                  setChart({
-                      labels : response.data.data.map((indiData) => indiData.tgl),
-                      datasets : [
-                          {
-                              label : 'amNett',
-                              data : response.data.data.map((indiData) => indiData.amNett),
-                              borderColor: 'rgb(255, 99, 132)',
-                              backgroundColor: 'rgba(255, 99, 132, 1)',
-                          },
-                          {
-                              label : 'amSI',
-                              data : response.data.data.map((indiData) => indiData.amSI),
-                              borderColor: 'rgb(53, 162, 235)',
-                              backgroundColor: 'rgba(53, 162, 235, 1)',
-                          },
-                      ]
-                  })
-              }
-              else{
-                  console.log('Tidak Ada Data');
-              }
-          })
-          .catch((errors) => {
-              console.log(errors.message)
-              console.log('Error Guys..!');
-          })
+        axios.get(baseURL,{
+            params : {
+                startDate : '',
+                endDate : ''
+            }
+        }).then((response) => {
+            // console.log(response.data);
+            if(response.data.data.length > 0) {
+                setChart({
+                    labels : response.data.data.map((indiData) => indiData.tgl),
+                    datasets : [
+                        {
+                            label : 'amNett',
+                            data : response.data.data.map((indiData) => indiData.amNett),
+                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgba(255, 99, 132, 1)',
+                        },
+                        {
+                            label : 'amSI',
+                            data : response.data.data.map((indiData) => indiData.amSI),
+                            borderColor: 'rgb(53, 162, 235)',
+                            backgroundColor: 'rgba(53, 162, 235, 1)',
+                        },
+                    ]
+                })
+            }
+            else{
+                console.log('Tidak Ada Data');
+            }
+        })
+        .catch((errors) => {
+            console.log(errors.message)
+            console.log('Error Guys..!');
+        })
       }
-  },[])
+    },[])
 
   return(
     <>

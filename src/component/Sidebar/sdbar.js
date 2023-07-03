@@ -83,7 +83,7 @@ function Sdbar() {
             </div>
 
             <div className='col-span-2 flex justify-end bg-black'>
-                <div className={`flex rounded-b-xl bg-gray-500 fixed ${bka ? 'mr-10' : 'show'}`}>
+                <div className={`flex -mt-2 rounded-b-xl bg-gray-500 fixed ${bka ? 'mr-10' : 'show'}`}>
                     <ul className={`-ml-7 mr-1 mt-1 ${!bka  && 'hidden' }`}>
                         {menuHeader.map((val, index) => {
                             return(                 
@@ -93,7 +93,7 @@ function Sdbar() {
                                     
                                     className={`cursor-pointer no-underline flex flex-row duration-300 
                                     ${!bka && 'active' } text-gray-100 overflow-y-visible
-                                    hover:bg-light-white hover:text-yellow-600 w-36 px-2`} >
+                                    hover:bg-light-white hover:text-white w-36 px-2`} >
 
                                     <li className='flex items-center'>
                                         <div className={`mr-1 mt-0.5 `}>{val.icon}</div>

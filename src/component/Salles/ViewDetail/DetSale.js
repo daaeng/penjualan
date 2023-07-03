@@ -28,12 +28,11 @@ const DetSale =() => {
                     <div className="flex p-1">
                         <div className="cursor-pointer font-bold p-1 text-lg flex items-center -mt-2" onClick={BackBack}>
                             <VscDebugStepBack />
-
                             Dashboard,  
                         </div>
 
                         <div className="underline ml-1">
-                            Piutang
+                            Penjualan
                         </div>
 
                     </div>
@@ -55,7 +54,7 @@ const DetSale =() => {
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
-                            tes tes
+                            tes tes data halaman det sales
                         </div>
 
                     </div>

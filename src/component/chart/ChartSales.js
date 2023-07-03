@@ -17,9 +17,10 @@ import {
 //     getElementAtEvent,
 //     getElementsAtEvent,
 //   } from 'react-chartjs-2';
-  import { Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import Loadeer from "../backpage/Loader/Loadeer";
 import FilTime from "../backpage/FilTime";
+// import { useNavigate } from "react-router-dom";
 
   ChartJS.register(
     CategoryScale,
@@ -35,6 +36,9 @@ import FilTime from "../backpage/FilTime";
   const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 const ChartSales = () => {
+
+    // const navigate = useNavigate()
+
       
     const [chart, setChart] = useState(null)
     const [Start, setStart] = useState([])
@@ -112,6 +116,7 @@ const ChartSales = () => {
     const footer = (tooltipItems) => {
         let chrTool = (tooltipItems)
         console.log(chrTool);
+        // navigate('', chrTool)
 
         //ini data percobaan
         let sum = 0;      
@@ -137,6 +142,10 @@ const ChartSales = () => {
             },
             callbacks: {
               footer: footer,
+            },
+            tooltip: {
+                enable: true,
+                titleAlign: 'center',
             }
         },
     };

@@ -38,13 +38,13 @@ export default function AlertDialog() {
       // navigate('/sales')
   }
 
-  useEffect(() => {
-    let userData = sessionStorage.getItem('userData')
-      if(!userData){
-        navigate('/')
-        console.log('~~~~~ Session not available ~~~~~');
-      } 
-  })
+  // useEffect(() => {
+  //   let userData = sessionStorage.getItem('userData')
+  //     if(!userData){
+  //       navigate('/')
+  //       console.log('~~~~~ Session not available ~~~~~');
+  //     } 
+  // })
   
   const LogOut = () => {
 
@@ -100,7 +100,7 @@ export default function AlertDialog() {
     navigate('/')
 
 }
-
+  
   return (
     <div>
       <ToastContainer/>

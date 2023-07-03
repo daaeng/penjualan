@@ -5,6 +5,7 @@ import { VscDebugStepBack } from "react-icons/vsc";
 import TablePiutang from "../backpage/Tabel/TabelPiutang";
 import ChartKNN from "../chart/ChartKNN";
 import { useNavigate } from "react-router-dom";
+import CobaChart from "../chart/coba";
 
 const SalesPiutangDet =() => {
 
@@ -55,7 +56,8 @@ const SalesPiutangDet =() => {
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
                         <div className="col-span-1 p-2 bg-marron">
-                            <ChartKNN/>
+                            {/* <ChartKNN/> */}
+                            <CobaChart/>
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
