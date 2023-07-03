@@ -19,14 +19,6 @@ function Sdbar() {
     const [buka, setbuka] =  useState(false);
     const [bka, setBka] =  useState(false);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-      };
-    
-      const handleClose = () => {
-        setOpen(false);
-      };
-
     const menu = [
         // {name:'Dashboard', icon: <MdDashboard/>, path:'/dash'},
         {name:'Sales', icon: <SiAudiomack/>, path:'/sales'},
@@ -117,10 +109,9 @@ function Sdbar() {
         
         <nav className = {`top-20 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             <div className=' -ml-4'>
-                <GiHexagonalNut size={'24'} className={`rotate-12 cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> handleClickOpen }/>
-                {/* setOpen(!open) */}
+                <GiHexagonalNut size={'24'} className={`rotate-12 cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
-            <div className={`duration-300 ${!open && 'hidden'}`} onCLose={handleClose}>
+            <div className={`duration-300 ${!open && 'hidden'}`}>
                 <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>
 
                     {menu.map((val, index) => {
@@ -134,7 +125,7 @@ function Sdbar() {
                                         <div className={`ml-1 text-2xl `}>
                                             {val.icon}
                                         </div>
-                                        <div onCLose={handleClose} className={`ml-2 duration-50 ${!open && 'hidden'}`} >{val.name}</div> 
+                                        <div className={`ml-2 duration-50 ${!open && 'hidden'}`} >{val.name}</div> 
                             </NavLink>
                         );
                     })}
