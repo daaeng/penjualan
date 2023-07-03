@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -13,7 +13,7 @@ const LOGOut_URL = '/api/Auth/LogOff?token='
 export default function AlertDialog() {
 
   const navigate = useNavigate()
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -38,7 +38,7 @@ export default function AlertDialog() {
       // navigate('/sales')
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     let userData = sessionStorage.getItem('userData')
       if(!userData){
         navigate('/')
@@ -53,21 +53,40 @@ export default function AlertDialog() {
     // console.log(str);
 
     try{
-        axios.put(`${LOGOut_URL}` + str)
-        .then((response) => {
-            // console.log(response.data);
-            console.log(response.data?.success);
-            console.log(response.data?.errors);
-            sessionStorage.removeItem("userData")
-            localStorage.removeItem("userData")
-            localStorage.clear()
-            sToastLogOut()
-            navigate('/')
-        })
-        .catch((error) => {
-          console.error(error.data?.errors);
-          sToastLogOutFail()
-        })
+      // axios.put(`${LOGOut_URL}` + str)
+      // .then((response) => {
+      //     // console.log(response.data);
+      //     console.log(response.data?.success);
+      //     console.log(response.data?.errors);
+      //     sessionStorage.removeItem("userData")
+      //     localStorage.removeItem("userData")
+      //     localStorage.clear()
+      //     sToastLogOut()
+      //     navigate('/')
+      // })
+      // .catch((error) => {
+      //   console.error(error.data?.errors);
+      //   sToastLogOutFail()
+      // })
+
+      axios.put(LOGOut_URL, {
+        params : {
+            refreshToken : str
+        }
+      })
+      .then((response) => {
+        console.log(response.data?.success);
+        console.log(response.data?.errors);
+        sessionStorage.removeItem("userData")
+        localStorage.removeItem("userData")
+        localStorage.clear()
+        sToastLogOut()
+        navigate('/')
+      })
+      .catch((error) => {
+        console.error(error.data?.errors);
+        sToastLogOutFail()
+      })
     }
     catch {
         console.log('Gagal');
