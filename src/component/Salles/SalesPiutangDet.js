@@ -3,7 +3,7 @@ import { SiAudiomack } from "react-icons/si";
 import { VscDebugStepBack } from "react-icons/vsc";
 // import FilterTime from "../backpage/filterTime";
 import TablePiutang from "../backpage/Tabel/TabelPiutang";
-import ChartKNN from "../chart/ChartKNN";
+// import ChartKNN from "../chart/ChartKNN";
 import { useNavigate } from "react-router-dom";
 import CobaChart from "../chart/coba";
 

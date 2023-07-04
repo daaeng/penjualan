@@ -1,5 +1,5 @@
 //Data grafik
-import React, {useRef} from 'react';
+import React, { useState } from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,9 +9,10 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
-import { Bar, getDatasetAtEvent, getElementAtEvent,} from 'react-chartjs-2';
+import { Bar} from 'react-chartjs-2';
+import { useNavigate } from 'react-router-dom';
 
-function CobaChart(){
+function CobaChart(onChange){
 
     ChartJS.register(
         CategoryScale,
@@ -21,6 +22,41 @@ function CobaChart(){
         Tooltip,
         Legend
     );
+
+    const navigate = useNavigate()
+    const [tool, setTool] = useState([])
+    //data yg akan dikirim
+    const [label, setLabel] = useState([])
+    const [vall, setVall] = useState([])
+
+    const sHtool =() => {
+      let dtLabel = (tool.label)
+      let dtVall = (tool.formattedValue)
+
+      setLabel(dtLabel)
+      setVall(dtVall)
+
+      console.log('S data : ', dtLabel);
+      console.log('S data : ', dtVall);
+      console.log('S data : ', tool);
+
+      onChange={label, vall}
+      // console.log('ini data : ', tool.label);
+      // console.log('ini data : ', tool.formattedValue);
+      // console.log('ini data : ', tool);
+      navigate('/detdtsalesman', label, vall, tool)
+
+    }
+    
+    const ovTip = (tooltipItem) => {
+      let tip = tooltipItem
+      // setTool(tip)
+      console.log('data : ', tip);
+    }
+
+    // useEffect(() => {
+    //   sHtool(navigate('/detdtsalesman'))
+    // })
 
     const options = {
       responsive: true,
@@ -36,6 +72,18 @@ function CobaChart(){
       plugins: {
         legend: {
           position: 'bottom',
+        },
+        tooltip: {
+          enable: true,
+          titleAlign: 'center',
+
+          filter: function(tooltipItem){
+            setTool(tooltipItem)
+            return tooltipItem.datasetIndex === 0 
+          }
+        },
+        callbacks: {
+          footer : ovTip,
         },
         title: {
           display: true,
@@ -58,17 +106,17 @@ function CobaChart(){
       ]
     }
 
-    const chartRef = useRef();
-    const onClick = (event) => {
-      const {current:chart} =chartRef;
+    // const chartRef = useRef();
+    // const onClick = (event) => {
+    //   const {current:chart} =chartRef;
 
-      if (!chart) {
-        return;
-      }
+    //   if (!chart) {
+    //     return;
+    //   }
       
-      console.log(getElementAtEvent(chartRef.current, event));
-      console.log(getDatasetAtEvent(chartRef.current, event));
-    }
+    //   console.log(getElementAtEvent(chartRef.current, event));
+    //   console.log(getDatasetAtEvent(chartRef.current, event));
+    // }
 
     return(
         <>            
@@ -76,9 +124,9 @@ function CobaChart(){
 
                 <Bar 
                   options={options} 
-                  onClick={onClick} 
+                  onClick={() => sHtool(label, vall, tool)}
                   data={data} 
-                  ref={chartRef}
+                  // ref={chartRef}
                 />
 
             </div>
