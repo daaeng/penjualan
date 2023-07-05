@@ -14,7 +14,12 @@ const DetSale =() => {
         console.log('Mundur ke Dash Sales');
     }
 
-    const sHtool =(label, vall, tool) => {
+    const BackBack2 =() => {
+        navigate('/detpiutang')
+        console.log('Mundur ke Dash Sales');
+    }
+
+    const data =(label, vall, tool) => {
         let dtIn = label
         let dtIn2 = vall
         let dtIn3 = tool
@@ -23,13 +28,13 @@ const DetSale =() => {
     }
 
     useEffect(() => {
-        sHtool()
+        data()
     },[])
 
     return(
         <>
             <div className="hidden">
-                <CobaChart sHtool={sHtool}/>
+                <CobaChart sHtool={data}/>
             </div>
             <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
                 <div className=' mt-1'>
@@ -47,9 +52,14 @@ const DetSale =() => {
                             Dashboard,  
                         </div>
 
-                        <div className="underline ml-1">
-                            Penjualan
+                        <div className="cursor-pointer font-bold p-1 text-lg flex items-center -mt-2 " onClick={BackBack2}>
+                            Penjualan,
                         </div>
+
+                        <div className="underline ml-1 " >
+                            Detail Salesman,  
+                        </div>
+
 
                     </div>
                 </div>

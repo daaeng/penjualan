@@ -59,8 +59,8 @@ const ChartSales = () => {
         setBranch(dataBr)
     }
 
-    const minuteTO = 600000
-    // 10-menit refersh hitungan ~ MS ~
+    const minuteTO = 960000
+    // 16-menit refersh hitungan ~ MS ~
     useEffect(() => {
 
         if(UbahTgl){
@@ -111,7 +111,7 @@ const ChartSales = () => {
                 console.log('Error Guys..!');
             })
         }
-    },[Start, Last, Compare, Branch])
+    },[Start, Last, Compare, Branch], minuteTO)
 
     const footer = (tooltipItems) => {
         let chrTool = (tooltipItems)

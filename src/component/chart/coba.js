@@ -1,5 +1,5 @@
 //Data grafik
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -10,9 +10,9 @@ import {
     Legend,
   } from 'chart.js';
 import { Bar} from 'react-chartjs-2';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
-function CobaChart(onChange){
+function CobaChart(){
 
     ChartJS.register(
         CategoryScale,
@@ -23,8 +23,9 @@ function CobaChart(onChange){
         Legend
     );
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const [tool, setTool] = useState([])
+    
     //data yg akan dikirim
     const [label, setLabel] = useState([])
     const [vall, setVall] = useState([])
@@ -40,23 +41,22 @@ function CobaChart(onChange){
       console.log('S data : ', dtVall);
       console.log('S data : ', tool);
 
-      onChange={label, vall}
-      // console.log('ini data : ', tool.label);
-      // console.log('ini data : ', tool.formattedValue);
-      // console.log('ini data : ', tool);
-      navigate('/detdtsalesman', label, vall, tool)
-
+      // navigate('/detdtsalesman', {
+      //   label : label,
+      //   value : vall,
+      //   chart : tool,
+      // })
     }
     
     const ovTip = (tooltipItem) => {
       let tip = tooltipItem
-      // setTool(tip)
+      setTool(tip)
       console.log('data : ', tip);
     }
 
     // useEffect(() => {
-    //   sHtool(navigate('/detdtsalesman'))
-    // })
+    //   ovTip()
+    // },[])
 
     const options = {
       responsive: true,

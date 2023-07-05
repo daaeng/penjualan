@@ -25,8 +25,8 @@ const TopItemCateg =() => {
         return ("Tabel Top Item Category")
     }
     
-    const minuteTO = 600000
-    // 10-menit refersh hitungan ~ MS ~
+    const minuteTO = 960000
+    // 16-menit refersh hitungan ~ MS ~
     const dataTab = () => {
         axios.get(baseURL)
         .then((response) => {

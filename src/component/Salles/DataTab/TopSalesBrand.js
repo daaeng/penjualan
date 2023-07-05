@@ -43,8 +43,8 @@ const TopSalesBrand =() => {
     setStart(firstDate)
     setEnd(tgl)
 
-    const minuteTO = 600000
-    // // 10-menit refersh hitungan ~ MS ~
+    const minuteTO = 960000
+    // 16-menit refersh hitungan ~ MS ~
     useEffect(() =>{
         // dataTab()        
         axios.get(baseURL, {

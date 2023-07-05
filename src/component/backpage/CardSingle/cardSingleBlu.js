@@ -53,8 +53,8 @@ const CardSingleBlu = () => {
     //     }
     // }
 
-    const minuteTO = 600000
-    // 10-menit
+    const minuteTO = 960000
+    // 16-menit
     useEffect(() => {
         axios.get(baseURL, {
             params : {
@@ -67,7 +67,7 @@ const CardSingleBlu = () => {
             setData(response.data.data)
 
         },minuteTO)
-    },[start, end])
+    },[start, end], minuteTO)
 
     // const perc = data.map((dtObj, idx) => {
     //     if (data.length < 0 ) {
