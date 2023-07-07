@@ -119,11 +119,11 @@ const ChartSales = () => {
         // navigate('', chrTool)
 
         //ini data percobaan
-        let sum = 0;      
-        tooltipItems.forEach(function(tooltipItem) {
-            sum += tooltipItem.parsed.y;
-        });
-        return 'Sum: ' + sum;
+        // let sum = 0;      
+        // tooltipItems.forEach(function(tooltipItem) {
+        //     sum += tooltipItem.parsed.y;
+        // });
+        // return 'Sum: ' + sum;
     }
 
     const options = {

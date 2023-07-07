@@ -1,5 +1,5 @@
 //Data grafik
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -48,21 +48,41 @@ function CobaChart(){
       // })
     }
     
-    const ovTip = (tooltipItem) => {
-      let tip = tooltipItem
-      setTool(tip)
-      console.log('data : ', tip);
+    const ovTip = () => {
+      let tip = options
+      let dtTip = JSON.stringify(tip.plugins.tooltip.data.datasets)
+      // .map((dt) => dt.data)
+      let dtTip2 = JSON.stringify(tip.plugins.tooltip.data)
+      let dataTip = JSON.parse(dtTip)
+      let dataTip2 = JSON.parse(dtTip2)
+      console.log('data   => ', dataTip);
+      console.log('data2  => ', dataTip2);
     }
 
-    // useEffect(() => {
-    //   ovTip()
-    // },[])
+    useEffect(() => {
+      ovTip()
+    })
 
+    const labels = ['01/01', '02/01', '03/01', '04/01', '05/01', '06/01', '07/01', '08/01', '09/01', '10/01'];
+    
+    const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Pembayaran',
+          data: [25, 38, 3, 53, 46, 10, 2, 10, 60, 17],
+          backgroundColor: 'rgba(255, 112, 92, 0.7)',
+        },
+          
+      ]
+    }
+    
     const options = {
       responsive: true,
       maintainAspectRatio: true,
       aspectRatio: 2,
 
+      showTooltips: true,
       scales: {
         y: {
           beginAtZero: true,
@@ -74,11 +94,14 @@ function CobaChart(){
           position: 'bottom',
         },
         tooltip: {
+          mode: "index",
+          intersect: false,
           enable: true,
           titleAlign: 'center',
+          data : data,
 
           filter: function(tooltipItem){
-            setTool(tooltipItem)
+            // setTool(tooltipItem)
             return tooltipItem.datasetIndex === 0 
           }
         },
@@ -91,32 +114,6 @@ function CobaChart(){
         },
       },
     };
-      
-    const labels = ['01/01', '02/01', '03/01', '04/01', '05/01', '06/01', '07/01', '08/01', '09/01', '10/01'];
-      
-    const data = {
-      labels,
-      datasets: [
-        {
-          label: 'Pembayaran',
-          data: [25, 38, 3, 53, 46, 10, 2, 10, 60, 17],
-          backgroundColor: 'rgba(255, 112, 92, 0.7)',
-        },
-          
-      ]
-    }
-
-    // const chartRef = useRef();
-    // const onClick = (event) => {
-    //   const {current:chart} =chartRef;
-
-    //   if (!chart) {
-    //     return;
-    //   }
-      
-    //   console.log(getElementAtEvent(chartRef.current, event));
-    //   console.log(getDatasetAtEvent(chartRef.current, event));
-    // }
 
     return(
         <>            
