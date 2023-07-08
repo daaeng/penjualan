@@ -39,7 +39,7 @@ function CobaChart(){
 
       console.log('S data : ', dtLabel);
       console.log('S data : ', dtVall);
-      console.log('S data : ', tool);
+      // console.log('S data : ', tool);
 
       // navigate('/detdtsalesman', {
       //   label : label,
@@ -48,15 +48,19 @@ function CobaChart(){
       // })
     }
     
-    const ovTip = () => {
-      let tip = options
-      let dtTip = JSON.stringify(tip.plugins.tooltip.data.datasets)
-      // .map((dt) => dt.data)
-      let dtTip2 = JSON.stringify(tip.plugins.tooltip.data)
-      let dataTip = JSON.parse(dtTip)
-      let dataTip2 = JSON.parse(dtTip2)
-      console.log('data   => ', dataTip);
-      console.log('data2  => ', dataTip2);
+    const ovTip = (tooltipItem) => {
+      console.log('Tooltip : ', tooltipItem);
+
+      // let tip = options
+      // let dtTip = JSON.stringify(tip.plugins.tooltip.data.datasets)
+      // // .map((dt) => dt.data)
+      // let dtTip2 = JSON.stringify(tip)
+      // let dataTip = JSON.parse(dtTip)
+      // let dataTip2 = JSON.parse(dtTip2)
+      // console.log('data   => ', dataTip);
+      // console.log('data2  => ', dataTip2);
+
+      // // console.log(tool);
     }
 
     useEffect(() => {
@@ -100,10 +104,11 @@ function CobaChart(){
           titleAlign: 'center',
           data : data,
 
-          filter: function(tooltipItem){
+          filter:function(tooltipItem){
             // setTool(tooltipItem)
+            // return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
             return tooltipItem.datasetIndex === 0 
-          }
+          },
         },
         callbacks: {
           footer : ovTip,
@@ -133,3 +138,4 @@ function CobaChart(){
 
 export default CobaChart
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
