@@ -115,6 +115,7 @@ function CobaChart(){
                 <div className='p-1'>
                   <div className='p-2 bg-teal-400 rounded-lg'>
                     <div>Data Active</div>
+                    
                     <div className='flex'>
                       <div className='flex mr-2'>
                         Tanggal : {Ltip} 
@@ -122,7 +123,12 @@ function CobaChart(){
                       <div>
                         Value : {Vtip}
                       </div>
+                    </div>
 
+                    <div className='justify-end'>
+                      <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
+                        Send
+                      </div>
                     </div>
                   </div>
                 </div>

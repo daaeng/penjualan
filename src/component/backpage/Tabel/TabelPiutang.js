@@ -72,7 +72,7 @@ export default function TablePiutang() {
     <>
       <div className=''>
         
-        <div className='bg-white sm:h-96 md:h-128= lg:h-128 rounded-lg' style={{ width: '100%' }}>
+        <div className='bg-white sm:h-96 md:h-128= lg:h-135 rounded-lg' style={{ width: '100%' }}>
           <DataGrid
             
             rows={data}

@@ -13,6 +13,7 @@ import SalesDetPembayaran from "./page/SalesDetail/SalesDetPembayaran";
 import SalesDetPenjualan from "./page/SalesDetail/SalesDetPenjualan";
 import DetailDatPiutang from "./page/SalesDetail/DetailDatPiutang";
 import DetSalesman from "./page/SalesDetail/DataTable/DetSalesman";
+import NotingPage from "./page/NotingPage";
 
 function App() {
   
@@ -41,7 +42,7 @@ function App() {
 
           <Route path="/Grosir" element = {<Ggrosir/>}/>
 
-          <Route path="*" element= {'NOT FOUND !'}/>
+          <Route path="*" element= {<NotingPage/>}/>
         </Routes>
       </Router>
 
