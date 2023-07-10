@@ -1,5 +1,5 @@
 //Data grafik
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -24,48 +24,34 @@ function CobaChart(){
     );
 
     // const navigate = useNavigate()
-    const [tool, setTool] = useState([])
     
     //data yg akan dikirim
     const [label, setLabel] = useState([])
     const [vall, setVall] = useState([])
+    const [Ltip, setLtip] = useState([])
+    const [Vtip, setVtip] = useState([])
 
     const sHtool =() => {
-      let dtLabel = (tool.label)
-      let dtVall = (tool.formattedValue)
+      console.log('S data : ', label);
+      console.log('S data : ', vall);
 
-      setLabel(dtLabel)
-      setVall(dtVall)
-
-      console.log('S data : ', dtLabel);
-      console.log('S data : ', dtVall);
-      // console.log('S data : ', tool);
-
-      // navigate('/detdtsalesman', {
-      //   label : label,
-      //   value : vall,
-      //   chart : tool,
-      // })
+      setLtip(label)
+      setVtip(vall)
+      // navigate('/detdtsalesman')
     }
     
     const ovTip = (tooltipItem) => {
-      console.log('Tooltip : ', tooltipItem);
+      let tp = tooltipItem
+      let dtLabel = (tp.label)
+      let dtVall = (tp.formattedValue)
 
-      // let tip = options
-      // let dtTip = JSON.stringify(tip.plugins.tooltip.data.datasets)
-      // // .map((dt) => dt.data)
-      // let dtTip2 = JSON.stringify(tip)
-      // let dataTip = JSON.parse(dtTip)
-      // let dataTip2 = JSON.parse(dtTip2)
-      // console.log('data   => ', dataTip);
-      // console.log('data2  => ', dataTip2);
-
-      // // console.log(tool);
+      setLabel(dtLabel)
+      setVall(dtVall)
     }
 
-    useEffect(() => {
-      ovTip()
-    })
+    // useEffect(() => {
+    //   // ovTip()
+    // })
 
     const labels = ['01/01', '02/01', '03/01', '04/01', '05/01', '06/01', '07/01', '08/01', '09/01', '10/01'];
     
@@ -74,7 +60,7 @@ function CobaChart(){
       datasets: [
         {
           label: 'Pembayaran',
-          data: [25, 38, 3, 53, 46, 10, 2, 10, 60, 17],
+          data: [25, 38, 3, 53, 46, 30, 5, 10, 60, 17],
           backgroundColor: 'rgba(255, 112, 92, 0.7)',
         },
           
@@ -86,7 +72,7 @@ function CobaChart(){
       maintainAspectRatio: true,
       aspectRatio: 2,
 
-      showTooltips: true,
+      // showTooltips: true,
       scales: {
         y: {
           beginAtZero: true,
@@ -102,16 +88,11 @@ function CobaChart(){
           intersect: false,
           enable: true,
           titleAlign: 'center',
-          data : data,
 
-          filter:function(tooltipItem){
-            // setTool(tooltipItem)
-            // return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+          filter: function(tooltipItem){
+            ovTip(tooltipItem)
             return tooltipItem.datasetIndex === 0 
           },
-        },
-        callbacks: {
-          footer : ovTip,
         },
         title: {
           display: true,
@@ -126,10 +107,25 @@ function CobaChart(){
 
                 <Bar 
                   options={options} 
-                  onClick={() => sHtool(label, vall, tool)}
+                  onClick={() => sHtool()}
                   data={data} 
                   // ref={chartRef}
                 />
+
+                <div className='p-1'>
+                  <div className='p-2 bg-teal-400 rounded-lg'>
+                    <div>Data Active</div>
+                    <div className='flex'>
+                      <div className='flex mr-2'>
+                        Tanggal : {Ltip} 
+                      </div>
+                      <div>
+                        Value : {Vtip}
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
 
             </div>
         </>
