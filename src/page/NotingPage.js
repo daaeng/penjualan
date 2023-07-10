@@ -22,6 +22,7 @@ function NotingPage() {
                 <div className='font-light text-6xl'>
                   ERROR 404 
                 </div>
+                <div className='border w-72 mb-1'/>
                 <div className='text-4xl font-sans'>
                   Page Not Found
                 </div>
