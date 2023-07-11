@@ -206,7 +206,7 @@ function Loggin () {
                                     </div>
 
                                     <div className="text-xl">
-                                        <label htmlFor='Username'>
+                                        <label htmlFor='Username' className='justify-start flex'>
                                             Username
                                         </label>
                                         
@@ -224,7 +224,7 @@ function Loggin () {
                                     </div>
 
                                     <div className="text-xl">
-                                        <label htmlFor='Password'>
+                                        <label htmlFor='Password' className='justify-start flex'>
                                             Password
                                         </label> 
                                     
@@ -240,7 +240,7 @@ function Loggin () {
                                     
                                     </div>
 
-                                    <div className='mt-4 text-xl'>
+                                    <div className='mt-4 text-xl font-mono'>
                                         <button className='w-full p-2 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
                                     </div>                                  
 

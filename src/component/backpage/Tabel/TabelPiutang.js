@@ -1,37 +1,14 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useState } from 'react';
-// import EditIcon from '@mui/icons-material/Edit';
-// import { useNavigate } from 'react-router-dom';
-// import { BiStreetView } from 'react-icons/bi';
-// import MaterialTable from "material-table";
+import { useEffect } from 'react';
+import { info } from 'autoprefixer';
 
 export default function TablePiutang() {
 
   // const navigate = useNavigate()
 
   const columns = [
-    // { no: 'no', headerName: 'No', width:30},
-    // {
-    //   field: 'actions',
-    //   type: 'actions',
-    //   headerName: 'View',
-    //   width: 55,
-    //   cellClassName: 'actions',
-    //   getActions: ({ id }) => {
-    //     // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
-
-    //     return [
-    //       <GridActionsCellItem
-    //         icon={<BiStreetView size={'20'}/>}
-    //         label="Edit"
-    //         className="textPrimary"
-    //         onClick={()=> amblDt(id)}
-    //         color="inherit"
-    //       />,
-    //     ];
-    //   },
-    // },
     { field: 'id', headerName: 'ID', width: 30 },
     { field: 'firstName', headerName: 'First name', width: 100 },
     { field: 'lastName', headerName: 'Last name', width: 100 },
@@ -79,16 +56,31 @@ export default function TablePiutang() {
   // }
 
   const [selRow, setSelRow] = useState()
+  // const [iTab, setITab] = useState([])
 
   // const onSelectionChange = (selRow) => {
   //   console.log(selRow);
   // }
 
-  const onRowClick = (e, clickedRow) => {
+  const onRowClick = (clickedRow) => {
     setSelRow(clickedRow);
-    console.log(selRow);
   }
+
+  const infoTab =() => {
+    let dTab = selRow
+    // setITab(dTab)
+    console.log('View : ', dTab);
+  }
+
+  // const tfTab = () => {
+  //   let fil = iTab.row
+  //   console.log('filter : ', fil);
+  // }
  
+  useEffect(() => {
+    infoTab()
+  })
+
   return (
     
     <>
@@ -101,9 +93,7 @@ export default function TablePiutang() {
             columns={columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
-            // checkboxSelection
             onRowClick={onRowClick}
-
             slots={{
               toolbar: GridToolbar, 
             }}
@@ -114,25 +104,32 @@ export default function TablePiutang() {
 
           />
 
-          {/* <MaterialTable
-            data={data}
-            columns={columns}
-            // pageSize={5}
-            // rowsPerPageOptions={[5]}
-            // checkboxSelection
-            onRowClick={onRowClick}
+          {/* <div className='p-1'>
+            <div className='p-2 bg-teal-400 rounded-lg'>
+                <div>Data Active</div>
+                
+                <div className='flex'>
+                  <div className='flex mr-2'>
+                    id : 
+                  </div>
+                  <div className='flex mr-2'>
+                    firstName : 
+                  </div>
+                  <div className='flex mr-2'>
+                    lastransaksi : 
+                  </div>
+                  <div className='flex mr-2'>
+                    ttransaksi : 
+                  </div>
+                </div>
 
-            // slots={{
-            //   toolbar: GridToolbar, 
-            // }}
-            // options={
-              
-            // }
-            onSelectionChange={onSelectionChange}
-          />
-
-          {selRow} */}
-          {/* {selRow && <h3>select : {selRow} </h3>} */}
+                <div className='justify-end'>
+                  <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
+                      Send
+                  </div>
+                </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </>
