@@ -1,15 +1,37 @@
 import * as React from 'react';
-import { DataGrid, GridActionsCellItem, GridToolbar } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { useState } from 'react';
 // import EditIcon from '@mui/icons-material/Edit';
-import { useNavigate } from 'react-router-dom';
-import { BiStreetView } from 'react-icons/bi';
+// import { useNavigate } from 'react-router-dom';
+// import { BiStreetView } from 'react-icons/bi';
+// import MaterialTable from "material-table";
 
 export default function TablePiutang() {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const columns = [
     // { no: 'no', headerName: 'No', width:30},
+    // {
+    //   field: 'actions',
+    //   type: 'actions',
+    //   headerName: 'View',
+    //   width: 55,
+    //   cellClassName: 'actions',
+    //   getActions: ({ id }) => {
+    //     // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
+
+    //     return [
+    //       <GridActionsCellItem
+    //         icon={<BiStreetView size={'20'}/>}
+    //         label="Edit"
+    //         className="textPrimary"
+    //         onClick={()=> amblDt(id)}
+    //         color="inherit"
+    //       />,
+    //     ];
+    //   },
+    // },
     { field: 'id', headerName: 'ID', width: 30 },
     { field: 'firstName', headerName: 'First name', width: 100 },
     { field: 'lastName', headerName: 'Last name', width: 100 },
@@ -31,26 +53,6 @@ export default function TablePiutang() {
     { field: 'lastransaksi', headerName: 'Last Transaction', width: 125},
     { field: 'ttransaksi', headerName: 'Total Transaction', width: 125},
     { field: 'detail', headerName: 'Detail', width: 125},
-    {
-      field: 'actions',
-      type: 'actions',
-      headerName: 'View',
-      width: 55,
-      cellClassName: 'actions',
-      getActions: ({ id }) => {
-        // const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;
-
-        return [
-          <GridActionsCellItem
-            icon={<BiStreetView size={'20'}/>}
-            label="Edit"
-            className="textPrimary"
-            onClick={()=> navigate('/DetailDatPiutang')}
-            color="inherit"
-          />,
-        ];
-      },
-    },
   ];
 
   const data = [
@@ -67,6 +69,26 @@ export default function TablePiutang() {
     
   ];
 
+  // const amblDt =(id) => {
+  //   let sell = (id)
+  //   let detail = JSON.parse(sell)
+  //   // setSelect(sell)
+  //   console.log('datanya select : ', sell);
+  //   console.log('View All : ', detail);
+  //   // navigate('/detdtsalesman', sell)
+  // }
+
+  const [selRow, setSelRow] = useState()
+
+  // const onSelectionChange = (selRow) => {
+  //   console.log(selRow);
+  // }
+
+  const onRowClick = (e, clickedRow) => {
+    setSelRow(clickedRow);
+    console.log(selRow);
+  }
+ 
   return (
     
     <>
@@ -79,13 +101,38 @@ export default function TablePiutang() {
             columns={columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
-            checkboxSelection
+            // checkboxSelection
+            onRowClick={onRowClick}
 
             slots={{
               toolbar: GridToolbar, 
             }}
+            // options={
+              
+            // }
+            // onSelectionChange={onSelectionChange}
 
           />
+
+          {/* <MaterialTable
+            data={data}
+            columns={columns}
+            // pageSize={5}
+            // rowsPerPageOptions={[5]}
+            // checkboxSelection
+            onRowClick={onRowClick}
+
+            // slots={{
+            //   toolbar: GridToolbar, 
+            // }}
+            // options={
+              
+            // }
+            onSelectionChange={onSelectionChange}
+          />
+
+          {selRow} */}
+          {/* {selRow && <h3>select : {selRow} </h3>} */}
         </div>
       </div>
     </>

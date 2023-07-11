@@ -19,12 +19,11 @@ const DetSale =() => {
         console.log('Mundur ke Dash Sales');
     }
 
-    const data =(label, vall, tool) => {
+    const data =(label, vall) => {
         let dtIn = label
         let dtIn2 = vall
-        let dtIn3 = tool
+
         console.log('data masuk : ', dtIn, ' & ', dtIn2);
-        console.log('data masuk : ', dtIn3);
     }
 
     useEffect(() => {

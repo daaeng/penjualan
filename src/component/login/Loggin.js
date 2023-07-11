@@ -138,7 +138,7 @@ function Loggin () {
                 <section>
                     <ToastContainer/>
                     
-                    <div className=''>
+                    <div className='App'>
                         <div className="flex bg-slate-100 rounded-xl h-fit">
                             <div>
                                 <img src={Logo} alt='sakir' className={`sm:w-0 md:w-32 lg:w-fit rounded-l-xl duration-500 hover:text-yellow-600`} />
@@ -183,7 +183,7 @@ function Loggin () {
                 </section>
             ):(
 
-                <section className="flex rounded-xl bg-red-50 shadow-lg">
+                <section className="flex rounded-xl bg-red-50 shadow-lg text-black">
                     
 
                 {/* Gambar */}
@@ -192,20 +192,20 @@ function Loggin () {
                     </div>
 
                     {/* Login */}
-                    <div className="sm:p-1 md:p-2 lg:p-10 ">
+                    <div className="sm:p-1 md:p-2 lg:p-3">
                         <div className='p-1 rounded-xl'>
 
                             <form onSubmit={handleSubmit}>
 
                                 {/* Header Login */}
                                 <div className=''>
-                                    <div className='flex justify-center font-mono'>
+                                    <div className='flex justify-center font-mono mb-3'>
                                         <h2>
                                             Login
                                         </h2>
                                     </div>
 
-                                    <div className="">
+                                    <div className="text-xl">
                                         <label htmlFor='Username'>
                                             Username
                                         </label>
@@ -223,7 +223,7 @@ function Loggin () {
 
                                     </div>
 
-                                    <div className="">
+                                    <div className="text-xl">
                                         <label htmlFor='Password'>
                                             Password
                                         </label> 
@@ -240,7 +240,7 @@ function Loggin () {
                                     
                                     </div>
 
-                                    <div className='mt-4'>
+                                    <div className='mt-4 text-xl'>
                                         <button className='w-full p-2 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
                                     </div>                                  
 

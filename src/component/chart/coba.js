@@ -32,12 +32,13 @@ function CobaChart(){
     const [Vtip, setVtip] = useState([])
 
     const sHtool =() => {
-      console.log('S data : ', label);
-      console.log('S data : ', vall);
+      console.log('S Tgl : ', label);
+      console.log('S Raw : ', vall);
 
       setLtip(label)
       setVtip(vall)
       // navigate('/detdtsalesman')
+      // navigate('/detpiutang')
     }
     
     const ovTip = (tooltipItem) => {
@@ -60,7 +61,7 @@ function CobaChart(){
       datasets: [
         {
           label: 'Pembayaran',
-          data: [25, 38, 3, 53, 46, 30, 5, 10, 60, 17],
+          data: [25, 38, 3, 53, 46, 30, 15, 10, 60, 17],
           backgroundColor: 'rgba(255, 112, 92, 0.7)',
         },
           
@@ -104,35 +105,33 @@ function CobaChart(){
     return(
         <>            
             <div className='bg-white rounded w-full'>
-
                 <Bar 
                   options={options} 
-                  onClick={() => sHtool()}
+                  onClick={() => sHtool(Ltip, Vtip)}
                   data={data} 
                   // ref={chartRef}
                 />
+            </div>
 
-                <div className='p-1'>
-                  <div className='p-2 bg-teal-400 rounded-lg'>
+            <div className='p-1'>
+                <div className='p-2 bg-teal-400 rounded-lg'>
                     <div>Data Active</div>
                     
                     <div className='flex'>
                       <div className='flex mr-2'>
-                        Tanggal : {Ltip} 
+                          Tanggal : {Ltip}
                       </div>
                       <div>
-                        Value : {Vtip}
+                          Value : {Vtip}
                       </div>
                     </div>
 
                     <div className='justify-end'>
                       <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
-                        Send
+                          Send
                       </div>
                     </div>
-                  </div>
                 </div>
-
             </div>
         </>
     )

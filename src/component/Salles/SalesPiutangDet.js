@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SiAudiomack } from "react-icons/si";
 import { VscDebugStepBack } from "react-icons/vsc";
 // import FilterTime from "../backpage/filterTime";
@@ -15,6 +15,17 @@ const SalesPiutangDet =() => {
         navigate('/sales')
         console.log('Mundur ke Dash Sales');
     }
+
+    const sHtool =(Ltip, Vtip) => {
+        console.log('IN data : ', Ltip, ' & ', Vtip);
+        // console.log('IN data : ', Vtip);
+        // navigate('/detdtsalesman')
+        // navigate('/detpiutang')
+    }
+
+    useEffect(() => {
+        sHtool()
+    },[])
 
     return (
         <>
@@ -46,7 +57,7 @@ const SalesPiutangDet =() => {
 
                 <div className='ml-2 mt-3 '>
                     <h3>
-                        Piutang
+                        Sales ! (DUMMY)
                     </h3>
                     <div className='border ml-52 -mt-5 mb-2'/>
 
@@ -65,6 +76,27 @@ const SalesPiutangDet =() => {
                         </div>
 
                     </div>
+
+                    {/* <div className='p-1'>
+                        <div className='p-2 bg-teal-400 rounded-lg'>
+                            <div>Data Active</div>
+                            
+                            <div className='flex'>
+                            <div className='flex mr-2'>
+                                Tanggal : 
+                            </div>
+                            <div>
+                                Value : 
+                            </div>
+                            </div>
+
+                            <div className='justify-end'>
+                            <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
+                                Send
+                            </div>
+                            </div>
+                        </div>
+                    </div> */}
 
                     
                 </div>

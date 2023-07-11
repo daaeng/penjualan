@@ -2,6 +2,8 @@ import React from 'react'
 import Sdbar from '../component/Sidebar/sdbar';
 
 function NotingPage() {
+
+  console.log('Error 404, page not found');
   
   return (
 
