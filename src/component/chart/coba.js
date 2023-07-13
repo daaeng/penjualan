@@ -62,7 +62,15 @@ function CobaChart(){
         {
           label: 'Pembayaran',
           data: [25, 38, 3, 53, 46, 30, 15, 10, 60, 17],
-          backgroundColor: 'rgba(255, 112, 92, 0.7)',
+          // backgroundColor: 'rgba(255, 112, 92, 0.7)',
+          backgroundColor: (context) => {
+          const ctx = context.chart.ctx;
+          const gradient = ctx.createLinearGradient(0, 10, 0, 300);
+          gradient.addColorStop(0, "rgba(255, 112, 92, 1)");
+          gradient.addColorStop(1, "rgba(255, 112, 92, 0.2)");
+          return gradient;
+        },
+          borderColor: "rgba(75,192,192,1)"
         },
           
       ]

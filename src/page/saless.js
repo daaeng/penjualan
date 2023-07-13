@@ -12,7 +12,7 @@ const Psale = () => {
 
         <div>
           <section className={`-mt-1`}>
-            <Sales/>
+            {/* <Sales/> */}
           </section>
         </div>
       </div>

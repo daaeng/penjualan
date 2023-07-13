@@ -2,7 +2,6 @@ import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { info } from 'autoprefixer';
 
 export default function TablePiutang() {
 
@@ -46,36 +45,24 @@ export default function TablePiutang() {
     
   ];
 
-  // const amblDt =(id) => {
-  //   let sell = (id)
-  //   let detail = JSON.parse(sell)
-  //   // setSelect(sell)
-  //   console.log('datanya select : ', sell);
-  //   console.log('View All : ', detail);
-  //   // navigate('/detdtsalesman', sell)
-  // }
-
   const [selRow, setSelRow] = useState()
-  // const [iTab, setITab] = useState([])
-
-  // const onSelectionChange = (selRow) => {
-  //   console.log(selRow);
-  // }
+  const [rid, setRid] = useState()
+  const [stNm, setStNm] = useState()
+  const [trx, setTrx] = useState()
+  const [ttrx, setTTrx] = useState()
 
   const onRowClick = (clickedRow) => {
     setSelRow(clickedRow);
+    setRid(clickedRow.row.id)  
+    setStNm(clickedRow.row.firstName)  
+    setTrx(clickedRow.row.lastransaksi)  
+    setTTrx(clickedRow.row.ttransaksi)  
   }
 
   const infoTab =() => {
     let dTab = selRow
-    // setITab(dTab)
-    console.log('View : ', dTab);
+    console.log('V Data : ', dTab);
   }
-
-  // const tfTab = () => {
-  //   let fil = iTab.row
-  //   console.log('filter : ', fil);
-  // }
  
   useEffect(() => {
     infoTab()
@@ -97,29 +84,25 @@ export default function TablePiutang() {
             slots={{
               toolbar: GridToolbar, 
             }}
-            // options={
-              
-            // }
-            // onSelectionChange={onSelectionChange}
 
           />
 
-          {/* <div className='p-1'>
+          <div className='p-1'>
             <div className='p-2 bg-teal-400 rounded-lg'>
                 <div>Data Active</div>
                 
-                <div className='flex'>
-                  <div className='flex mr-2'>
-                    id : 
+                <div className=''>
+                  <div className=' mr-2'>
+                    id : {rid}
                   </div>
-                  <div className='flex mr-2'>
-                    firstName : 
+                  <div className=' mr-2'>
+                    firstName : {stNm}
                   </div>
-                  <div className='flex mr-2'>
-                    lastransaksi : 
+                  <div className=' mr-2'>
+                    lastransaksi : {trx}
                   </div>
-                  <div className='flex mr-2'>
-                    ttransaksi : 
+                  <div className=' mr-2'>
+                    ttransaksi : {ttrx}
                   </div>
                 </div>
 
@@ -129,7 +112,8 @@ export default function TablePiutang() {
                   </div>
                 </div>
             </div>
-          </div> */}
+          </div>
+
         </div>
       </div>
     </>
