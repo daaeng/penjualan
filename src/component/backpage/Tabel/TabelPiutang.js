@@ -2,6 +2,7 @@ import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { useState } from 'react';
 import { useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
 export default function TablePiutang() {
 
@@ -42,7 +43,7 @@ export default function TablePiutang() {
     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36, lastransaksi: '05/01/2023', ttransaksi: 46 },
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 18, lastransaksi: '07/01/2023', ttransaksi: 2 },
     { id: 10, lastName: 'Zahro', firstName: 'Aulia', age: 24, lastransaksi: '04/01/2023', ttransaksi: 53 },
-    
+      
   ];
 
   const [selRow, setSelRow] = useState()
@@ -57,11 +58,16 @@ export default function TablePiutang() {
     setStNm(clickedRow.row.firstName)  
     setTrx(clickedRow.row.lastransaksi)  
     setTTrx(clickedRow.row.ttransaksi)  
+
+    // navigate('/detdtsalesman')
+
   }
 
   const infoTab =() => {
     let dTab = selRow
-    console.log('V Data : ', dTab);
+    console.log('V Table Data : ', dTab);
+    // navigate('/detdtsalesman')
+
   }
  
   useEffect(() => {
@@ -107,9 +113,9 @@ export default function TablePiutang() {
                 </div>
 
                 <div className='justify-end'>
-                  <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
-                      Send
-                  </div>
+                  <button className='p-1 bg-teal-500 w-full rounded-lg hover:bg-teal-600 text-center hover:text-white'>
+                      Detail
+                  </button>
                 </div>
             </div>
           </div>

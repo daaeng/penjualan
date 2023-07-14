@@ -59,7 +59,7 @@ const SalesPiutangDet =() => {
                     <h3>
                         Sales ! (DUMMY)
                     </h3>
-                    <div className='border ml-52 -mt-5 mb-2'/>
+                    <div className='border ml-56 -mt-5 mb-2'/>
 
                 </div>
 

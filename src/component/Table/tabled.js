@@ -13,6 +13,8 @@ const Tabled = (props) => {
             columns={props.columns}
             pageSize={5}
             rowsPerPageOptions={[5]}
+            onRowClick={props.onRowClick}
+
             // checkboxSelection
             // onRowSelectionModelChange={props.dtSelection}
 

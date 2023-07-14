@@ -37,9 +37,16 @@ function CobaChart(){
 
       setLtip(label)
       setVtip(vall)
-      // navigate('/detdtsalesman')
+      // navigate('/detdtsalesman', Ltip, Vtip)
       // navigate('/detpiutang')
     }
+
+    // const handleSend =() => {
+    //   this.props.history.push({
+    //     path: '/detdtsalesman',
+    //     state: Ltip, Vtip,
+    //   })
+    // }
     
     const ovTip = (tooltipItem) => {
       let tp = tooltipItem
@@ -116,6 +123,7 @@ function CobaChart(){
                 <Bar 
                   options={options} 
                   onClick={() => sHtool(Ltip, Vtip)}
+                  // onClick={() => {this.handleSend.bind(this.Ltip)}}
                   data={data} 
                   // ref={chartRef}
                 />
@@ -136,7 +144,7 @@ function CobaChart(){
 
                     <div className='justify-end'>
                       <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
-                          Send
+                          Detail
                       </div>
                     </div>
                 </div>
