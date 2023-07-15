@@ -1,5 +1,6 @@
 import axios from '../config/api/axios'
 import Logo from '../../assets/log.png'
+import LogoCandi from '../../assets/L_Candi.png'
 import useAuth from '../../hooks/useAuth'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaBoxOpen } from 'react-icons/fa'
@@ -7,7 +8,7 @@ import { AiFillTags } from 'react-icons/ai'
 import { SiAudiomack } from 'react-icons/si'
 import { BiMoneyWithdraw } from 'react-icons/bi'
 import { MdShoppingBasket } from 'react-icons/md'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,7 +25,7 @@ function Loggin () {
         {name:'Grosir', icon: <MdShoppingBasket/>, path:'/Grosir'},
     ];
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const {setAuth} = useAuth(useAuth)  
     const userRef = useRef();
@@ -134,9 +135,21 @@ function Loggin () {
     
     return(
         <>
+            <ToastContainer
+                        position="top-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
             {success ? ( 
                 <section>
-                    <ToastContainer/>
+                    
                     
                     <div className='App'>
                         <div className="flex bg-slate-100 rounded-xl h-fit">
@@ -183,7 +196,7 @@ function Loggin () {
                 </section>
             ):(
 
-                <section className="flex rounded-xl bg-red-50 shadow-lg text-black">
+                <section className="flex rounded-xl bg-light-white shadow-lg text-black">
                     
 
                 {/* Gambar */}
@@ -193,13 +206,17 @@ function Loggin () {
 
                     {/* Login */}
                     <div className="sm:p-1 md:p-2 lg:p-3">
-                        <div className='p-1 rounded-xl'>
+                        <div className='p-1 rounded-xl text-white'>
 
                             <form onSubmit={handleSubmit}>
 
                                 {/* Header Login */}
                                 <div className=''>
-                                    <div className='flex justify-center font-mono mb-3'>
+                                    <div className='lg:w-full justify-center flex'>
+                                        <img src={LogoCandi} alt='sakir' className={`justify-center lg:w-68 md:w-48 sm:w-32`} />
+                                    </div>
+
+                                    <div className='flex justify-center font-mono mt-2'>
                                         <h2>
                                             Login
                                         </h2>
@@ -241,15 +258,13 @@ function Loggin () {
                                     </div>
 
                                     <div className='mt-4 text-xl font-mono'>
-                                        <button className='w-full p-2 bg-blue-300 hover:bg-blue-400 rounded-md'>Log In</button>
+                                        <button className='w-full p-2 bg-blue-300 hover:bg-blue-400 text-black rounded-md'>Log In</button>
                                     </div>                                  
 
                                 </div>
 
-                                <div className='mt-3 md:-mb-14 lg:-mb-20'>
+                                <div className='mt-3 sm:-mb-14 md:-mb-14 lg:-mb-20'>
                                     <div className='text-red-700 flex w-full justify-center rounded items-center font-mono'>
-                                        
-                                        <ToastContainer/>
                                         
                                         <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live='assertive'>
                                             {errMsg}
