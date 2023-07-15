@@ -19,7 +19,7 @@ function NotingPage() {
           <section className={`bg-gray-800 -mt-20 h-screen w-screen text-white`}>
 
             <div className='App'>
-              <header className='App-header'>
+              <header className='App-notpage'>
                 
                 <div className='font-light text-6xl'>
                   ERROR 404 
