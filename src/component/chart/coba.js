@@ -38,7 +38,6 @@ function CobaChart(){
       setLtip(label)
       setVtip(vall)
       // navigate('/detdtsalesman', Ltip, Vtip)
-      // navigate('/detpiutang')
     }
 
     // const handleSend =() => {

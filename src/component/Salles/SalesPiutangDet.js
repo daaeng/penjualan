@@ -7,7 +7,7 @@ import TablePiutang from "../backpage/Tabel/TabelPiutang";
 import { useNavigate } from "react-router-dom";
 import CobaChart from "../chart/coba";
 
-const SalesPiutangDet =() => {
+const SalesPiutangDet =(props) => {
 
     const navigate = useNavigate()
 
@@ -16,15 +16,20 @@ const SalesPiutangDet =() => {
         console.log('Mundur ke Dash Sales');
     }
 
-    const sHtool =(Ltip, Vtip) => {
-        console.log('IN data : ', Ltip, ' & ', Vtip);
-        // console.log('IN data : ', Vtip);
-        // navigate('/detdtsalesman')
-        // navigate('/detpiutang')
-    }
+    // const sHtool =(selRow) => {
+    //     console.log('IN data : ', selRow);
+    //     // console.log('IN data : ', Vtip);
+    //     // navigate('/detdtsalesman')
+    //     // navigate('/detpiutang')
+    // }
 
+    const onRowClick = (selRow) => {
+        console.log('tes : ' ,selRow);
+    }
+      
     useEffect(() => {
-        sHtool()
+        // sHtool()
+        onRowClick()
     },[])
 
     return (
@@ -72,7 +77,7 @@ const SalesPiutangDet =() => {
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
-                            <TablePiutang/>
+                            <TablePiutang  onClick={onRowClick}/>
                         </div>
 
                     </div>
