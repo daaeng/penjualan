@@ -4,13 +4,13 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Tabled from '../../Table/tabled';
 import axios from '../../config/api/axios';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const baseURL = '/products'
 
 export default function TablePiutang() {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 30 },
@@ -43,16 +43,16 @@ export default function TablePiutang() {
 
   const [selRow, setSelRow] = useState()
   const [rid, setRid] = useState()
-  const [stNm, setStNm] = useState()
-  const [trx, setTrx] = useState()
-  const [ttrx, setTTrx] = useState()
+  // const [stNm, setStNm] = useState()
+  // const [trx, setTrx] = useState()
+  // const [ttrx, setTTrx] = useState()
 
   const onRowClick = (clickedRow) => {
-    setSelRow(clickedRow);
+    setSelRow(clickedRow.row);
     setRid(clickedRow.row.id)  
-    setStNm(clickedRow.row.title)  
-    setTrx(clickedRow.row.category)  
-    setTTrx(clickedRow.row.price)  
+    // setStNm(clickedRow.row.title)  
+    // setTrx(clickedRow.row.category)  
+    // setTTrx(clickedRow.row.price)  
 
     // navigate('/detdtsalesman')
 
@@ -61,7 +61,12 @@ export default function TablePiutang() {
   const infoTab =() => {
     let dTab = selRow
     console.log('V Table Data : ', dTab);
-    // navigate('/detdtsalesman')
+    if (dTab != null) {
+      navigate(`/detdtsalesman/${rid}`, {state: {rid}})
+      
+    } else {
+      console.log('Mohon pilih data Table yang ingin di lihat');
+    }
   }
   
   // const minuteTO = 960000
@@ -77,9 +82,6 @@ export default function TablePiutang() {
       setData(response.data.products);
     // setData(response)
     })
-
-  // infoTab()
-      
   },[])
 
   return (
@@ -96,7 +98,7 @@ export default function TablePiutang() {
           />
         </div>
         
-        <div className='p-1'>
+        {/* <div className='p-1'>
           <div className='p-2 bg-teal-400 rounded-lg'>
               <div>Data Active</div>
               
@@ -122,7 +124,8 @@ export default function TablePiutang() {
                 </div>
               </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
     </>
   );

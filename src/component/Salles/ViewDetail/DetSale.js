@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
-// import SalesDetSalesman from "../DetailDataPenjualan/SalesDetSalesman";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SiAudiomack } from "react-icons/si";
 import { VscDebugStepBack } from "react-icons/vsc";
-import CobaChart from "../../chart/coba";
+import axios from "../../config/api/axios";
+
+const baseURL = '/products?'
 
 const DetSale =() => {
 
     const navigate = useNavigate()
+    const location = useLocation();
+
 
     const BackBack =() => {
         navigate('/sales')
@@ -19,22 +22,24 @@ const DetSale =() => {
         console.log('Mundur ke Dash Sales');
     }
 
-    const data =(label, vall) => {
-        let dtIn = label
-        let dtIn2 = vall
-
-        console.log('data masuk : ', dtIn, ' & ', dtIn2);
+    const dtGetSend =() => {
+        let show = location.state.rid
+        console.log(show);
+        axios.get(baseURL, {
+            params: {
+                baseURL: show
+            }
+        }).then((resp) => {
+            console.log(resp.data);
+        })
     }
 
     useEffect(() => {
-        data()
-    },[])
+        dtGetSend()
+    })
 
     return(
         <>
-            <div className="hidden">
-                <CobaChart sHtool={data}/>
-            </div>
             <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
                 <div className=' mt-1'>
                     <div className='grid grid-cols-2'>  
@@ -74,8 +79,10 @@ const DetSale =() => {
                 <div className="p-1 mt-3">
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
-                        <div className="col-span-1 p-2 bg-marron">
+                        <div className="col-span-1 p-2 bg-marron text-white">
                             {/* <SalesDetSalesman/> */}
+                            sudah dapat id data tinggal masukan params API, ini ID nya : _
+                            {location.state.rid}
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
