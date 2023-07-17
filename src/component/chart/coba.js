@@ -129,24 +129,25 @@ function CobaChart(){
             </div>
 
             <div className='p-1'>
-                <div className='p-2 bg-teal-400 rounded-lg'>
-                    <div>Data Active</div>
-                    
-                    <div className='flex'>
-                      <div className='flex mr-2'>
-                          Tanggal : {Ltip}
-                      </div>
-                      <div>
-                          Value : {Vtip}
-                      </div>
+              <div className='p-2 bg-gradient-to-b from-teal-300 to-teal-200 rounded-lg'>
+                  <div className='flex justify-center'>Data Active</div>
+                  <div className='flex justify-center'>Detail Data Chart</div>
+                  
+                  <div className=''>
+                    <div className=' mr-2'>
+                        Tanggal : {Ltip}
                     </div>
+                    <div>
+                        Value : {Vtip}
+                    </div>
+                  </div>
 
-                    <div className='justify-end'>
-                      <div className='p-1 bg-teal-500 hover:bg-teal-600 text-center hover:text-white'>
-                          Detail
-                      </div>
+                  <div className='justify-end'>
+                    <div className='p-1 bg-gradient-to-b from-teal-400 to-teal-300 rounded-lg hover:from-teal-500 hover:to-teal-400 text-center hover:text-white'>
+                        Detail
                     </div>
-                </div>
+                  </div>
+              </div>
             </div>
         </>
     )
