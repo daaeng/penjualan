@@ -8,7 +8,7 @@ import {RiSettings3Fill } from 'react-icons/ri'
 import {MdShoppingBasket } from 'react-icons/md'
 import {BiSearch, BiMoneyWithdraw } from 'react-icons/bi'
 import {HiUserCircle, HiUser} from 'react-icons/hi'
-import {GiHexagonalNut} from 'react-icons/gi'
+import {TbLayoutSidebarLeftExpand} from 'react-icons/tb'
 import { ToastContainer } from 'react-toastify'
 import AlertDialog from '../backpage/AlertMod/AlertDialog'
 
@@ -109,7 +109,7 @@ function Sdbar() {
         
         <nav className = {`top-20 h-fit mt-5 lg:ml-1 md:ml-1 sm:ml-1 py-2 pt-10 duration-300  ${open ? 'w-48' : ' sm:w-10 md:w-16 '} `}>
             <div className=' -ml-4'>
-                <GiHexagonalNut size={'24'} className={`rotate-12 cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
+                <TbLayoutSidebarLeftExpand size={'24'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
             <div className={`duration-300 ${!open && 'hidden'}`}>
                 <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>
