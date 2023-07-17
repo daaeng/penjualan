@@ -30,7 +30,7 @@ function App() {
           <Route path="/detpiutang" element = {<SalesDetPiutang/>} />
           <Route path="/detpembayaran" element = {<SalesDetPembayaran/>} />
           <Route path="/detpenjualan" element = {<SalesDetPenjualan/>} />
-          <Route path="/detdtsalesman" element = {<DetSalesman/>} />
+          <Route path="/detdtsalesman/:id" element = {<DetSalesman/>} />
 
           <Route path="/DetailDatPiutang" element = {<DetailDatPiutang/>} />
           
