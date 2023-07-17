@@ -66,6 +66,7 @@ module.exports = {
         'darkgolden'  : 'rgb(184,134,11)',
         'marron'      : '#E32222',
         // 'rgb(128,0,0)',
+        'merah'        : '#E70000',
         'redd'        : '#B22222',
         'lightgold'   : '#FFD779',
         'cobamerah'   : '#B30024',
