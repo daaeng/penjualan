@@ -19,20 +19,20 @@ const SalesPiutangDet =(props) => {
             <div className=' sm:ml-8 md:ml-8 lg:ml-14 mr-3'>
                 <div className=' mt-1'>
                     <div className='grid grid-cols-2'>  
-                        <h2 className='col-span-1 font-mono text-black items-center flex'>
+                        <h2 className='col-span-1 font-mono text-white items-center flex'>
                             <SiAudiomack className='mr-1' size={'20'}/>Sales
                         </h2>
                     </div>
                     <div className='border ' />
 
                     <div className="flex p-1">
-                        <div className="cursor-pointer font-bold p-1 text-lg flex items-center -mt-2" onClick={BackBack}>
+                        <div className="cursor-pointer text-white font-bold p-1 text-lg flex items-center -mt-2" onClick={BackBack}>
                             <VscDebugStepBack />
 
                             Dashboard,  
                         </div>
 
-                        <div className="underline ml-1">
+                        <div className="text-white underline ml-1">
                             Piutang
                         </div>
 
@@ -40,10 +40,10 @@ const SalesPiutangDet =(props) => {
                 </div>
 
                 <div className='ml-2 mt-3 '>
-                    <h3>
+                    <h3 className="text-white">
                         Sales ! (DUMMY)
                     </h3>
-                    <div className='border ml-56 -mt-5 mb-2'/>
+                    {/* <div className='border ml-56 -mt-5 mb-2'/> */}
 
                 </div>
 

@@ -5,7 +5,7 @@ import DetSale from "../../../component/Salles/ViewDetail/DetSale";
 const DetSalesman = () => {
     return(
         <>
-            <div>
+            <div className='App-bgpage'>
                 <div>
                     <Sdbar/>
                 </div>

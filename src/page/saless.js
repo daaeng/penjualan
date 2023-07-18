@@ -5,7 +5,7 @@ import Sales from '../component/Salles/sales'
 const Psale = () => {
   return (
     <> 
-      <div>
+      <div className='App-bgpage'>
         <div>
           <Sdbar/>
         </div>

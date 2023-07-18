@@ -43,19 +43,10 @@ export default function TablePiutang() {
 
   const [selRow, setSelRow] = useState()
   const [rid, setRid] = useState()
-  // const [stNm, setStNm] = useState()
-  // const [trx, setTrx] = useState()
-  // const [ttrx, setTTrx] = useState()
 
   const onRowClick = (clickedRow) => {
     setSelRow(clickedRow.row);
     setRid(clickedRow.row.id)  
-    // setStNm(clickedRow.row.title)  
-    // setTrx(clickedRow.row.category)  
-    // setTTrx(clickedRow.row.price)  
-
-    // navigate('/detdtsalesman')
-
   }
   
   const infoTab =() => {
@@ -68,21 +59,21 @@ export default function TablePiutang() {
       console.log('Mohon pilih data Table yang ingin di lihat');
     }
   }
-  
-  // const minuteTO = 960000
+
+  const minuteTO = 960000
   // 16-menit refersh hitungan ~ MS ~~
-  useEffect(() => {
-    infoTab()
-  })
-  
   const [ data, setData] = useState([])
   useEffect(() =>{
     axios.get(baseURL)
     .then((response) => {
       setData(response.data.products);
-    // setData(response)
-    })
+      // setData(response)
+    }, minuteTO)
   },[])
+  
+  useEffect(() => {
+    infoTab()
+  })
 
   return (
     

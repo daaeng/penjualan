@@ -5,7 +5,7 @@ import SalesPiutangDet from "../../component/Salles/SalesPiutangDet";
 const SalesDetPiutang = () => {
     return(
         <>
-            <div>
+            <div className="App-bgpage">
                 <div>
 
                     <Sdbar/>
