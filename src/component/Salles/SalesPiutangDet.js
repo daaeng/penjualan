@@ -50,11 +50,11 @@ const SalesPiutangDet =(props) => {
                 <div className="p-1 mt-3">
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
-                        <div className="col-span-1 p-2 bg-marron">
+                        <div className="col-span-1 p-2 bg-red-700">
                             <CobaChart/>
                         </div>
 
-                        <div className="col-span-1 p-2 bg-marron">
+                        <div className="col-span-1 p-2 bg-red-700">
                             <TablePiutang />
                         </div>
 
