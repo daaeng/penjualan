@@ -63,7 +63,7 @@ main{
 }
 
 .App-bgpage {
-  background: linear-gradient( #CD0000, #CD0000, #FFFFFF, #FFFFFF);
+  background: linear-gradient( #E70000, #CD0000, #FFFFFF, #FFFFFF);
   min-height: 100vh;
   /* display: flex; */
   /* flex-direction: column; */
