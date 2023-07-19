@@ -80,7 +80,7 @@ export default function TablePiutang() {
     <>
       <div className=''>
         
-        <div className='bg-white sm:h-96 md:h-128 rounded-lg' style={{ width: '100%' }}>
+        <div className='bg-white sm:h-96 md:h-auto rounded-lg' style={{ width: '100%' }}>
           <Tabled 
             data={data} 
             columns={columns} 
