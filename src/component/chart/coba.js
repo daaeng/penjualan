@@ -72,8 +72,8 @@ function CobaChart(){
           backgroundColor: (context) => {
           const ctx = context.chart.ctx;
           const gradient = ctx.createLinearGradient(0, 10, 0, 300);
-          gradient.addColorStop(0, "rgba(255, 112, 92, 1)");
-          gradient.addColorStop(1, "rgba(255, 112, 92, 0.2)");
+          gradient.addColorStop(0, "rgba(204, 102, 12, 1)");
+          gradient.addColorStop(1, "rgba(204, 102, 12, 0.2)");
           return gradient;
         },
           borderColor: "rgba(75,192,192,1)"
@@ -129,11 +129,11 @@ function CobaChart(){
             </div>
 
             <div className='p-1'>
-              <div className='p-2 bg-gradient-to-b from-teal-300 to-teal-200 rounded-lg'>
+              <div className='p-2 text-white bg-gradient-to-b from-amber-600 to-amber-500 rounded-lg'>
                   <div className='flex justify-center'>Data Active</div>
                   <div className='flex justify-center'>Detail Data Chart</div>
                   
-                  <div className=''>
+                  <div className='mb-1'>
                     <div className=' mr-2'>
                         Tanggal : {Ltip}
                     </div>
@@ -142,11 +142,11 @@ function CobaChart(){
                     </div>
                   </div>
 
-                  <div className='justify-end'>
-                    <div className='p-1 bg-gradient-to-b from-teal-400 to-teal-300 rounded-lg hover:from-teal-500 hover:to-teal-400 text-center hover:text-white'>
+                  {/* <div className='justify-end'>
+                    <div className='p-1 text-black bg-gradient-to-b from-teal-400 to-teal-300 rounded-lg hover:from-teal-500 hover:to-teal-400 text-center hover:text-white'>
                         Detail
                     </div>
-                  </div>
+                  </div> */}
               </div>
             </div>
         </>
