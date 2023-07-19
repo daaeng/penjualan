@@ -6,7 +6,7 @@ const Ggrosir = () => {
   return (
     <>
 
-      <div>
+      <div className='App-bgpage'>
           <div>
           
           <Sdbar/>
@@ -14,7 +14,7 @@ const Ggrosir = () => {
           </div>
 
           <div>
-          <section className={`bg-gray-50 -mt-1`}>
+          <section className={`-mt-1`}>
               
               <Grosir/>
 

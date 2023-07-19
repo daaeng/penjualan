@@ -1,6 +1,6 @@
 import React from 'react'
 import {MdShoppingBasket } from 'react-icons/md'
-import FilterTime from '../backpage/filterTime'
+// import FilterTime from '../backpage/filterTime'
 
 const Grosir = () => {
 
@@ -10,13 +10,13 @@ const Grosir = () => {
                 <div className='ml-2 mt-1'>
 
                     <div className='grid grid-cols-2'>  
-                        <h2 className='col-span-1 font-mono text-black items-center flex'>
+                        <h2 className='col-span-1 font-mono text-white items-center flex'>
                             <MdShoppingBasket className='mr-1' size={'22'}/> Grosir
                         </h2>
 
-                        <div className='col-span-1 flex justify-end items-center font-mono text-black '>
+                        {/* <div className='col-span-1 flex justify-end items-center font-mono text-black '>
                             <FilterTime />
-                        </div>
+                        </div> */}
                         
                     </div>
               

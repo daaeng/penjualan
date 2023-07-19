@@ -5,7 +5,7 @@ import Merchain from '../component/MD/Merchain'
 const MdMerhcain = () => {
   return (
     <>
-      <div>
+      <div className='App-bgpage'>
         <div>
           
           <Sdbar/>
@@ -13,7 +13,7 @@ const MdMerhcain = () => {
         </div>
 
         <div>
-          <section className={`bg-gray-50 -mt-1`}>
+          <section className={`-mt-1`}>
             <Merchain/>
           </section>
         </div>
