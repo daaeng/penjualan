@@ -37,14 +37,14 @@ function Sdbar() {
     <>   
         <ToastContainer/>
         
-        <header className='grid grid-cols-2 p-2 h-20 bg-merah rounded-bl-45px'>
+        <header className='grid grid-cols-2 p-2 h-20  rounded-bl-45px'>
             <div className='flex col-span-1 h-9 -mr-5 -mt-6 -mb-10'>
-                <div className='flex justify-end ml-60 rounded-bl-70px bg-red-800 w-full'>
+                <div className='flex justify-end ml-64 rounded-bl-70px bg-red-800 w-full'>
                     
                 </div>
             </div>
 
-            <div className='flex col-span-1 -mr-2 -mt-11 -mb-4'>
+            <div className='flex col-span-1 -mr-2 -mt-11 -mb-6'>
                 <div className='flex justify-end h-14 rounded-bl-70px -mb-14 bg-red-900 w-full'>
                     
                 </div>
@@ -112,7 +112,8 @@ function Sdbar() {
                 <TbLayoutSidebarLeftExpand size={'24'} className={`cursor-pointer hover:text-darkgolden ml-3`} onClick={()=> setOpen(!open)}/>
             </div>
             <div className={`duration-300 ${!open && 'hidden'}`}>
-                <div className='sm:p-1 md:p-3 items-center rounded-xl bg-marron '>
+                <div className='sm:p-1 md:p-3 items-center rounded-xl bg-redd '>
+                    <div></div>
 
                     {menu.map((val, index) => {
                         return (
@@ -121,7 +122,7 @@ function Sdbar() {
                                 to={val.path}               
                                 className={`cursor-pointer no-underline flex flex-row duration-300 
                                 ${!open && 'active' }items-center text-gray-100 overflow-y-visible
-                                hover:bg-light-white hover:text-black rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
+                                hover:bg-light-white hover:text-yellow-300 rounded-lg px-2.5 py-4 -ml-2 -mr-2`} >
                                         <div className={`ml-1 text-2xl `}>
                                             {val.icon}
                                         </div>
