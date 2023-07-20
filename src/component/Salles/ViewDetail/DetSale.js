@@ -112,18 +112,20 @@ const DetSale =() => {
                                         Stock : {dtIN.stock}
                                     </div>
                                     <div>
-                                        Price : {dtIN.price}
+                                        Price : ${dtIN.price}
                                     </div>
-                                    {/* <div>
-                                        Price : {dtIN.images}
-                                    </div> */}
+                                    
 
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
-                            tes tes data halaman det sales
+                            <div className='p-2 h-full w-auto text-white bg-gradient-to-b from-amber-600 to-amber-500 rounded-lg'>
+                                <div className="flex justify-center">
+                                    <img src={dtIN.thumbnail} alt="new"/>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

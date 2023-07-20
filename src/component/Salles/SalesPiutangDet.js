@@ -8,7 +8,7 @@ import TempCG from "./TempCG";
 import DataChart from "../chart/dataChart";
 import Pembelian from "../chart/pembelian";
 
-const SalesPiutangDet =(props) => {
+const SalesPiutangDet =() => {
 
     const navigate = useNavigate()
 
@@ -53,20 +53,20 @@ const SalesPiutangDet =(props) => {
                 <div className="p-1 mt-3">
 
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
+                        <div className="col-span-1 p-2">
+                            <TempCG/>
+                        </div>
+
                         <div className="col-span-1 p-2 bg-red-700">
                             <CobaChart/>
                         </div>
 
-                        <div className="col-span-1 p-2 bg-red-700">
-                            <TablePiutang />
-                        </div>
-                        
-                        <div className="col-span-1 p-2">
-                            <TempCG/>
-                        </div>
-                        
                         <div className="col-span-1 p-2">
                             <DataChart/>
+                        </div>
+
+                        <div className="col-span-1 p-2 bg-red-700">
+                            <TablePiutang />
                         </div>
 
                         <div className="col-span-1 p-2 bg-red-700">

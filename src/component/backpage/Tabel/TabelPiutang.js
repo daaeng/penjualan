@@ -16,15 +16,9 @@ export default function TablePiutang() {
     { field: 'id', headerName: 'ID', width: 30 },
     { field: 'title', headerName: 'title', width: 100 },
     { field: 'category', headerName: 'category', width: 150 },
-    {
-      field: 'price',
-      headerName: 'price',
-      type: 'number',
-      width: 50,
-    },
-    { field: 'stock', headerName: 'stock', width: 65},
-    // { field: 'thumbnail', headerName: 'thumbnail', width: 125},
-    { field: 'rating', headerName: 'rating', width: 65},
+    { field: 'brand', headerName: 'Brand', width: 100 },
+    { field: 'stock', headerName: 'Stock', width: 65},
+    { field: 'rating', headerName: 'Rating ★', width: 85},
   ];
 
   // const data = [
@@ -51,13 +45,13 @@ export default function TablePiutang() {
   
   const infoTab =() => {
     let dTab = selRow
-    console.log('V Table Data : ', dTab);
+    // console.log('V Table Data : ', dTab);
     if (dTab != null) {
       navigate(`/detdtsalesman/${rid}`, {state: {rid}})
-      
-    } else {
-      console.log('Mohon pilih data Table yang ingin di lihat');
-    }
+    } 
+    // else {
+      // console.log('Mohon pilih data Table yang ingin di lihat');
+    // }
   }
 
   const minuteTO = 960000
