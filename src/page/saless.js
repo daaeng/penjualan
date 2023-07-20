@@ -1,6 +1,6 @@
 import React from 'react'
 import Sdbar from '../component/Sidebar/sdbar'
-import Sales from '../component/Salles/sales'
+// import Sales from '../component/Salles/sales'
 
 const Psale = () => {
   return (
