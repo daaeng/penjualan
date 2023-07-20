@@ -5,88 +5,90 @@ import { MdPointOfSale } from "react-icons/md";
 import Loadeer from "../Loader/Loadeer";
 // import Loadeer from "../Loader/Loadeer";
 
-const baseURL = '/rptReact/Dashboard/getSalesRetur?'
+// const baseURL = '/rptReact/Dashboard/getSalesRetur?'
 
 
 const CardSingleBlu = () => {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const [data, setData] = useState([])
-    const [start, setStart] = useState([])
-    const [end, setEnd] = useState([])
+    // const [data, setData] = useState([])
+    // const [start, setStart] = useState([])
+    // const [end, setEnd] = useState([])
     
-    function tkStDate(year, month) {
-        return new Date(year, month, 1);
-    }
-
-    const tgl = new Date()
-    const firstDate = tkStDate(
-        tgl.getFullYear(),
-        tgl.getMonth()
-    )
-
-    function numberWithCommas(x) {
-        x = x.toString();
-        var pattern = /(-?\d+)(\d{3})/;
-        while (pattern.test(x))
-            x = x.replace(pattern, "$1.$2");
-        return x;
-        // console.log(numberWithCommas(1000))
-    }
-    
-    setStart(firstDate)
-    setEnd(tgl)
-    
-    // const dataInfo = () => {
-    //     if (dataTime) {
-    //         axios.get(baseURL, {
-    //             params : {
-    //                 startDate : start,
-    //                 endDate : end,    
-    //                 comparison : 'LM',
-    //                 isAsper : true,
-    //             }
-    //         }).then(response => {
-    //             setData(response.data.data)
-    //         })
-    //     }
+    // function tkStDate(year, month) {
+    //     return new Date(year, month, 1);
     // }
 
-    const minuteTO = 960000
-    // 16-menit
-    useEffect(() => {
-        axios.get(baseURL, {
-            params : {
-                startDate : start,
-                endDate : end,    
-                comparison : 'LM',
-                isAsper : true,
-            }
-        }).then(response => {
-            setData(response.data.data)
+    // const tgl = new Date()
+    // const firstDate = tkStDate(
+    //     tgl.getFullYear(),
+    //     tgl.getMonth()
+    // )
 
-        },minuteTO)
-    },[start, end], minuteTO)
+    // function numberWithCommas(x) {
+    //     x = x.toString();
+    //     var pattern = /(-?\d+)(\d{3})/;
+    //     while (pattern.test(x))
+    //         x = x.replace(pattern, "$1.$2");
+    //     return x;
+    //     // console.log(numberWithCommas(1000))
+    // }
+    
+    // setStart(firstDate)
+    // setEnd(tgl)
+    
+    // // const dataInfo = () => {
+    // //     if (dataTime) {
+    // //         axios.get(baseURL, {
+    // //             params : {
+    // //                 startDate : start,
+    // //                 endDate : end,    
+    // //                 comparison : 'LM',
+    // //                 isAsper : true,
+    // //             }
+    // //         }).then(response => {
+    // //             setData(response.data.data)
+    // //         })
+    // //     }
+    // // }
 
-    // const perc = data.map((dtObj, idx) => {
-    //     if (data.length < 0 ) {
-    //         <div key = {idx} className=" text-redd">
-    //             ▼ {dtObj.diffSIPerc}% Last Month
-    //         </div>
-    //     } else {
-    //         <div key = {idx} className=" text-green-700">
-    //             ▲ {dtObj.diffSIPerc}% Last Month
-    //         </div>
-    //     }
-    // })
+    // const minuteTO = 960000
+    // // 16-menit
+    // useEffect(() => {
+    //     axios.get(baseURL, {
+    //         params : {
+    //             startDate : start,
+    //             endDate : end,    
+    //             comparison : 'LM',
+    //             isAsper : true,
+    //         }
+    //     }).then(response => {
+    //         setData(response.data.data)
+
+    //     },minuteTO)
+    // },[start, end], minuteTO)
+
+    // // const perc = data.map((dtObj, idx) => {
+    // //     if (data.length < 0 ) {
+    // //         <div key = {idx} className=" text-redd">
+    // //             ▼ {dtObj.diffSIPerc}% Last Month
+    // //         </div>
+    // //     } else {
+    // //         <div key = {idx} className=" text-green-700">
+    // //             ▲ {dtObj.diffSIPerc}% Last Month
+    // //         </div>
+    // //     }
+    // // })
 
     return(
         <>
             {/* {data.map((dataObj, index) => {
                 
                 return( */}
-                    <div  className="" onClick={()=> navigate('/detpenjualan')}>
+                    <div  className="" 
+                    // onClick={()=> navigate('/detpenjualan')}
+                    >
                         <div className="flex justify-end" >
                             <div className='bg-blue-600 sm:w-28 md:w-34 lg:w-72 rounded-tl-full relative sm:h-22 md:h-28 lg:h-34 -mb-36'>
                             </div>
@@ -106,7 +108,7 @@ const CardSingleBlu = () => {
                             </div>  
                             
                             <div className='lg:col-span-1 font-bold text-4xl mb-2 ml-2 sm:-mt-12 md:-mt-14 lg:-mt-0 sm:text-lg md:text-3xl lg:text-4xl'>
-                                {data !== null ? (
+                                {/* {data !== null ? (
                                     <>
                                         {data.map((dataObj, index) => {
                                             return(
@@ -123,13 +125,13 @@ const CardSingleBlu = () => {
                                             <Loadeer/>
                                         </div>
                                     </>
-                                )}
-
+                                )} */}
+                                46363423
                             </div>
 
                             <div className="lg:col-span-2 font-bold text-xs mb-1 sm:-mt-4 md:-mt-3 lg:-mt-0">  
-                                {/* percent '%' */}
-                                {data.map((dataObj, index) => {
+                                percent '%'
+                                {/* {data.map((dataObj, index) => {
                                     if (dataObj.diffSIPerc < 0) {
                                         return(
                                             <div key = {index} className=" text-redd">
@@ -142,7 +144,7 @@ const CardSingleBlu = () => {
                                         </div>
                                     }
                                    
-                                },[])}
+                                },[])} */}
                             </div>
                         
                         </div>    

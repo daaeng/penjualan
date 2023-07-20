@@ -65,6 +65,8 @@ main{
 .App-bgpage {
   background: linear-gradient( #E70000, #CD0000, #FFFFFF, #FFFFFF);
   min-height: 100vh;
+  max-height: 100vh;
+  
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */

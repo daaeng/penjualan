@@ -4,6 +4,9 @@ import { VscDebugStepBack } from "react-icons/vsc";
 import TablePiutang from "../backpage/Tabel/TabelPiutang";
 import { useNavigate } from "react-router-dom";
 import CobaChart from "../chart/coba";
+import TempCG from "./TempCG";
+import DataChart from "../chart/dataChart";
+import Pembelian from "../chart/pembelian";
 
 const SalesPiutangDet =(props) => {
 
@@ -56,6 +59,18 @@ const SalesPiutangDet =(props) => {
 
                         <div className="col-span-1 p-2 bg-red-700">
                             <TablePiutang />
+                        </div>
+                        
+                        <div className="col-span-1 p-2">
+                            <TempCG/>
+                        </div>
+                        
+                        <div className="col-span-1 p-2">
+                            <DataChart/>
+                        </div>
+
+                        <div className="col-span-1 p-2 bg-red-700">
+                            <Pembelian/>
                         </div>
 
                     </div>

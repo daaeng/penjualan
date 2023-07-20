@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { SiAudiomack } from "react-icons/si";
 import { VscDebugStepBack } from "react-icons/vsc";
 import axios from "../../config/api/axios";
 
-const baseURL = '/products?'
+const baseURL = '/products/'
 
 const DetSale =() => {
 
@@ -22,21 +22,22 @@ const DetSale =() => {
         console.log('Mundur ke Dash Sales');
     }
 
-    const dtGetSend =() => {
-        let show = location.state.rid
-        console.log(show);
-        axios.get(baseURL, {
-            params: {
-                baseURL: show
-            }
-        }).then((resp) => {
-            console.log(resp.data);
-        })
-    }
+    const [dtIN, setDtIN] = useState([])
+    // const dtGetSend =() => {
+    //     let show = location.state.rid
+    //     console.log(show);
+    //     axios.get(`${baseURL}` + show).then((resp) => {
+    //         console.log(resp.data);
+    //     })
+    // }
 
     useEffect(() => {
-        dtGetSend()
-    })
+        let show = location.state.rid
+        console.log(show);
+        axios.get(`${baseURL}` + show).then((resp) => {
+            setDtIN(resp.data);
+        })
+    },[location.state.rid])
 
     return(
         <>
@@ -81,8 +82,44 @@ const DetSale =() => {
                     <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-2">
                         <div className="col-span-1 p-2 bg-marron text-white">
                             {/* <SalesDetSalesman/> */}
-                            sudah dapat id data tinggal masukan params API, ini ID nya : _
-                            {location.state.rid}
+                            {/* sudah dapat id data tinggal masukan params API, ini ID nya : _
+                            {location.state.rid} */}
+
+                            <div className='p-2 text-white bg-gradient-to-b from-amber-600 to-amber-500 rounded-lg'>
+                                <div className='flex justify-center'>Data Active</div>
+                                <div className='flex justify-center'>Detail Data Tabel</div>
+                                
+                                <div className='mb-1'>
+                                    <div className=' mr-2'>
+                                        ID : {dtIN.id}
+                                    </div>
+                                    <div>
+                                        Item : {dtIN.title}
+                                    </div>
+                                    <div>
+                                        Brand : {dtIN.brand}
+                                    </div>
+                                    <div>
+                                        Category : {dtIN.category}
+                                    </div>
+                                    <div>
+                                        Description : {dtIN.description}
+                                    </div>
+                                    <div>
+                                        Rating : {dtIN.rating}
+                                    </div>
+                                    <div>
+                                        Stock : {dtIN.stock}
+                                    </div>
+                                    <div>
+                                        Price : {dtIN.price}
+                                    </div>
+                                    {/* <div>
+                                        Price : {dtIN.images}
+                                    </div> */}
+
+                                </div>
+                            </div>
                         </div>
 
                         <div className="col-span-1 p-2 bg-marron">
