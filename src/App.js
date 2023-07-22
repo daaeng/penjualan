@@ -51,3 +51,73 @@ function App() {
 }
 
 export default App;
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// make :
+// Side Bar & Header
+// Dashboard {Sales}
+// Tabel Data Sales
+// Chart Sales {Bar, Bar Samping, Line, Pie}
+// Detail Sales
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// blum
+// {
+//  ~ Session Login ~~~~~~~!
+// }
+
+// penjualan (bar naik)
+// - / brang
+// - / kategori
+// - / sales
+// - / area
+
+// piuntang (bar kanan)
+// / hari ini
+// / esper hari ini
+// / customer
+
+// table ?
+// jumlah pengiriman (Card)
+// 1 - pengiriman hari ini
+// 2 - instalasi hari ini
+// 3 - extended waranty
+// 4 - jumlah retur hari ini
+// 5 - jumlah cash back
+// 6 - jumlah penjualan brand
+// 7 - jumlah transaksi (total)
+// 8 - jumlah baraqn gyang terjual
+// 9 - jumlah penjualan harvi
+
+// ╢─> logout (api)
+// toast (all notif)
+// efek loading(loodle)
+
+// userJabID
+// userCategID
+// cabID
+
+// Sales
+// logistic
+// md
+// (itmd ==)
+// finance
+// grosir
+
+// admin
+// (itspm = 123)
+// ______________________________________________
+
+// Login
+// Dashboard role id
+// - Sales
+// penjualan
+// piutang
+
+// - logistic
+// - md
+// - finance
+// - grosir

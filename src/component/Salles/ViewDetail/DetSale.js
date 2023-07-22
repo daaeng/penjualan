@@ -33,8 +33,9 @@ const DetSale =() => {
 
     useEffect(() => {
         let show = location.state.rid
-        console.log(show);
+        // console.log(show);
         axios.get(`${baseURL}` + show).then((resp) => {
+            // console.log(resp.data);
             setDtIN(resp.data);
         })
     },[location.state.rid])
@@ -106,7 +107,7 @@ const DetSale =() => {
                                         Description : {dtIN.description}
                                     </div>
                                     <div>
-                                        Rating : {dtIN.rating}
+                                        Rating : ★{dtIN.rating}
                                     </div>
                                     <div>
                                         Stock : {dtIN.stock}
@@ -123,7 +124,7 @@ const DetSale =() => {
                         <div className="col-span-1 p-2 bg-marron">
                             <div className='p-2 h-full w-auto text-white bg-gradient-to-b from-amber-600 to-amber-500 rounded-lg'>
                                 <div className="flex justify-center">
-                                    <img src={dtIN.thumbnail} alt="new"/>
+                                    <img src={dtIN.thumbnail} alt="new" className="w-full"/>
                                 </div>
                             </div>
                         </div>

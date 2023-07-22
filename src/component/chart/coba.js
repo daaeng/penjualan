@@ -10,7 +10,6 @@ import {
     Legend,
   } from 'chart.js';
 import { Bar} from 'react-chartjs-2';
-// import { useNavigate } from 'react-router-dom';
 
 function CobaChart(){
 
@@ -22,8 +21,6 @@ function CobaChart(){
         Tooltip,
         Legend
     );
-
-    // const navigate = useNavigate()
     
     //data yg akan dikirim
     const [label, setLabel] = useState([])
@@ -37,15 +34,8 @@ function CobaChart(){
 
       setLtip(label)
       setVtip(vall)
-      // navigate('/detdtsalesman', Ltip, Vtip)
-    }
 
-    // const handleSend =() => {
-    //   this.props.history.push({
-    //     path: '/detdtsalesman',
-    //     state: Ltip, Vtip,
-    //   })
-    // }
+    }
     
     const ovTip = (tooltipItem) => {
       let tp = tooltipItem
@@ -55,10 +45,6 @@ function CobaChart(){
       setLabel(dtLabel)
       setVall(dtVall)
     }
-
-    // useEffect(() => {
-    //   // ovTip()
-    // })
 
     const labels = ['01/01', '02/01', '03/01', '04/01', '05/01', '06/01', '07/01', '08/01', '09/01', '10/01'];
     
@@ -72,8 +58,8 @@ function CobaChart(){
           backgroundColor: (context) => {
           const ctx = context.chart.ctx;
           const gradient = ctx.createLinearGradient(0, 10, 0, 300);
-          gradient.addColorStop(0, "rgba(204, 102, 12, 1)");
-          gradient.addColorStop(1, "rgba(204, 102, 12, 0.2)");
+          gradient.addColorStop(0, "rgba(204, 0, 0, 1)");
+          gradient.addColorStop(1, "rgba(204, 0, 0, 0.4)");
           return gradient;
         },
           borderColor: "rgba(75,192,192,1)"
@@ -86,8 +72,7 @@ function CobaChart(){
       responsive: true,
       maintainAspectRatio: true,
       aspectRatio: 2,
-
-      // showTooltips: true,
+      showTooltips: true,
       scales: {
         y: {
           beginAtZero: true,

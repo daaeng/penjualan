@@ -36,7 +36,7 @@ const SalesPiutangDet =() => {
                         </div>
 
                         <div className="text-white underline ml-1">
-                            Piutang
+                            sales tes
                         </div>
 
                     </div>
@@ -61,7 +61,7 @@ const SalesPiutangDet =() => {
                             <CobaChart/>
                         </div>
 
-                        <div className="col-span-1 p-2">
+                        <div className="col-span-1 p-2 bg-red-700">
                             <DataChart/>
                         </div>
 
